@@ -1,12 +1,12 @@
 @charset "UTF-8";
 html body {
-    background-color: #eee;
+    background-color: #333;
     font-family: 'Ubuntu', 'M PLUS Rounded 1c', sans-serif;
-    color: #333;
+    color: #eee;
 }
 
 .line-dark {
-    border-top: 1px sli rgba(0, 0, 0, 1);
+    border-top: 1px solid rgba(0, 0, 0, 1);
     box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
 }
 
@@ -29,7 +29,7 @@ html body {
 }
 
 .text-bright {
-    text-shadow: rgba(0, 0, 0, 1);
+    text-shadow:1px -1px 0 rgba(0, 0, 0, 1);
 }
 
 .jumbotron-ex {
