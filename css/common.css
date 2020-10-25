@@ -39,6 +39,10 @@ html body {
     background-size: cover;
 }
 
+.card-deck-ex {
+    color: #333;
+}
+
 .footer {
     margin-top: 2rem;
     /* height: 10vh; */
