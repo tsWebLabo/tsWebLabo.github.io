@@ -35,8 +35,13 @@ html body {
 .jumbotron-ex {
     position: relative;
     height: 100vh;
-    background-image: url(../images/sample.png);
+    background-image: url(../images/main_BG.png);
     background-size: cover;
+}
+
+.container-ex {
+    margin-top: 30vh;
+    background-color: rgba(85, 85, 85, 0.5);
 }
 
 .card-deck-ex {
