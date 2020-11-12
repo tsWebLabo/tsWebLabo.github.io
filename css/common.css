@@ -70,6 +70,7 @@ a:hover {
 .btn-ghost {
     border-radius: 0.125rem;
     background: transparent;
+    margin-bottom: 1rem;
 }
 
 .btn-ghost
@@ -80,6 +81,7 @@ a:hover {
 .btn-ghost
 .btn-primary {
     color: #337ab7;
+    /* color: #16FFCE; */
 }
 
 .btn-ghost
