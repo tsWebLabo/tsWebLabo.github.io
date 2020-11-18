@@ -11,3 +11,15 @@ section {
     color: #333;
 }
 
+.card-header-dark {
+    background-color: #444;
+}
+
+.card-header-dark .btn {
+    text-decoration: none;
+    color: #eee;
+}
+
+.card-body-dark {
+    background-color: #222;
+}
