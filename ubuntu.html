@@ -181,32 +181,76 @@
 
         <h5>ディレクトリ（フォルダ）操作</h5>
         <table class="table table-striped table-dark">
-          <thead>
+          <thead class="text-center">
             <tr>
               <th scope="col">コマンド</th>
               <th scope="col">機能</th>
               <th scope="col">使い方（例文）</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="text-left">
             <tr>
               <th scope="row">ls</th>
               <td>ファイルやディレクトリの情報を表示させるコマンド</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">cd</th>
-              <td>ディレクトリを移動するためのコマンド</td>
-              <td></td>
+              <td>
+                <pre>
+                  <code>
+                    ls
+                    Documents  Music     Templates
+                    Downloads  Pictures  Videos
+                    Desktop    Dropbox   Public    snap
+                  </code>
+                </pre>
+              </td>
             </tr>
             <tr>
               <th scope="row">pwd</th>
               <td>現在のディレクトリの場所を表示させる</td>
-              <td></td>
+              <td>
+                <pre>
+                  <code>
+                    pwd
+                    /home/xxxxxx(ユーザー名)/
+                  </code>
+                </pre>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">cd</th>
+              <td>ディレクトリを移動するためのコマンド</td>
+              <td>
+                <pre>
+                  <code>
+                    pwd
+                    /home/xxxxxx(ユーザー名)/
+                    cd Desktop
+                    pwd
+                    /home/xxxxxx(ユーザー名)/Desktop/
+                    cd ~
+                    pwd
+                    /home/xxxxxx(ユーザー名)/
+                  </code>
+                </pre>
+              </td>
             </tr>
             <tr>
               <th scope="row">mkdir</th>
               <td>新しいディレクトリを作成する</td>
+              <td>
+                <pre>
+                  <code>
+                    ls
+                    Documents  Music     Templates
+                    Downloads  Pictures  Videos
+                    Desktop    Dropbox   Public    snap
+                    mkdir Scripts
+                    ls
+                    Documents  Music     Templates
+                    Downloads  Pictures  Scripts   Videos
+                    Desktop    Dropbox   Public    snap
+                  </code>
+                </pre>
+              </td>
             </tr>
             <!-- <tr>
               <th scope="row">rm</th>
@@ -216,23 +260,38 @@
         </table>
         <h5>ファイル操作</h5>
         <table class="table table-striped table-dark">
-          <thead>
+          <thead class="text-center">
             <tr>
               <th scope="col">コマンド</th>
               <th scope="col">機能</th>
               <th scope="col">使い方（例文）</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="text-left">
             <tr>
               <th scope="row">touch</th>
               <td>ファイルを新規作成する</td>
-              <td></td>
+              <td>
+                <pre>
+                  <code>
+                    touch sample.txt
+                    ls
+                    sample.txt
+                  </code>
+                </pre>
+              </td>
             </tr>
             <tr>
               <th scope="row">cat</th>
               <td>ファイルの内容を表示させる</td>
-              <td></td>
+              <td>
+                <pre>
+                  <code>
+                    cat sample.txt
+                    これはsample.txtのテキストです。
+                  </code>
+                </pre>
+              </td>
             </tr>
             <tr>
               <th scope="row">cp</th>

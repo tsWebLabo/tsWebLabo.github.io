@@ -23,3 +23,7 @@ section {
 .card-body-dark {
     background-color: #222;
 }
+
+pre code {
+    color: #eee;
+}
