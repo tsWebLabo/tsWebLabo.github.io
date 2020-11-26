@@ -10,12 +10,13 @@ html body {
 }
 
 a {
-    color: #333;
+    text-decoration: none;
+    color: #eee;
 }
 
 a:hover {
     text-decoration: none;
-    color: #555;
+    color: #ccc;
 }
 
 .anchor {
