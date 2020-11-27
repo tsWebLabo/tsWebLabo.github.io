@@ -10,13 +10,21 @@ a:hover {
 }
 
 /* カスタムデフォルトボタン */
-.btn-secondary,
+.btn-secondary {
+  margin: 10px;
+  color: #eee;
+  text-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: .05rem solid #eee;
+}
+
+
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: #eee;
   text-shadow: none; /* `body`からの継承を防ぐ */
-  background-color: #fff;
-  border: .05rem solid #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border: .05rem solid #eee;
 }
 
 
@@ -53,6 +61,7 @@ body {
 }
 
 .masthead-brand {
+  color: #555;
   margin-bottom: 0;
 }
 
@@ -67,6 +76,7 @@ body {
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
   border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: #16FFCE;
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -86,6 +96,14 @@ body {
     float: right;
   }
 }
+
+/* .link-dark {
+  color: #333;
+}
+
+.link-bright {
+  color: #eee;
+} */
 
 
 /*
