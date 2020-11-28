@@ -4,6 +4,13 @@ section {
     margin: 1rem;
 }
 
+.jumbotron {
+    margin-top: 2rem;
+    background-image: url(../images/main_BG.png);
+    background-size: cover;
+    background-position: center 70%;
+}
+
 .card-title {
     color: #333;    
 }
