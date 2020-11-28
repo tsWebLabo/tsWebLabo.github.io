@@ -53,15 +53,6 @@ a:hover {
     text-shadow:1px -1px 0 rgba(0, 0, 0, 1);
 }
 
-.jumbotron-ex {
-    position: relative;
-    height: 100vh;
-    background-image: url(../images/main_BG.png);
-    background-size: cover;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
 .container-ex {
     margin-top: 30vh;
     background-color: rgba(85, 85, 85, 0.5);
