@@ -52,8 +52,8 @@ pre code {
 
 /* footer */
 .footer {
-    background-color: #555;
-    color: #eee;
+    background-color: #333;
+    color: rgba(255, 255, 255, .5);
     display: flex;
     align-items: center;
     justify-content:center;
