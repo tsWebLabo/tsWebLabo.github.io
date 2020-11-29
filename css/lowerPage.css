@@ -1,9 +1,23 @@
 @charset "UTF-8";
+/* navbar */
+.navbar {
+    background-color: #333;
+}
 
+.navbar-brand {
+    margin-left: 10rem;
+}
+
+.navbar-nav {
+    margin-right: 10rem;
+}
+
+/* contents */
 section {
     margin: 1rem;
 }
 
+/* jumbotron */
 .jumbotron {
     margin-top: 2rem;
     background-image: url(../images/main_BG.png);
@@ -11,6 +25,7 @@ section {
     background-position: center 70%;
 }
 
+/* card */
 .card-title {
     color: #333;    
 }
@@ -33,4 +48,13 @@ section {
 
 pre code {
     color: #eee;
+}
+
+/* footer */
+.footer {
+    background-color: #555;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }

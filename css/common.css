@@ -85,11 +85,3 @@ a:hover {
 .btn-info {
     color: #5bc0de;
 }
-
-.footer {
-    background-color: #555;
-    color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
