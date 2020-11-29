@@ -36,7 +36,6 @@ html,
 body {
   height: 100%;
   background-color: #333;
-  background-image:url(../images/main_BG.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -49,7 +48,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 80em;
 }
 
 /*
@@ -61,7 +60,6 @@ body {
 }
 
 .masthead-brand {
-  color: #555;
   margin-bottom: 0;
 }
 
@@ -85,7 +83,7 @@ body {
 
 .nav-masthead .active {
   color: #fff;
-  border-bottom-color: #fff;
+  border-bottom-color: #16FFCE;
 }
 
 @media (min-width: 48em) {
