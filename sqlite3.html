@@ -64,7 +64,7 @@
           <hr class="my-4">
           <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         </div>
-        <h2>SQLite3のインストールとコマンドラインツールの起動</h2>
+        <h2 class="text-bright">SQLite3のインストールとコマンドラインツールの起動</h2>
         <h3>・SQLite3のインストール</h3>
         <p>ターミナルで以下のコマンド入力することでSQLite3のインストールを行えます</p>
         <pre>
@@ -87,12 +87,112 @@
             sqlite> 
           </code>
         </pre>
+
         <hr class="line-dark">
-        <h2>SQLite3の基本的な使い方</h2>
+        
+        <h2 class="text-bright">データベースの操作</h2>
+        <h3>データベース作成・接続</h3>
+        <pre>
+          <code>
+            sqlite3 sample.sqlite3
+          </code>
+        </pre>
+        <p>
+          上記コマンドはSQLite3のコマンドライン起動コマンドと同じものです。<br>
+          このコマンドを実行した際、指定したデータベースが存在すればそのデータベースに接続し、<br>
+          指定したデータベースが存在しなかった場合はそのデータベース名で新規ファイルが作成されコマンドラインツールが開きます。
+        </p>
+        <h5>sqlite3での拡張子</h5>
+        <p>
+          データベース名については、拡張子を付けなくてもデータベースとして使うことは可能です。<br>
+          ですが、ひとつのプロジェクトには様々なプログラムファイルが格納してあり、かつデータベースの種類も多数あることから、<br>
+          それを明示的にするために下記のような拡張子をつけることが通例となっているようです。
+        </p>
+        <ul>
+          <li>sample.sqlite3</li>
+          <li>sample.sqlite</li>
+          <li>sample.db</li>
+        </ul>
+        <h3>データベースのバックアップ</h3>
+        <p>
+          SQLite3はひとつのデータベースを１ファイルとして管理しているので、<br>
+          ファイル名を変えてコピーするだけでデータベースのバックアップをとることができます。
+        </p>
+        <h3>データベースの削除</h3>
+        <p>
+          バックアップの項目と同じ理由で、データベースのファイルを削除することでデータベースを削除することができます。
+        </p>
+
         <hr class="line-dark">
-        <h2>Androidアプリで使う時のSQLite3の接続</h2>
+
+        <h2 class="text-bright">テーブルの操作</h2>
+        <h3>テーブル作成</h3>
+        <p>
+          SQLのCREATE文でテーブルを作成します。<br>
+          新規データベースでこの操作を行った時点で、Nutilus(ファイルマネージャ)にでーたべーすのファイルが表示されます。
+        </p>
+        <pre>
+          <code>
+            CREATE TABLE testTable001(id, name);
+          </code>
+        </pre>
+        <h3>テーブルの確認</h3>
+        <p>
+          テーブルの確認方法は２種類あります。<br>
+          状況に合わせて使い分けましょう。
+        </p>
+        <ul>
+          <li>.tables</li>
+            <p>データベースに格納されたテーブルを確認したい時に使う</p>
+            <pre>
+              <code>
+                .tables
+              </code>
+            </pre>
+            <p>実行結果</p>
+            <pre>
+              <code>
+                testTable001  testTable002
+              </code>
+            </pre>
+          <li>.schema</li>
+            <p>データベースに格納されたテーブルの構造を確認することができる。</p>
+            <pre>
+              <code>
+                .schema
+              </code>
+            </pre>
+            <p>実行結果</p>
+            <pre>
+              <code>
+                CREATE TABLE testTable001(id, name);
+                CREATE TABLE testTable002(id INTEGER PRIMARY KEY, name TEXT NOT NULL);
+              </code>
+            </pre>
+        </ul>
+        
+        <h3>テーブル名の変更</h3>
+        <p>テーブル名を変更するには下記のコマンドを使います。</p>
+        <pre>
+          <code>
+            ALTER TABLE 現在のテーブル名 RENAME TO 新しいテーブル名;
+          </code>
+        </pre>
+
+        <p>前述のテーブル"testTable002"を"myfriends"に変更してみます。</p>
+        <pre>
+          <code>
+            ALTER TABLE testTable002 RENAME TO myfriends;
+          </code>
+        </pre>
+
         <hr class="line-dark">
-        <h2>Androidアプリ以外からの接続</h2>
+
+        <h2 class="text-bright">Androidアプリで使う時のSQLite3の接続</h2>
+        
+        <hr class="line-dark">
+        
+        <h2 class="text-bright">Androidアプリ以外からの接続</h2>
       </section>
     <!-- footer -->
     <footer class="footer">
