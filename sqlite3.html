@@ -278,7 +278,123 @@
 
         <hr class="line-dark">
 
-        
+        <h2>データの追加（INSERT文）</h2>
+        <p>
+          テーブルにデータを追加するにはINSERT文を使います。<br>
+          全てのカラムにデータを追加する方法と、カラムを指定してデータを追加する方法があります。
+        </p>
+        <h3>全てのカラムにデータを追加する方法</h3>
+        <p>書式</p>
+        <pre>
+          <code>
+            INSERT INTO テーブル名 VALUES(値1, 値2, ....);
+          </code>
+        </pre>
+
+        <p>
+          例文<br>
+          テスト用にテーブルを作成します。
+        </p>
+        <pre>
+          <code>
+            CREATE TABLE testUser(id INTEGER, name TEXT, age INTEGER, address TEXT);
+          </code>
+        </pre>
+        <p>
+          このテーブルには４つのカラムがあります。<br>
+          このテーブルにデータを追加する場合、4つの値をカラムの順番に沿って追加します。<br>
+          例えば、id=1, name='Yamada', age=19, address='Tokyo'だとします。
+        </p>
+        <pre>
+          <code>
+            INSERT INTO testUser VALUES (1, 'Yamada', 19, 'Tokyo');
+          </code>
+        </pre>
+        <p>引き続き以下のデータを追加してみます</p>
+        <pre>
+          <code>
+            INSERT INTO testUser VALUES (2, 'Mori', 32, 'Kyoto');
+            INSERT INTO testUser VALUES (3, 'Ueda', 27, 'Tokyo');
+            INSERT INTO testUser VALUES (4, 'Mitsui', 20, 'Nagoya');
+          </code>
+        </pre>
+        <p>
+          データが追加されたので、SELECT分を使ってデータを取得してみます。
+        </p>
+        <pre>
+          <code>
+            SELECT * FROM testUser;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            id          name        old         address   
+            ----------  ----------  ----------  ----------
+            1           Yamada      19          Tokyo     
+            2           Mori        32          Kyoto     
+            3           Ueda        27          Tokyo     
+            4           Mitsui      20          Nagoya
+          </code>
+        </pre>
+
+        <h3>カラムを指定してデータを追加する方法</h3>
+        <p>書式</p>
+        <pre>
+          <code>
+            INSERT INTO テーブル名(カラム1, カラム2, ....) VALUES(値1, 値2, ....);
+          </code>
+        </pre>
+
+        <p>
+          例文<br>
+          テスト用にテーブルを作成します。
+        </p>
+        <pre>
+          <code>
+            CREATE TABLE testUser2(id INTEGER, name TEXT, age INTEGER, address TEXT DEFAULT 'NO VALUE');
+          </code>
+        </pre>
+        <p>
+          テーブルには３つのカラムがあり、addressカラムにはDEFAULT制約が設定されています。
+          まずは３つのカラム全てに値を指定してデータを追加してみます。
+        </p>
+        <pre>
+          <code>
+            INSERT INTO testUser2(id, name, address) VALUES(1, 'Honda', 'Tokyo');
+          </code>
+        </pre>
+        <p>
+          次に２つのカラムだけに値を指定してデータを追加してみます。
+        </p>
+        <pre>
+          <code>
+            INSERT INTO testUser2(id, name) VALUES(2, 'Okada');
+            INSERT INTO testUser2(id, address) VALUES(3, 'Mori');
+          </code>
+        </pre>
+        <p>
+          データが追加されたので、SELECT分を使ってデータを取得してみます。
+        </p>
+        <pre>
+          <code>
+            SELECT * FROM testUser2;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            id          name        address   
+            ----------  ----------  ----------
+            1           Honda       Tokyo     
+            2           Okada       NO VALUE  
+            3                       Mori      
+          </code>
+        </pre>
+        <p>
+          
+        </p>
+
+        <h3>値を指定せずにデータを追加する方法</h3>
+
 
         <hr class="line-dark">
 
