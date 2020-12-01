@@ -129,13 +129,14 @@
         <h3>テーブル作成</h3>
         <p>
           SQLのCREATE文でテーブルを作成します。<br>
-          新規データベースでこの操作を行った時点で、Nutilus(ファイルマネージャ)にでーたべーすのファイルが表示されます。
+          新規データベースでこの操作を行った時点で、Nutilus(ファイルマネージャ)にデータベースのファイルが表示されます。
         </p>
         <pre>
           <code>
             CREATE TABLE testTable001(id, name);
           </code>
         </pre>
+        
         <h3>テーブルの確認</h3>
         <p>
           テーブルの確認方法は２種類あります。<br>
@@ -172,7 +173,7 @@
         </ul>
         
         <h3>テーブル名の変更</h3>
-        <p>テーブル名を変更するには下記のコマンドを使います。</p>
+        <p>テーブル名を変更するには下記のSQL文を使います。</p>
         <pre>
           <code>
             ALTER TABLE 現在のテーブル名 RENAME TO 新しいテーブル名;
@@ -185,6 +186,99 @@
             ALTER TABLE testTable002 RENAME TO myfriends;
           </code>
         </pre>
+        <p>テーブル名が変更されているかを.tablesコマンドで確認します。</p>
+        <pre>
+          <code>
+            .tables
+
+            myfriends  testTable001
+          </code>
+        </pre>
+
+        <h3>カラムの追加</h3>
+        <p>
+          既につくってあるテーブルに後からカラムを追加することもできます。<br>
+          カラムを追加するには、下記のALTER TABLE文を使います。
+        </p>
+        <pre>
+          <code>
+            ALTER TABLE テーブル名 ADD COLUMN カラム名 [データ型];
+          </code>
+        </pre>
+        <p>
+          追加したカラムはテーブルの末尾に追加されます。<br>
+          また、カラムを追加する際には次の条件を満たしていなければなりません。
+        </p>
+        <ul>
+          <li>PRIMARY KEY や UNIQUE制約は設定できない。</li>
+          <li>DEFAULT制約を設定する時は、CURRENT_TIME/CURRENT_DATE/CARRENT_TIMESTAMPは指定できない。</li>
+          <li>NOT NULL制約を設定する時は、NULL以外のデフォルト値の設定が必要。</li>
+        </ul>
+        <p>現在のテーブルを確認してみます。</p>
+        <pre>
+          <code>
+            .schema
+
+            CREATE TABLE myfriend(id INTEGER PRIMARY KEY, name TEXT NOT NULL);
+            CREATE TABLE testTable001(id, name);
+          </code>
+        </pre>
+        <p>テーブル”myfriends”に新しいカラム”address”を追加してみます。</p>
+        <pre>
+          <code>
+            ALTER TABLE myfriends ADD COLUMN address TEXT;
+          </code>
+        </pre>
+        <p>テーブルを確認すると、新しいカラム”address”が追加されたことが分かります。</p>
+        <pre>
+          <code>
+            .schema
+
+            CREATE TABLE myfriends(id INTEGER PRYMARY KEY, name TEXT NOT NULL, address TEXT);
+            CREATE TABLE testTable001(id, name);
+          </code>
+        </pre>
+
+        <h3>カラムの削除</h3>
+        <p>
+          SQLite3では、カラムを削除するコマンドが無いようです。<br>
+          なので、任意のカラムを削除したい時は次の手順を行う必要があります。
+        </p>
+        <ol>
+          <li>元テーブル（削除対象のカラムが入っているもの）を用意する。</li>
+          <li>元テーブルのコピーを削除対象のカラムを除いて作成する。（必然的にテーブル名が違うものになる）</li>
+          <li>元テーブルを削除する。</li>
+          <li>コピーしたテーブル名を元テーブルの名前と同じものに変更する。</li>
+        </ol>
+
+        <h3>テーブルの削除</h3>
+        <p>テーブルを削除するにはDROP TABLE文を使います。</p>
+        <p>.tablesコマンドで現在作成済みのテーブルを確認します。</p>
+        <pre>
+          <code>
+            .tables
+
+            myfriends  testTable001
+          </code>
+        </pre>
+        <p>テーブル”myfriends”を削除します。</p>
+        <pre>
+          <code>
+            DROP TABLE myfriends;
+          </code>
+        </pre>
+        <p>テーブルを確認してみます。</p>
+        <pre>
+          <code>
+            .tables
+
+            testTable001
+          </code>
+        </pre>
+
+        <hr class="line-dark">
+
+        
 
         <hr class="line-dark">
 
