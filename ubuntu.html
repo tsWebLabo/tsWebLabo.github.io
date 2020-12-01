@@ -314,10 +314,72 @@
         </table>
 
         <hr class="line-dark">
+        
         <h2>ShellScript</h2>
         <p>
-          ShellScriptについての記事を書いていきます
+          ShellScriptは複数のLinuxコマンドをひとつのファイルに記述して実行できるようにしたもの。<br>
+          ターミナルでUbuntuをアップデートするなど、複数のコマンドをルーティンで実行させたい時に有効。
         </p>
+        <h3>ShellScriptのファイルの作成から実行まで</h3>
+        <ul>
+          <li>「****(ファイル名).sh」の形でファイルを作成</li>
+            <pre>
+              <code>
+                touch ****.sh
+              </code>
+            </pre>
+          <li>ファイルにShellScriptを記述</li>
+            <pre>
+              <code>
+                #!/bin/bash
+                sudo apt update;
+              </code>
+            </pre>
+            <p>必ず1行目に<code>#!/bin/bash</code>というシバンと呼ばれる定型文を書く</p>
+          <li>ファイルに実行権限を付与</li>
+            <pre>
+              <code>
+                chmod +x ****.sh
+              </code>
+            </pre>
+          <li>ShellScriptを実行</li>
+          <pre>
+            <code>
+              sh ****.sh
+            </code>
+          </pre>
+        </ul>
+        <h3>ShellScriptの例：Ubuntuアップデート</h3>
+        <p>
+          Ubuntuのアップデートをターミナルで行う時、Linuxコマンドで行うと６つのコマンドを「&&」で繋げて実行するか<br>
+          別々に実行させる必要があり、かつ定期的に同じことをする必要が出てくるためShellScriptにしておくと効率的にアップデートを行えます。<br>
+          このファイルを実行させると、ファイル内に<code>sudo</code>（管理者権限コマンド）があるため、パスワードを尋ねられます。
+        </p>
+        <pre>
+          <code>
+            #!/bin/bash
+
+            # Ubuntu本体とインストールされているソフトウェアのメンテナンス・アップデート
+
+            # 最新のアップデートを確認
+            sudo apt-get update;
+
+            # 確認したアップデートを適用
+            sudo apt-get -y upgrade;
+
+            # ディストリビューションを最新のものに適用
+            sudo apt-get -y dist-upgrade;
+
+            # aptのパッケージキャッシュクリア
+            sudo apt-get clean;
+
+            # 依存関係解決後に使わなくなったパッケージを削除
+            sudo apt-get -y autoremove;
+
+            # 他のパッケージの依存関係を満たすため自動的にインストールされ、不要になったパッケージを削除
+            sudo apt-get -y autoclean;
+          </code>
+        </pre>
       </section>
     <!-- footer -->
     <footer class="footer">
