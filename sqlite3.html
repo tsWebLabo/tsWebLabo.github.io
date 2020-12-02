@@ -642,6 +642,76 @@
         <hr class="line-dark">
 
         <h2 class="text-bright">データの取得（SELECT文）</h2>
+        <p>
+          テーブルの中のどのカラムの値を取得するのかを<code>SELECT</code>の後に記述し、<br>
+          取得するテーブル名を<code>FROM</code>の後に記述します。
+        </p>
+        <p>書式</p>
+        <pre>
+          <code>
+            SELECT カラム名 FROM テーブル名;
+          </code>
+        </pre>
+        <p>
+          テスト用に下記のテーブルを作成しておきます。
+        </p>
+        <pre>
+          <code>
+            CREATE TABLE testUser4 (id INTEGER, name TEXT, address TEXT);
+            INSERT INTO testUser4 VALUES (1, 'Yamada', 'Tokyo');
+            INSERT INTO testUser4 VALUES (2, 'Kumada', 'Osaka');
+            INSERT INTO testUser4 VALUES (3, 'Hoshi', 'Kyoto');
+            INSERT INTO testUser4 VALUES (4, 'Endou', 'Tokyo');
+            INSERT INTO testUser4 VALUES (5, 'Suzuki', 'Osaka');
+          </code>
+        </pre>
+
+        <h3>任意のカラムのデータを取得</h3>
+        <p>任意に複数のカラムの値を取得する時はカンマ(,)で区切ってカラムを指定します。</p>
+        <p>書式</p>
+        <pre>
+          <code>
+            SELECT カラム1, カラム2, .... FROM テーブル名;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT id, name FROM testUser4
+
+            id          name      
+            ----------  ----------
+            1           Yamada    
+            2           Kumada    
+            3           Hoshi     
+            4           Endou     
+            5           Suzuki    
+          </code>
+        </pre>
+
+        <h3>全てのカラムのデータを取得</h3>
+        <p>
+          テーブルに含まれるすべてのカラムの値を取得したい場合は、<br>
+          カラム名の代わりにアスタリスク（*）を記述すると全てのカラムを指定したことと同じ結果になります。
+        </p>
+        <p>書式</p>
+        <pre>
+          <code>
+            SELECT * FROM テーブル名;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT * FROM testUser4;
+
+            id          name        address   
+            ----------  ----------  ----------
+            1           Yamada      Tokyo     
+            2           Kumada      Osaka     
+            3           Hoshi       Kyoto     
+            4           Endou       Tokyo     
+            5           Suzuki      Osaka     
+          </code>
+        </pre>
 
         <hr class="line-dark">
 
