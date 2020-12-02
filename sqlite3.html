@@ -568,6 +568,76 @@
         <hr class="line-dark">
 
         <h2 class="text-bright">データの削除（DELETE文）</h2>
+        <p>
+          テーブルからデータを削除するには、DELETE文を使います。
+        </p>
+        <p>書式</p>
+        <pre>
+          <code>
+            DELETE FROM テーブル名 WHERE 条件式;
+          </code>
+        </pre>
+        <p>
+          まず削除の対象となるデータを条件式を使って指定します。<br>
+          条件式に一致するデータが複数の場合は複数のデータがまとめて削除されることになります。<br>
+          WHERE句を省略してしまった場合はテーブルに含まれる全てのデータが削除されます。
+        </p>
+        <p>
+          下記のテーブルを例にDELETE文を試してみます。
+        </p>
+        <pre>
+          <code>
+            CREATE TABLE testUser3 (id INTEGER, name TEXT, age INTEGER);
+            INSERT INTO testUser3 VALUES (1, 'Yamada', 32);
+            INSERT INTO testUser3 VALUES (2, 'Suzuki', 15);
+            INSERT INTO testUser3 VALUES (3, 'Honda', 18);
+            INSERT INTO testUser3 VALUES (4, 'Endou', 24);
+            INSERT INTO testUser3 VALUES (5, 'Furuta', 19);
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT * FROM testUser3;
+
+            id          name        age       
+            ----------  ----------  ----------
+            1           Yamada      32        
+            2           Suzuki      15        
+            3           Honda       18        
+            4           Endou       24        
+            5           Furuta      19        
+          </code>
+        </pre>
+        <p>ageカラム20より小さいデータを削除します。</p>
+        <pre>
+          <code>
+            DELETE FROM testUser3 WHERE age &lt; 20
+          </code>
+        </pre>
+        <p>実行結果</p>
+        <pre>
+          <code>
+            SELECT * FROM testUser3;
+
+            id          name        age       
+            ----------  ----------  ----------
+            1           Yamada      32        
+            4           Endou       24        
+          </code>
+        </pre>
+        <p>WHERE句を省略して全てのデータを削除してみます。</p>
+        <pre>
+          <code>
+            DELETE FROM testUser3;
+          </code>
+        </pre>
+        <p>実行結果</p>
+        <pre>
+          <code>
+            SELECT * FROM testUser3;
+
+          </code>
+        </pre>
 
         <hr class="line-dark">
 
