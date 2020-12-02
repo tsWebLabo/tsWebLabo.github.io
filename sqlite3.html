@@ -283,7 +283,7 @@
           テーブルにデータを追加するにはINSERT文を使います。<br>
           全てのカラムにデータを追加する方法と、カラムを指定してデータを追加する方法があります。
         </p>
-        <h3>全てのカラムにデータを追加する方法</h3>
+        <h3>全てのカラムに値を指定してデータを追加する方法</h3>
         <p>書式</p>
         <pre>
           <code>
@@ -337,7 +337,7 @@
           </code>
         </pre>
 
-        <h3>カラムを指定してデータを追加する方法</h3>
+        <h3>特定のカラムに値を指定してデータを追加する方法</h3>
         <p>書式</p>
         <pre>
           <code>
@@ -390,11 +390,78 @@
           </code>
         </pre>
         <p>
-          
+          ２つ目のデータを追加した時には、addressカラムの値を指定していなかったのですが、<br>
+          addressカラムにはDEFAULT制約が設定されているためデフォルト値である'no value'が格納されています。
         </p>
+        <p>
+          ３つ目のデータを追加した時には、nameカラムの値を指定していなかったので、デフォルト値であるNULLが格納されています。<br>
+          （NULLは画面上では何も表示されません）
+        </p>
+        <p>
+          尚、データを追加する際に記述するカラムの順番はテーブルで定義されているカラムの順番通りである必要はありません。<br>
+          次の２つのINSERT文は同じ結果となり、エラーにもなりません。
+        </p>
+        <pre>
+          <code>
+            INSERT INTO user(id, name) VALUES(2, 'Ueda');
+            INSERT INTO user(name, id) VALUES('Ueda', 2);
+          </code>
+        </pre>
 
         <h3>値を指定せずにデータを追加する方法</h3>
+        <p>
+          値を指定せずにデータを追加することもできます。<br>
+          この場合、全てのカラムにデフォルト値が格納されます。
+        </p>
+        <p>書式</p>
+        <pre>
+          <code>
+            INSERT INTO テーブル名 DEFAULT VALUES;
+          </code>
+        </pre>
+        <p>先程のテーブル'testUser2'をそのまま利用します。</p>
+        <pre>
+          <code>
+            SELECT * FROM testUser2;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            id          name        address   
+            ----------  ----------  ----------
+            1           Honda       Tokyo     
+            2           Okada       NO VALUE  
+            3                       Mori      
+          </code>
+        </pre>
+        <p>値を指定せずにデータを追加します。</p>
+        <pre>
+          <code>
+            INSERT INTO testUser2 DEFAULT VALUES;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT * FROM testUser2;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            id          name        address   
+            ----------  ----------  ----------
+            1           Honda       Tokyo     
+            2           Okada       NO VALUE  
+            3                       Mori      
+                                    NO VALUE  
+          </code>
+        </pre>
+        <p>
+          追加されたデータは値が指定されていないので、<br>
+          DEFAULT制約がされていないカラム（id, name）にはNULLが格納される。<br>
+          DEFAULT制約が設定されているカラム（address）にはデフォルト値が格納されました。
+        </p>
 
+        <hr class="line-dark">
 
         <hr class="line-dark">
 
