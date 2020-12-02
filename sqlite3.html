@@ -278,7 +278,7 @@
 
         <hr class="line-dark">
 
-        <h2>データの追加（INSERT文）</h2>
+        <h2 class="text-bright">データの追加（INSERT文）</h2>
         <p>
           テーブルにデータを追加するにはINSERT文を使います。<br>
           全てのカラムにデータを追加する方法と、カラムを指定してデータを追加する方法があります。
@@ -462,6 +462,116 @@
         </p>
 
         <hr class="line-dark">
+
+        <h2 class="text-bright">データの更新（UPDATE文）</h2>
+        <p>テーブルに格納されているデータを新しい値に更新するにはUPDATE文を使います。</p>
+        <p>書式</p>
+        <pre>
+          <code>
+            UPDATE テーブル名 SET カラム名1 = 値1, カラム2 = 値2, ... WHERE 条件式;
+          </code>
+        </pre>
+        <p>
+          まず更新の対象となるデータをWHERE句の条件式を使って指定します。<br>
+          条件式に一致するデータが複数の場合、複数のデータがそれぞれ更新されます。<br>
+          ※WHERE句を省略した場合、テーブルに含まれる全てのデータが更新されます
+        </p>
+        <p>
+          次のテーブルを例にUPDATE文がどのようなものか見ていきます。
+        </p>
+        <pre>
+          <code>
+            CREATE TABLE staff (id INTEGER, name TEXT, unit TEXT, flag TEXT);
+            INSERT INTO staff VALUES (1, 'Yamada', 'Sales', 'Yes');
+            INSERT INTO staff VALUES (2, 'Honda', 'Office', 'No');
+            INSERT INTO staff VALUES (3, 'Nakai', 'Office', 'Yes');
+            INSERT INTO staff VALUES (4, 'Suzuki', 'Tech', 'No');
+            INSERT INTO staff VALUES (5, 'Itou', 'Sales', 'No');
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT * FROM staff;
+
+            id          name        unit        flag      
+            ----------  ----------  ----------  ----------
+            1           Yamada      Sales       Yes       
+            2           Honda       Office      No        
+            3           Nakai       Office      Yes       
+            4           Suzuki      Tech        Yes       
+            5           Itou        Sales       No       
+          </code>
+        </pre>
+        <h3>ひとつのデータを更新</h3>
+        <p>idカラムの値が3のデータのnameカラムの値を変更</p>
+        <pre>
+          <code>
+            UPDATE staff SET name = 'Nakajima' WHERE id = 3;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT * FROM staff;
+
+            id          name        unit        flag      
+            ----------  ----------  ----------  ----------
+            1           Yamada      Sales       Yes       
+            2           Honda       Office      No        
+            3           Nakajima    Office      Yes       
+            4           Suzuki      Tech        Yes       
+            5           Itou        Sales       No        
+          </code>
+        </pre>
+
+        <h3>複数のデータを一度に更新する場合</h3>
+        <p>unitカラムの'Offce'という値を'Desk'に変更します。</p>
+        <pre>
+          <code>
+            UPDATE staff SET unit = 'Desk' WHERE unit = 'Office';
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT * FROM staff;
+            
+            id          name        unit        flag      
+            ----------  ----------  ----------  ----------
+            1           Yamada      Sales       Yes       
+            2           Honda       Desk        No        
+            3           Nakajima    Desk        Yes       
+            4           Suzuki      Tech        Yes       
+            5           Itou        Sales       No        
+          </code>
+        </pre>
+
+        <h3>全てのデータを一度に更新する場合</h3>
+        <p>flagカラムの値を'unknown'に変更してみます。</p>
+        <pre>
+          <code>
+            UPDATE staff SET flag = 'unknown';
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT * FROM staff;
+
+            id          name        unit        flag      
+            ----------  ----------  ----------  ----------
+            1           Yamada      Sales       unKnown   
+            2           Honda       Desk        unKnown   
+            3           Nakajima    Desk        unKnown   
+            4           Suzuki      Tech        unKnown   
+            5           Itou        Sales       unKnown   
+          </code>
+        </pre>
+
+        <hr class="line-dark">
+
+        <h2 class="text-bright">データの削除（DELETE文）</h2>
+
+        <hr class="line-dark">
+
+        <h2 class="text-bright">データの取得（SELECT文）</h2>
 
         <hr class="line-dark">
 
