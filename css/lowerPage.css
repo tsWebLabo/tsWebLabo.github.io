@@ -47,6 +47,7 @@ section {
 
 /* code埋め込み部分 */
 pre {
+    width: 60vw;
     background-color: #555;
     border: 1px solid rgba(0, 0, 0, .1);
     box-shadow: rgba(0, 0, 0, .1) -1px 1px 2px inset;
