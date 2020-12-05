@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="t's Web Labo">
+    <meta name="keywords" content="パソコン, プログラミング, Ubuntu, Androidアプリ開発">
+    <meta name="description" content="はじめまして、t's Web Laboの「たむ」と申します。
+    「プログラミングって楽しい」を多くの方と共有したいと思っています。Webサイト作成をはじめとして様々なアプリケーション開発に挑戦します。
+    現状私のスキルは高くはないですが、当サイトやYouTubeライブ配信を通して少しずつ成長していきますので応援して頂けると嬉しいです。">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/tsweblabo.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/lowerPage.css">
+    <title>t's Web Labo</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <div class="navbar-brand">
+        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        t's Web Labo
+      </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../aboutme.html">About me</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="../ubuntu.html">Ubuntu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../androidApp.html">androidアプリ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../sqlite3.html">SQLite3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../vim.html">Vim</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vim
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="vim001.html">インストールと設定</a>
+                <a class="dropdown-item active" href="vim002.html">モード・基本操作</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item disabled" href="#">その他</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <!--jumbotron-->
+        <div class="jumbotron">
+          <h1 class="display-4">Vim</h1>
+          <p class="lead">
+            ターミナル上で使える軽量・高機能テキストエディタ
+          </p>
+          <hr class="my-4">
+          <p>Vimはいざという時に役に立つテキストエディタです。低スペックPCや非常時のエディタとして使い方を覚えていると強い味方になってくれるはず。</p>
+        </div>
+
+        <h2 class="text-bright">モード</h2>
+        <p>
+          Vimの大きな特徴のひとつとして「モード」という機能があります。<br>
+          モードがあることで、初めのうちは混乱する人も多いかと思いますが、<br>
+          モードがあることでキーボード入力のみの環境でも様々な機能を使えるようになっています。
+          ここではよく使う4つのモードを紹介します
+        </p>
+        <table class="table table-striped table-dark">
+          <thead class="text-center">
+            <tr>
+              <th scope="col">モード名</th>
+              <th scope="col">主なモード変換キー</th>
+              <th scope="col">機能</th>
+            </tr>
+          </thead>
+          <tbody class="text-left">
+            <tr>
+              <th scope="row">ノーマルモード</th>
+              <td>ESC</td>
+              <td>
+                Vimを起動したばかりの状態で表示される基本のモード<br>
+                他のモードに移動したい時は、一度ノーマルモードに戻る必要がある。
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">入力モード</th>
+              <td>i, a</td>
+              <td>
+                テキストファイルを編集するためのモード
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">ビジュアルモード</th>
+              <td>v</td>
+              <td>
+                入力された文字列を範囲指定・選択するモード
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">コマンドモード</th>
+              <td>:</td>
+              <td>
+                ファイルの保存やVimの終了などのコマンドを入力するモード
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr class="line-dark">
+        
+        <h2 class="text-brighht">基本操作</h2>
+        <p>基本的な操作については、ターミナルで<code>vimtutor</code>と入力することで、チュートリアルを見ることができます。</p>
+        <h3>Vimの起動と終了</h3>
+        <ul>
+          <li>Vimの起動（ターミナルでの操作）</li>
+            <table class="table table-striped table-dark">
+              <thead class="text-left">
+                <tr>
+                  <th scope="col">動作</th>
+                  <th scope="col">コマンド</th>
+                  <th scope="col">備考</th>
+                </tr>
+              </thead>
+              <tbody class="text-left">
+                <tr>
+                  <th scope="row">ファイルを指定せずにVimを起動</th>
+                  <td><code>vim</code></td>
+                  <td>空のVimが開かれる</td>
+                </tr>
+                <tr>
+                  <th scope="row">ファイルを指定してVimを起動</th>
+                  <td><code>vim ****.txt(任意のファイル)</code></td>
+                  <td>
+                    選択したディレクトリ内のファイルがVim上で開かれる<br>
+                    同じ名前のファイルが存在しない場合はその名前のファイルが保存時に新規作成される。
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <li>Vimの終了（ノーマルモードでの操作）</li>
+            <table class="table table-striped table-dark">
+              <thead class="text-left">
+                <tr>
+                  <th scope="col">動作</th>
+                  <th scope="col">コマンド</th>
+                  <th scope="col">備考</th>
+                </tr>
+              </thead>
+              <tbody class="text-left">
+                <tr>
+                  <th scope="row">Vimの終了</th>
+                  <td><code>:q</code></td>
+                  <td>
+                    Vimを終了する。<br>
+                    保存していないファイルがある場合は終了できない。
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">ファイルを保存して終了</th>
+                  <td><code>:wq</code></td>
+                  <td>
+                    編集したファイルを保存してVimを終了する。<br>
+                    同じ名前のファイルが存在しない場合はその名前のファイルが新規作成される。
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Vimの強制終了</th>
+                  <td><code>:q!</code></td>
+                  <td>
+                    編集したファイルを保存せずにVimを終了する。
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </ul>
+        <h3>カーソルの移動</h3>
+        <p>
+          カーソルキーでもカーソルを任意の方向に動かすことができますが、<br>
+          ノーマルモードでは次のキーでもカーソルを動かすことができます。
+        </p>
+        <table class="table table-striped table-dark" style="width: 30vw;">
+          <thead class="text-left">
+            <tr>
+              <th scope="col">キー</th>
+              <th scope="col">h</th>
+              <th scope="col">j</th>
+              <th scope="col">k</th>
+              <th scope="col">l</th>
+            </tr>
+          </thead>
+          <tbody class="text-left">
+            <tr>
+              <th scope="row">カーソルの動き</th>
+              <td>←</td>
+              <td>↓</td>
+              <td>↑</td>
+              <td>→</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>文字の挿入・追加・削除</h3>
+        <p>ノーマルモードで文字を挿入・追加・削除するには次のキーを入力します。</p>
+        <table class="table table-striped table-dark" style="width: 75vw;">
+          <thead class="text-left">
+            <tr>
+              <th scope="col">動作</th>
+              <th scope="col">キー</th>
+
+            </tr>
+          </thead>
+          <tbody class="text-left">
+            <tr>
+              <th scope="row">文字の挿入（カーソル位置に挿入）</th>
+              <td><code>i</code></td>
+            </tr>
+            <tr>
+              <th scope="row">文字の挿入（カーソル位置の後ろに挿入）</th>
+              <td><code>a</code></td>
+            </tr>
+            <tr>
+              <th scope="row">文字の追加（カーソル位置の行末に挿入）</th>
+              <td><code>A</code></td>
+            </tr>
+            <tr>
+              <th scope="row">文字の削除（カーソル位置の文字を削除）</th>
+              <td><code>x</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    <!-- footer -->
+    <footer class="footer">
+      <p>Copyright &copy; 2016-2020 t's Web Labo</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <!-- my Javascript file -->
+    <script src="../JavaScript/navbar.js"></script>
+  </body>
+</html>
