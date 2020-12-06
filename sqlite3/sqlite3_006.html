@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="t's Web Labo">
+    <meta name="keywords" content="パソコン, プログラミング, Ubuntu, Androidアプリ開発">
+    <meta name="description" content="はじめまして、t's Web Laboの「たむ」と申します。
+    「プログラミングって楽しい」を多くの方と共有したいと思っています。Webサイト作成をはじめとして様々なアプリケーション開発に挑戦します。
+    現状私のスキルは高くはないですが、当サイトやYouTubeライブ配信を通して少しずつ成長していきますので応援して頂けると嬉しいです。">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/tsweblabo.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/lowerPage.css">
+    <title>t's Web Labo</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <div class="navbar-brand">
+        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        t's Web Labo
+      </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../aboutme.html">About me</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="../ubuntu.html">Ubuntu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../androidApp.html">androidアプリ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SQLite3
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="sqlite3_001.html">インストールとコマンドラインツールの起動</a>
+                <a class="dropdown-item" href="sqlite3_002.html">データベースの操作</a>
+                <a class="dropdown-item" href="sqlite3_003.html">テーブルの操作</a>
+                <a class="dropdown-item" href="sqlite3_004.html">データの追加（INSERT文）</a>
+                <a class="dropdown-item" href="sqlite3_005.html">データの更新（UPDATE文）</a>
+                <a class="dropdown-item active" href="sqlite3_006.html">データの削除（DELETE文）</a>
+                <a class="dropdown-item" href="sqlite3_007.html">データの取得（SELECT文）</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item disabled" href="#">その他</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="../vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vim
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item disabled" href="#">その他</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <!--jumbotron-->
+        <div class="jumbotron">
+          <h1 class="display-4">SQLite3</h1>
+          <p class="lead">
+            SQLite3を通して気軽にデータベースとSQL文に触れてみよう！！
+          </p>
+          <hr class="my-4">
+          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        </div>
+        <h2 class="text-bright">データの削除（DELETE文）</h2>
+        <p>
+          テーブルからデータを削除するには、DELETE文を使います。
+        </p>
+        <p>書式</p>
+        <pre>
+          <code>
+            DELETE FROM テーブル名 WHERE 条件式;
+          </code>
+        </pre>
+        <p>
+          まず削除の対象となるデータを条件式を使って指定します。<br>
+          条件式に一致するデータが複数の場合は複数のデータがまとめて削除されることになります。<br>
+          WHERE句を省略してしまった場合はテーブルに含まれる全てのデータが削除されます。
+        </p>
+        <p>
+          下記のテーブルを例にDELETE文を試してみます。
+        </p>
+        <pre>
+          <code>
+            CREATE TABLE testUser3 (id INTEGER, name TEXT, age INTEGER);
+            INSERT INTO testUser3 VALUES (1, 'Yamada', 32);
+            INSERT INTO testUser3 VALUES (2, 'Suzuki', 15);
+            INSERT INTO testUser3 VALUES (3, 'Honda', 18);
+            INSERT INTO testUser3 VALUES (4, 'Endou', 24);
+            INSERT INTO testUser3 VALUES (5, 'Furuta', 19);
+          </code>
+        </pre>
+        <pre>
+          <code>
+            SELECT * FROM testUser3;
+
+            id          name        age       
+            ----------  ----------  ----------
+            1           Yamada      32        
+            2           Suzuki      15        
+            3           Honda       18        
+            4           Endou       24        
+            5           Furuta      19        
+          </code>
+        </pre>
+        <p>ageカラム20より小さいデータを削除します。</p>
+        <pre>
+          <code>
+            DELETE FROM testUser3 WHERE age &lt; 20
+          </code>
+        </pre>
+        <p>実行結果</p>
+        <pre>
+          <code>
+            SELECT * FROM testUser3;
+
+            id          name        age       
+            ----------  ----------  ----------
+            1           Yamada      32        
+            4           Endou       24        
+          </code>
+        </pre>
+        <p>WHERE句を省略して全てのデータを削除してみます。</p>
+        <pre>
+          <code>
+            DELETE FROM testUser3;
+          </code>
+        </pre>
+        <p>実行結果</p>
+        <pre>
+          <code>
+            SELECT * FROM testUser3;
+
+          </code>
+        </pre>
+      </section>
+    <!-- footer -->
+    <footer class="footer">
+      <p>Copyright &copy; 2016-2020 t's Web Labo</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <!-- my Javascript file -->
+    <script src="../JavaScript/navbar.js"></script>
+  </body>
+</html>
