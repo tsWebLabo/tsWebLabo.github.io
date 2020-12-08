@@ -442,6 +442,76 @@
             </code>
           </pre>
         </ul>
+        <h3>自然結合をやってみよう！！</h3>
+        <ul>
+          <li>2つのテーブルを用意します。</li>
+          <pre>
+            <code>
+              // 1つめのテーブル
+              CREATE TABLE staff(id INTEGER, name TEXT, deptid INTEGER);
+              INSERT INTO staff VALUES(1, 'Suzuki', 1);
+              INSERT INTO staff VALUES(2, 'Endou', 3);
+              INSERT INTO staff VALUES(3, 'Katou', 1);
+              INSERT INTO staff VALUES(4, 'Yamada', 2);
+              INSERT INTO staff VALUES(5, 'Takahashi', 4);
+              INSERT INTO staff VALUES(6, 'Honda', 3);
+              
+              SELECT * FROM staff;
+              id          name        deptid    
+              ----------  ----------  ----------
+              1           Suzuki      1         
+              2           Endou       3         
+              3           Katou       1         
+              4           Yamada      2         
+              5           Takahashi   4         
+              6           Honda       3         
+            </code>
+          </pre>
+          <pre>
+            <code>
+              // 2つめのテーブル
+              CREATE TABLE dept(deptid INTEGER, deptname TEXT);
+              INSERT INTO dept VALUES(1, 'Sales');
+              INSERT INTO dept VALUES(2, 'Manage');
+              INSERT INTO dept VALUES(3, 'Dev');
+
+              SELECT * FROM dept;
+              deptid      deptname  
+              ----------  ----------
+              1           Sales     
+              2           Manage    
+              3           Dev       
+            </code>
+          </pre>
+          <li>自然結合をやってみよう！！</li>
+            <li>内部結合</li>
+            <pre>
+              <code>
+                SELECT * FROM staff NATURAL INNER JOIN dept;
+                id          name        deptid      deptname  
+                ----------  ----------  ----------  ----------
+                1           Suzuki      1           Sales     
+                2           Endou       3           Dev       
+                3           Katou       1           Sales     
+                4           Yamada      2           Manage    
+                6           Honda       3           Dev       
+              </code>
+            </pre>
+            <li>外部結合</li>
+            <pre>
+              <code>
+                SELECT * FROM staff NATURAL LEFT OUTER JOIN dept;
+                id          name        deptid      deptname  
+                ----------  ----------  ----------  ----------
+                1           Suzuki      1           Sales     
+                2           Endou       3           Dev       
+                3           Katou       1           Sales     
+                4           Yamada      2           Manage    
+                5           Takahashi   4                     
+                6           Honda       3           Dev       
+              </code>
+            </pre>
+        </ul>
 
         <hr class="line-dark">
 
@@ -460,6 +530,7 @@
             </code>
           </pre>
         </ul>
+
 
       </section>
     <!-- footer -->
