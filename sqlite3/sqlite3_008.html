@@ -100,15 +100,111 @@
             </code>
           </pre>
         </ul>
-        
+        <h3>内部結合をやってみよう！！</h3>
+        <ul>
+          <li>2つのテーブルを用意します。</li>
+          <pre>
+            <code>
+              // 1つめのテーブル
+              CREATE TABLE staff(id INTEGER, name TEXT, depid INTEGER);
+              INSERT INTO staff VALUES(1, 'Suzuki', 1);
+              INSERT INTO staff VALUES(2, 'Endou', 3);
+              INSERT INTO staff VALUES(3, 'Katou', 1);
+              INSERT INTO staff VALUES(4, 'Yamada', 2);
+              INSERT INTO staff VALUES(5, 'Takahashi', 4);
+              INSERT INTO staff VALUES(6, 'Honda', 3);
 
+              SELECT * FROM staff;
+              id          name        deptid    
+              ----------  ----------  ----------
+              1           Suzuki      1         
+              2           Endou       3         
+              3           Katou       1         
+              4           Yamada      2         
+              5           Takahashi   4         
+              6           Honda       3         
+            </code>
+          </pre>
+          <pre>
+            <code>
+              // 2つめのテーブル
+              CREATE TABLE dept(id INTEGER, name TEXT);
+              INSERT INTO dept VALUES(1, 'Sales');
+              INSERT INTO dept VALUES(2, 'Manage');
+              INSERT INTO dept VALUES(3, 'Dev');
+
+              SELECT * FROM dept;
+              id          name      
+              ----------  ----------
+              1           Sales     
+              2           Manage    
+              3           Dev       
+            </code>
+          </pre>
+          <li>内部結合をやってみる</li>
+          <pre>
+            <code>
+              SELECT * FROM staff INNER JOIN dept ON staff.deptid = dept.id
+              id          name        deptid      id          name      
+              ----------  ----------  ----------  ----------  ----------
+              1           Suzuki      1           1           Sales     
+              2           Endou       3           3           Dev       
+              3           Katou       1           1           Sales     
+              4           Yamada      2           2           Manage    
+              6           Honda       3           3           Dev       
+            </code>
+          </pre>
+          <li>staffテーブルとdeptテーブルを逆にして内部結合</li>
+          <pre>
+            <code>
+              SELCT * FROM dept INNER JOIN staff ON dept.id = staff.deptid;
+              id          name        id          name        deptid    
+              ----------  ----------  ----------  ----------  ----------
+              1           Sales       1           Suzuki      1         
+              1           Sales       3           Katou       1         
+              2           Manage      4           Yamada      2         
+              3           Dev         2           Endou       3         
+              3           Dev         6           Honda       3         
+            </code>
+          </pre>
+          <li>取得するデータのカラムを指定する</li>
+          <pre>
+            <code>
+              SELECT staff.id, staff.name, dept.name FROM staff INNER JOIN dept ON staff.deptid = dept.id;
+              id          name        name      
+              ----------  ----------  ----------
+              1           Suzuki      Sales     
+              2           Endou       Dev       
+              3           Katou       Sales     
+              4           Yamada      Manage    
+              6           Honda       Dev       
+            </code>
+          </pre>
+          <li>カラムを指定する時の注意事項</li>
+          <p>
+            以下の条件を満たしている場合、「テーブル名.」の部分を省略して「カラム名」のみで指定することもできます。
+            <ul>
+              <li>どちらかのテーブルにしか含まれていないこと</li>
+              <li>テーブル名を省略してもどちらのテーブルのカラムかがわかる場合</li>
+            </ul>
+            ２つのテーブルに同じカラム名があるのに「テーブル名」を省略した場合、次のようなエラーが出ます。
+          </p>
+          <pre>
+            <code>
+              SELECT staff.id, name, deptid, dept.name FROM staff INNER JOIN dept ON staff.deptid = dept.id;
+              Error: ambiguous column name: name
+            </code>
+          </pre>
+        </ul>
 
         <hr class="line-dark">
 
         <h2 class="text-bright">外部結合（OUTER JOIN句）</h2>
         <h3>外部結合とは</h3>
         <p>
-          2つのテーブルを結合してデータを取得する方法の中で、指定したそれぞれのテーブルのカラムの値が一致するデータだけでなくどちらかのテーブルにだけデータがある場合も合わせて取得する方法。
+          2つのテーブルを結合してデータを取得する方法の中で、指定したそれぞれのテーブルのカラムの値が一致するデータだけでなく<br>
+          どちらかのテーブルにだけデータがある場合も合わせて取得する方法。<br>
+          このため内部結合のときと違い、<code>FROM</code>の後のテーブル名を入れ替えると結果が異なります。
         </p>   
         <h3>SQLite3での外部結合の種類</h3>
         <p>
@@ -131,7 +227,104 @@
             </code>
           </pre>
         </ul>
+        <h3>外部結合をやってみよう！！</h3>
+        <ul>
+          <li>2つのテーブルを用意します。</li>
+          <pre>
+            <code>
+              // 1つめのテーブル
+              CREATE TABLE staff(id INTEGER, name TEXT, depid INTEGER);
+              INSERT INTO staff VALUES(1, 'Suzuki', 1);
+              INSERT INTO staff VALUES(2, 'Endou', 3);
+              INSERT INTO staff VALUES(3, 'Katou', 1);
+              INSERT INTO staff VALUES(4, 'Yamada', 2);
+              INSERT INTO staff VALUES(5, 'Takahashi', 4);
+              INSERT INTO staff VALUES(6, 'Honda', 3);
 
+              SELECT * FROM staff;
+              id          name        deptid    
+              ----------  ----------  ----------
+              1           Suzuki      1         
+              2           Endou       3         
+              3           Katou       1         
+              4           Yamada      2         
+              5           Takahashi   4         
+              6           Honda       3         
+            </code>
+          </pre>
+          <pre>
+            <code>
+              // 2つめのテーブル
+              CREATE TABLE dept(id INTEGER, name TEXT);
+              INSERT INTO dept VALUES(1, 'Sales');
+              INSERT INTO dept VALUES(2, 'Manage');
+              INSERT INTO dept VALUES(3, 'Dev');
+
+              SELECT * FROM dept;
+              id          name      
+              ----------  ----------
+              1           Sales     
+              2           Manage    
+              3           Dev       
+            </code>
+          </pre>
+          <li>外部結合をやってみる</li>
+          <pre>
+            <code>
+              SELECT * FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
+              id          name        deptid      id          name      
+              ----------  ----------  ----------  ----------  ----------
+              1           Suzuki      1           1           Sales     
+              2           Endou       3           3           Dev       
+              3           Katou       1           1           Sales     
+              4           Yamada      2           2           Manage    
+              5           Takahashi   4                                 
+              6           Honda       3           3           Dev       
+            </code>
+          </pre>
+          <li>staffテーブルとdeptテーブルを逆にして外部結合</li>
+          <pre>
+            <code>
+              SELECT * FROM dept LEFT OUTER JOIN staff ON dept.id = staff.deptid;
+              id          name        id          name        deptid    
+              ----------  ----------  ----------  ----------  ----------
+              1           Sales       1           Suzuki      1         
+              1           Sales       3           Katou       1         
+              2           Manage      4           Yamada      2         
+              3           Dev         2           Endou       3         
+              3           Dev         6           Honda       3         
+            </code>
+          </pre>
+          <li>取得するデータのカラムを指定する</li>
+          <pre>
+            <code>
+              SELECT staff.id, staff.name, dept.name FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
+              id          name        name      
+              ----------  ----------  ----------
+              1           Suzuki      Sales     
+              2           Endou       Dev       
+              3           Katou       Sales     
+              4           Yamada      Manage    
+              5           Takahashi             
+              6           Honda       Dev       
+            </code>
+          </pre>
+          <li>カラムを指定する時の注意事項</li>
+          <p>
+            以下の条件を満たしている場合、「テーブル名.」の部分を省略して「カラム名」のみで指定することもできます。
+            <ul>
+              <li>どちらかのテーブルにしか含まれていないこと</li>
+              <li>テーブル名を省略してもどちらのテーブルのカラムかがわかる場合</li>
+            </ul>
+            ２つのテーブルに同じカラム名があるのに「テーブル名」を省略した場合、次のようなエラーが出ます。
+          </p>
+          <pre>
+            <code>
+              SELECT staff.id, name, deptid, dept.name FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
+              Error: ambiguous column name: name
+            </code>
+          </pre>
+        </ul>
 
         <hr class="line-dark">
 
