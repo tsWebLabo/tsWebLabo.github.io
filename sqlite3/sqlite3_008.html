@@ -348,6 +348,76 @@
             </code>
           </pre>
         </ul>
+        <h3>交差結合をやってみよう！！</h3>
+        <ul>
+          <li>2つのテーブルを用意する</li>
+          <pre>
+            <code>
+              //1つめのテーブル
+              CREATE TABLE product(id INTEGER, name TEXT);
+              INSERT INTO product VALUES(1, 'Desk');
+              INSERT INTO product VALUES(2, 'Light');
+              INSERT INTO product VALUES(3, 'Chair');
+              
+              SELECT * FROM product;
+              id          name      
+              ----------  ----------
+              1           Desk      
+              2           Light     
+              3           Chair     
+            </code>
+          </pre>
+          <pre>
+            <code>
+              // 2つめのテーブル
+              CREATE TABLE color(id INTEGER, name TEXT);
+              INSERT INTO color VALUES(1, 'Red');
+              INSERT INTO color VALUES(2, 'Blue');
+              INSERT INTO color VALUES(3, 'White');
+              
+              SELECT * FROM color;
+              id          name      
+              ----------  ----------
+              1           Red       
+              2           Blue      
+              3           White     
+            </code>
+          </pre>
+          <li>交差結合をやってみる</li>
+          <pre>
+            <code>
+              SELECT * FROM product CROSS JOIN color;
+              id          name        id          name      
+              ----------  ----------  ----------  ----------
+              1           Desk        1           Red       
+              1           Desk        2           Blue      
+              1           Desk        3           White     
+              2           Light       1           Red       
+              2           Light       2           Blue      
+              2           Light       3           White     
+              3           Chair       1           Red       
+              3           Chair       2           Blue      
+              3           Chair       3           White     
+            </code>
+          </pre>
+          <li>取得するデータのカラムを指定する</li>
+          <pre>
+            <code>
+              SELECT product.id, product.name, color.name FROM product CROSS JOIN color;
+              id          name        name      
+              ----------  ----------  ----------
+              1           Desk        Red       
+              1           Desk        Blue      
+              1           Desk        White     
+              2           Light       Red       
+              2           Light       Blue      
+              2           Light       White     
+              3           Chair       Red       
+              3           Chair       Blue      
+              3           Chair       White     
+            </code>
+          </pre>
+        </ul>
 
         <hr class="line-dark">
 
