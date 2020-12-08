@@ -483,7 +483,8 @@
               3           Dev       
             </code>
           </pre>
-          <li>自然結合をやってみよう！！</li>
+          <li>自然結合をやってみる</li>
+          <ul>
             <li>内部結合</li>
             <pre>
               <code>
@@ -511,6 +512,7 @@
                 6           Honda       3           Dev       
               </code>
             </pre>
+          </ul>
         </ul>
 
         <hr class="line-dark">
@@ -530,8 +532,57 @@
             </code>
           </pre>
         </ul>
+        <h3>自己結合をやってみよう！！</h3>
+        <ul>
+          <li>1つのテーブルを用意します。</li>
+          <pre>
+            <code>
+              CREATE TABLE staff(id INTEGER, name TEXT, bossid INTEGER);
+              INSERT INTO staff VALUES(1, 'Yamada', 3);
+              INSERT INTO staff VALUES(2, 'Itou', 4);
+              INSERT INTO staff VALUES(3, 'Suzuki', 5);
+              INSERT INTO staff VALUES(4, 'Ueda', 3);
+              INSERT INTO staff VALUES(5, 'Kuroda', 0);
 
-
+              SELECT * staff;
+              id          name        bossid    
+              ----------  ----------  ----------
+              1           Yamada      3         
+              2           Itou        4         
+              3           Suzuki      5         
+              4           Ueda        3         
+              5           Kuroda      0         
+            </code>
+          </pre>
+          <li>自己結合をやってみる</li>
+          <ul>
+            <li>内部結合</li>
+            <pre>
+              <code>
+                SELECT person.id, person.name, boss.name FROM staff person INNER JOIN staff boss ON person.bossid = boss.id;
+                id          name        name      
+                ----------  ----------  ----------
+                1           Yamada      Suzuki    
+                2           Itou        Ueda      
+                3           Suzuki      Kuroda    
+                4           Ueda        Suzuki  
+              </code>
+            </pre>
+            <li>外部結合</li>
+            <pre>
+              <code>
+                SELECT person.id, person.name, boss.name FROM staff person LEFT OUTER JOIN staff boss ON person.bossid = boss.id;
+                id          name        name      
+                ----------  ----------  ----------
+                1           Yamada      Suzuki    
+                2           Itou        Ueda      
+                3           Suzuki      Kuroda    
+                4           Ueda        Suzuki    
+                5           Kuroda                
+              </code>
+            </pre>
+          </ul>
+        </ul>
       </section>
     <!-- footer -->
     <footer class="footer">
