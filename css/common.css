@@ -67,7 +67,8 @@ a:hover {
 
 .btn-ghost
 .btn-default {
-    color: #777;
+    color: #eee;
+    border: #eee;
 }
 
 .btn-ghost
@@ -84,4 +85,8 @@ a:hover {
 .btn-ghost
 .btn-info {
     color: #5bc0de;
+}
+
+.btn-outline-secondary {
+    background-color: transparent;
 }
