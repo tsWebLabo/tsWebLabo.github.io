@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="t's Web Labo">
+    <meta name="keywords" content="パソコン, プログラミング, Ubuntu, Androidアプリ開発">
+    <meta name="description" content="はじめまして、t's Web Laboの「たむ」と申します。
+    「プログラミングって楽しい」を多くの方と共有したいと思っています。Webサイト作成をはじめとして様々なアプリケーション開発に挑戦します。
+    現状私のスキルは高くはないですが、当サイトやYouTubeライブ配信を通して少しずつ成長していきますので応援して頂けると嬉しいです。">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/tsweblabo.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/lowerPage.css">
+    <title>t's Web Labo</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <div class="navbar-brand">
+        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        t's Web Labo
+    </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../aboutme.html">About me</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="ubuntu001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ubuntu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="ubuntu001.html">Ubuntuってなに？</a>
+                <a class="dropdown-item" href="ubuntu002.html">Linuxコマンド</a>
+                <a class="dropdown-item active" href="ubuntu003.html">ShellScript</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../androidApp.html">androidアプリ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SQLite3
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">インストールとコマンドラインツールの起動</a>
+                <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="../vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vim
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <!--jumbotron-->
+        <div class="jumbotron">
+          <h1 class="display-4">ユーザーを育ててくれるOS「Ubuntu」</h1>
+          <p class="lead">Ubuntuをより楽しく便利に使う方法を発信します</p>
+          <hr class="my-4">
+          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        </div>        
+        <h2>ShellScript</h2>
+        <p>
+          ShellScriptは複数のLinuxコマンドをひとつのファイルに記述して実行できるようにしたもの。<br>
+          ターミナルでUbuntuをアップデートするなど、複数のコマンドをルーティンで実行させたい時に有効。
+        </p>
+        <h3>ShellScriptのファイルの作成から実行まで</h3>
+        <ul>
+          <li>「****(ファイル名).sh」の形でファイルを作成</li>
+            <pre>
+              <code>
+                touch ****.sh
+              </code>
+            </pre>
+          <li>ファイルにShellScriptを記述</li>
+            <pre>
+              <code>
+                #!/bin/bash
+                sudo apt update;
+              </code>
+            </pre>
+            <p>必ず1行目に<code>#!/bin/bash</code>というシバンと呼ばれる定型文を書く</p>
+          <li>ファイルに実行権限を付与</li>
+            <pre>
+              <code>
+                chmod +x ****.sh
+              </code>
+            </pre>
+          <li>ShellScriptを実行</li>
+          <pre>
+            <code>
+              sh ****.sh
+            </code>
+          </pre>
+        </ul>
+        <h3>ShellScriptの例：Ubuntuアップデート</h3>
+        <p>
+          Ubuntuのアップデートをターミナルで行う時、Linuxコマンドで行うと６つのコマンドを「&&」で繋げて実行するか<br>
+          別々に実行させる必要があり、かつ定期的に同じことをする必要が出てくるためShellScriptにしておくと効率的にアップデートを行えます。<br>
+          このファイルを実行させると、ファイル内に<code>sudo</code>（管理者権限コマンド）があるため、パスワードを尋ねられます。
+        </p>
+        <pre>
+          <code>
+            #!/bin/bash
+
+            # Ubuntu本体とインストールされているソフトウェアのメンテナンス・アップデート
+
+            # 最新のアップデートを確認
+            sudo apt-get update;
+
+            # 確認したアップデートを適用
+            sudo apt-get -y upgrade;
+
+            # ディストリビューションを最新のものに適用
+            sudo apt-get -y dist-upgrade;
+
+            # aptのパッケージキャッシュクリア
+            sudo apt-get clean;
+
+            # 依存関係解決後に使わなくなったパッケージを削除
+            sudo apt-get -y autoremove;
+
+            # 他のパッケージの依存関係を満たすため自動的にインストールされ、不要になったパッケージを削除
+            sudo apt-get -y autoclean;
+          </code>
+        </pre>
+      </section>
+    <!-- footer -->
+    <footer class="footer">
+      <p>Copyright &copy; 2016-2020 t's Web Labo</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <!-- my Javascript file -->
+    <script src="../JavaScript/navbar.js"></script>
+  </body>
+</html>
