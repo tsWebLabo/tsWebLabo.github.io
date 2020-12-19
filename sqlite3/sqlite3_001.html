@@ -64,7 +64,7 @@
                 SQLite3
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item active" href="sqlite3_001.html">インストールとコマンドラインツールの起動</a>
+                <a class="dropdown-item active" href="sqlite3_001.html">SQLite3とは</a>
                 <a class="dropdown-item" href="sqlite3_002.html">データベースの操作</a>
                 <a class="dropdown-item" href="sqlite3_003.html">テーブルの操作</a>
                 <div class="dropdown-divider"></div>
@@ -83,8 +83,6 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
                 <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item disabled" href="#">その他</a>
               </div>
             </li>
           </ul>
@@ -100,13 +98,22 @@
           </p>
           <hr class="my-4">
           <p class="lead">
-            Ubuntuでのインストールとコマンドラインツールの起動について紹介します。
+            SQLite3について紹介します。
           </p>
         </div>
         <h2 class="text-bright">SQLite3とは</h2>
         <p>
-          
+          SQLite3は組み込み型のデータベースといわれ、他のデータベースのようにサーバーを用意する必要がありません。<br>
+          サーバーを使うこと無くデータベースに触れることができるので、SQLの学習や気軽にデータベースアプリをつくってみたいと言う時におすすめです。
         </p>
+        <p>
+          公式ページもありますので見てみてはいかがでしょうか。
+        </p>
+        <ul>
+          <li><a href="https://www.sqlite.org/index.html" target="blank">SQLite3公式ページはこちら</a></li>
+        </ul>
+        
+        <hr class="line-dark">
         
         <h2 class="text-bright">SQLite3のインストール</h2>
         <p>ターミナルで以下のコマンド入力することでSQLite3のインストールを行えます</p>
@@ -115,6 +122,9 @@
             sudo apt install sqlite3
           </code>
         </pre>
+
+        <hr class="line-dark">
+
         <h2 class="text-bright">コマンドラインツールの起動</h2>
         <p>コマンドラインツールを使うことで、SQLite3を直接、対話的に使うことができます。</p>
         <pre>
