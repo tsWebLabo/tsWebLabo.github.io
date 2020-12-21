@@ -100,7 +100,134 @@
           </p>
         </div>
         <h2>Basic-Tips</h2>
+        <h3>インストールからHello World!!へ</h3>
+        <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <h5 class="mb-0">
+                <a class="text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+                  UbuntuでのAndroid Studioインストールと設定
+                </a>
+              </h5>
+            </div><!-- /.card-header -->
+            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  UbuntuでAndroidStudioを使う際、アプリのテストでエミュレータを使います。<br>
+                  そのためソフトウェアのインストールの他にいくつか設定が必要になります。<br>
+                  エミュレータを使わず実機テストのみでAndroidStudioを使う場合は必要ありません。
+                </p>
+                <ol>
+                  <li>BIOSの設定で仮想マシンの使用を許可する</li>
+                    <p>PC起動時に[F2]や[Delete]等のキーを押すことでBIOS設定画面に入ることができます。</p>
+                    <p>
+                      注意！！：BIOSの設定を不用意に変えてしまうのは非常に危険です。<br>
+                      僕の動画やWebサイト以外の情報も取り入れて自己責任で行ってください。
+                    </p>
+                    <ul>
+                      <li>Advanced -> CPU Configuration -> Execute Disable Bit -> "Enabled"</li>
+                      <li>Advanced -> CPU Configuration -> Intel(R) VirtualizationTechnology -> "Enabled"</li>
+                    </ul>
+                  <li>仮想マシンKVMをインストールして使えるようにする</li>
+                    <ul>
+                      <li>UbuntuにKVMをインストール</li>
+                      <pre>
+                        <code>
+                          sudo apt install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+                        </code>
+                      </pre>
+                      <li>一般ユーザーをKVMグループに所属させる</li>
+                        <ul>
+                          <li>KVMの所有者を確認する</li>
+                          <pre>
+                            <code>
+                              ls -al /dev/kvm
+                            </code>
+                          </pre>
+                          <li>kvmグループに属しているユーザーを確認する</li>
+                          <pre>
+                            <code>
+                              grep kvm /etc/group
+                            </code>
+                          </pre>
+                          <li>kvmグループに自分の使っているユーザーを追加する</li>
+                          <pre>
+                            <code>
+                              sudo adduser $USER kvm
+                            </code>
+                          </pre>
+                        </ul>
+                    </ul>
+                </ol>
+              </div><!-- /.card-body -->
+            </div><!-- /.collapse -->
+          </div><!-- /.card -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo">
+              <h5 class="mb-0">
+                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
+                  Hello World!!
+                </a>
+              </h5>
+            </div><!-- /.card-header -->
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Android Studioを起動して、Hello World!!までの流れ
+                </p>
+              </div><!-- /.card-body -->
+            </div><!-- /.collapse -->
+          </div><!-- /.card -->
+        </div><!-- /#accordion -->
         
+        <hr class="line-dark">
+
+        <h3>基本的なオブジェクトの表示と機能</h3>
+        <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="card">
+            <div class="card-header" role="tab" id="headingThree">
+              <h5 class="mb-0">
+                <a class="text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
+                  アイテム1
+                </a>
+              </h5>
+            </div><!-- /.card-header -->
+            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                アイテム1のコンテンツ
+              </div><!-- /.card-body -->
+            </div><!-- /.collapse -->
+          </div><!-- /.card -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingFour">
+              <h5 class="mb-0">
+                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseFour" role="button" aria-expanded="false" aria-controls="collapseFour">
+                  アイテム2
+                </a>
+              </h5>
+            </div><!-- /.card-header -->
+            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                アイテム2のコンテンツ
+              </div><!-- /.card-body -->
+            </div><!-- /.collapse -->
+          </div><!-- /.card -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingFive">
+              <h5 class="mb-0">
+                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="false" aria-controls="collapseFive">
+                  アイテム3
+                </a>
+              </h5>
+            </div><!-- /.card-header -->
+            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                アイテム3のコンテンツ
+              </div><!-- /.card-body -->
+            </div><!-- /.collapse -->
+          </div><!-- /.card -->
+        </div><!-- /#accordion -->
+
       </section>
     <!-- footer -->
     <footer class="footer">

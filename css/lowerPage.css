@@ -32,26 +32,11 @@ section {
     margin-left: 10rem;
 }
 
-/* card */
-.card-title {
-    color: #333;    
-}
-.card-text {
+/* accordion */
+.card-body {
     color: #333;
 }
 
-.card-header-dark {
-    background-color: #444;
-}
-
-.card-header-dark .btn {
-    text-decoration: none;
-    color: #eee;
-}
-
-.card-body-dark {
-    background-color: #222;
-}
 
 /* code埋め込み部分 */
 pre {

@@ -46,10 +46,12 @@ a:hover {
 }
 
 .text-dark {
+    color: #333;
     text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
 }
 
 .text-bright {
+    color: #eee;
     text-shadow:1px -1px 0 rgba(0, 0, 0, 1);
 }
 
