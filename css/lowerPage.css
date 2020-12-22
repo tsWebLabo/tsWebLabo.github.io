@@ -37,6 +37,13 @@ section {
     color: #333;
 }
 
+/* modal */
+.modal-dialog-fluid {
+    max-width: inherit;
+    width: 50vw;
+    
+}
+
 
 /* code埋め込み部分 */
 pre {

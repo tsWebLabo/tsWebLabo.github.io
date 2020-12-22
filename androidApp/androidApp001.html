@@ -99,18 +99,19 @@
             ひとつひとつは簡単なものですが組み合わせることで様々な可能性を見いだせます。
           </p>
         </div>
-        <h2>Basic-Tips</h2>
-        <h3>インストールからHello World!!へ</h3>
+        <h2 class="text-bright">Basic-Tips</h2>
+        <!-- accordion -->
         <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+          <!-- contents01 -->
           <div class="card">
-            <div class="card-header" role="tab" id="headingOne">
+            <div class="card-header" role="tab" id="heading001">
               <h5 class="mb-0">
-                <a class="text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+                <a class="text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapse001" role="button" aria-expanded="true" aria-controls="collapse001">
                   UbuntuでのAndroid Studioインストールと設定
                 </a>
               </h5>
             </div><!-- /.card-header -->
-            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+            <div id="collapse001" class="collapse show" role="tabpanel" aria-labelledby="heading001" data-parent="#accordion">
               <div class="card-body">
                 <p>
                   UbuntuでAndroidStudioを使う際、アプリのテストでエミュレータを使います。<br>
@@ -162,67 +163,189 @@
               </div><!-- /.card-body -->
             </div><!-- /.collapse -->
           </div><!-- /.card -->
+          <!-- contents02 -->
           <div class="card">
-            <div class="card-header" role="tab" id="headingTwo">
+            <div class="card-header" role="tab" id="heading002">
               <h5 class="mb-0">
-                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
-                  Hello World!!
+                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapse002" role="button" aria-expanded="false" aria-controls="collapse002">
+                  Android Studioの起動からHello World!!へ
                 </a>
               </h5>
             </div><!-- /.card-header -->
-            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div id="collapse002" class="collapse" role="tabpanel" aria-labelledby="heading002" data-parent="#accordion">
+              <div class="card-body">
+                <div class="media">
+                  <!-- モーダル切り替えボタンの設定 -->
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal01">
+                  <img src="images/androidstudio001.png" width="300px" alt="メディアの画像">
+                </button>
+                  <div class="media-body">
+                    <h5 class="mt-0">メディアのヘッダ</h5>
+                    メディアのコンテンツ...
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
+                <!-- モーダルの設定 -->
+                <div class="modal fade" id="exampleModal01" tabindex="-1" aria-labelledby="exampleModalLabel">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-fluid">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/androidstudio001.png" alt="メディアの画像">
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="media">
+                  <!-- モーダル切り替えボタンの設定 -->
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal02">
+                  <img src="images/androidstudio002.png" width="300px" alt="メディアの画像">
+                </button>
+                  <div class="media-body">
+                    <h5 class="mt-0">メディアのヘッダ</h5>
+                    メディアのコンテンツ...
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
+                <!-- モーダルの設定 -->
+                <div class="modal fade" id="exampleModal02" tabindex="-1" aria-labelledby="exampleModalLabel">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-fluid">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/androidstudio002.png" alt="メディアの画像">
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="media">
+                  <!-- モーダル切り替えボタンの設定 -->
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal03">
+                  <img src="images/androidstudio003.png" width="300px" alt="メディアの画像">
+                </button>
+                  <div class="media-body">
+                    <h5 class="mt-0">メディアのヘッダ</h5>
+                    メディアのコンテンツ...
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
+                <!-- モーダルの設定 -->
+                <div class="modal fade" id="exampleModal03" tabindex="-1" aria-labelledby="exampleModalLabel">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-fluid">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/androidstudio003.png" alt="メディアの画像">
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="media">
+                  <!-- モーダル切り替えボタンの設定 -->
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal04">
+                  <img src="images/androidstudio004.png" width="300px" alt="メディアの画像">
+                </button>
+                  <div class="media-body">
+                    <h5 class="mt-0">メディアのヘッダ</h5>
+                    メディアのコンテンツ...
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
+                <!-- モーダルの設定 -->
+                <div class="modal fade" id="exampleModal04" tabindex="-1" aria-labelledby="exampleModalLabel">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-fluid">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/androidstudio004.png" alt="メディアの画像">
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="media">
+                  <!-- モーダル切り替えボタンの設定 -->
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal05">
+                  <img src="images/androidstudio005.png" width="300px" alt="メディアの画像">
+                </button>
+                  <div class="media-body">
+                    <h5 class="mt-0">メディアのヘッダ</h5>
+                    メディアのコンテンツ...
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
+                <!-- モーダルの設定 -->
+                <div class="modal fade" id="exampleModal05" tabindex="-1" aria-labelledby="exampleModalLabel">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-fluid">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/androidstudio005.png" alt="メディアの画像">
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                
+
+              </div><!-- /.card-body -->
+            </div><!-- /.collapse -->
+          </div><!-- /.card -->
+          <!-- contents03 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="heading003">
+              <h5 class="mb-0">
+                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapse003" role="button" aria-expanded="false" aria-controls="collapse003">
+                  SAMPLE03
+                </a>
+              </h5>
+            </div><!-- /.card-header -->
+            <div id="collapse003" class="collapse" role="tabpanel" aria-labelledby="heading003" data-parent="#accordion">
               <div class="card-body">
                 <p>
-                  Android Studioを起動して、Hello World!!までの流れ
+                  CONTENTS03
                 </p>
               </div><!-- /.card-body -->
             </div><!-- /.collapse -->
           </div><!-- /.card -->
-        </div><!-- /#accordion -->
-        
-        <hr class="line-dark">
-
-        <h3>基本的なオブジェクトの表示と機能</h3>
-        <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+          <!-- contents04 -->
           <div class="card">
-            <div class="card-header" role="tab" id="headingThree">
+            <div class="card-header" role="tab" id="heading004">
               <h5 class="mb-0">
-                <a class="text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
-                  アイテム1
+                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapse004" role="button" aria-expanded="false" aria-controls="collapse004">
+                  SAMPLE04
                 </a>
               </h5>
             </div><!-- /.card-header -->
-            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+            <div id="collapse004" class="collapse" role="tabpanel" aria-labelledby="heading004" data-parent="#accordion">
               <div class="card-body">
-                アイテム1のコンテンツ
+                <p>
+                  CONTENTS04
+                </p>
               </div><!-- /.card-body -->
             </div><!-- /.collapse -->
           </div><!-- /.card -->
+          <!-- contents05 -->
           <div class="card">
-            <div class="card-header" role="tab" id="headingFour">
+            <div class="card-header" role="tab" id="heading005">
               <h5 class="mb-0">
-                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseFour" role="button" aria-expanded="false" aria-controls="collapseFour">
-                  アイテム2
+                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapse005" role="button" aria-expanded="false" aria-controls="collapse005">
+                  SAMPLE05
                 </a>
               </h5>
             </div><!-- /.card-header -->
-            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+            <div id="collapse005" class="collapse" role="tabpanel" aria-labelledby="heading005" data-parent="#accordion">
               <div class="card-body">
-                アイテム2のコンテンツ
-              </div><!-- /.card-body -->
-            </div><!-- /.collapse -->
-          </div><!-- /.card -->
-          <div class="card">
-            <div class="card-header" role="tab" id="headingFive">
-              <h5 class="mb-0">
-                <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="false" aria-controls="collapseFive">
-                  アイテム3
-                </a>
-              </h5>
-            </div><!-- /.card-header -->
-            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
-              <div class="card-body">
-                アイテム3のコンテンツ
+                <p>
+                  CONTENTS05
+                </p>
               </div><!-- /.card-body -->
             </div><!-- /.collapse -->
           </div><!-- /.card -->
