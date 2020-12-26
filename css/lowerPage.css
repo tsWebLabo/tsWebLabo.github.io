@@ -51,6 +51,24 @@ pre code {
     color: #eee;
 }
 
+/* media */
+.imageHorizontal {
+    width: 50vw;
+}
+
+.imageVertical {
+    width: 20vw;
+}
+
+.media-body {
+    margin-left: 1rem;
+}
+
+/* image縮小 */
+.img_shrinked {
+    width: 70vw;
+}
+
 /* footer */
 .footer {
     background-color: #333;
