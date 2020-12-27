@@ -28,6 +28,10 @@
   color: #16FFCE;
 }
 
+.btn {
+  margin: 0.3rem;
+}
+
 /* footer */
 .footer {
   background-color: #333;
