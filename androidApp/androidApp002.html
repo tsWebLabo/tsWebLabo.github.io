@@ -162,9 +162,13 @@
           </pre>
           <div class="media-body">
             <h5 class="mt-0">activity_main.xmlの解説</h5>
-            <p>
-              activity_main.xmlの解説
-            </p>
+            <ul>
+              <li>LinearLayout</li>
+                <p>
+                  LinearLayoutは、その中に配置されるオブジェクトを縦並びもしくは横並びに配置するレイアウトです。<br>
+                  今回は画面全体のオブジェクトを縦並びに配置したかったので、<code>android:orientation="vertical"</code>の指定をしています。
+                </p>
+            </ul>
           </div><!-- /.media-body -->
         </div><!-- /.media -->
 
@@ -683,7 +687,7 @@
       </section>
     <!-- footer -->
     <footer class="footer">
-      <p>Copyright &copy; 2016-2020 t's Web Labo</p>
+      <div id="copyright"></div>
     </footer>
 
     <!-- Optional JavaScript -->
@@ -694,5 +698,6 @@
     
     <!-- my Javascript file -->
     <script src="../JavaScript/navbar.js"></script>
+    <script src="../JavaScript/copyright.js"></script>
   </body>
 </html>

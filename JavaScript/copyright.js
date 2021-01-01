@@ -1,0 +1,1 @@
+document.getElementById('copyright').innerHTML = "<p>Copyright &copy; 2016-2021 t's Web Labo</p>" ;
