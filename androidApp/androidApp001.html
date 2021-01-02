@@ -328,6 +328,7 @@
               </div><!-- /.card-body -->
             </div><!-- /.collapse -->
           </div><!-- /.card -->
+          
           <!-- contents04 -->
           <div class="card">
             <div class="card-header" role="tab" id="heading004">
@@ -341,11 +342,10 @@
               <div class="card-body">
                 <p>
                   AndroidアプリはPCと比較して画面の小さい端末で操作するため画面遷移の機能を使うことでより豊富な機能を実装させることができます。<br>
-                  
                   実際のソースコードから見てみましょう。
                 </p>
-                <ul>
-                  <li>activity_main.xml</li>
+                <h4>activity_main.xml</h4>
+                <div class="media">
                   <pre>
                     <code>
                       &lt;?xml&nbsp;version=&quot;1.0&quot;&nbsp;encoding=&quot;utf-8&quot;?&gt;
@@ -377,7 +377,17 @@
                       &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
                     </code>
                   </pre>
-                  <li>MainActivity.java</li>
+                  <div class="media-body">
+                    <h5 class="mt-0">Buttonに<code>onClick</code>を指定する</h5>
+                    <p>
+                      <code>android:onClick=&quot;onButtonIntent1&quot;</code><br>
+                      <code>onClick</code>を指定することでボタンが押された時の処理を書くことができるようになります。<br>
+                      <code>onClick</code>に記述した名前がjavaファイルにメソッド名として記述されます。
+                    </p>
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
+                <h4>MainActivity.java</h4>
+                <div class="media">
                   <pre>
                     <code>
                       package com.example.testintent;
@@ -404,7 +414,18 @@
                       }
                     </code>
                   </pre>
-                  <li>activity_main2.xml</li>
+                  <div class="media-body">
+                    <h5 class="mt-0">onButtonIntent1メソッドを定義する</h5>
+                    <p>
+                      activity_main.xmlのButtonにつけたonClickの名前(onButtonIntent1)のメソッドを定義する。<br>
+                      <code>Intent intent = new Intent(this, MainActivity2.class);</code>で画面遷移に必要なIntentをインスタンス化し、<br>
+                      同時にどのアクティビティからどのアクティビティに遷移するのかを指定しています。<br>
+                      <code>startActivity(intent);</code>で先程インスタンス化したintentを実行するよう命令しています。
+                    </p>
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
+                <h4>activity_main2.xml</h4>
+                <div class="media">
                   <pre>
                     <code>
                       &lt;?xml&nbsp;version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
@@ -437,7 +458,17 @@
                           &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
                     </code>
                   </pre>
-                  <li>MainActivity2.java</li>
+                  <div class="media-body">
+                    <h5 class="mt-0">Buttonに<code>onClick</code>を指定する</h5>
+                    <p>
+                      <code>android:onClick=&quot;onButtonIntent2&quot;</code><br>
+                      <code>onClick</code>を指定することでボタンが押された時の処理を書くことができるようになります。<br>
+                      <code>onClick</code>に記述した名前がjavaファイルにメソッド名として記述されます。
+                    </p>
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
+                <h4>MainActivity2.java</h4>
+                <div class="media">
                   <pre>
                     <code>
                       package com.example.testintent;
@@ -464,60 +495,16 @@
                       }
                     </code>
                   </pre>
-                </ul>
-                <p>
-                  ４つのソースコードの中にある画面遷移に必要なコードをひとつずつ抜き出してみます。
-                </p>
-                <pre>
-                  <code>
-                    // activity_main.xml
-                    android:onClick=&quot;onButtonIntent1&quot;
-                  </code>
-                </pre>
-                <p>
-                  <code>onClick</code>を指定することでボタンが押された時の処理を書くことができるようになります。<br>
-                  <code>onClick</code>に記述した名前がjavaファイルにメソッド名として記述されます。
-                </p>
-                <pre>
-                  <code>
-                    // MainActivity.java
-                    // 画面１から画面２へと画面遷移させるメソッド
-                    public void onButtonIntent1(View v) {
-                        Intent intent = new Intent(this, MainActivity2.class);
-                        startActivity(intent);
-                    }
-                  </code>
-                </pre>
-                <p>
-                  <code>Intent intent = new Intent(this, MainActivity2.class);</code>の行で画面遷移に必要なIntentをインスタンス化し、<br>
-                  同時にどのアクティビティからどのアクティビティに遷移するのかを指定しています。<br>
-                  <code>startActivity(intent);</code>で先程インスタンス化したintentを実行するよう命令しています。
-                </p>
-                <pre>
-                  <code>
-                    // activity_main2.xml
-                    android:onClick=&quot;onButtonIntent2&quot;
-                  </code>
-                </pre>
-                <p>
-                  <code>onClick</code>を指定することでボタンが押された時の処理を書くことができるようになります。<br>
-                  <code>onClick</code>に記述した名前がjavaファイルにメソッド名として記述されます。
-                </p>
-                <pre>
-                  <code>
-                    // MainActivity2.java
-                    // 画面２から画面１へと画面遷移させるメソッド
-                    public void onButtonIntent2(View v) {
-                        Intent intent = new Intent(this, MainActivity.class);
-                        startActivity(intent);
-                    }
-                  </code>
-                </pre>
-                <p>
-                  <code>Intent intent = new Intent(this, MainActivity2.class);</code>の行で画面遷移に必要なIntentをインスタンス化し、<br>
-                  同時にどのアクティビティからどのアクティビティに遷移するのかを指定しています。<br>
-                  <code>startActivity(intent);</code>で先程インスタンス化したintentを実行するよう命令しています。
-                </p>
+                  <div class="media-body">
+                    <h5 class="mt-0">メディアのヘッダ</h5>
+                    <p>
+                      activity_main2.xmlのButtonにつけたonClickの名前(onButtonIntent2)のメソッドを定義する。<br>
+                      <code>Intent intent = new Intent(this, MainActivity2.class);</code>で画面遷移に必要なIntentをインスタンス化し、<br>
+                      同時にどのアクティビティからどのアクティビティに遷移するのかを指定しています。<br>
+                      <code>startActivity(intent);</code>で先程インスタンス化したintentを実行するよう命令しています。
+                    </p>
+                  </div><!-- /.media-body -->
+                </div><!-- /.media -->
               </div><!-- /.card-body -->
             </div><!-- /.collapse -->
           </div><!-- /.card -->
