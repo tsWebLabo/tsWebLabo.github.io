@@ -164,10 +164,21 @@
             <h5 class="mt-0">activity_main.xmlの解説</h5>
             <ul>
               <li>LinearLayout</li>
-                <p>
-                  LinearLayoutは、その中に配置されるオブジェクトを縦並びもしくは横並びに配置するレイアウトです。<br>
-                  今回は画面全体のオブジェクトを縦並びに配置したかったので、<code>android:orientation="vertical"</code>の指定をしています。
-                </p>
+              <p>
+                LinearLayoutは、その中に配置されるオブジェクトを縦並びもしくは横並びに配置するレイアウトです。<br>
+                今回は画面全体のオブジェクトを縦並びに配置したかったので、<code>android:orientation="vertical"</code>の指定をしています。
+              </p>
+              <li>EditText</li>
+              <p>
+                EditTextはユーザーが文字を直接入力できるオブジェクトです。<br>
+                <code>android:hint=&quot;YourName&quot;</code>で表示することで、ここに何を入力すればいいのかをユーザーに伝えます。<br>
+                次に入力された文字列を取得して処理するために<code>android:id=&quot;@+id/editText&quot;/&gt;</code>の形でIDを指定してjavaで扱えるようにしています。
+              </p>
+              <li>Button</li>
+              <p>
+                この画面には3つのボタンが設置されています。<br>
+                それぞれにonClickを指定してjavaで個々のメソッドに対応させています。
+              </p>
             </ul>
           </div><!-- /.media-body -->
         </div><!-- /.media -->
@@ -231,8 +242,38 @@
           <div class="media-body">
             <h5 class="mt-0">MainActivity.javaの解説</h5>
             <p>
-              MainActivity.javaの解説
+              MainActivity.javaには「データベースへの登録」と「画面遷移」の2つの機能をもたせたメソッドを定義しています。
             </p>
+            <ul>
+              <li>データベースへの登録</li>
+              <p>
+                データベースへの登録そのものの命令は、<code>helper.insertData(db, name);</code>の1文のみです。<br>
+                引数に「db」と「name」があるため、それらの定義が必要です。
+              </p>
+              <ul>
+                <li>引数「db」</li>
+                <p>
+                  <code>DBOpenHelper helper;</code>でDatabaseOpenHelperクラスを変数に格納し、<br>
+                  <code>SQLiteDatabase db = helper.getWritableDatabase();</code>でインスタンス化しています。
+                </p>
+                <li>引数「name」</li>
+                <p>
+                  <code>EditText editTextName = findViewById(R.id.editText);</code>でactivity_mainのEditTextを変数editTextNameとして格納しておきます。<br>
+                  <code>String name = editTextName.getText().toString();</code>変数editTextNameと定義したEditTextの文字を文字列として取得してString型(文字列型)変数「name」に格納。<br>
+                </p>
+              </ul>
+              <p>
+                「db」「name」の定義ができたら、引数に渡してあげます。<br>
+                データベース登録の命令文をif文で囲んでいるのは、EditTextが空白のまま登録ボタンを押した際に入力を促すためのものです。<br>
+                このif文を書くことで空白のまま登録される可能性をなくすだけでなく、データベースアクセス面でのエラーによる不意にアプリが終了してしまう事態を未然に防ぐことができます。
+              </p>
+              <li>画面遷移</li>
+              <p>
+                画面遷移のボタンは2つあり、各メソッドでそれぞれの画面へ移動するように指定しています。<br>
+                それぞれのメソッドには<code>intent</code>という同じ変数名が使われています。<br>
+                これはメソッド内でのみ使えるローカル変数なので、同じ変数名にしても他に影響を及ぼしません。
+              </p>
+            </ul>
           </div><!-- /.media-body -->
         </div><!-- /.media -->
 
