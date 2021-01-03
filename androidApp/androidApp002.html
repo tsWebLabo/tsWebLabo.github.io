@@ -245,7 +245,7 @@
               MainActivity.javaには「データベースへの登録」と「画面遷移」の2つの機能をもたせたメソッドを定義しています。
             </p>
             <ul>
-              <li>データベースへの登録</li>
+              <li>onButtonInsertメソッド（データベースへの登録）</li>
               <p>
                 データベースへの登録そのものの命令は、<code>helper.insertData(db, name);</code>の1文のみです。<br>
                 引数に「db」と「name」があるため、それらの定義が必要です。
@@ -258,20 +258,21 @@
                 </p>
                 <li>引数「name」</li>
                 <p>
-                  <code>EditText editTextName = findViewById(R.id.editText);</code>でactivity_mainのEditTextを変数editTextNameとして格納しておきます。<br>
+                  <code>EditText editTextName = findViewById(R.id.editText);</code>でactivity_main.xmlのEditTextを変数editTextNameとして格納しておきます。<br>
                   <code>String name = editTextName.getText().toString();</code>変数editTextNameと定義したEditTextの文字を文字列として取得してString型(文字列型)変数「name」に格納。<br>
                 </p>
               </ul>
               <p>
                 「db」「name」の定義ができたら、引数に渡してあげます。<br>
                 データベース登録の命令文をif文で囲んでいるのは、EditTextが空白のまま登録ボタンを押した際に入力を促すためのものです。<br>
-                このif文を書くことで空白のまま登録される可能性をなくすだけでなく、データベースアクセス面でのエラーによる不意にアプリが終了してしまう事態を未然に防ぐことができます。
+                このif文を書くことで空白のまま登録される可能性をなくすだけでなく、データベースアクセス面でのエラーにより不意にアプリが終了してしまう事態を未然に防ぐことができます。
               </p>
-              <li>画面遷移</li>
+              <li>onButtonEditメソッド・onButtonLoadメソッド（画面遷移）</li>
               <p>
                 画面遷移のボタンは2つあり、各メソッドでそれぞれの画面へ移動するように指定しています。<br>
                 それぞれのメソッドには<code>intent</code>という同じ変数名が使われています。<br>
-                これはメソッド内でのみ使えるローカル変数なので、同じ変数名にしても他に影響を及ぼしません。
+                これはメソッド内でのみ使えるローカル変数なので、同じ変数名にしても他に影響を及ぼしません。<br>
+                詳しくは <a href="androidApp001.html">BasicTipsの画面遷移の実装</a>を参照してください。
               </p>
             </ul>
           </div><!-- /.media-body -->
@@ -522,8 +523,69 @@
           <div class="media-body">
             <h5 class="mt-0">EditActivity.javaの解説</h5>
             <p>
-              EditActivity.javaの解説
+              EditActivity.javaには「データの抽出」「データの更新」「データの削除」「画面遷移」の4つの機能をもたせたメソッドを定義しています。
             </p>
+            <ul>
+              <li>onButtonTopメソッド（画面遷移）</li>
+              <p>
+                activity_main.xmlへの画面遷移のメソッドです。<br>
+                詳しくは <a href="androidApp001.html">BasicTipsの画面遷移の実装</a>を参照してください。
+              </p>
+              <li>onButtonLoadメソッド（データの抽出）</li>
+              <p>
+                このメソッドについては同じメソッド名のものがLoadactivity.javaにあるので、そちらの解説をご覧ください。
+              </p>
+              <li>onButtonUpdateメソッド（データの更新）</li>
+              <p>
+                データベースへの登録そのものの命令は、<code>helper.updateData(db, name, id);</code>の1文のみです。<br>
+                引数に「db」と「name」と「id」があるため、それらの定義が必要です。
+              </p>
+              <ul>
+                <li>引数「db」</li>
+                <p>
+                  <code>DBOpenHelper helper;</code>でDatabaseOpenHelperクラスを変数に格納し、<br>
+                  <code>SQLiteDatabase db = helper.getWritableDatabase();</code>でインスタンス化しています。
+                </p>
+                <li>引数「name」</li>
+                <p>
+                  <code>EditText editTextName = findViewById(R.id.updateName);</code>でactivity_edit.xmlのEditTextを変数editTextNameとして格納しておきます。<br>
+                  <code>String name = editTextName.getText().toString();</code>変数editTextNameと定義したEditTextの文字を文字列として取得してString型(文字列型)変数「name」に格納します。
+                </p>
+                <li>引数「id」</li>
+                <p>
+                  <code>EditText editTextId = findViewById(R.id.dataId);</code>でactivity_edit.xmlのEditTextを変数editTextIdとして格納しておきます。<br>
+                  <code>String id = editTextId.getText().toString();</code>変数editTextIdと定義したEditTextの文字を文字列として取得してString型(文字列型)変数「id」に格納します。
+                </p>
+              </ul>
+              <p>
+              「db」「name」「id」の定義ができたら、引数に渡してあげます。<br>
+                データの更新の命令文をif文で囲んでいるのは、EditTextが空白のまま更新ボタンを押した際に入力を促すためのものです。<br>
+                このif文を書くことで空白のまま登録される可能性をなくすだけでなく、データベースアクセス面でのエラーにより不意にアプリが終了してしまう事態を未然に防ぐことができます。
+              </p>
+              <li>onButtonDeleteメソッド（データの削除）</li>
+              <p>
+                データベースへの登録そのものの命令は、<code>helper.deleteData(db, id);</code>の1文のみです。<br>
+                データのPRIMARY KEY（主キー）である「id」を選んで削除するため引数に「db」と「id」があります。<br>
+                それらの定義が必要です。
+              </p>
+              <ul>
+                <li>引数「db」</li>
+                <p>
+                  <code>DBOpenHelper helper;</code>でDatabaseOpenHelperクラスを変数に格納し、<br>
+                  <code>SQLiteDatabase db = helper.getWritableDatabase();</code>でインスタンス化しています。
+                </p>
+                <li>引数「id」</li>
+                <p>
+                  <code>EditText editTextId = findViewById(R.id.dataId);</code>でactivity_edit.xmlのEditTextを変数editTextIdとして格納しておきます。<br>
+                  <code>String id = editTextId.getText().toString();</code>変数editTextIdと定義したEditTextの文字を文字列として取得してString型(文字列型)変数「id」に格納します。
+                </p>
+              </ul>
+              <p>
+              「db」「id」の定義ができたら、引数に渡してあげます。<br>
+                データの更新の命令文をif文で囲んでいるのは、EditTextが空白のまま更新ボタンを押した際に入力を促すためのものです。<br>
+                このif文を書くことで空白のまま登録される可能性をなくすだけでなく、データベースアクセス面でのエラーにより不意にアプリが終了してしまう事態を未然に防ぐことができます。
+              </p>
+            </ul>
           </div><!-- /.media-body -->
         </div><!-- /.media -->
 
@@ -665,9 +727,45 @@
           </pre>
           <div class="media-body">
             <h5 class="mt-0">LoadActivity.javaの解説</h5>
-            <p>
-              LoadActivity.javaの解説
-            </p>
+            <ul>
+              <li>onButtonLoadメソッド</li>
+              <p>
+                このアプリでは最も複雑なメソッドですが、SELECT文の記述は2つ目のtry文です。<br>
+                AndroidアプリでSELECT文を扱う際には、<code>Cursor</code>を使います。<br>
+                コードを順に見ていきます。
+              </p>
+              <ul>
+                <li><code>db = null;</code></li>
+                <p>
+                  EditActivityクラスのグローバル変数で<code>SQLiteDatabase db;</code>と定義していたものに、nullを代入して<br>
+                  変数dbをリセットしておきます。
+                </p>
+                <li>1つ目のtry-catch-finally文</li>
+                <p>
+                  <code>db = new DBOpenHelper(this).getReadableDatabase();</code>と<code>Cursor c = null;</code><br>
+                  try-catch文を挟んで、変数dbにDBOpenHelperクラスを読込専用でインスタンス化します。<br>
+                  同時にCursorにnullを代入しておきます。
+                </p>
+                <p>
+                  finally文はtry文が成功する・しないにかかわらず実行されるものです。<br>
+                  データベースは読込のあとアクセスした状態から確実に閉じておく必要があります。<br>
+                  ここにdbがnullでない時の処理を書いておくことで、データベースを確実に閉じることができます。
+                </p>
+                <li><code>2つ目のtry-catch-finally文</code></li>
+                <p>
+                  1つ目のtry文にネストして2つ目のtry-catch-finally文が入ります。<br>
+                  SELECT文を使ってデータをfor文で順番に抽出し、文字列を操作するStringBuilderクラスをインスタンス化したものに結合していく流れになります。
+                </p>
+                <p>
+                  CursorもSELECT文を扱うものなので、使い終わったら<code>c.close();</code>という形で閉じておく必要があります。
+                </p>
+                <li>TextViewに抽出したデータを表示させる</li>
+                <p>
+                  <code>((TextView)findViewById(R.id.loadView)).setText(sBuilder);</code>
+                  データを結合した文字列の状態で格納してある<code>sBuilder</code>を上記のコードを用いてTextViewに表示させます。
+                </p>
+              </ul>
+            </ul>
           </div><!-- /.media-body -->
         </div><!-- /.media -->
 
