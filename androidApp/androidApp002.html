@@ -644,9 +644,25 @@
           </pre>
           <div class="media-body">
             <h5 class="mt-0">activity_load.xmlの解説</h5>
-            <p>
-              activity_load.xmlの解説
-            </p>
+            <ul>
+              <li>全体のレイアウト（Linear Layout）</li>
+              <p>
+                画面全体に配置されるオブジェクトを縦並びで表示させるために<code>android:orientation="vertical"</code>を指定したLinear Layoutを使っています。
+              </p>
+              <li>ボタンのレイアウト（Linear Layout）</li>
+              <p>
+                2つのボタンを横並びで配置するためにLinearLayoutを使っています。
+              </p>
+              <li>2つのボタン</li>
+              <p>
+                2つのボタンについてはユーザーが識別するためのテキストとjavaで処理を書くために必要な<code>onClick</code>を指定してあります。
+              </p>
+              <li>データベースを表示させるためのオブジェクト（Text View）</li>
+              <p>
+                データベースの内容を読み出して表示させるためのオブジェクトです。<br>
+                javaで扱うためのidを指定して、そこにTextViewがあることを示すための文字列をあらかじめ表示させています。
+              </p>
+            </ul>
           </div><!-- /.media-body -->
         </div><!-- /.media -->  
 
