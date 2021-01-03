@@ -367,9 +367,32 @@
           </pre>
           <div class="media-body">
             <h5 class="mt-0">activity_edit.xmlの解説</h5>
-            <p>
-              activity_edit.xmlの解説
-            </p>
+            <ul>
+              <li>EditText</li>
+              <ul>
+                <li>ID</li>
+                <p>
+                  <code>android:id="@+id/dataId"</code>："dataId"というidを割り当ててjavaで取得できるようにします。<br>
+                  <code>android:hint="ID:"</code>：ユーザーに何を入力してほしいかを伝えます。
+                </p>
+                <li>Name</li>
+                <code>android:id="@+id/updateName"</code>：UPDATE文の実行時に取得できるようにidを割り当てます。<br>
+                id名を"updateName"とすることで、コードを書く際にもUPDATE文のためのEditTextだと認識できるようにすます。
+                <code>android:hint="Please enter the name you want to edit."</code>：このヒントの和訳は「編集したい名前を入力してください。」となります。<br>
+                EditTextへの入力内容をユーザーに伝えます。
+              </ul>
+              <li>Button</li>
+              <p>
+                このアクティビティには4つのボタンがあります。<br>
+                各ボタンにはボタン識別用のテキストとjavaでの処理を書くためのonClickの指定がしてあります。<br>
+                ４つのボタンは横並びで表示させるための<code>LinearLayout</code>でくくり、<code>android:orientation="horizontal"</code>の指定をしています。
+              </p>
+              <li>TextView</li>
+              <p>
+                データベースの内容を読み出して表示させるためのオブジェクトです。<br>
+                javaで扱うためのidを指定して、そこにTextViewがあることを示すための文字列をあらかじめ表示させています。
+              </p>
+            </ul>
           </div><!-- /.media-body -->
         </div><!-- /.media -->
 
