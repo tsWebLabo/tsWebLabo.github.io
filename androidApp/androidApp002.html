@@ -857,9 +857,44 @@
           </pre>
           <div class="media-body">
             <h5 class="mt-0">DBOpenHelper.javaの解説</h5>
-            <p>
-              DBOpenHelper.javaの解説
-            </p>
+            <h5>SQLiteOpenHelperクラスを継承させた後のフロー</h5>
+            <ol>
+              <li>SQLiteOpenHelperクラスを継承させる</li>
+              <p>
+                <code>public class DBOpenHelper extends SQLiteOpenHelper</code><br>
+                クラスを定義する時に、この形でSQLiteOpenHelperクラスを継承させます。
+                継承させた段階で、コンストラクタ・onCreateメソッド・onUpgradeメソッドを定義するように求められます。<br>
+                Android Studioの指示通りに定義していけば問題ありません。
+              </p>
+              <li>コンストラクタを定義</li>
+              <p>
+                コンストラクタは、クラスが呼び出された時、自動で動くメソッドです。<br>
+                コンストラクタ名＝クラス名という決まりがあるので注意が必要です。
+              </p>
+              <p>
+                コンストラクタ内の<code>DB_NAME</code>と<code>DB_VERSION</code>はこちらで定義する必要があります。<br>
+                そのどちらもメソッドを越えて使うのでグローバル定数として定義します。
+              </p>
+              <li>onCreateメソッドを定義</li>
+              <p>
+                onCreateメソッドもAndroid Studioの指示通りに定義していきますが、メソッド内には何も記述されていないはずです。<br>
+                <code>db.execSQL();</code>を使ってカッコ内にテーブルを作成するSQL文を記述し、テーブルを定義します。
+              </p>
+              <p>
+                テーブルを定義した後、その下に、INSERT文を記述することで、初期のデータをデータベースに渡しておくことが可能です。
+              </p>
+              <li>onUpgradeメソッドを定義</li>
+              <p>
+                データベースの構造などを更新した場合ここでバージョン管理を行います。<br>
+                今回のコードではメソッド内の記述はしていません。
+              </p>
+              <li>データベース関連の任意のメソッドを定義する</li>
+              <p>
+                データベースに関するメソッド（処理）は主にINSERT文・UPDATE文・DELETE文・SELECT文に分けられます。<br>
+                今回のコードに関してはSELECT文以外の処理をメソッドメソッドとして定義しています。<br>
+                SELECT文に関しては、変数の参照等をうまく指定できなかったこともあり各Activityでメソッドを作りました。
+              </p>
+            </ol>
           </div><!-- /.media-body -->
         </div><!-- /.media -->
       </section>
