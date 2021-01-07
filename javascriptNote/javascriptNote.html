@@ -113,7 +113,6 @@
           </p>
           <li>オブジェクト指向言語</li>
           <p>
-            オブジェクト指向言語。<br>
             オブジェクトのデータ型に区別はない。<br>
             継承はプロトタイプベースの機構を通して行われ、プロパティとメソッドはどんなオブジェクトにも動的に追加できる。
           </p>
@@ -122,9 +121,50 @@
           <li>サーバーサイドJavaScript</li>
           <li>JavaScriptとJavaは別物です。</li>
         </ul>
-
         <hr class="line-dark">
-        <h2 class="text-bright">変数・定数</h2>
+        <h2 class="text-bright">型</h2>
+        <ul>
+          <li>数値</li>
+          <li>文字列</li>
+          <li>真偽値</li>
+          <li>Symbol</li>
+          <li>オブジェクト</li>
+            <ul>
+              <li>関数</li>
+              <li>Array(配列)</li>
+              <li>Date</li>
+              <li>RegExp(正規表現)</li>
+            </ul>
+          <li>null</li>
+          <p>
+            意図的に「値がない」ということを示す値
+          </p>
+          <li>undefined</li>
+          <p>
+            初期化されていない状態を示す。<br>
+            値が代入されていない状態を示す値
+          </p>
+        </ul>
+        <hr class="line-dark">
+        <h2 class="text-bright">変数</h2>
+        <ul>
+          <li>var</li>
+          <p>
+            最も一般的な宣言キーワード。<br>
+            <code>let</code>、<code>const</code>のような制約がない。<br>
+            varキーワードで宣言した変数は、変数を宣言した関数ブロックから使用できます。
+          </p>
+          <li>let</li>
+          <p>
+            ブロックレベルの変数を宣言できる。<br>
+            宣言されたブロックの外からは変数を使えない。
+          </p>
+          <li>const</li>
+          <p>
+            変更を意図しない変数を宣言できる。
+            宣言されたあとに変更ができない。（＝定数）
+          </p>
+        </ul>
         <hr class="line-dark">
         <h2 class="text-bright">配列</h2>
         <hr class="line-dark">
