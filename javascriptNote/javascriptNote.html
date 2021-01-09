@@ -167,6 +167,135 @@
         </ul>
         <hr class="line-dark">
         <h2 class="text-bright">配列</h2>
+        <ul>
+          <li>配列とは</li>
+            <ul>
+              <li>リストのようなオブジェクトである</li>
+              <li>単一オブジェクト内に複数の値をリストとして保持している</li>
+              <li>配列オブジェクトは変数に格納される</li>
+              <li>リスト内の値に個別にアクセスすることができる</li>
+            </ul>
+          <li>配列をつくる</li>
+            <ul>
+              <li>配列を定義してから要素を代入する方法</li>
+              <pre>
+                <code>
+                  var a = new array(); // 配列aを定義
+                  a[0] = 'dog';
+                  a[1] = 'cat';
+                  a[3] = 'hen';
+
+                  a.length; // 3
+                </code>
+              </pre>
+              <li>配列の定義と要素の代入を同時に行う方法</li>
+              <pre>
+                <code>
+                  var b = ['dog', 'cat', 'hen'];
+
+                  b.length; // 3
+                </code>
+              </pre>
+            </ul>
+          <li>配列を呼び出す</li>
+          <p>配列を呼び出すにはfor文を使って呼び出すことができます。</p>
+          <pre>
+            <code>
+              for(let i = 0; i &lt; a.length; i++) {
+                console.log(a[i]);
+              }
+
+              "dog"
+              "cat"
+              "hen"
+            </code>
+          </pre>
+          <li>項目の追加と削除</li>
+          <pre>
+            <code>
+              // あらかじめ配列を定義しておきます
+              let myArray = ['札幌', '仙台', '東京', '名古屋', '大阪', '博多'];
+            </code>
+          </pre>
+          <pre>
+            <code>
+              // 配列の呼び出し
+              for(let i = 0; i &lt; myArray.length; i++) {
+                console.log(myArray[i]);
+              }
+
+              札幌
+              仙台
+              東京
+              名古屋
+              大阪
+              博多
+            </code>
+          </pre>
+          <ul>
+            <li>項目の追加</li>
+            <p>
+              配列の最後に項目を追加するには<code>push()</code>を使います。<br>
+              <code>push()</code>を使う時はひとつ以上の項目を引数に指定します。
+            </p>
+            <pre>
+              <code>
+                myArray.push('横浜');
+
+                myArray.push('神戸', '広島', '京都');
+              </code>
+            </pre>
+            <pre>
+              <code>
+                // 配列の呼び出し
+                for(let i = 0; i &lt; myArray.length; i++) {
+                  console.log(myArray[i]);
+                }
+  
+                札幌
+                仙台
+                東京
+                名古屋
+                大阪
+                博多
+                横浜
+                神戸
+                広島
+                京都
+              </code>
+            </pre>
+            <li>項目の削除</li>
+            <p>
+              配列の最後の項目を削除するには<code>pop()</code>を使います。
+            </p>  
+            <pre>
+              <code>
+                myArray.pop();
+              </code>
+            </pre>
+            <pre>
+              <code>
+                // 配列の呼び出し
+                for(let i = 0; i &lt; myArray.length; i++) {
+                  console.log(myArray[i]);
+                }
+  
+                札幌
+                仙台
+                東京
+                名古屋
+                大阪
+                博多
+                横浜
+                神戸
+                広島
+              </code>
+            </pre>
+          </ul>
+          
+          
+          <li>配列のメソッド</li>
+        </ul>
         <hr class="line-dark">
         <h2 class="text-bright">代入</h2>
         <hr class="line-dark">
