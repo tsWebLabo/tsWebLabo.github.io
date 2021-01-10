@@ -166,6 +166,210 @@
           </p>
         </ul>
         <hr class="line-dark">
+        <h2 class="text-bright">演算子</h2>
+        <ul>
+          <li>代入演算子</li>
+          <p>
+            代入演算子は右オペランド（演算子を挟んで右側）の値を元に左オペランド（演算子を挟んで左側）に値を代入するもの
+          </p>
+          <ul>
+            <li>代入</li>
+            <pre>
+              <code>
+                // xにyを代入する
+                var x;
+                var y = 10;
+                
+                x = y;
+
+                // x = 10, y = 10
+              </code>
+            </pre>
+            <li>加算代入</li>
+            <pre>
+              <code>
+                // xにx + yを代入する
+                var x = 10;
+                var y = 10;
+
+                x += y;
+
+                // x = 20, y = 10
+              </code>
+            </pre>
+            <li>減算代入</li>
+            <pre>
+              <code>
+                // xにx - yを代入する
+                var x = 20;
+                var y = 10;
+
+                x -= y;
+
+                // x = 10, y = 10
+              </code>
+            </pre>
+            <li>乗算代入</li>
+            <pre>
+              <code>
+                // xにx * yを代入する
+                var x = 10;
+                var y = 10;
+
+                x *= y;
+
+                // x = 100, y = 10
+              </code>
+            </pre>
+            <li>除算代入</li>
+            <pre>
+              <code>
+                // xにx / yを代入する
+                var x = 100;
+                var y = 10;
+
+                x /= y;
+
+                // x = 10, y = 10
+              </code>
+            </pre>
+            <li>剰余代入</li>
+            <pre>
+              <code>
+                // xにx % yを代入する
+                var x = 10;
+                var y = 10;
+                
+                x %= y;
+
+                // x = 0, y = 10
+              </code>
+            </pre>
+            <li>べき乗代入</li>
+            <pre>
+              <code>
+                // xにx ** yを代入する
+                var x = 10;
+                var y = 10;
+
+                x **= y;
+
+                // x = 10000000000, y= 10
+              </code>
+            </pre>
+          </ul>
+          <li>比較演算子</li>
+          <ul>
+            <li>被演算子を比較してその結果が真であるかに基づいて論理値を返す。</li>
+            <li>被演算子には数値・文字列・論理値・オブジェクトを使用できる。</li>
+            <li>
+              ほとんどの場合、2つの被演算子が異なる型ならばJavaScriptではその被演算子を比較に適した型に変換しようとする。<br>
+              一般的に被演算子は数値的に比較される結果となる。
+            </li>
+            <li>例外として<code>===</code>と<code>!==</code>については等値性を比較する前に被演算子を適合する型に変換しない</li>
+          </ul>
+          <p>
+            以下に比較演算子の種類と使い方の例をあげていきます。あらかじめ次の通り変数を定義しておきます。
+            <pre>
+              <code>
+                var a = 20;
+                var b = 10;
+                var c = 'Sasaki'
+              </code>
+            </pre>
+          </p>
+          <ul>
+            <li>等価(==)</li>
+            <pre>
+              <code>
+                a == b;
+                // false
+
+                a == c;
+                // false
+              </code>
+            </pre>
+            <li>不等価(!=)</li>
+            <pre>
+              <code>
+                a != b;
+                // true
+
+                a != c;
+                // true
+              </code>
+            </pre>
+            <li>厳密等価(===)</li>
+            <pre>
+              <code>
+                a === b;
+                // false
+
+                a === c;
+                // false
+              </code>
+            </pre>
+            <li>厳密不等価(!==)</li>
+            <pre>
+              <code>
+                a !== b;
+                // true
+
+                a !== c;
+                // true
+              </code>
+            </pre>
+            <li>より大きい(&gt;)</li>
+            <pre>
+              <code>
+                a &gt; b;
+                // true
+
+                b &gt; a;
+                // false
+              </code>
+            </pre>
+            <li>以上(&gt;=)</li>
+            <pre>
+              <code>
+                a &gt;= b;
+                // true
+
+                b &gt;= a;
+                // false
+              </code>
+            </pre>
+            <li>より小さい(&lt;)</li>
+            <pre>
+              <code>
+                a &lt; b;
+                // false
+
+                b &lt; a;
+                // true
+              </code>
+            </pre>
+            <li>以下(&lt;=)</li>
+            <pre>
+              <code>
+                a &lt;= b;
+                // false
+
+                b &lt;= a;
+                // true
+              </code>
+            </pre>
+          </ul>
+          <li>算術演算子</li>
+          <p>
+
+          </p>
+          <li>論理演算子</li>
+          <p>
+
+          </p>
+        </ul>
+        <hr class="line-dark">
         <h2 class="text-bright">配列</h2>
         <ul>
           <li>配列とは</li>
