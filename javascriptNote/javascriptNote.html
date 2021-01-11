@@ -468,9 +468,47 @@
           </ul>
           
           <li>論理演算子</li>
-          <p>
+          <p>基本的にブール値（Boolean型：true / false）を用いる</p>
+          <ul>
+            <li>論理積  （AND：&&）</li>
+            <pre>
+              <code>
+                true && true  // trueを返す
+                true && false // falseを返す
+                false && true // falseを返す
 
-          </p>
+                false && (3 == 4) // falseを返す
+
+                'Cat' && 'Dog' // "Dog"を返す
+                false && 'Cat' // falseを返す
+                'Cat' && false // falseを返す
+              </code>
+            </pre>
+            <li>論理和  （OR ：||）</li>
+            <pre>
+              <code>
+                true || true   // trueを返す
+                false || true  // trueを返す
+                true || false  // trueを返す
+                false || false // falseを返す
+
+                false || (3 == 4) // falseを返す
+                false || (3 == 3) // trueを返す
+
+                'Cat' || 'Dog' // "Cat"を返す
+                false || 'Cat' // "Cat"を返す
+                'Cat' || false // "Cat"を返す
+              </code>
+            </pre>
+            <li>論理否定（NOT：!）</li>
+            <pre>
+              <code>
+                !true  // falseを返す
+                !false // trueを返す
+                !'Cat' // falseを返す
+              </code>
+            </pre>
+          </ul>
         </ul>
         <hr class="line-dark">
         <h2 class="text-bright">配列</h2>
