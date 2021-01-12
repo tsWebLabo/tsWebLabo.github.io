@@ -636,15 +636,75 @@
                 広島
               </code>
             </pre>
-          </ul>
-          
-          
+          </ul>  
           <li>配列のメソッド</li>
         </ul>
         <hr class="line-dark">
         <h2 class="text-bright">代入</h2>
         <hr class="line-dark">
         <h2 class="text-bright">条件分岐</h2>
+        <h5>if...else文</h5>
+        <ul>
+          <li>基本構文</li>
+          <pre>
+            <code>
+              if( 条件 ) {
+                条件がtrueの時の処理
+              } else {
+                条件がfalseの時の処理
+              }
+            </code>
+          </pre>
+          <li>例文1</li>
+          <pre>
+            <code>
+              var age = 18;
+
+              if(age &gt;= 20) {
+                console.log('成人です');
+              } else {
+                cosole.log('未成年です');
+              }
+
+              // 未成年です（条件分を満たさないため<code>else</code>のブロックが読まれる ）
+
+              var age = 25;
+
+              if(age &gt;= 20) {
+                console.log('成人です');
+              } else {
+                cosole.log('未成年です');
+              }
+
+              // 成人です（条件文を満たしているためtrueである）
+            </code>
+          </pre>
+          <li>例文2</li>
+          <pre>
+            <code>
+              var age = 25;
+
+              if(age &lt; 10) {
+                console.log('10歳未満です');
+              } else if(age &lt; 20) {
+                console.log('20歳未満です');
+              } else if(age &lt; 30) {
+                console.log('30歳未満です');
+              } else {
+                console.log('30歳以上です');
+              }
+
+              // 30歳未満です
+            </code>
+          </pre>
+        </ul>
+        <h5>switch文</h5>
+        <ul>
+          <li>構文</li>
+          <li>例文</li>
+        </ul>
+        <hr class="line-dark">
+        <h2 class="text-bright">try...catch文（例外処理）</h2>
         <hr class="line-dark">
         <h2 class="text-bright">繰り返し</h2>
         <hr class="line-dark">
