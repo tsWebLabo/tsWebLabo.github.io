@@ -701,7 +701,76 @@
         <h5>switch文</h5>
         <ul>
           <li>構文</li>
+          <pre>
+            <code>
+              switch(変数) {
+                case 条件1:
+                  条件1を満たす時の処理;
+                  break;
+
+                case 条件2:
+                  条件2を満たす時の処理;
+                  break;
+
+                case 条件3:
+                  条件3を満たす時の処理;
+                  break;
+
+                ︙
+
+                default:
+                  条件1を満たす時の処理; 
+              }
+            </code>
+          </pre>
           <li>例文</li>
+          <ul>
+            <li>if文での記述</li>
+            <pre>
+              <code>
+                var stationery = 'pencil';
+
+                if(stationery === 'pen') {
+                  console.log('ペンは100円です');
+                } else if(stationery === 'eraser') {
+                  console.log('消しゴムは80円です');
+                } else if(stationery === 'ruler') {
+                  console.log('定規は120円です');
+                } else if(stationery === 'pencil') {
+                  console.log('えんぴつは50円です');
+                } else {
+                  console.log('買いたい文房具を選んでください');
+                }
+              </code>
+            </pre>
+            <li>switch文での記述</li>
+            <pre>
+              <code>
+                var stationery = 'pencil';
+
+                switch(stationery) {
+                  case 'pen':
+                    console.log('ペンは100円です');
+                    break;
+                
+                  case 'eraser':
+                    console.log('消しゴムは80円です');
+                    break;
+                  
+                  case 'ruler':
+                    console.log('定規は120円です');
+                    break;
+                
+                  case 'pencil':
+                    console.log('えんぴつは50円です');
+                    break;
+                
+                  default:
+                    console.log('買いたい文房具を選んでください');
+                }
+              </code>
+            </pre>
+          </ul>
         </ul>
         <hr class="line-dark">
         <h2 class="text-bright">try...catch文（例外処理）</h2>
