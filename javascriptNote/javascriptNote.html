@@ -833,6 +833,38 @@
           </pre>
         </ul>
         <h5>do...while文</h5>
+        <p>
+          基本構文にあるとおりdo...while文は実行される命令文が条件式より前に記述される。<br>
+          do...while文では条件式の判定の前に一度<code>do{}</code>の中の命令文が実行される。<br>
+          その後条件式の判定がされ、条件式がfalseになる直前まで繰り返される。
+        </p>
+        <ul>
+          <li>基本構文</li>
+          <pre>
+            <code>
+              do {
+                文;
+              } while(条件式);
+            </code>
+          </pre>
+          <li>例文</li>
+          <pre>
+            <code>
+              let i = 0;
+
+              do {
+                i += 1;
+                console.log(i);
+              } while(i &lt; 5);
+
+              1
+              2
+              3
+              4
+              5
+            </code>
+          </pre>
+        </ul>
         <h5>while文</h5>
         <hr class="line-dark">
         <h2 class="text-bright">関数</h2>
