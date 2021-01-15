@@ -776,6 +776,64 @@
         <h2 class="text-bright">try...catch文（例外処理）</h2>
         <hr class="line-dark">
         <h2 class="text-bright">繰り返し</h2>
+        <h5>for文</h5>
+        <ul>
+          <li>基本構文</li>
+          <pre>
+            <code>
+              for([初期化式]; [条件式]; [加算式]) {
+                命令文;
+              }
+            </code>
+          </pre>
+          <li>例1 Hello World!!を5回繰り返す</li>
+          <pre>
+            <code>
+              for(let i = 0; i &lt; 5; i++) {
+                console.log('Hello World!!');
+              }
+
+              Hello World!!
+              Hello World!!
+              Hello World!!
+              Hello World!!
+              Hello World!!
+            </code>
+          </pre>
+          <li>例2 無限ループ：Hello World!!がとまらない</li>
+          <pre>
+            <code>
+              for(let i = 0; i &gt;= 0; i++) {
+                console.log('Hello World!!');
+              }
+
+              Hello World!!
+              Hello World!!
+              Hello World!!
+              ︙
+              
+            </code>
+          </pre>
+          <li>例3 for文を使って配列の要素を全部表示させる</li>
+          <pre>
+            <code>
+              var a = ['みかん', 'りんご', 'いちご', 'すいか', 'ぶどう', 'ゆず'];
+
+              for(let i = 0; i &lt; a.length; i++) {
+                console.log(a[i]);
+              }
+
+              みかん
+              りんご
+              いちご
+              すいか
+              ぶどう
+              ゆず
+            </code>
+          </pre>
+        </ul>
+        <h5>do...while文</h5>
+        <h5>while文</h5>
         <hr class="line-dark">
         <h2 class="text-bright">関数</h2>
         <hr class="line-dark">
