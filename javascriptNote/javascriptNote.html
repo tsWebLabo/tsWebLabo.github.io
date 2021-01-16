@@ -643,7 +643,14 @@
         <h2 class="text-bright">代入</h2>
         <hr class="line-dark">
         <h2 class="text-bright">条件分岐</h2>
+        <p>
+          条件分岐とは、プログラム上で指定した条件にあっている場合、ない場合で実行する命令文を変えられる仕組みです。<br>
+          JavaScriptでは<code>if ... else</code>と<code>switch</code>の2つの条件文があります。
+        </p>
         <h5>if...else文</h5>
+        <p>
+          if ... else文では条件がtrueの時に実行する命令文とfalseの時に実行する命令文を分けて書くことができます。
+        </p>
         <ul>
           <li>基本構文</li>
           <pre>
@@ -699,11 +706,15 @@
           </pre>
         </ul>
         <h5>switch文</h5>
+        <p>
+          switch文を使うと、プログラムは式を評価し、その式の値を<code>case</code>ラベルと照合します。<br>
+          一致すると、プログラムはそのラベルに関連付けられた文を実行します。
+        </p>
         <ul>
           <li>構文</li>
           <pre>
             <code>
-              switch(変数) {
+              switch(式) {
                 case 条件1:
                   条件1を満たす時の処理;
                   break;
@@ -719,7 +730,7 @@
                 ︙
 
                 default:
-                  条件1を満たす時の処理; 
+                  どの条件も満たさない時の処理; 
               }
             </code>
           </pre>
@@ -777,6 +788,22 @@
         <hr class="line-dark">
         <h2 class="text-bright">繰り返し</h2>
         <h5>for文</h5>
+        <p>
+          for文は条件式がfalseと評価されるまでループします。
+        </p>
+        <p>
+          基本構文で見るfor文の処理の流れ
+        </p>
+        <ol>
+          <li>初期化式を実行</li>
+          <li>条件式の評価</li>
+            <ul>
+              <li><code>true</code>の場合 ：ループ文が実行される </li>
+              <li><code>false</code>の場合：forループ文が終了する</li>
+            </ul>
+          <li>加算式を実行</li>
+          <li>2. に戻る</li>
+        </ol>
         <ul>
           <li>基本構文</li>
           <pre>
