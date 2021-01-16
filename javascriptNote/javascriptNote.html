@@ -866,6 +866,58 @@
           </pre>
         </ul>
         <h5>while文</h5>
+        <p>
+          条件式の判定を行い条件式＝falseになるまで命令文を繰り返す
+        </p>
+        <ul>
+          <li>基本構文</li>
+          <pre>
+            <code>
+              while(条件式) {
+                命令文
+              }
+            </code>
+          </pre>
+          <li>例文1</li>
+          <pre>
+            <code>
+              let n = 0;
+              let x = 0;
+
+              while(n &lt; 3) {
+                n++;
+                x += n;
+
+                console.log("n=" + n " | x=" + x);
+              }
+
+              n=1 | x=1
+              n=2 | x=3
+              n=3 | x=6
+            </code>
+          </pre>
+          <li>例文2：無限ループ</li>
+          <p>
+            条件式がfalseにならない場合、無限ループになる。<br>
+            プログラムをしっかり設計し、条件式がfalseになることを確認し無限ループを避けましょう。
+          </p>
+          <pre>
+            <code>
+              while(true) {
+                cosole.log('Hello World!!');
+              }
+
+              Hello World!!
+              Hello World!!
+              Hello World!!
+              Hello World!!
+              Hello World!!
+              Hello World!!
+              Hello World!!
+              ︙
+            </code>
+          </pre>
+        </ul>
         <hr class="line-dark">
         <h2 class="text-bright">関数</h2>
         <hr class="line-dark">
