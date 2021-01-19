@@ -947,10 +947,175 @@
         </ul>
         <hr class="line-dark">
         <h2 class="text-bright">関数</h2>
+        <h5>関数とは</h5>
+        <ul>
+          <li>関数は一連の処理の集まりである</li>
+          <li>関数は外部（再帰の場合は内部）から呼ばれることのできる「サブプログラム」</li>
+          <li>値を関数に渡すことができ（＝引数）、関数は値を返すことができる（＝戻り値）</li>
+          <li>関数はFunctionオブジェクトである</li>
+        </ul>
+        <h5>関数を定義する</h5>
+        <ul>
+          <li>関数の宣言</li>
+          <ul>
+            <li>基本構文</li>
+            <pre>
+              <code>
+                function 関数名(引数1, 引数2, ...) {
+                  関数の本体;
+                }
+              </code>
+            </pre>
+            <li>例文：四則演算の関数を書いてみる</li>
+            <pre>
+              <code>
+                // 足し算の関数の定義
+                function add(number01, number02) {
+                  return number01 + number02;
+                }
+
+                // 引き算の関数の定義
+                function sub(number01, number02) {
+                  return number01 - number02;
+                }
+
+                // 掛け算の関数の定義
+                function multiple(number01, number02) {
+                  return number01 * number02; 
+                }
+
+                // 割り算の関数の定義
+                function division(number01, number02) {
+                  return number01 / number02;
+                }
+
+                // 剰余の関数の定義
+                function surplus (number01, number02) {
+                  return number01 % number02;
+                }
+
+                // ２つの値（数字）を変数に格納
+                var num01 = 15;
+                var num02 = 10;
+
+                // 関数の呼び出し
+                var answer01 = add(num01, num02);
+                var answer02 = sub(num01, num02);
+                var answer03 = multiple(num01, num02);
+                var answer04 = division(num01, num02);
+                var answer05 = surplus(num01, num02);
+
+                // ターミナルへの出力
+                console.log('足し算の結果は ' + answer01);
+                console.log('引き算の結果は ' + answer02);
+                console.log('掛け算の結果は ' + answer03);
+                console.log('割り算の結果は ' + Math.floor(answer04) + ' 余り ' + answer05);
+
+                // 出力結果
+                足し算の結果は 25
+                引き算の結果は 5
+                掛け算の結果は 150
+                割り算の結果は 1 余り 5
+              </code>
+            </pre>
+          </ul>
+          <li>関数式</li>
+          <ul>
+            <li>基本構文</li>
+            <pre>
+              <code>
+                const 変数名 = function(引数1, 引数2, ...) {
+                  関数の本体;
+                }
+              </code>
+            </pre>
+            <li>例文：先程の四則演算の関数を関数式で書いてみる</li>
+            <pre>
+              <code>
+                // 足し算の関数の定義
+                const add = function(number01, number02) {
+                  return number01 + number02;
+                }
+
+                // 引き算の関数の定義
+                const sub = function(number01, number02) {
+                  return number01 - number02;
+                } 
+
+                // 掛け算の関数の定義
+                const multiple = function(number01, number02) {
+                  return number01 * number02;
+                }
+
+                // 割り算の関数の定義
+                const division = function(number01, number02) {
+                  return number01 / number02;
+                }
+
+                // 剰余の関数の定義
+                const surplus = function(number01, number02) {
+                  return number01 % number02;
+                }
+
+                // ２つの値（数字）を変数に格納
+                var num01 = 15;
+                var num02 = 10;
+
+                // 関数の呼び出し
+                var answer01 = add(num01, num02);
+                var answer02 = sub(num01, num02);
+                var answer03 = multiple(num01, num02);
+                var answer04 = division(num01, num02);
+                var answer05 = surplus(num01, num02);
+
+                // ターミナルへの出力
+                console.log('足し算の結果は ' + answer01);
+                console.log('引き算の結果は ' + answer02);
+                console.log('掛け算の結果は ' + answer03);
+                console.log('割り算の結果は ' + Math.floor(answer04) + ' 余り ' + answer05);
+
+                // 出力結果
+                足し算の結果は 25
+                引き算の結果は 5
+                掛け算の結果は 150
+                割り算の結果は 1 余り 5
+              </code>
+            </pre>
+          </ul>
+        </ul>
+        <h5>関数の呼び出し</h5>
+        <ul>
+          <li>関数を定義しても、その関数が実行されるわけではない</li>
+          <li>関数は、指定した一連の処理に名前を付けたもの</li>
+          <li>関数に引数をわたし呼び出すことで、指定された処理を実行し結果を返してくれる。</li>
+        </ul>
+        <h5>関数のスコープ</h5>
+        <h5>スコープと関数スタック</h5>
+        <ul>
+          <li>再帰</li>
+          <li>入れ子の関数とクロージャ</li>
+          <li>変数の保護</li>
+          <li>多重入れ子関数</li>
+          <li>名前衝突</li>
+        </ul>
+        <h5>クロージャ</h5>
+        <h5>argumentsオブジェクトの使用</h5>
+        <h5>関数の引数</h5>
+        <ul>
+          <li>デフォルト引数</li>
+          <li>残余引数</li>
+        </ul>
+        <h5>アロー関数</h5>
+        <ul>
+          <li>短縮形の関数</li>
+          <li>別々のthisはない</li>
+        </ul>
+        <h5>定義済み関数</h5>
+
         <hr class="line-dark">
         <h2 class="text-bright">画面入出力</h2>
         <hr class="line-dark">
-        <h2 class="text-bright">処理の呼び出し</h2>
+        <h2 class="text-bright">処理の呼び出し（引数・戻り値）</h2>
         <hr class="line-dark">
         <h2 class="text-bright">データベースの読込・書出・更新・削除</h2>        
       </section>
