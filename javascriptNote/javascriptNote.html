@@ -1089,10 +1089,96 @@
           <li>関数は、指定した一連の処理に名前を付けたもの</li>
           <li>関数に引数をわたし呼び出すことで、指定された処理を実行し結果を返してくれる。</li>
         </ul>
+        <p>関数の呼び出し方法</p>
+        <pre>
+          <code>
+            // 関数の定義：定義されただけ
+            function hello(hello) {
+              console.log(hello);
+            }
+
+            // 関数の呼び出し：ここで関数が実行される
+            hello('Good morning!!');
+            hello('Good afternoon!!');
+            hello('Good evening!!');
+
+            // 結果
+            Good morning!!
+            Good afternoon!!
+            Good evening!!
+          </code>
+        </pre>
         <h5>関数のスコープ</h5>
+        <p>
+          <ul>
+            <li>スコープ＝定義されたもの（変数・関数）を参照できる範囲</li>
+            <li>スコープには、グローバルスコープとローカルスコープがある</li>
+            <li>関数の内部で宣言された変数は関数の外部からアクセスできない</li>
+            <li>関数は自身が定義されたスコープ内で定義されている全ての変数や関数にアクセスできる</li>
+          </ul>
+        </p>
+        <pre>
+          <code>
+            // 関数のスコープ
+            // グローバルスコープで変数を定義
+            var num1 = 20;
+            var num2 = 3;
+            var name = 'Sasaki';
+
+            // グローバルスコープで関数を定義
+            function multiply() {
+              return num1 * num2;
+            }
+
+            console.log(multiply());
+
+            // 結果
+            60
+
+            // グローバル ↔ ローカル
+
+            function getScore() {
+              var num1 = 2;
+              var num2 = 3;
+
+              function add() {
+                return name + ' scored ' + (num1 + num2);
+              }
+              return add();
+            }
+
+            console.log(getScore());
+
+            // 結果
+            Sasaki scored 5
+          </code>
+        </pre>
         <h5>スコープと関数スタック</h5>
         <ul>
           <li>再帰</li>
+          <pre>
+            <code>
+              function loop(x) {
+                if(x >= 10) 
+                  return;
+                  console.log(x);
+                  loop(x + 1); // 再帰呼び出し
+              }
+              loop(0);
+
+              // 結果
+              0
+              1
+              2
+              3
+              4
+              5
+              6
+              7
+              8
+              9
+            </code>
+          </pre>
           <li>入れ子の関数とクロージャ</li>
           <li>変数の保護</li>
           <li>多重入れ子関数</li>
