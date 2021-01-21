@@ -1200,6 +1200,125 @@
 
         <hr class="line-dark">
         <h2 class="text-bright">画面入出力</h2>
+        <p>
+          一般にプログラミングでの「画面の入出力」というのはターミナルを用いた標準入力・標準出力を指すと思いますが、<br>
+          JavaScriptではブラウザ上のDOM操作ができることから、ここではブラウザ画面を用いた入出力について書いていきます。
+        </p>
+        <ul>
+          <li>index.html</li>
+          <pre>
+            <code>
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;title&gt;JavaScriptで画面への入出力テスト&lt;/title&gt;
+                  &lt;link rel="stylesheet" href="style.css"&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;h1&gt;JavaScriptで画面への入出力テスト&lt;/h1&gt;
+                  
+                  &lt;!-- 日付入力フォーム --&gt;
+                  &lt;label for="start"&gt;Start Date&lt;/label&gt;
+                  &lt;input type="date" id="start" name="trip-start"
+                  value="2021-01-19"    &lt;!-- 初期値 --&gt;
+                  min="2021-01-01"      &lt;!-- 最小値 --&gt;
+                  max="2021-12-31"&gt;  &lt;!-- 最大値 --&gt;
+
+                  &lt;!-- テキスト入力フォーム --&gt;
+                  &lt;label for="name"&gt;Name(４〜８文字で入力してください)&lt;/label&gt;
+                  &lt;input type="text" name="name" id="name" required
+                  minlength="4" &lt;!-- 文字数最小値 --&gt;
+                  maxlength="8" &lt;!-- 文字数最大値 --&gt;
+                  size="10"&gt;
+
+                  &lt;!-- 数値入力フォーム --&gt;
+                  &lt;label for="number"&gt;Number&lt;/label&gt;
+                  &lt;input type="number" name="number" id="number"
+                  min="0" &lt;!-- 最小値 --&gt;
+                  max="100"&gt; &lt;!-- 最大値 --&gt;
+
+                  &lt;!-- ボタン --&gt;
+                  &lt;input class="favorite styled"
+                        type="button"
+                        value="Add to favorites"
+                        onclick="getValue()"&gt;
+                  
+                  &lt;!-- テキスト出力部分 --&gt;
+                  &lt;p class="outputArea" id="output"&gt;&lt;/p&gt;
+                  &lt;script src="input_output.js"&gt;&lt;/script&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+          <li>style.css</li>
+          <pre>
+            <code>
+              label {
+                display: block;
+                font: 1rem 'Ubuntu', sans-serif;
+              }
+              
+              input, label {
+                margin: .4rem 0;
+              }
+              
+              .styled {
+                display: block;
+                border: 0;
+                line-height: 2.5;
+                padding: 0 20px;
+                font-size: 1rem;
+                text-align: center;
+                color: #fff;
+                text-shadow: 1px 1px 1px #000;
+                border-radius: 10px;
+                background-color: rgba(220, 0, 0, 1);
+                background-image: linear-gradient(to top left,
+                                                  rgba(0, 0, 0, .2),
+                                                  rgba(0, 0, 0, .2) 30%,
+                                                  rgba(0, 0, 0, 0));
+                box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                            inset -2px -2px 3px rgba(0, 0, 0, .6);
+              }
+              
+              .styled:hover {
+                background-color: rgba(255, 0, 0, 1);
+              }
+              
+              .styled:active {
+                box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                            inset 2px 2px 3px rgba(0, 0, 0, .6);
+              }
+              
+              .outputArea {
+                display: block;
+              }
+              
+            </code>
+          </pre>
+          <li>input_output.js</li>
+          <pre>
+            <code>
+              // 関数名<code>getValue()：htmlのbuttonに同名のonClickを記述する</code>
+              function getValue(){
+                var date = document.getElementById('start').value;    // 日付入力フォームの値を取得
+                var text = document.getElementById('name').value;     // テキスト入力フォームの値を取得
+                var number = document.getElementById('number').value; // 数値入力フォームの値を取得
+              
+                // デベロッパーツールのconsoleに取得したデータを出力させてみる
+                console.log(date + " | " + text + " | " + number);    
+                
+                // HTMLの出力用のpタグに取得したデータを出力させる
+                document.getElementById('output').innerHTML = date + " | " + text + " | " + number;
+              }
+            </code>
+          </pre>
+        </ul>
+        <ul>
+          <li>ブラウザでの表示</li>
+          <img src="images/js_IO_001.png" width="50%" alt="JavaScriptを使ったデータの入出力画面の画像">
+          <li>各入力フォームにデータを入力後、ボタンを押してみた</li>
+          <img src="images/js_IO_002.png" width="50%" alt="JavaScriptを使ったデータの入出力画面にデータを入力して動作させた画面の画像">
+        </ul>
         <hr class="line-dark">
         <h2 class="text-bright">処理の呼び出し（引数・戻り値）</h2>
         <hr class="line-dark">
