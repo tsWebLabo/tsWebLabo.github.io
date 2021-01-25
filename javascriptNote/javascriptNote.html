@@ -1322,7 +1322,204 @@
         <hr class="line-dark">
         <h2 class="text-bright">処理の呼び出し（引数・戻り値）</h2>
         <hr class="line-dark">
-        <h2 class="text-bright">データベースの読込・書出・更新・削除</h2>        
+        <h2 class="text-bright">データベースの読込・書出・更新・削除</h2>       
+        <p>
+          JavaScriptでデータベースにアクセスするには「node.js」を使うことになります。<br>
+          またデータベースについては様々なものがありますが「SQLite3」を使っていきます。
+        </p> 
+        <h5>本記事執筆時の環境</h5>
+        <ul>
+          <li>OS：Ubuntu 20.04 LTS</li>
+          <li>node.js：ver 12.18.3</li>
+          <li>SQLite3：ver 3.31.1</li>
+        </ul>
+        <h5>node.jsの導入方法</h5>
+        <p>
+          上記環境で僕が実際にnode.jsを導入した方法を記載します。<br>
+          後々のnode.jsのバージョン管理のことを考え、n packageでの導入を行いました。
+        </p>
+        <ol>
+          <li>node.jsとnpmのインストール</li>
+          <p>まずは下記の3つのコマンドを入力してnode.jsとnpm(Node Package Manager)をインストールしましょう。</p>
+          <pre>
+            <code>
+              sudo apt-get update
+              sudo apt-get install nodejs
+              sudo apt-get install npm
+            </code>
+          </pre>
+          <li>n packageを導入</li>
+          <pre>
+            <code>
+              sudo npm cache clean
+              sudo npm install n -g
+
+              // インストール後
+              sudo n stable
+              sudo ln /usr/local/bin/node /usr/bin/node
+            </code>
+          </pre>
+          <li>最初にインストールしたnode.js npmは使わないので、アンインストールしておく</li>
+          <p>
+            最初にインストールされたnode.jsはバージョン指定したものではなく、その時に選ばれた（おそらく最新のもの）がインストールされているためアンインストールします。<br>
+            npmについても、後でnode.jsをインストールする際に同時にインストールされるようです。
+          </p>
+          <pre>
+            <code>
+              sudo apt-get purge -y nodejs npm
+            </code>
+          </pre>
+          <li>n packageでバージョンを管理する</li>
+          <pre>
+            <code>
+              sudo n インストールしたいバージョン
+              sudo ln -sf /usr/local/bin/node /usr/bin/node
+            </code>
+          </pre>
+          <li>node.jsが正常にインストールされたかを確認</li>
+          <pre>
+            <code>
+              node --version
+
+              v12.18.3
+            </code>
+          </pre>
+        </ol>
+        <h5>node.jsでのSQLite3アクセスの準備</h5>
+        <p>
+          node.jsやSQLite3のデータベースファイルを格納しておくディレクトリ（フォルダ）をつくります。<br>
+          ディレクトリの場所はお好みの場所で構いません。<br>
+          不安な方は、HOMEディレクトリ直下に作ることをお勧めします。
+        </p>
+        <p>
+          ディレクトリを作ってそこに入ったら、ターミナルから次のコマンドを入力しnode.jsでSQLite3にアクセスできるようにします。
+        </p>
+        <pre>
+          <code>
+            npm install sqlite3
+          </code>
+        </pre>
+        <h5>SQLite3のデータベースファイル作成</h5>
+        <p>
+          SQLite3のコマンドでデータベースを作成しておきます。<br>
+          データベースを作ったら、<code>ctrl+d</code>でsqlite3のコンソールから抜けましょう。
+        </p>
+        <pre>
+          <code>
+            sqlite3 test.db
+          </code>
+        </pre>
+        <h5>node.jsのファイル作成</h5>
+        <p>
+          データベースファイルを定義したフォルダの中にJavaScriptのファイルを作ります。
+        </p>
+        <pre>
+          <code>
+            touch testAccess.js
+          </code>
+        </pre>
+        <h5>データベースアクセスのコードを書こう！！</h5>
+        <div class="media">
+          <pre>
+            <code>
+              // SQLite3を使う準備
+              var sqlite3 = require('sqlite3').verbose();
+              // DBファイルを指定
+              var db = new sqlite3.Database('test.db');
+
+              // DB操作
+              db.serialize(() => {
+                // テーブルを初期化
+                dataInitialize();
+
+                // データを格納
+                insertData('Sasaki');
+                insertData('Satou');
+                insertData('Takahashi');
+
+                // 格納したデータを抽出
+                selectAll();
+
+                // データを更新
+                updateData('Takahashi', 'Tanaka');
+
+                // 格納したデータを抽出
+                selectAll();
+
+                // データを削除
+                deleteData('Tanaka');
+
+                // 格納したデータを抽出
+                selectAll();
+              });
+              db.close();
+
+
+              /**
+              * テーブルの初期化メソッド
+              */
+              function dataInitialize() {
+                // テーブルを削除
+                db.run('DROP TABLE testTable');
+
+                // テーブルを定義
+                db.run("CREATE TABLE testTable (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)");
+                console.log("テーブルの初期化完了");
+              }
+
+              /**
+              * SELECT文：DBのデータを抽出メソッド
+              */
+              function selectAll() {
+                db.each("SELECT * FROM testTable", (error, row) => {
+                  if(error) {
+                    console.error("Error", error);
+                    return;
+                  }
+                  console.log(row.id + ' | ' + row.name);
+                });
+              }
+
+              /**
+              * INSERT文：データを新規に格納するメソッド
+              * @param {新規追加の名前} name 
+              */
+              function insertData(name) {
+                const stmt_insert = db.prepare("INSERT INTO testTable (name) VALUES (?)");
+                stmt_insert.run(name);
+                stmt_insert.finalize();
+                console.log("データの格納完了");
+              }
+
+              /**
+              * 既存のデータを更新するメソッド
+              * @param {変更前の名前} oldName 
+              * @param {変更後の名前} newName 
+              */
+              function updateData(oldName, newName) {
+                const stmt_update = db.prepare("UPDATE testTable SET name = ? WHERE name = ?");
+                stmt_update.run([newName, oldName]);
+                stmt_update.finalize();
+                console.log("データの更新完了");
+              }
+
+              /**
+              * データを削除するメソッド
+              * @param {削除する名前} name 
+              */
+              function deleteData(name) {
+                const stmt_delete = db.prepare("DELETE FROM testTable WHERE name = ?");
+                stmt_delete.run(name);
+                stmt_delete.finalize();
+                console.log("データの削除完了");
+              }
+            </code>
+          </pre>
+          <div class="media-body">
+            <h5 class="mt-0">メディアのヘッダ</h5>
+            メディアのコンテンツ...
+          </div><!-- /.media-body -->
+        </div><!-- /.media -->
       </section>
     <!-- footer -->
     <footer class="footer">
