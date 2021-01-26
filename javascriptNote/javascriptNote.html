@@ -1516,8 +1516,43 @@
             </code>
           </pre>
           <div class="media-body">
-            <h5 class="mt-0">メディアのヘッダ</h5>
-            メディアのコンテンツ...
+            <h5 class="mt-0">データベースの種類とパスの指定</h5>
+            <p>
+              <code>var sqlite3 = require('sqlite3').verbose();</code><br>
+              「SQLite3データベースを使います」という宣言を変数<code>sqlite3</code>に格納しています。<br>
+              <code>var db = new sqlite3.Database('test.db');</code><br>
+              「test.db」というSQLite3データベースを定義して変数<code>db</code>に格納しています。<br>
+              この2行を記述することで、データベースの種類とパス（データベースの場所と名前）を指定します。
+            </p>
+            <hr class="line-dark">
+            <h5 class="mt-0">データベースアクセスの処理を記述</h5>
+            <p>
+              <code>db.serialize(() => {...});</code><br>
+              <code>db.close();</code><br>
+              このブロックでデータベースへのデータの追加・更新・削除・読込等の処理をどういった順序で行うのかを記述しています。<br>
+              ここで呼び出している関数はブロックの後ろの方で記述しています。
+            </p>
+            <hr class="line-dark">
+            <h5 class="mt-0">テーブルの初期化メソッド</h5>
+            <p>
+              今回のコードはテスト用コードということもあり、<code>DROP TABLE</code>文によるデーブルの削除と<br>
+              <code>CREATE TABLE</code>文によるテーブルの定義を組み合わせた形でテーブルの初期化メソッドを定義しました。
+            </p>
+            <hr class="line-dark">
+            <h5 class="mt-0">SELECT文：データの読込メソッド</h5>
+            <p>
+              SELECT文の場合のみコードの形が少し違っているので、注意が必要です。
+              for文等の繰り返し文をつかなくても<code>db.each("SELECT文", (error, row) => {});</code>の記述だけで<br>
+              SELECT文に応じたデータを抽出してくれます。
+            </p>
+            <hr class="line-dark">
+            <h5 class="mt-0">INSERT文・UPDATE文・DELETE文のメソッド</h5>
+            <p>
+              INSERT文・UPDATE文・DELETE文の3つは共通点のある記述方法です。
+              <code>db.prepare();</code>というメソッドを使うことでプレースホルダ(?)を用いてSQL文を記述することができます。<br>
+              そのプレースホルダに引数をわたしてメソッドを定義しています。<br>
+              それぞれのメソッドによってプレースホルダの数や記述箇所が異なるので注意が必要です。
+            </p>
           </div><!-- /.media-body -->
         </div><!-- /.media -->
       </section>
