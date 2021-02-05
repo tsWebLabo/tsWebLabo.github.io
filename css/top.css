@@ -1,17 +1,4 @@
 @charset "UTF-8";
-/* navbar */
-.navbar {
-    background-color: #333;
-}
-
-.navbar-brand {
-    margin-left: 10rem;
-}
-
-.navbar-nav {
-    margin-right: 10rem;
-}
-
 /* jumbotron */
 .jumbotron {
   position: relative;
