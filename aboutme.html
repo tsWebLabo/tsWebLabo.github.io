@@ -24,121 +24,137 @@
   <body>
     <!--navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-        <div class="navbar-brand">
-            <img src="images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            t's Web Labo
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="aboutme.html">About me</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="ubuntu/ubuntu001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="navbar-brand">
+          <img src="images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="./ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
                   Ubuntu
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="ubuntu/ubuntu001.html">Ubuntuってなに？</a>
-                  <a class="dropdown-item" href="ubuntu/ubuntu002.html">Linuxコマンド</a>
-                  <a class="dropdown-item" href="ubuntu/ubuntu003.html">ShellScript</a>
-                </div>
-                <li class="nav-item dropdown">
-                  <a href="androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Androidアプリ
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="androidApp/androidApp001.html">Basic-Tips</a>
-                    <a class="dropdown-item" href="androidApp/androidApp002.html">データベースアクセス</a>
-                    <a class="dropdown-item" href="androidApp/androidApp003.html">Androidアプリの紹介</a>
-                  </div>
-                </li>
-              <li class="nav-item dropdown">
-                <a href="sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  SQLite3
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="sqlite3/sqlite3_001.html">SQLite3とは</a>
-                  <a class="dropdown-item" href="sqlite3/sqlite3_002.html">データベースの操作</a>
-                  <a class="dropdown-item" href="sqlite3/sqlite3_003.html">テーブルの操作</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
-                  <a class="dropdown-item" href="sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
-                  <a class="dropdown-item" href="sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
-                  <a class="dropdown-item" href="sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                  <a class="dropdown-item" href="./ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item" href="./ubuntu/ubuntu002.html">Linuxコマンド</a>
+                  <a class="dropdown-item" href="./ubuntu/ubuntu003.html">ShellScript</a>
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                <a href="vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="./vim/vim001.html" type="button" data-toggle="dropdown">
                   Vim
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="vim/vim001.html">インストールと設定</a>
-                  <a class="dropdown-item" href="vim/vim002.html">モード・基本操作</a>
+                  <a class="dropdown-item" href="./vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="./vim/vim002.html">モード・基本操作</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascriptNote/javascriptNote.html">JavaScript入門！！</a>
+            </ul>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="./androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="./androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="./androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
               </li>
-          </ul>
-        </div>
-      </nav>
-      
-      <section>
-        <!-- jumbotron -->
-        <div class="jumbotron">
-          <h1 class="display-4 text-accent text-bright">About me</h1>
-          <p class="lead">
-            みなさん、こんにちは。t's Web Laboの”たむ”です。<br>
-            はじめましての方、はじめまして！！<br>
-            YouTubeチャンネルを見てくださっている方ありがとうございます！！
-          </p>
-          <hr class="my-4">
-          <p class="lead">
-            このサイトではYouTubeで配信したことをメインにPCやプログラミングに関することを発信していきます。<br>
-            YouTubeチャンネルやTwitter等のリンクも載せておきますので気軽にご覧ください。
-          </p>
-        </div>
-        <h3>好きなプログラミング言語(順不同/マークアップ言語含む)</h3>
-        <ul>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>SQL</li>
-          <li>HTML/CSS</li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="./sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="./sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item" href="./sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="./sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item" href="./sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="./sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li><a class="dropdown-item" href="./javascriptNote/javascriptNote.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="./ExpressApp/expressApp.html">Expressアプリ</a></li>
+            </ul>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item active">
+            <a class="nav-link" href="aboutme.html">About me</a>
+          </li>    
         </ul>
-        <h3>使っているテキストエディタ・IDE</h3>
-        <ul>
-          <li>VSCode</li>
-          <li>Vim</li>
-          <li>Android Studio</li>
-        </ul>
-        <h3>これからやってみたいこと</h3>
-        <ul>
-          <li>ライブ配信を1日1枠のペースで続けていく</li>
-          <li>Androidアプリを作ってGoogle Playに出品する</li>
-          <li>node.JSを使ったデータベースアクセスのあるアプリをつくる</li>
-          <li>LinuxコマンドやShellScriptをもっと使えるようになる</li>
-          <li>LinuxOSのことも勉強してみたい</li>
-          <li>自作PCでサーバーをたてて管理・運用をしたい</li>
-          <li>Raspberry Piを使ってのサーバーもやってみたい</li>
-          <li>自作キーボードをつくってみたい</li>
-          <li>・・・and more</li>
-        </ul>
-        <h3>趣味</h3>
-        <ul>
-          <li>YouTube視聴</li>
-          <li>ゲーム(オープンワールドもの・死にゲーが好きです。)・・・最近はゲームやれてません。。。</li>
-        </ul>
-      </section>
-      
+      </div>
+    </nav>
+    <section>
+      <!-- jumbotron -->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">About me</h1>
+        <p class="lead">
+          みなさん、こんにちは。t's Web Laboの”たむ”です。<br>
+          はじめましての方、はじめまして！！<br>
+          YouTubeチャンネルを見てくださっている方ありがとうございます！！
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+          このサイトではYouTubeで配信したことをメインにPCやプログラミングに関することを発信していきます。<br>
+          YouTubeチャンネルやTwitter等のリンクも載せておきますので気軽にご覧ください。
+        </p>
+      </div>
+      <h3>好きなプログラミング言語(順不同/マークアップ言語含む)</h3>
+      <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>SQL</li>
+        <li>HTML/CSS</li>
+      </ul>
+      <h3>使っているテキストエディタ・IDE</h3>
+      <ul>
+        <li>VSCode</li>
+        <li>Vim</li>
+        <li>Android Studio</li>
+      </ul>
+      <h3>これからやってみたいこと</h3>
+      <ul>
+        <li>ライブ配信を1日1枠のペースで続けていく</li>
+        <li>Androidアプリを作ってGoogle Playに出品する</li>
+        <li>node.JSを使ったデータベースアクセスのあるアプリをつくる</li>
+        <li>LinuxコマンドやShellScriptをもっと使えるようになる</li>
+        <li>LinuxOSのことも勉強してみたい</li>
+        <li>自作PCでサーバーをたてて管理・運用をしたい</li>
+        <li>Raspberry Piを使ってのサーバーもやってみたい</li>
+        <li>自作キーボードをつくってみたい</li>
+        <li>・・・and more</li>
+      </ul>
+      <h3>趣味</h3>
+      <ul>
+        <li>YouTube視聴</li>
+        <li>ゲーム(オープンワールドもの・死にゲーが好きです。)・・・最近はゲームやれてません。。。</li>
+      </ul>
+    </section> 
     <!-- footer -->
     <footer class="footer">
       <div id="copyright"></div>

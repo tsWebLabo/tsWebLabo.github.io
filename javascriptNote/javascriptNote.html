@@ -24,542 +24,587 @@
     <!--navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="navbar-brand">
-        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        t's Web Labo
+          <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
       </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../aboutme.html">About me</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../ubuntu/ubuntu001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ubuntu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
-                <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
-                <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Androidアプリ
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
-                <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
-                <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                SQLite3
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLIte3とは</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vim
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
-                <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">JavaScript入門！！</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <section>
-        <!--jumbotron-->
-        <div class="jumbotron">
-          <h1 class="display-4 text-accent text-bright">JavaScript入門！！</h1>
-          <p class="lead">JavaScriptを基礎から勉強していきます。</p>
-          <hr class="my-4">
-          <p class="lead">
-            YouTubeライブ配信で勉強した内容をまとめて記録していきます。
-          </p>
-        </div>
-        <h2 class="text-bright">JavaScriptとは。</h2>
-        <ul>
-          <li>クロスプラットフォームで動作する。</li>
-          <p>
-            どのOSでも、どのブラウザでもJavaScriptは使えます。
-          </p>
-          <li>動的型付け言語</li>
-          <p>
-            変数のデータ型は宣言が不要（動的型付け、弱い型付け）
-          </p>
-          <li>オブジェクト指向言語</li>
-          <p>
-            オブジェクトのデータ型に区別はない。<br>
-            継承はプロトタイプベースの機構を通して行われ、プロパティとメソッドはどんなオブジェクトにも動的に追加できる。
-          </p>
-          <li>スクリプト言語</li>
-          <li>クライアントサイドJavaScript</li>
-          <li>サーバーサイドJavaScript</li>
-          <li>JavaScriptとJavaは別物です。</li>
-        </ul>
-        <hr class="line-dark">
-        <h2 class="text-bright">型</h2>
-        <ul>
-          <li>数値</li>
-          <li>文字列</li>
-          <li>真偽値</li>
-          <li>Symbol</li>
-          <li>オブジェクト</li>
-            <ul>
-              <li>関数</li>
-              <li>Array(配列)</li>
-              <li>Date</li>
-              <li>RegExp(正規表現)</li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
+                  Ubuntu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="../vim/vim001.html" type="button" data-toggle="dropdown">
+                  Vim
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                </div>
+              </li>
             </ul>
-          <li>null</li>
-          <p>
-            意図的に「値がない」ということを示す値
-          </p>
-          <li>undefined</li>
-          <p>
-            初期化されていない状態を示す。<br>
-            値が代入されていない状態を示す値
-          </p>
-        </ul>
-        <hr class="line-dark">
-        <h2 class="text-bright">変数</h2>
-        <ul>
-          <li>var</li>
-          <p>
-            最も一般的な宣言キーワード。<br>
-            <code>let</code>、<code>const</code>のような制約がない。<br>
-            varキーワードで宣言した変数は、変数を宣言した関数ブロックから使用できます。
-          </p>
-          <li>let</li>
-          <p>
-            ブロックレベルの変数を宣言できる。<br>
-            宣言されたブロックの外からは変数を使えない。
-          </p>
-          <li>const</li>
-          <p>
-            変更を意図しない変数を宣言できる。
-            宣言されたあとに変更ができない。（＝定数）
-          </p>
-        </ul>
-        <hr class="line-dark">
-        <h2 class="text-bright">演算子</h2>
-        <ul>
-          <li>代入演算子</li>
-          <p>
-            代入演算子は右オペランド（演算子を挟んで右側）の値を元に左オペランド（演算子を挟んで左側）に値を代入するもの
-          </p>
-          <ul>
-            <li>代入</li>
-            <pre>
-              <code>
-                // xにyを代入する
-                var x;
-                var y = 10;
-                
-                x = y;
-
-                // x = 10, y = 10
-              </code>
-            </pre>
-            <li>加算代入</li>
-            <pre>
-              <code>
-                // xにx + yを代入する
-                var x = 10;
-                var y = 10;
-
-                x += y;
-
-                // x = 20, y = 10
-              </code>
-            </pre>
-            <li>減算代入</li>
-            <pre>
-              <code>
-                // xにx - yを代入する
-                var x = 20;
-                var y = 10;
-
-                x -= y;
-
-                // x = 10, y = 10
-              </code>
-            </pre>
-            <li>乗算代入</li>
-            <pre>
-              <code>
-                // xにx * yを代入する
-                var x = 10;
-                var y = 10;
-
-                x *= y;
-
-                // x = 100, y = 10
-              </code>
-            </pre>
-            <li>除算代入</li>
-            <pre>
-              <code>
-                // xにx / yを代入する
-                var x = 100;
-                var y = 10;
-
-                x /= y;
-
-                // x = 10, y = 10
-              </code>
-            </pre>
-            <li>剰余代入</li>
-            <pre>
-              <code>
-                // xにx % yを代入する
-                var x = 10;
-                var y = 10;
-                
-                x %= y;
-
-                // x = 0, y = 10
-              </code>
-            </pre>
-            <li>べき乗代入</li>
-            <pre>
-              <code>
-                // xにx ** yを代入する
-                var x = 10;
-                var y = 10;
-
-                x **= y;
-
-                // x = 10000000000, y= 10
-              </code>
-            </pre>
-          </ul>
-          <li>比較演算子</li>
-          <ul>
-            <li>被演算子を比較してその結果が真であるかに基づいて論理値を返す。</li>
-            <li>被演算子には数値・文字列・論理値・オブジェクトを使用できる。</li>
-            <li>
-              ほとんどの場合、2つの被演算子が異なる型ならばJavaScriptではその被演算子を比較に適した型に変換しようとする。<br>
-              一般的に被演算子は数値的に比較される結果となる。
-            </li>
-            <li>例外として<code>===</code>と<code>!==</code>については等値性を比較する前に被演算子を適合する型に変換しない</li>
-          </ul>
-          <p>
-            以下に比較演算子の種類と使い方の例をあげていきます。あらかじめ次の通り変数を定義しておきます。
-            <pre>
-              <code>
-                var a = 20;
-                var b = 10;
-                var c = 'Sasaki'
-              </code>
-            </pre>
-          </p>
-          <ul>
-            <li>等価(==)</li>
-            <pre>
-              <code>
-                a == b;
-                // false
-
-                a == c;
-                // false
-              </code>
-            </pre>
-            <li>不等価(!=)</li>
-            <pre>
-              <code>
-                a != b;
-                // true
-
-                a != c;
-                // true
-              </code>
-            </pre>
-            <li>厳密等価(===)</li>
-            <pre>
-              <code>
-                a === b;
-                // false
-
-                a === c;
-                // false
-              </code>
-            </pre>
-            <li>厳密不等価(!==)</li>
-            <pre>
-              <code>
-                a !== b;
-                // true
-
-                a !== c;
-                // true
-              </code>
-            </pre>
-            <li>より大きい(&gt;)</li>
-            <pre>
-              <code>
-                a &gt; b;
-                // true
-
-                b &gt; a;
-                // false
-              </code>
-            </pre>
-            <li>以上(&gt;=)</li>
-            <pre>
-              <code>
-                a &gt;= b;
-                // true
-
-                b &gt;= a;
-                // false
-              </code>
-            </pre>
-            <li>より小さい(&lt;)</li>
-            <pre>
-              <code>
-                a &lt; b;
-                // false
-
-                b &lt; a;
-                // true
-              </code>
-            </pre>
-            <li>以下(&lt;=)</li>
-            <pre>
-              <code>
-                a &lt;= b;
-                // false
-
-                b &lt;= a;
-                // true
-              </code>
-            </pre>
-          </ul>
-          <li>算術演算子</li>
-          <ul>
-            <li>被演算子として数値（リテラルまたは変数）をとり１つの数値をかえす。</li>
-            <li>標準的な算術演算子は、加算(+)・減算(-)・乗算(*)・除算(/)</li>
-            <li>他のプログラミング言語で「浮動小数点数を用いた場合」と同じ様に機能する</li>
-          </ul>
-          <ul>
-            <li>加算</li>
-            <pre>
-              <code>
-                12 + 5
-                // 17
-              </code>
-            </pre>
-            <li>減算</li>
-            <pre>
-              <code>
-                12 - 5
-                // 7
-              </code>
-            </pre>
-            <li>乗算</li>
-            <pre>
-              <code>
-                12 * 5
-                // 60
-              </code>
-            </pre>
-            <li>除算</li>
-            <pre>
-              <code>
-                12 / 5
-                // 2.4
-              </code>
-            </pre>
-            <li>剰余</li>
-            <pre>
-              <code>
-                12 % 5
-                // 2
-              </code>
-            </pre>
-            <li>インクリメント</li>
-            <ul>
-              <li>x++</li>
-              <pre>
-                <code>
-                  var x = 3;
-                  x++; // ここでは x = 3
-                  x;    // この段階で x = 4 になる
-                </code>
-              </pre>
-              <li>++x</li>
-              <pre>
-                <code>
-                  var x = 3;
-                  ++x; // ここで既に x = 4
-                </code>
-              </pre>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li><a class="dropdown-item active" href="../javascriptNote/javascriptNote.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="../ExpressApp/expressApp.html">Expressアプリ</a></li>
             </ul>
-            <li>デクリメント</li>
-            <ul>
-              <li>x--</li>
-              <pre>
-                <code>
-                  var x = 3;
-                  x--; // ここでは x = 3
-                  x;   // この段階で x = 2 になる
-                </code>
-              </pre>
-              <li>--x</li>
-              <pre>
-                <code>
-                  var x = 3;
-                  --x; // この段階で x = 2 になる
-                </code>
-              </pre>
-            </ul>
-            <li>単項符号反転</li>
-            <p>被演算子の符号を反転してその値を返す</p>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutme.html">About me</a>
+          </li>    
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <!--jumbotron-->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">JavaScript入門！！</h1>
+        <p class="lead">JavaScriptを基礎から勉強していきます。</p>
+        <hr class="my-4">
+        <p class="lead">
+          YouTubeライブ配信で勉強した内容をまとめて記録していきます。
+        </p>
+      </div>
+      <h2 class="text-bright">JavaScriptとは。</h2>
+      <ul>
+        <li>クロスプラットフォームで動作する。</li>
+        <p>
+          どのOSでも、どのブラウザでもJavaScriptは使えます。
+        </p>
+        <li>動的型付け言語</li>
+        <p>
+          変数のデータ型は宣言が不要（動的型付け、弱い型付け）
+        </p>
+        <li>オブジェクト指向言語</li>
+        <p>
+          オブジェクトのデータ型に区別はない。<br>
+          継承はプロトタイプベースの機構を通して行われ、プロパティとメソッドはどんなオブジェクトにも動的に追加できる。
+        </p>
+        <li>スクリプト言語</li>
+        <li>クライアントサイドJavaScript</li>
+        <li>サーバーサイドJavaScript</li>
+        <li>JavaScriptとJavaは別物です。</li>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">型</h2>
+      <ul>
+        <li>数値</li>
+        <li>文字列</li>
+        <li>真偽値</li>
+        <li>Symbol</li>
+        <li>オブジェクト</li>
+          <ul>
+            <li>関数</li>
+            <li>Array(配列)</li>
+            <li>Date</li>
+            <li>RegExp(正規表現)</li>
+          </ul>
+        <li>null</li>
+        <p>
+          意図的に「値がない」ということを示す値
+        </p>
+        <li>undefined</li>
+        <p>
+          初期化されていない状態を示す。<br>
+          値が代入されていない状態を示す値
+        </p>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">変数</h2>
+      <ul>
+        <li>var</li>
+        <p>
+          最も一般的な宣言キーワード。<br>
+          <code>let</code>、<code>const</code>のような制約がない。<br>
+          varキーワードで宣言した変数は、変数を宣言した関数ブロックから使用できます。
+        </p>
+        <li>let</li>
+        <p>
+          ブロックレベルの変数を宣言できる。<br>
+          宣言されたブロックの外からは変数を使えない。
+        </p>
+        <li>const</li>
+        <p>
+          変更を意図しない変数を宣言できる。
+          宣言されたあとに変更ができない。（＝定数）
+        </p>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">演算子</h2>
+      <ul>
+        <li>代入演算子</li>
+        <p>
+          代入演算子は右オペランド（演算子を挟んで右側）の値を元に左オペランド（演算子を挟んで左側）に値を代入するもの
+        </p>
+        <ul>
+          <li>代入</li>
+          <pre>
+            <code>
+              // xにyを代入する
+              var x;
+              var y = 10;
+              
+              x = y;
+
+              // x = 10, y = 10
+            </code>
+          </pre>
+          <li>加算代入</li>
+          <pre>
+            <code>
+              // xにx + yを代入する
+              var x = 10;
+              var y = 10;
+
+              x += y;
+
+              // x = 20, y = 10
+            </code>
+          </pre>
+          <li>減算代入</li>
+          <pre>
+            <code>
+              // xにx - yを代入する
+              var x = 20;
+              var y = 10;
+
+              x -= y;
+
+              // x = 10, y = 10
+            </code>
+          </pre>
+          <li>乗算代入</li>
+          <pre>
+            <code>
+              // xにx * yを代入する
+              var x = 10;
+              var y = 10;
+
+              x *= y;
+
+              // x = 100, y = 10
+            </code>
+          </pre>
+          <li>除算代入</li>
+          <pre>
+            <code>
+              // xにx / yを代入する
+              var x = 100;
+              var y = 10;
+
+              x /= y;
+
+              // x = 10, y = 10
+            </code>
+          </pre>
+          <li>剰余代入</li>
+          <pre>
+            <code>
+              // xにx % yを代入する
+              var x = 10;
+              var y = 10;
+              
+              x %= y;
+
+              // x = 0, y = 10
+            </code>
+          </pre>
+          <li>べき乗代入</li>
+          <pre>
+            <code>
+              // xにx ** yを代入する
+              var x = 10;
+              var y = 10;
+
+              x **= y;
+
+              // x = 10000000000, y= 10
+            </code>
+          </pre>
+        </ul>
+        <li>比較演算子</li>
+        <ul>
+          <li>被演算子を比較してその結果が真であるかに基づいて論理値を返す。</li>
+          <li>被演算子には数値・文字列・論理値・オブジェクトを使用できる。</li>
+          <li>
+            ほとんどの場合、2つの被演算子が異なる型ならばJavaScriptではその被演算子を比較に適した型に変換しようとする。<br>
+            一般的に被演算子は数値的に比較される結果となる。
+          </li>
+          <li>例外として<code>===</code>と<code>!==</code>については等値性を比較する前に被演算子を適合する型に変換しない</li>
+        </ul>
+        <p>
+          以下に比較演算子の種類と使い方の例をあげていきます。あらかじめ次の通り変数を定義しておきます。
+          <pre>
+            <code>
+              var a = 20;
+              var b = 10;
+              var c = 'Sasaki'
+            </code>
+          </pre>
+        </p>
+        <ul>
+          <li>等価(==)</li>
+          <pre>
+            <code>
+              a == b;
+              // false
+
+              a == c;
+              // false
+            </code>
+          </pre>
+          <li>不等価(!=)</li>
+          <pre>
+            <code>
+              a != b;
+              // true
+
+              a != c;
+              // true
+            </code>
+          </pre>
+          <li>厳密等価(===)</li>
+          <pre>
+            <code>
+              a === b;
+              // false
+
+              a === c;
+              // false
+            </code>
+          </pre>
+          <li>厳密不等価(!==)</li>
+          <pre>
+            <code>
+              a !== b;
+              // true
+
+              a !== c;
+              // true
+            </code>
+          </pre>
+          <li>より大きい(&gt;)</li>
+          <pre>
+            <code>
+              a &gt; b;
+              // true
+
+              b &gt; a;
+              // false
+            </code>
+          </pre>
+          <li>以上(&gt;=)</li>
+          <pre>
+            <code>
+              a &gt;= b;
+              // true
+
+              b &gt;= a;
+              // false
+            </code>
+          </pre>
+          <li>より小さい(&lt;)</li>
+          <pre>
+            <code>
+              a &lt; b;
+              // false
+
+              b &lt; a;
+              // true
+            </code>
+          </pre>
+          <li>以下(&lt;=)</li>
+          <pre>
+            <code>
+              a &lt;= b;
+              // false
+
+              b &lt;= a;
+              // true
+            </code>
+          </pre>
+        </ul>
+        <li>算術演算子</li>
+        <ul>
+          <li>被演算子として数値（リテラルまたは変数）をとり１つの数値をかえす。</li>
+          <li>標準的な算術演算子は、加算(+)・減算(-)・乗算(*)・除算(/)</li>
+          <li>他のプログラミング言語で「浮動小数点数を用いた場合」と同じ様に機能する</li>
+        </ul>
+        <ul>
+          <li>加算</li>
+          <pre>
+            <code>
+              12 + 5
+              // 17
+            </code>
+          </pre>
+          <li>減算</li>
+          <pre>
+            <code>
+              12 - 5
+              // 7
+            </code>
+          </pre>
+          <li>乗算</li>
+          <pre>
+            <code>
+              12 * 5
+              // 60
+            </code>
+          </pre>
+          <li>除算</li>
+          <pre>
+            <code>
+              12 / 5
+              // 2.4
+            </code>
+          </pre>
+          <li>剰余</li>
+          <pre>
+            <code>
+              12 % 5
+              // 2
+            </code>
+          </pre>
+          <li>インクリメント</li>
+          <ul>
+            <li>x++</li>
             <pre>
               <code>
                 var x = 3;
-                -x;
-
-                // -3が返ってくる。
+                x++; // ここでは x = 3
+                x;    // この段階で x = 4 になる
               </code>
             </pre>
-            <li>単項プラス</li>
-            <p>数値でない被演算子の数値への変換を試みる</p>
+            <li>++x</li>
             <pre>
               <code>
-                +"3";  // 3 (数値型)
-                +true  // 1
-                +false // 0
-              </code>
-            </pre>
-            <li>べき乗演算子</li>
-            <pre>
-              <code>
-                2 ** 3;  // 2の3乗 = 8
-
-                10 ** -1 // 10の-1乗 = 0.1
+                var x = 3;
+                ++x; // ここで既に x = 4
               </code>
             </pre>
           </ul>
-          
-          <li>論理演算子</li>
-          <p>基本的にブール値（Boolean型：true / false）を用いる</p>
+          <li>デクリメント</li>
           <ul>
-            <li>論理積  （AND：&&）</li>
+            <li>x--</li>
             <pre>
               <code>
-                true && true  // trueを返す
-                true && false // falseを返す
-                false && true // falseを返す
-
-                false && (3 == 4) // falseを返す
-
-                'Cat' && 'Dog' // "Dog"を返す
-                false && 'Cat' // falseを返す
-                'Cat' && false // falseを返す
+                var x = 3;
+                x--; // ここでは x = 3
+                x;   // この段階で x = 2 になる
               </code>
             </pre>
-            <li>論理和  （OR ：||）</li>
+            <li>--x</li>
             <pre>
               <code>
-                true || true   // trueを返す
-                false || true  // trueを返す
-                true || false  // trueを返す
-                false || false // falseを返す
-
-                false || (3 == 4) // falseを返す
-                false || (3 == 3) // trueを返す
-
-                'Cat' || 'Dog' // "Cat"を返す
-                false || 'Cat' // "Cat"を返す
-                'Cat' || false // "Cat"を返す
-              </code>
-            </pre>
-            <li>論理否定（NOT：!）</li>
-            <pre>
-              <code>
-                !true  // falseを返す
-                !false // trueを返す
-                !'Cat' // falseを返す
+                var x = 3;
+                --x; // この段階で x = 2 になる
               </code>
             </pre>
           </ul>
-        </ul>
-        <hr class="line-dark">
-        <h2 class="text-bright">配列</h2>
-        <ul>
-          <li>配列とは</li>
-            <ul>
-              <li>リストのようなオブジェクトである</li>
-              <li>単一オブジェクト内に複数の値をリストとして保持している</li>
-              <li>配列オブジェクトは変数に格納される</li>
-              <li>リスト内の値に個別にアクセスすることができる</li>
-            </ul>
-          <li>配列をつくる</li>
-            <ul>
-              <li>配列を定義してから要素を代入する方法</li>
-              <pre>
-                <code>
-                  var a = new array(); // 配列aを定義
-                  a[0] = 'dog';
-                  a[1] = 'cat';
-                  a[3] = 'hen';
-
-                  a.length; // 3
-                </code>
-              </pre>
-              <li>配列の定義と要素の代入を同時に行う方法</li>
-              <pre>
-                <code>
-                  var b = ['dog', 'cat', 'hen'];
-
-                  b.length; // 3
-                </code>
-              </pre>
-            </ul>
-          <li>配列を呼び出す</li>
-          <p>配列を呼び出すにはfor文を使って呼び出すことができます。</p>
+          <li>単項符号反転</li>
+          <p>被演算子の符号を反転してその値を返す</p>
           <pre>
             <code>
-              for(let i = 0; i &lt; a.length; i++) {
-                console.log(a[i]);
-              }
+              var x = 3;
+              -x;
 
-              "dog"
-              "cat"
-              "hen"
+              // -3が返ってくる。
             </code>
           </pre>
-          <li>項目の追加と削除</li>
+          <li>単項プラス</li>
+          <p>数値でない被演算子の数値への変換を試みる</p>
           <pre>
             <code>
-              // あらかじめ配列を定義しておきます
-              let myArray = ['札幌', '仙台', '東京', '名古屋', '大阪', '博多'];
+              +"3";  // 3 (数値型)
+              +true  // 1
+              +false // 0
+            </code>
+          </pre>
+          <li>べき乗演算子</li>
+          <pre>
+            <code>
+              2 ** 3;  // 2の3乗 = 8
+
+              10 ** -1 // 10の-1乗 = 0.1
+            </code>
+          </pre>
+        </ul>
+        
+        <li>論理演算子</li>
+        <p>基本的にブール値（Boolean型：true / false）を用いる</p>
+        <ul>
+          <li>論理積  （AND：&&）</li>
+          <pre>
+            <code>
+              true && true  // trueを返す
+              true && false // falseを返す
+              false && true // falseを返す
+
+              false && (3 == 4) // falseを返す
+
+              'Cat' && 'Dog' // "Dog"を返す
+              false && 'Cat' // falseを返す
+              'Cat' && false // falseを返す
+            </code>
+          </pre>
+          <li>論理和  （OR ：||）</li>
+          <pre>
+            <code>
+              true || true   // trueを返す
+              false || true  // trueを返す
+              true || false  // trueを返す
+              false || false // falseを返す
+
+              false || (3 == 4) // falseを返す
+              false || (3 == 3) // trueを返す
+
+              'Cat' || 'Dog' // "Cat"を返す
+              false || 'Cat' // "Cat"を返す
+              'Cat' || false // "Cat"を返す
+            </code>
+          </pre>
+          <li>論理否定（NOT：!）</li>
+          <pre>
+            <code>
+              !true  // falseを返す
+              !false // trueを返す
+              !'Cat' // falseを返す
+            </code>
+          </pre>
+        </ul>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">配列</h2>
+      <ul>
+        <li>配列とは</li>
+          <ul>
+            <li>リストのようなオブジェクトである</li>
+            <li>単一オブジェクト内に複数の値をリストとして保持している</li>
+            <li>配列オブジェクトは変数に格納される</li>
+            <li>リスト内の値に個別にアクセスすることができる</li>
+          </ul>
+        <li>配列をつくる</li>
+          <ul>
+            <li>配列を定義してから要素を代入する方法</li>
+            <pre>
+              <code>
+                var a = new array(); // 配列aを定義
+                a[0] = 'dog';
+                a[1] = 'cat';
+                a[3] = 'hen';
+
+                a.length; // 3
+              </code>
+            </pre>
+            <li>配列の定義と要素の代入を同時に行う方法</li>
+            <pre>
+              <code>
+                var b = ['dog', 'cat', 'hen'];
+
+                b.length; // 3
+              </code>
+            </pre>
+          </ul>
+        <li>配列を呼び出す</li>
+        <p>配列を呼び出すにはfor文を使って呼び出すことができます。</p>
+        <pre>
+          <code>
+            for(let i = 0; i &lt; a.length; i++) {
+              console.log(a[i]);
+            }
+
+            "dog"
+            "cat"
+            "hen"
+          </code>
+        </pre>
+        <li>項目の追加と削除</li>
+        <pre>
+          <code>
+            // あらかじめ配列を定義しておきます
+            let myArray = ['札幌', '仙台', '東京', '名古屋', '大阪', '博多'];
+          </code>
+        </pre>
+        <pre>
+          <code>
+            // 配列の呼び出し
+            for(let i = 0; i &lt; myArray.length; i++) {
+              console.log(myArray[i]);
+            }
+
+            札幌
+            仙台
+            東京
+            名古屋
+            大阪
+            博多
+          </code>
+        </pre>
+        <ul>
+          <li>項目の追加</li>
+          <p>
+            配列の最後に項目を追加するには<code>push()</code>を使います。<br>
+            <code>push()</code>を使う時はひとつ以上の項目を引数に指定します。
+          </p>
+          <pre>
+            <code>
+              myArray.push('横浜');
+
+              myArray.push('神戸', '広島', '京都');
             </code>
           </pre>
           <pre>
@@ -575,987 +620,959 @@
               名古屋
               大阪
               博多
+              横浜
+              神戸
+              広島
+              京都
             </code>
           </pre>
-          <ul>
-            <li>項目の追加</li>
-            <p>
-              配列の最後に項目を追加するには<code>push()</code>を使います。<br>
-              <code>push()</code>を使う時はひとつ以上の項目を引数に指定します。
-            </p>
-            <pre>
-              <code>
-                myArray.push('横浜');
+          <li>項目の削除</li>
+          <p>
+            配列の最後の項目を削除するには<code>pop()</code>を使います。
+          </p>  
+          <pre>
+            <code>
+              myArray.pop();
+            </code>
+          </pre>
+          <pre>
+            <code>
+              // 配列の呼び出し
+              for(let i = 0; i &lt; myArray.length; i++) {
+                console.log(myArray[i]);
+              }
 
-                myArray.push('神戸', '広島', '京都');
-              </code>
-            </pre>
-            <pre>
-              <code>
-                // 配列の呼び出し
-                for(let i = 0; i &lt; myArray.length; i++) {
-                  console.log(myArray[i]);
-                }
-  
-                札幌
-                仙台
-                東京
-                名古屋
-                大阪
-                博多
-                横浜
-                神戸
-                広島
-                京都
-              </code>
-            </pre>
-            <li>項目の削除</li>
-            <p>
-              配列の最後の項目を削除するには<code>pop()</code>を使います。
-            </p>  
-            <pre>
-              <code>
-                myArray.pop();
-              </code>
-            </pre>
-            <pre>
-              <code>
-                // 配列の呼び出し
-                for(let i = 0; i &lt; myArray.length; i++) {
-                  console.log(myArray[i]);
-                }
-  
-                札幌
-                仙台
-                東京
-                名古屋
-                大阪
-                博多
-                横浜
-                神戸
-                広島
-              </code>
-            </pre>
-          </ul>  
-          <li>配列のメソッド</li>
-        </ul>
-        <hr class="line-dark">
-        <h2 class="text-bright">代入</h2>
-        <hr class="line-dark">
-        <h2 class="text-bright">条件分岐</h2>
-        <p>
-          条件分岐とは、プログラム上で指定した条件にあっている場合、ない場合で実行する命令文を変えられる仕組みです。<br>
-          JavaScriptでは<code>if ... else</code>と<code>switch</code>の2つの条件文があります。
-        </p>
-        <h5>if...else文</h5>
-        <p>
-          if ... else文では条件がtrueの時に実行する命令文とfalseの時に実行する命令文を分けて書くことができます。
-        </p>
+              札幌
+              仙台
+              東京
+              名古屋
+              大阪
+              博多
+              横浜
+              神戸
+              広島
+            </code>
+          </pre>
+        </ul>  
+        <li>配列のメソッド</li>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">代入</h2>
+      <hr class="line-dark">
+      <h2 class="text-bright">条件分岐</h2>
+      <p>
+        条件分岐とは、プログラム上で指定した条件にあっている場合、ない場合で実行する命令文を変えられる仕組みです。<br>
+        JavaScriptでは<code>if ... else</code>と<code>switch</code>の2つの条件文があります。
+      </p>
+      <h5>if...else文</h5>
+      <p>
+        if ... else文では条件がtrueの時に実行する命令文とfalseの時に実行する命令文を分けて書くことができます。
+      </p>
+      <ul>
+        <li>基本構文</li>
+        <pre>
+          <code>
+            if( 条件 ) {
+              条件がtrueの時の処理
+            } else {
+              条件がfalseの時の処理
+            }
+          </code>
+        </pre>
+        <li>例文1</li>
+        <pre>
+          <code>
+            var age = 18;
+
+            if(age &gt;= 20) {
+              console.log('成人です');
+            } else {
+              cosole.log('未成年です');
+            }
+
+            // 未成年です（条件分を満たさないため<code>else</code>のブロックが読まれる ）
+
+            var age = 25;
+
+            if(age &gt;= 20) {
+              console.log('成人です');
+            } else {
+              cosole.log('未成年です');
+            }
+
+            // 成人です（条件文を満たしているためtrueである）
+          </code>
+        </pre>
+        <li>例文2</li>
+        <pre>
+          <code>
+            var age = 25;
+
+            if(age &lt; 10) {
+              console.log('10歳未満です');
+            } else if(age &lt; 20) {
+              console.log('20歳未満です');
+            } else if(age &lt; 30) {
+              console.log('30歳未満です');
+            } else {
+              console.log('30歳以上です');
+            }
+
+            // 30歳未満です
+          </code>
+        </pre>
+      </ul>
+      <h5>switch文</h5>
+      <p>
+        switch文を使うと、プログラムは式を評価し、その式の値を<code>case</code>ラベルと照合します。<br>
+        一致すると、プログラムはそのラベルに関連付けられた文を実行します。
+      </p>
+      <ul>
+        <li>構文</li>
+        <pre>
+          <code>
+            switch(式) {
+              case 条件1:
+                条件1を満たす時の処理;
+                break;
+
+              case 条件2:
+                条件2を満たす時の処理;
+                break;
+
+              case 条件3:
+                条件3を満たす時の処理;
+                break;
+
+              ︙
+
+              default:
+                どの条件も満たさない時の処理; 
+            }
+          </code>
+        </pre>
+        <li>例文</li>
         <ul>
-          <li>基本構文</li>
+          <li>if文での記述</li>
           <pre>
             <code>
-              if( 条件 ) {
-                条件がtrueの時の処理
+              var stationery = 'pencil';
+
+              if(stationery === 'pen') {
+                console.log('ペンは100円です');
+              } else if(stationery === 'eraser') {
+                console.log('消しゴムは80円です');
+              } else if(stationery === 'ruler') {
+                console.log('定規は120円です');
+              } else if(stationery === 'pencil') {
+                console.log('えんぴつは50円です');
               } else {
-                条件がfalseの時の処理
+                console.log('買いたい文房具を選んでください');
               }
             </code>
           </pre>
-          <li>例文1</li>
+          <li>switch文での記述</li>
           <pre>
             <code>
-              var age = 18;
+              var stationery = 'pencil';
 
-              if(age &gt;= 20) {
-                console.log('成人です');
-              } else {
-                cosole.log('未成年です');
-              }
-
-              // 未成年です（条件分を満たさないため<code>else</code>のブロックが読まれる ）
-
-              var age = 25;
-
-              if(age &gt;= 20) {
-                console.log('成人です');
-              } else {
-                cosole.log('未成年です');
-              }
-
-              // 成人です（条件文を満たしているためtrueである）
-            </code>
-          </pre>
-          <li>例文2</li>
-          <pre>
-            <code>
-              var age = 25;
-
-              if(age &lt; 10) {
-                console.log('10歳未満です');
-              } else if(age &lt; 20) {
-                console.log('20歳未満です');
-              } else if(age &lt; 30) {
-                console.log('30歳未満です');
-              } else {
-                console.log('30歳以上です');
-              }
-
-              // 30歳未満です
-            </code>
-          </pre>
-        </ul>
-        <h5>switch文</h5>
-        <p>
-          switch文を使うと、プログラムは式を評価し、その式の値を<code>case</code>ラベルと照合します。<br>
-          一致すると、プログラムはそのラベルに関連付けられた文を実行します。
-        </p>
-        <ul>
-          <li>構文</li>
-          <pre>
-            <code>
-              switch(式) {
-                case 条件1:
-                  条件1を満たす時の処理;
-                  break;
-
-                case 条件2:
-                  条件2を満たす時の処理;
-                  break;
-
-                case 条件3:
-                  条件3を満たす時の処理;
-                  break;
-
-                ︙
-
-                default:
-                  どの条件も満たさない時の処理; 
-              }
-            </code>
-          </pre>
-          <li>例文</li>
-          <ul>
-            <li>if文での記述</li>
-            <pre>
-              <code>
-                var stationery = 'pencil';
-
-                if(stationery === 'pen') {
+              switch(stationery) {
+                case 'pen':
                   console.log('ペンは100円です');
-                } else if(stationery === 'eraser') {
+                  break;
+              
+                case 'eraser':
                   console.log('消しゴムは80円です');
-                } else if(stationery === 'ruler') {
+                  break;
+                
+                case 'ruler':
                   console.log('定規は120円です');
-                } else if(stationery === 'pencil') {
+                  break;
+              
+                case 'pencil':
                   console.log('えんぴつは50円です');
-                } else {
+                  break;
+              
+                default:
                   console.log('買いたい文房具を選んでください');
-                }
-              </code>
-            </pre>
-            <li>switch文での記述</li>
-            <pre>
-              <code>
-                var stationery = 'pencil';
-
-                switch(stationery) {
-                  case 'pen':
-                    console.log('ペンは100円です');
-                    break;
-                
-                  case 'eraser':
-                    console.log('消しゴムは80円です');
-                    break;
-                  
-                  case 'ruler':
-                    console.log('定規は120円です');
-                    break;
-                
-                  case 'pencil':
-                    console.log('えんぴつは50円です');
-                    break;
-                
-                  default:
-                    console.log('買いたい文房具を選んでください');
-                }
-              </code>
-            </pre>
-          </ul>
-        </ul>
-        <hr class="line-dark">
-        <h2 class="text-bright">try...catch文（例外処理）</h2>
-        <hr class="line-dark">
-        <h2 class="text-bright">繰り返し</h2>
-        <h5>for文</h5>
-        <p>
-          for文は条件式がfalseと評価されるまでループします。
-        </p>
-        <p>
-          基本構文で見るfor文の処理の流れ
-        </p>
-        <ol>
-          <li>初期化式を実行</li>
-          <li>条件式の評価</li>
-            <ul>
-              <li><code>true</code>の場合 ：ループ文が実行される </li>
-              <li><code>false</code>の場合：forループ文が終了する</li>
-            </ul>
-          <li>加算式を実行</li>
-          <li>2. に戻る</li>
-        </ol>
-        <ul>
-          <li>基本構文</li>
-          <pre>
-            <code>
-              for([初期化式]; [条件式]; [加算式]) {
-                命令文;
               }
-            </code>
-          </pre>
-          <li>例1 Hello World!!を5回繰り返す</li>
-          <pre>
-            <code>
-              for(let i = 0; i &lt; 5; i++) {
-                console.log('Hello World!!');
-              }
-
-              Hello World!!
-              Hello World!!
-              Hello World!!
-              Hello World!!
-              Hello World!!
-            </code>
-          </pre>
-          <li>例2 無限ループ：Hello World!!がとまらない</li>
-          <pre>
-            <code>
-              for(let i = 0; i &gt;= 0; i++) {
-                console.log('Hello World!!');
-              }
-
-              Hello World!!
-              Hello World!!
-              Hello World!!
-              ︙
-              
-            </code>
-          </pre>
-          <li>例3 for文を使って配列の要素を全部表示させる</li>
-          <pre>
-            <code>
-              var a = ['みかん', 'りんご', 'いちご', 'すいか', 'ぶどう', 'ゆず'];
-
-              for(let i = 0; i &lt; a.length; i++) {
-                console.log(a[i]);
-              }
-
-              みかん
-              りんご
-              いちご
-              すいか
-              ぶどう
-              ゆず
             </code>
           </pre>
         </ul>
-        <h5>do...while文</h5>
-        <p>
-          基本構文にあるとおりdo...while文は実行される命令文が条件式より前に記述される。<br>
-          do...while文では条件式の判定の前に一度<code>do{}</code>の中の命令文が実行される。<br>
-          その後条件式の判定がされ、条件式がfalseになる直前まで繰り返される。
-        </p>
-        <ul>
-          <li>基本構文</li>
-          <pre>
-            <code>
-              do {
-                文;
-              } while(条件式);
-            </code>
-          </pre>
-          <li>例文</li>
-          <pre>
-            <code>
-              let i = 0;
-
-              do {
-                i += 1;
-                console.log(i);
-              } while(i &lt; 5);
-
-              1
-              2
-              3
-              4
-              5
-            </code>
-          </pre>
-        </ul>
-        <h5>while文</h5>
-        <p>
-          条件式の判定を行い条件式＝falseになるまで命令文を繰り返す
-        </p>
-        <ul>
-          <li>基本構文</li>
-          <pre>
-            <code>
-              while(条件式) {
-                命令文
-              }
-            </code>
-          </pre>
-          <li>例文1</li>
-          <pre>
-            <code>
-              let n = 0;
-              let x = 0;
-
-              while(n &lt; 3) {
-                n++;
-                x += n;
-
-                console.log("n=" + n " | x=" + x);
-              }
-
-              n=1 | x=1
-              n=2 | x=3
-              n=3 | x=6
-            </code>
-          </pre>
-          <li>例文2：無限ループ</li>
-          <p>
-            条件式がfalseにならない場合、無限ループになる。<br>
-            プログラムをしっかり設計し、条件式がfalseになることを確認し無限ループを避けましょう。
-          </p>
-          <pre>
-            <code>
-              while(true) {
-                cosole.log('Hello World!!');
-              }
-
-              Hello World!!
-              Hello World!!
-              Hello World!!
-              Hello World!!
-              Hello World!!
-              Hello World!!
-              Hello World!!
-              ︙
-            </code>
-          </pre>
-        </ul>
-        <hr class="line-dark">
-        <h2 class="text-bright">関数</h2>
-        <h5>関数とは</h5>
-        <ul>
-          <li>関数は一連の処理の集まりである</li>
-          <li>関数は外部（再帰の場合は内部）から呼ばれることのできる「サブプログラム」</li>
-          <li>値を関数に渡すことができ（＝引数）、関数は値を返すことができる（＝戻り値）</li>
-          <li>関数はFunctionオブジェクトである</li>
-        </ul>
-        <h5>関数を定義する</h5>
-        <ul>
-          <li>関数の宣言</li>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">try...catch文（例外処理）</h2>
+      <hr class="line-dark">
+      <h2 class="text-bright">繰り返し</h2>
+      <h5>for文</h5>
+      <p>
+        for文は条件式がfalseと評価されるまでループします。
+      </p>
+      <p>
+        基本構文で見るfor文の処理の流れ
+      </p>
+      <ol>
+        <li>初期化式を実行</li>
+        <li>条件式の評価</li>
           <ul>
-            <li>基本構文</li>
-            <pre>
-              <code>
-                function 関数名(引数1, 引数2, ...) {
-                  関数の本体;
-                }
-              </code>
-            </pre>
-            <li>例文：四則演算の関数を書いてみる</li>
-            <pre>
-              <code>
-                // 足し算の関数の定義
-                function add(number01, number02) {
-                  return number01 + number02;
-                }
-
-                // 引き算の関数の定義
-                function sub(number01, number02) {
-                  return number01 - number02;
-                }
-
-                // 掛け算の関数の定義
-                function multiple(number01, number02) {
-                  return number01 * number02; 
-                }
-
-                // 割り算の関数の定義
-                function division(number01, number02) {
-                  return number01 / number02;
-                }
-
-                // 剰余の関数の定義
-                function surplus (number01, number02) {
-                  return number01 % number02;
-                }
-
-                // ２つの値（数字）を変数に格納
-                var num01 = 15;
-                var num02 = 10;
-
-                // 関数の呼び出し
-                var answer01 = add(num01, num02);
-                var answer02 = sub(num01, num02);
-                var answer03 = multiple(num01, num02);
-                var answer04 = division(num01, num02);
-                var answer05 = surplus(num01, num02);
-
-                // ターミナルへの出力
-                console.log('足し算の結果は ' + answer01);
-                console.log('引き算の結果は ' + answer02);
-                console.log('掛け算の結果は ' + answer03);
-                console.log('割り算の結果は ' + Math.floor(answer04) + ' 余り ' + answer05);
-
-                // 出力結果
-                足し算の結果は 25
-                引き算の結果は 5
-                掛け算の結果は 150
-                割り算の結果は 1 余り 5
-              </code>
-            </pre>
+            <li><code>true</code>の場合 ：ループ文が実行される </li>
+            <li><code>false</code>の場合：forループ文が終了する</li>
           </ul>
-          <li>関数式</li>
-          <ul>
-            <li>基本構文</li>
-            <pre>
-              <code>
-                const 変数名 = function(引数1, 引数2, ...) {
-                  関数の本体;
-                }
-              </code>
-            </pre>
-            <li>例文：先程の四則演算の関数を関数式で書いてみる</li>
-            <pre>
-              <code>
-                // 足し算の関数の定義
-                const add = function(number01, number02) {
-                  return number01 + number02;
-                }
-
-                // 引き算の関数の定義
-                const sub = function(number01, number02) {
-                  return number01 - number02;
-                } 
-
-                // 掛け算の関数の定義
-                const multiple = function(number01, number02) {
-                  return number01 * number02;
-                }
-
-                // 割り算の関数の定義
-                const division = function(number01, number02) {
-                  return number01 / number02;
-                }
-
-                // 剰余の関数の定義
-                const surplus = function(number01, number02) {
-                  return number01 % number02;
-                }
-
-                // ２つの値（数字）を変数に格納
-                var num01 = 15;
-                var num02 = 10;
-
-                // 関数の呼び出し
-                var answer01 = add(num01, num02);
-                var answer02 = sub(num01, num02);
-                var answer03 = multiple(num01, num02);
-                var answer04 = division(num01, num02);
-                var answer05 = surplus(num01, num02);
-
-                // ターミナルへの出力
-                console.log('足し算の結果は ' + answer01);
-                console.log('引き算の結果は ' + answer02);
-                console.log('掛け算の結果は ' + answer03);
-                console.log('割り算の結果は ' + Math.floor(answer04) + ' 余り ' + answer05);
-
-                // 出力結果
-                足し算の結果は 25
-                引き算の結果は 5
-                掛け算の結果は 150
-                割り算の結果は 1 余り 5
-              </code>
-            </pre>
-          </ul>
-        </ul>
-        <h5>関数の呼び出し</h5>
-        <ul>
-          <li>関数を定義しても、その関数が実行されるわけではない</li>
-          <li>関数は、指定した一連の処理に名前を付けたもの</li>
-          <li>関数に引数をわたし呼び出すことで、指定された処理を実行し結果を返してくれる。</li>
-        </ul>
-        <p>関数の呼び出し方法</p>
+        <li>加算式を実行</li>
+        <li>2. に戻る</li>
+      </ol>
+      <ul>
+        <li>基本構文</li>
         <pre>
           <code>
-            // 関数の定義：定義されただけ
-            function hello(hello) {
-              console.log(hello);
+            for([初期化式]; [条件式]; [加算式]) {
+              命令文;
             }
-
-            // 関数の呼び出し：ここで関数が実行される
-            hello('Good morning!!');
-            hello('Good afternoon!!');
-            hello('Good evening!!');
-
-            // 結果
-            Good morning!!
-            Good afternoon!!
-            Good evening!!
           </code>
         </pre>
-        <h5>関数のスコープ</h5>
+        <li>例1 Hello World!!を5回繰り返す</li>
+        <pre>
+          <code>
+            for(let i = 0; i &lt; 5; i++) {
+              console.log('Hello World!!');
+            }
+
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+          </code>
+        </pre>
+        <li>例2 無限ループ：Hello World!!がとまらない</li>
+        <pre>
+          <code>
+            for(let i = 0; i &gt;= 0; i++) {
+              console.log('Hello World!!');
+            }
+
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            ︙
+            
+          </code>
+        </pre>
+        <li>例3 for文を使って配列の要素を全部表示させる</li>
+        <pre>
+          <code>
+            var a = ['みかん', 'りんご', 'いちご', 'すいか', 'ぶどう', 'ゆず'];
+
+            for(let i = 0; i &lt; a.length; i++) {
+              console.log(a[i]);
+            }
+
+            みかん
+            りんご
+            いちご
+            すいか
+            ぶどう
+            ゆず
+          </code>
+        </pre>
+      </ul>
+      <h5>do...while文</h5>
+      <p>
+        基本構文にあるとおりdo...while文は実行される命令文が条件式より前に記述される。<br>
+        do...while文では条件式の判定の前に一度<code>do{}</code>の中の命令文が実行される。<br>
+        その後条件式の判定がされ、条件式がfalseになる直前まで繰り返される。
+      </p>
+      <ul>
+        <li>基本構文</li>
+        <pre>
+          <code>
+            do {
+              文;
+            } while(条件式);
+          </code>
+        </pre>
+        <li>例文</li>
+        <pre>
+          <code>
+            let i = 0;
+
+            do {
+              i += 1;
+              console.log(i);
+            } while(i &lt; 5);
+
+            1
+            2
+            3
+            4
+            5
+          </code>
+        </pre>
+      </ul>
+      <h5>while文</h5>
+      <p>
+        条件式の判定を行い条件式＝falseになるまで命令文を繰り返す
+      </p>
+      <ul>
+        <li>基本構文</li>
+        <pre>
+          <code>
+            while(条件式) {
+              命令文
+            }
+          </code>
+        </pre>
+        <li>例文1</li>
+        <pre>
+          <code>
+            let n = 0;
+            let x = 0;
+
+            while(n &lt; 3) {
+              n++;
+              x += n;
+
+              console.log("n=" + n " | x=" + x);
+            }
+
+            n=1 | x=1
+            n=2 | x=3
+            n=3 | x=6
+          </code>
+        </pre>
+        <li>例文2：無限ループ</li>
         <p>
-          <ul>
-            <li>スコープ＝定義されたもの（変数・関数）を参照できる範囲</li>
-            <li>スコープには、グローバルスコープとローカルスコープがある</li>
-            <li>関数の内部で宣言された変数は関数の外部からアクセスできない</li>
-            <li>関数は自身が定義されたスコープ内で定義されている全ての変数や関数にアクセスできる</li>
-          </ul>
+          条件式がfalseにならない場合、無限ループになる。<br>
+          プログラムをしっかり設計し、条件式がfalseになることを確認し無限ループを避けましょう。
         </p>
         <pre>
           <code>
-            // 関数のスコープ
-            // グローバルスコープで変数を定義
-            var num1 = 20;
+            while(true) {
+              cosole.log('Hello World!!');
+            }
+
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            ︙
+          </code>
+        </pre>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">関数</h2>
+      <h5>関数とは</h5>
+      <ul>
+        <li>関数は一連の処理の集まりである</li>
+        <li>関数は外部（再帰の場合は内部）から呼ばれることのできる「サブプログラム」</li>
+        <li>値を関数に渡すことができ（＝引数）、関数は値を返すことができる（＝戻り値）</li>
+        <li>関数はFunctionオブジェクトである</li>
+      </ul>
+      <h5>関数を定義する</h5>
+      <ul>
+        <li>関数の宣言</li>
+        <ul>
+          <li>基本構文</li>
+          <pre>
+            <code>
+              function 関数名(引数1, 引数2, ...) {
+                関数の本体;
+              }
+            </code>
+          </pre>
+          <li>例文：四則演算の関数を書いてみる</li>
+          <pre>
+            <code>
+              // 足し算の関数の定義
+              function add(number01, number02) {
+                return number01 + number02;
+              }
+
+              // 引き算の関数の定義
+              function sub(number01, number02) {
+                return number01 - number02;
+              }
+
+              // 掛け算の関数の定義
+              function multiple(number01, number02) {
+                return number01 * number02; 
+              }
+
+              // 割り算の関数の定義
+              function division(number01, number02) {
+                return number01 / number02;
+              }
+
+              // 剰余の関数の定義
+              function surplus (number01, number02) {
+                return number01 % number02;
+              }
+
+              // ２つの値（数字）を変数に格納
+              var num01 = 15;
+              var num02 = 10;
+
+              // 関数の呼び出し
+              var answer01 = add(num01, num02);
+              var answer02 = sub(num01, num02);
+              var answer03 = multiple(num01, num02);
+              var answer04 = division(num01, num02);
+              var answer05 = surplus(num01, num02);
+
+              // ターミナルへの出力
+              console.log('足し算の結果は ' + answer01);
+              console.log('引き算の結果は ' + answer02);
+              console.log('掛け算の結果は ' + answer03);
+              console.log('割り算の結果は ' + Math.floor(answer04) + ' 余り ' + answer05);
+
+              // 出力結果
+              足し算の結果は 25
+              引き算の結果は 5
+              掛け算の結果は 150
+              割り算の結果は 1 余り 5
+            </code>
+          </pre>
+        </ul>
+        <li>関数式</li>
+        <ul>
+          <li>基本構文</li>
+          <pre>
+            <code>
+              const 変数名 = function(引数1, 引数2, ...) {
+                関数の本体;
+              }
+            </code>
+          </pre>
+          <li>例文：先程の四則演算の関数を関数式で書いてみる</li>
+          <pre>
+            <code>
+              // 足し算の関数の定義
+              const add = function(number01, number02) {
+                return number01 + number02;
+              }
+
+              // 引き算の関数の定義
+              const sub = function(number01, number02) {
+                return number01 - number02;
+              } 
+
+              // 掛け算の関数の定義
+              const multiple = function(number01, number02) {
+                return number01 * number02;
+              }
+
+              // 割り算の関数の定義
+              const division = function(number01, number02) {
+                return number01 / number02;
+              }
+
+              // 剰余の関数の定義
+              const surplus = function(number01, number02) {
+                return number01 % number02;
+              }
+
+              // ２つの値（数字）を変数に格納
+              var num01 = 15;
+              var num02 = 10;
+
+              // 関数の呼び出し
+              var answer01 = add(num01, num02);
+              var answer02 = sub(num01, num02);
+              var answer03 = multiple(num01, num02);
+              var answer04 = division(num01, num02);
+              var answer05 = surplus(num01, num02);
+
+              // ターミナルへの出力
+              console.log('足し算の結果は ' + answer01);
+              console.log('引き算の結果は ' + answer02);
+              console.log('掛け算の結果は ' + answer03);
+              console.log('割り算の結果は ' + Math.floor(answer04) + ' 余り ' + answer05);
+
+              // 出力結果
+              足し算の結果は 25
+              引き算の結果は 5
+              掛け算の結果は 150
+              割り算の結果は 1 余り 5
+            </code>
+          </pre>
+        </ul>
+      </ul>
+      <h5>関数の呼び出し</h5>
+      <ul>
+        <li>関数を定義しても、その関数が実行されるわけではない</li>
+        <li>関数は、指定した一連の処理に名前を付けたもの</li>
+        <li>関数に引数をわたし呼び出すことで、指定された処理を実行し結果を返してくれる。</li>
+      </ul>
+      <p>関数の呼び出し方法</p>
+      <pre>
+        <code>
+          // 関数の定義：定義されただけ
+          function hello(hello) {
+            console.log(hello);
+          }
+
+          // 関数の呼び出し：ここで関数が実行される
+          hello('Good morning!!');
+          hello('Good afternoon!!');
+          hello('Good evening!!');
+
+          // 結果
+          Good morning!!
+          Good afternoon!!
+          Good evening!!
+        </code>
+      </pre>
+      <h5>関数のスコープ</h5>
+      <p>
+        <ul>
+          <li>スコープ＝定義されたもの（変数・関数）を参照できる範囲</li>
+          <li>スコープには、グローバルスコープとローカルスコープがある</li>
+          <li>関数の内部で宣言された変数は関数の外部からアクセスできない</li>
+          <li>関数は自身が定義されたスコープ内で定義されている全ての変数や関数にアクセスできる</li>
+        </ul>
+      </p>
+      <pre>
+        <code>
+          // 関数のスコープ
+          // グローバルスコープで変数を定義
+          var num1 = 20;
+          var num2 = 3;
+          var name = 'Sasaki';
+
+          // グローバルスコープで関数を定義
+          function multiply() {
+            return num1 * num2;
+          }
+
+          console.log(multiply());
+
+          // 結果
+          60
+
+          // グローバル ↔ ローカル
+
+          function getScore() {
+            var num1 = 2;
             var num2 = 3;
-            var name = 'Sasaki';
 
-            // グローバルスコープで関数を定義
-            function multiply() {
-              return num1 * num2;
+            function add() {
+              return name + ' scored ' + (num1 + num2);
             }
+            return add();
+          }
 
-            console.log(multiply());
+          console.log(getScore());
+
+          // 結果
+          Sasaki scored 5
+        </code>
+      </pre>
+      <h5>スコープと関数スタック</h5>
+      <ul>
+        <li>再帰</li>
+        <pre>
+          <code>
+            function loop(x) {
+              if(x >= 10) 
+                return;
+                console.log(x);
+                loop(x + 1); // 再帰呼び出し
+            }
+            loop(0);
 
             // 結果
-            60
-
-            // グローバル ↔ ローカル
-
-            function getScore() {
-              var num1 = 2;
-              var num2 = 3;
-
-              function add() {
-                return name + ' scored ' + (num1 + num2);
-              }
-              return add();
-            }
-
-            console.log(getScore());
-
-            // 結果
-            Sasaki scored 5
+            0
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
           </code>
         </pre>
-        <h5>スコープと関数スタック</h5>
-        <ul>
-          <li>再帰</li>
-          <pre>
-            <code>
-              function loop(x) {
-                if(x >= 10) 
-                  return;
-                  console.log(x);
-                  loop(x + 1); // 再帰呼び出し
-              }
-              loop(0);
+        <li>入れ子の関数とクロージャ</li>
+        <li>変数の保護</li>
+        <li>多重入れ子関数</li>
+        <li>名前衝突</li>
+      </ul>
+      <h5>クロージャ</h5>
+      <h5>argumentsオブジェクトの使用</h5>
+      <h5>関数の引数</h5>
+      <ul>
+        <li>デフォルト引数</li>
+        <li>残余引数</li>
+      </ul>
+      <h5>アロー関数</h5>
+      <ul>
+        <li>短縮形の関数</li>
+        <li>別々のthisはない</li>
+      </ul>
+      <h5>定義済み関数</h5>
 
-              // 結果
-              0
-              1
-              2
-              3
-              4
-              5
-              6
-              7
-              8
-              9
-            </code>
-          </pre>
-          <li>入れ子の関数とクロージャ</li>
-          <li>変数の保護</li>
-          <li>多重入れ子関数</li>
-          <li>名前衝突</li>
-        </ul>
-        <h5>クロージャ</h5>
-        <h5>argumentsオブジェクトの使用</h5>
-        <h5>関数の引数</h5>
-        <ul>
-          <li>デフォルト引数</li>
-          <li>残余引数</li>
-        </ul>
-        <h5>アロー関数</h5>
-        <ul>
-          <li>短縮形の関数</li>
-          <li>別々のthisはない</li>
-        </ul>
-        <h5>定義済み関数</h5>
-
-        <hr class="line-dark">
-        <h2 class="text-bright">画面入出力</h2>
-        <p>
-          一般にプログラミングでの「画面の入出力」というのはターミナルを用いた標準入力・標準出力を指すと思いますが、<br>
-          JavaScriptではブラウザ上のDOM操作ができることから、ここではブラウザ画面を用いた入出力について書いていきます。
-        </p>
-        <ul>
-          <li>index.html</li>
-          <pre>
-            <code>
-              &lt;html&gt;
-                &lt;head&gt;
-                  &lt;title&gt;JavaScriptで画面への入出力テスト&lt;/title&gt;
-                  &lt;link rel="stylesheet" href="style.css"&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                  &lt;h1&gt;JavaScriptで画面への入出力テスト&lt;/h1&gt;
-                  
-                  &lt;!-- 日付入力フォーム --&gt;
-                  &lt;label for="start"&gt;Start Date&lt;/label&gt;
-                  &lt;input type="date" id="start" name="trip-start"
-                  value="2021-01-19"    &lt;!-- 初期値 --&gt;
-                  min="2021-01-01"      &lt;!-- 最小値 --&gt;
-                  max="2021-12-31"&gt;  &lt;!-- 最大値 --&gt;
-
-                  &lt;!-- テキスト入力フォーム --&gt;
-                  &lt;label for="name"&gt;Name(４〜８文字で入力してください)&lt;/label&gt;
-                  &lt;input type="text" name="name" id="name" required
-                  minlength="4" &lt;!-- 文字数最小値 --&gt;
-                  maxlength="8" &lt;!-- 文字数最大値 --&gt;
-                  size="10"&gt;
-
-                  &lt;!-- 数値入力フォーム --&gt;
-                  &lt;label for="number"&gt;Number&lt;/label&gt;
-                  &lt;input type="number" name="number" id="number"
-                  min="0" &lt;!-- 最小値 --&gt;
-                  max="100"&gt; &lt;!-- 最大値 --&gt;
-
-                  &lt;!-- ボタン --&gt;
-                  &lt;input class="favorite styled"
-                        type="button"
-                        value="Add to favorites"
-                        onclick="getValue()"&gt;
-                  
-                  &lt;!-- テキスト出力部分 --&gt;
-                  &lt;p class="outputArea" id="output"&gt;&lt;/p&gt;
-                  &lt;script src="input_output.js"&gt;&lt;/script&gt;
-                &lt;/body&gt;
-              &lt;/html&gt;
-            </code>
-          </pre>
-          <li>style.css</li>
-          <pre>
-            <code>
-              label {
-                display: block;
-                font: 1rem 'Ubuntu', sans-serif;
-              }
-              
-              input, label {
-                margin: .4rem 0;
-              }
-              
-              .styled {
-                display: block;
-                border: 0;
-                line-height: 2.5;
-                padding: 0 20px;
-                font-size: 1rem;
-                text-align: center;
-                color: #fff;
-                text-shadow: 1px 1px 1px #000;
-                border-radius: 10px;
-                background-color: rgba(220, 0, 0, 1);
-                background-image: linear-gradient(to top left,
-                                                  rgba(0, 0, 0, .2),
-                                                  rgba(0, 0, 0, .2) 30%,
-                                                  rgba(0, 0, 0, 0));
-                box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                            inset -2px -2px 3px rgba(0, 0, 0, .6);
-              }
-              
-              .styled:hover {
-                background-color: rgba(255, 0, 0, 1);
-              }
-              
-              .styled:active {
-                box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                            inset 2px 2px 3px rgba(0, 0, 0, .6);
-              }
-              
-              .outputArea {
-                display: block;
-              }
-              
-            </code>
-          </pre>
-          <li>input_output.js</li>
-          <pre>
-            <code>
-              // 関数名<code>getValue()：htmlのbuttonに同名のonClickを記述する</code>
-              function getValue(){
-                var date = document.getElementById('start').value;    // 日付入力フォームの値を取得
-                var text = document.getElementById('name').value;     // テキスト入力フォームの値を取得
-                var number = document.getElementById('number').value; // 数値入力フォームの値を取得
-              
-                // デベロッパーツールのconsoleに取得したデータを出力させてみる
-                console.log(date + " | " + text + " | " + number);    
+      <hr class="line-dark">
+      <h2 class="text-bright">画面入出力</h2>
+      <p>
+        一般にプログラミングでの「画面の入出力」というのはターミナルを用いた標準入力・標準出力を指すと思いますが、<br>
+        JavaScriptではブラウザ上のDOM操作ができることから、ここではブラウザ画面を用いた入出力について書いていきます。
+      </p>
+      <ul>
+        <li>index.html</li>
+        <pre>
+          <code>
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;JavaScriptで画面への入出力テスト&lt;/title&gt;
+                &lt;link rel="stylesheet" href="style.css"&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;h1&gt;JavaScriptで画面への入出力テスト&lt;/h1&gt;
                 
-                // HTMLの出力用のpタグに取得したデータを出力させる
-                document.getElementById('output').innerHTML = date + " | " + text + " | " + number;
-              }
-            </code>
-          </pre>
-        </ul>
-        <ul>
-          <li>ブラウザでの表示</li>
-          <img src="images/js_IO_001.png" width="50%" alt="JavaScriptを使ったデータの入出力画面の画像">
-          <li>各入力フォームにデータを入力後、ボタンを押してみた</li>
-          <img src="images/js_IO_002.png" width="50%" alt="JavaScriptを使ったデータの入出力画面にデータを入力して動作させた画面の画像">
-        </ul>
-        <hr class="line-dark">
-        <h2 class="text-bright">処理の呼び出し（引数・戻り値）</h2>
-        <hr class="line-dark">
-        <h2 class="text-bright">データベースの読込・書出・更新・削除</h2>       
-        <p>
-          JavaScriptでデータベースにアクセスするには「node.js」を使うことになります。<br>
-          またデータベースについては様々なものがありますが「SQLite3」を使っていきます。
-        </p> 
-        <h5>本記事執筆時の環境</h5>
-        <ul>
-          <li>OS：Ubuntu 20.04 LTS</li>
-          <li>node.js：ver 12.18.3</li>
-          <li>SQLite3：ver 3.31.1</li>
-        </ul>
-        <h5>node.jsの導入方法</h5>
-        <p>
-          上記環境で僕が実際にnode.jsを導入した方法を記載します。<br>
-          後々のnode.jsのバージョン管理のことを考え、n packageでの導入を行いました。
-        </p>
-        <ol>
-          <li>node.jsとnpmのインストール</li>
-          <p>まずは下記の3つのコマンドを入力してnode.jsとnpm(Node Package Manager)をインストールしましょう。</p>
-          <pre>
-            <code>
-              sudo apt-get update
-              sudo apt-get install nodejs
-              sudo apt-get install npm
-            </code>
-          </pre>
-          <li>n packageを導入</li>
-          <pre>
-            <code>
-              sudo npm cache clean
-              sudo npm install n -g
+                &lt;!-- 日付入力フォーム --&gt;
+                &lt;label for="start"&gt;Start Date&lt;/label&gt;
+                &lt;input type="date" id="start" name="trip-start"
+                value="2021-01-19"    &lt;!-- 初期値 --&gt;
+                min="2021-01-01"      &lt;!-- 最小値 --&gt;
+                max="2021-12-31"&gt;  &lt;!-- 最大値 --&gt;
 
-              // インストール後
-              sudo n stable
-              sudo ln /usr/local/bin/node /usr/bin/node
-            </code>
-          </pre>
-          <li>最初にインストールしたnode.js npmは使わないので、アンインストールしておく</li>
-          <p>
-            最初にインストールされたnode.jsはバージョン指定したものではなく、その時に選ばれた（おそらく最新のもの）がインストールされているためアンインストールします。<br>
-            npmについても、後でnode.jsをインストールする際に同時にインストールされるようです。
-          </p>
-          <pre>
-            <code>
-              sudo apt-get purge -y nodejs npm
-            </code>
-          </pre>
-          <li>n packageでバージョンを管理する</li>
-          <pre>
-            <code>
-              sudo n インストールしたいバージョン
-              sudo ln -sf /usr/local/bin/node /usr/bin/node
-            </code>
-          </pre>
-          <li>node.jsが正常にインストールされたかを確認</li>
-          <pre>
-            <code>
-              node --version
+                &lt;!-- テキスト入力フォーム --&gt;
+                &lt;label for="name"&gt;Name(４〜８文字で入力してください)&lt;/label&gt;
+                &lt;input type="text" name="name" id="name" required
+                minlength="4" &lt;!-- 文字数最小値 --&gt;
+                maxlength="8" &lt;!-- 文字数最大値 --&gt;
+                size="10"&gt;
 
-              v12.18.3
-            </code>
-          </pre>
-        </ol>
-        <h5>node.jsでのSQLite3アクセスの準備</h5>
+                &lt;!-- 数値入力フォーム --&gt;
+                &lt;label for="number"&gt;Number&lt;/label&gt;
+                &lt;input type="number" name="number" id="number"
+                min="0" &lt;!-- 最小値 --&gt;
+                max="100"&gt; &lt;!-- 最大値 --&gt;
+
+                &lt;!-- ボタン --&gt;
+                &lt;input class="favorite styled"
+                      type="button"
+                      value="Add to favorites"
+                      onclick="getValue()"&gt;
+                
+                &lt;!-- テキスト出力部分 --&gt;
+                &lt;p class="outputArea" id="output"&gt;&lt;/p&gt;
+                &lt;script src="input_output.js"&gt;&lt;/script&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+        <li>style.css</li>
+        <pre>
+          <code>
+            label {
+              display: block;
+              font: 1rem 'Ubuntu', sans-serif;
+            }
+            
+            input, label {
+              margin: .4rem 0;
+            }
+            
+            .styled {
+              display: block;
+              border: 0;
+              line-height: 2.5;
+              padding: 0 20px;
+              font-size: 1rem;
+              text-align: center;
+              color: #fff;
+              text-shadow: 1px 1px 1px #000;
+              border-radius: 10px;
+              background-color: rgba(220, 0, 0, 1);
+              background-image: linear-gradient(to top left,
+                                                rgba(0, 0, 0, .2),
+                                                rgba(0, 0, 0, .2) 30%,
+                                                rgba(0, 0, 0, 0));
+              box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                          inset -2px -2px 3px rgba(0, 0, 0, .6);
+            }
+            
+            .styled:hover {
+              background-color: rgba(255, 0, 0, 1);
+            }
+            
+            .styled:active {
+              box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                          inset 2px 2px 3px rgba(0, 0, 0, .6);
+            }
+            
+            .outputArea {
+              display: block;
+            }
+            
+          </code>
+        </pre>
+        <li>input_output.js</li>
+        <pre>
+          <code>
+            // 関数名<code>getValue()：htmlのbuttonに同名のonClickを記述する</code>
+            function getValue(){
+              var date = document.getElementById('start').value;    // 日付入力フォームの値を取得
+              var text = document.getElementById('name').value;     // テキスト入力フォームの値を取得
+              var number = document.getElementById('number').value; // 数値入力フォームの値を取得
+            
+              // デベロッパーツールのconsoleに取得したデータを出力させてみる
+              console.log(date + " | " + text + " | " + number);    
+              
+              // HTMLの出力用のpタグに取得したデータを出力させる
+              document.getElementById('output').innerHTML = date + " | " + text + " | " + number;
+            }
+          </code>
+        </pre>
+      </ul>
+      <ul>
+        <li>ブラウザでの表示</li>
+        <img src="images/js_IO_001.png" width="50%" alt="JavaScriptを使ったデータの入出力画面の画像">
+        <li>各入力フォームにデータを入力後、ボタンを押してみた</li>
+        <img src="images/js_IO_002.png" width="50%" alt="JavaScriptを使ったデータの入出力画面にデータを入力して動作させた画面の画像">
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">処理の呼び出し（引数・戻り値）</h2>
+      <hr class="line-dark">
+      <h2 class="text-bright">データベースの読込・書出・更新・削除</h2>       
+      <p>
+        JavaScriptでデータベースにアクセスするには「node.js」を使うことになります。<br>
+        またデータベースについては様々なものがありますが「SQLite3」を使っていきます。
+      </p> 
+      <h5>本記事執筆時の環境</h5>
+      <ul>
+        <li>OS：Ubuntu 20.04 LTS</li>
+        <li>node.js：ver 12.18.3</li>
+        <li>SQLite3：ver 3.31.1</li>
+      </ul>
+      <h5>node.jsの導入方法</h5>
+      <p>
+        上記環境で僕が実際にnode.jsを導入した方法を記載します。<br>
+        後々のnode.jsのバージョン管理のことを考え、n packageでの導入を行いました。
+      </p>
+      <ol>
+        <li>node.jsとnpmのインストール</li>
+        <p>まずは下記の3つのコマンドを入力してnode.jsとnpm(Node Package Manager)をインストールしましょう。</p>
+        <pre>
+          <code>
+            sudo apt-get update
+            sudo apt-get install nodejs
+            sudo apt-get install npm
+          </code>
+        </pre>
+        <li>n packageを導入</li>
+        <pre>
+          <code>
+            sudo npm cache clean
+            sudo npm install n -g
+
+            // インストール後
+            sudo n stable
+            sudo ln /usr/local/bin/node /usr/bin/node
+          </code>
+        </pre>
+        <li>最初にインストールしたnode.js npmは使わないので、アンインストールしておく</li>
         <p>
-          node.jsやSQLite3のデータベースファイルを格納しておくディレクトリ（フォルダ）をつくります。<br>
-          ディレクトリの場所はお好みの場所で構いません。<br>
-          不安な方は、HOMEディレクトリ直下に作ることをお勧めします。
-        </p>
-        <p>
-          ディレクトリを作ってそこに入ったら、ターミナルから次のコマンドを入力しnode.jsでSQLite3にアクセスできるようにします。
+          最初にインストールされたnode.jsはバージョン指定したものではなく、その時に選ばれた（おそらく最新のもの）がインストールされているためアンインストールします。<br>
+          npmについても、後でnode.jsをインストールする際に同時にインストールされるようです。
         </p>
         <pre>
           <code>
-            npm install sqlite3
+            sudo apt-get purge -y nodejs npm
           </code>
         </pre>
-        <h5>SQLite3のデータベースファイル作成</h5>
-        <p>
-          SQLite3のコマンドでデータベースを作成しておきます。<br>
-          データベースを作ったら、<code>ctrl+d</code>でsqlite3のコンソールから抜けましょう。
-        </p>
+        <li>n packageでバージョンを管理する</li>
         <pre>
           <code>
-            sqlite3 test.db
+            sudo n インストールしたいバージョン
+            sudo ln -sf /usr/local/bin/node /usr/bin/node
           </code>
         </pre>
-        <h5>node.jsのファイル作成</h5>
-        <p>
-          データベースファイルを定義したフォルダの中にJavaScriptのファイルを作ります。
-        </p>
+        <li>node.jsが正常にインストールされたかを確認</li>
         <pre>
           <code>
-            touch testAccess.js
+            node --version
+
+            v12.18.3
           </code>
         </pre>
-        <h5>データベースアクセスのコードを書こう！！</h5>
-        <div class="media">
-          <pre>
-            <code>
-              // SQLite3を使う準備
-              var sqlite3 = require('sqlite3').verbose();
-              // DBファイルを指定
-              var db = new sqlite3.Database('test.db');
+      </ol>
+      <h5>node.jsでのSQLite3アクセスの準備</h5>
+      <p>
+        node.jsやSQLite3のデータベースファイルを格納しておくディレクトリ（フォルダ）をつくります。<br>
+        ディレクトリの場所はお好みの場所で構いません。<br>
+        不安な方は、HOMEディレクトリ直下に作ることをお勧めします。
+      </p>
+      <p>
+        ディレクトリを作ってそこに入ったら、ターミナルから次のコマンドを入力しnode.jsでSQLite3にアクセスできるようにします。
+      </p>
+      <pre>
+        <code>
+          npm install sqlite3
+        </code>
+      </pre>
+      <h5>SQLite3のデータベースファイル作成</h5>
+      <p>
+        SQLite3のコマンドでデータベースを作成しておきます。<br>
+        データベースを作ったら、<code>ctrl+d</code>でsqlite3のコンソールから抜けましょう。
+      </p>
+      <pre>
+        <code>
+          sqlite3 test.db
+        </code>
+      </pre>
+      <h5>node.jsのファイル作成</h5>
+      <p>
+        データベースファイルを定義したフォルダの中にJavaScriptのファイルを作ります。
+      </p>
+      <pre>
+        <code>
+          touch testAccess.js
+        </code>
+      </pre>
+      <h5>データベースアクセスのコードを書こう！！</h5>
+      <div class="media">
+        <pre>
+          <code>
+            // SQLite3を使う準備
+            var sqlite3 = require('sqlite3').verbose();
+            // DBファイルを指定
+            var db = new sqlite3.Database('test.db');
 
-              // DB操作
-              db.serialize(() => {
-                // テーブルを初期化
-                dataInitialize();
+            // DB操作
+            db.serialize(() => {
+              // テーブルを初期化
+              dataInitialize();
 
-                // データを格納
-                insertData('Sasaki');
-                insertData('Satou');
-                insertData('Takahashi');
+              // データを格納
+              insertData('Sasaki');
+              insertData('Satou');
+              insertData('Takahashi');
 
-                // 格納したデータを抽出
-                selectAll();
+              // 格納したデータを抽出
+              selectAll();
 
-                // データを更新
-                updateData('Takahashi', 'Tanaka');
+              // データを更新
+              updateData('Takahashi', 'Tanaka');
 
-                // 格納したデータを抽出
-                selectAll();
+              // 格納したデータを抽出
+              selectAll();
 
-                // データを削除
-                deleteData('Tanaka');
+              // データを削除
+              deleteData('Tanaka');
 
-                // 格納したデータを抽出
-                selectAll();
+              // 格納したデータを抽出
+              selectAll();
+            });
+            db.close();
+
+
+            /**
+            * テーブルの初期化メソッド
+            */
+            function dataInitialize() {
+              // テーブルを削除
+              db.run('DROP TABLE testTable');
+
+              // テーブルを定義
+              db.run("CREATE TABLE testTable (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)");
+              console.log("テーブルの初期化完了");
+            }
+
+            /**
+            * SELECT文：DBのデータを抽出メソッド
+            */
+            function selectAll() {
+              db.each("SELECT * FROM testTable", (error, row) => {
+                if(error) {
+                  console.error("Error", error);
+                  return;
+                }
+                console.log(row.id + ' | ' + row.name);
               });
-              db.close();
+            }
 
+            /**
+            * INSERT文：データを新規に格納するメソッド
+            * @param {新規追加の名前} name 
+            */
+            function insertData(name) {
+              const stmt_insert = db.prepare("INSERT INTO testTable (name) VALUES (?)");
+              stmt_insert.run(name);
+              stmt_insert.finalize();
+              console.log("データの格納完了");
+            }
 
-              /**
-              * テーブルの初期化メソッド
-              */
-              function dataInitialize() {
-                // テーブルを削除
-                db.run('DROP TABLE testTable');
+            /**
+            * 既存のデータを更新するメソッド
+            * @param {変更前の名前} oldName 
+            * @param {変更後の名前} newName 
+            */
+            function updateData(oldName, newName) {
+              const stmt_update = db.prepare("UPDATE testTable SET name = ? WHERE name = ?");
+              stmt_update.run([newName, oldName]);
+              stmt_update.finalize();
+              console.log("データの更新完了");
+            }
 
-                // テーブルを定義
-                db.run("CREATE TABLE testTable (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)");
-                console.log("テーブルの初期化完了");
-              }
-
-              /**
-              * SELECT文：DBのデータを抽出メソッド
-              */
-              function selectAll() {
-                db.each("SELECT * FROM testTable", (error, row) => {
-                  if(error) {
-                    console.error("Error", error);
-                    return;
-                  }
-                  console.log(row.id + ' | ' + row.name);
-                });
-              }
-
-              /**
-              * INSERT文：データを新規に格納するメソッド
-              * @param {新規追加の名前} name 
-              */
-              function insertData(name) {
-                const stmt_insert = db.prepare("INSERT INTO testTable (name) VALUES (?)");
-                stmt_insert.run(name);
-                stmt_insert.finalize();
-                console.log("データの格納完了");
-              }
-
-              /**
-              * 既存のデータを更新するメソッド
-              * @param {変更前の名前} oldName 
-              * @param {変更後の名前} newName 
-              */
-              function updateData(oldName, newName) {
-                const stmt_update = db.prepare("UPDATE testTable SET name = ? WHERE name = ?");
-                stmt_update.run([newName, oldName]);
-                stmt_update.finalize();
-                console.log("データの更新完了");
-              }
-
-              /**
-              * データを削除するメソッド
-              * @param {削除する名前} name 
-              */
-              function deleteData(name) {
-                const stmt_delete = db.prepare("DELETE FROM testTable WHERE name = ?");
-                stmt_delete.run(name);
-                stmt_delete.finalize();
-                console.log("データの削除完了");
-              }
-            </code>
-          </pre>
-          <div class="media-body">
-            <h5 class="mt-0">データベースの種類とパスの指定</h5>
-            <p>
-              <code>var sqlite3 = require('sqlite3').verbose();</code><br>
-              「SQLite3データベースを使います」という宣言を変数<code>sqlite3</code>に格納しています。<br>
-              <code>var db = new sqlite3.Database('test.db');</code><br>
-              「test.db」というSQLite3データベースを定義して変数<code>db</code>に格納しています。<br>
-              この2行を記述することで、データベースの種類とパス（データベースの場所と名前）を指定します。
-            </p>
-            <hr class="line-dark">
-            <h5 class="mt-0">データベースアクセスの処理を記述</h5>
-            <p>
-              <code>db.serialize(() => {...});</code><br>
-              <code>db.close();</code><br>
-              このブロックでデータベースへのデータの追加・更新・削除・読込等の処理をどういった順序で行うのかを記述しています。<br>
-              ここで呼び出している関数はブロックの後ろの方で記述しています。
-            </p>
-            <hr class="line-dark">
-            <h5 class="mt-0">テーブルの初期化メソッド</h5>
-            <p>
-              今回のコードはテスト用コードということもあり、<code>DROP TABLE</code>文によるデーブルの削除と<br>
-              <code>CREATE TABLE</code>文によるテーブルの定義を組み合わせた形でテーブルの初期化メソッドを定義しました。
-            </p>
-            <hr class="line-dark">
-            <h5 class="mt-0">SELECT文：データの読込メソッド</h5>
-            <p>
-              SELECT文の場合のみコードの形が少し違っているので、注意が必要です。
-              for文等の繰り返し文をつかなくても<code>db.each("SELECT文", (error, row) => {});</code>の記述だけで<br>
-              SELECT文に応じたデータを抽出してくれます。
-            </p>
-            <hr class="line-dark">
-            <h5 class="mt-0">INSERT文・UPDATE文・DELETE文のメソッド</h5>
-            <p>
-              INSERT文・UPDATE文・DELETE文の3つは共通点のある記述方法です。
-              <code>db.prepare();</code>というメソッドを使うことでプレースホルダ(?)を用いてSQL文を記述することができます。<br>
-              そのプレースホルダに引数をわたしてメソッドを定義しています。<br>
-              それぞれのメソッドによってプレースホルダの数や記述箇所が異なるので注意が必要です。
-            </p>
-          </div><!-- /.media-body -->
-        </div><!-- /.media -->
-      </section>
+            /**
+            * データを削除するメソッド
+            * @param {削除する名前} name 
+            */
+            function deleteData(name) {
+              const stmt_delete = db.prepare("DELETE FROM testTable WHERE name = ?");
+              stmt_delete.run(name);
+              stmt_delete.finalize();
+              console.log("データの削除完了");
+            }
+          </code>
+        </pre>
+        <div class="media-body">
+          <h5 class="mt-0">データベースの種類とパスの指定</h5>
+          <p>
+            <code>var sqlite3 = require('sqlite3').verbose();</code><br>
+            「SQLite3データベースを使います」という宣言を変数<code>sqlite3</code>に格納しています。<br>
+            <code>var db = new sqlite3.Database('test.db');</code><br>
+            「test.db」というSQLite3データベースを定義して変数<code>db</code>に格納しています。<br>
+            この2行を記述することで、データベースの種類とパス（データベースの場所と名前）を指定します。
+          </p>
+          <hr class="line-dark">
+          <h5 class="mt-0">データベースアクセスの処理を記述</h5>
+          <p>
+            <code>db.serialize(() => {...});</code><br>
+            <code>db.close();</code><br>
+            このブロックでデータベースへのデータの追加・更新・削除・読込等の処理をどういった順序で行うのかを記述しています。<br>
+            ここで呼び出している関数はブロックの後ろの方で記述しています。
+          </p>
+          <hr class="line-dark">
+          <h5 class="mt-0">テーブルの初期化メソッド</h5>
+          <p>
+            今回のコードはテスト用コードということもあり、<code>DROP TABLE</code>文によるデーブルの削除と<br>
+            <code>CREATE TABLE</code>文によるテーブルの定義を組み合わせた形でテーブルの初期化メソッドを定義しました。
+          </p>
+          <hr class="line-dark">
+          <h5 class="mt-0">SELECT文：データの読込メソッド</h5>
+          <p>
+            SELECT文の場合のみコードの形が少し違っているので、注意が必要です。
+            for文等の繰り返し文をつかなくても<code>db.each("SELECT文", (error, row) => {});</code>の記述だけで<br>
+            SELECT文に応じたデータを抽出してくれます。
+          </p>
+          <hr class="line-dark">
+          <h5 class="mt-0">INSERT文・UPDATE文・DELETE文のメソッド</h5>
+          <p>
+            INSERT文・UPDATE文・DELETE文の3つは共通点のある記述方法です。
+            <code>db.prepare();</code>というメソッドを使うことでプレースホルダ(?)を用いてSQL文を記述することができます。<br>
+            そのプレースホルダに引数をわたしてメソッドを定義しています。<br>
+            それぞれのメソッドによってプレースホルダの数や記述箇所が異なるので注意が必要です。
+          </p>
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+    </section>
     <!-- footer -->
     <footer class="footer">
       <div id="copyright"></div>

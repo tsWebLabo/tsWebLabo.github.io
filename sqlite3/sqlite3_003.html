@@ -24,238 +24,255 @@
     <!--navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="navbar-brand">
-        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        t's Web Labo
+          <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
       </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
+                  Ubuntu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="../vim/vim001.html" type="button" data-toggle="dropdown">
+                  Vim
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item active" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li><a class="dropdown-item" href="../javascriptNote/javascriptNote.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="../ExpressApp/expressApp.html">Expressアプリ</a></li>
+            </ul>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutme.html">About me</a>
+          </li>    
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <!--jumbotron-->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">SQLite3</h1>
+        <p class="lead">
+          SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
+          SQLite3を通してデータベースとSQL文に触れてみませんか？
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+          データベースの操作に慣れたら、次はテーブルの操作です。<br>
+          テーブルの作成は、データベースの設計に重要なことなので、しっかりおさえておきたいですね！！
+        </p>
+      </div>
+      <h2 class="text-bright">テーブルの操作</h2>
+      <h3>テーブル作成</h3>
+      <p>
+        SQLのCREATE文でテーブルを作成します。<br>
+        新規データベースでこの操作を行った時点で、Nutilus(ファイルマネージャ)にデータベースのファイルが表示されます。
+      </p>
+      <pre>
+        <code>
+          CREATE TABLE testTable001(id, name);
+        </code>
+      </pre>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../aboutme.html">About me</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../ubuntu/ubuntu001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ubuntu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
-                <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
-                <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Androidアプリ
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
-                <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
-                <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown active">
-              <a href="sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                SQLite3
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="sqlite3_001.html">SQLite3とは</a>
-                <a class="dropdown-item" href="sqlite3_002.html">データベースの操作</a>
-                <a class="dropdown-item active" href="sqlite3_003.html">テーブルの操作</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="sqlite3_004.html">データの追加（INSERT文）</a>
-                <a class="dropdown-item" href="sqlite3_005.html">データの更新（UPDATE文）</a>
-                <a class="dropdown-item" href="sqlite3_006.html">データの削除（DELETE文）</a>
-                <a class="dropdown-item" href="sqlite3_007.html">データの取得（SELECT文）</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="sqlite3_008.html">テーブルの結合（JOIN句）</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vim
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
-                <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../javascriptNote/javascriptNote.html">JavaScript入門！！</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <section>
-        <!--jumbotron-->
-        <div class="jumbotron">
-          <h1 class="display-4 text-accent text-bright">SQLite3</h1>
-          <p class="lead">
-            SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
-            SQLite3を通してデータベースとSQL文に触れてみませんか？
-          </p>
-          <hr class="my-4">
-          <p class="lead">
-            データベースの操作に慣れたら、次はテーブルの操作です。<br>
-            テーブルの作成は、データベースの設計に重要なことなので、しっかりおさえておきたいですね！！
-          </p>
-        </div>
-        <h2 class="text-bright">テーブルの操作</h2>
-        <h3>テーブル作成</h3>
-        <p>
-          SQLのCREATE文でテーブルを作成します。<br>
-          新規データベースでこの操作を行った時点で、Nutilus(ファイルマネージャ)にデータベースのファイルが表示されます。
-        </p>
-        <pre>
-          <code>
-            CREATE TABLE testTable001(id, name);
-          </code>
-        </pre>
-        
-        <h3>テーブルの確認</h3>
-        <p>
-          テーブルの確認方法は２種類あります。<br>
-          状況に合わせて使い分けましょう。
-        </p>
-        <ul>
-          <li>.tables</li>
-            <p>データベースに格納されたテーブルを確認したい時に使う</p>
-            <pre>
-              <code>
-                .tables
-              </code>
-            </pre>
-            <p>実行結果</p>
-            <pre>
-              <code>
-                testTable001  testTable002
-              </code>
-            </pre>
-          <li>.schema</li>
-            <p>データベースに格納されたテーブルの構造を確認することができる。</p>
-            <pre>
-              <code>
-                .schema
-              </code>
-            </pre>
-            <p>実行結果</p>
-            <pre>
-              <code>
-                CREATE TABLE testTable001(id, name);
-                CREATE TABLE testTable002(id INTEGER PRIMARY KEY, name TEXT NOT NULL);
-              </code>
-            </pre>
-        </ul>
-        
-        <h3>テーブル名の変更</h3>
-        <p>テーブル名を変更するには下記のSQL文を使います。</p>
-        <pre>
-          <code>
-            ALTER TABLE 現在のテーブル名 RENAME TO 新しいテーブル名;
-          </code>
-        </pre>
+      <h3>テーブルの確認</h3>
+      <p>
+        テーブルの確認方法は２種類あります。<br>
+        状況に合わせて使い分けましょう。
+      </p>
+      <ul>
+        <li>.tables</li>
+          <p>データベースに格納されたテーブルを確認したい時に使う</p>
+          <pre>
+            <code>
+              .tables
+            </code>
+          </pre>
+          <p>実行結果</p>
+          <pre>
+            <code>
+              testTable001  testTable002
+            </code>
+          </pre>
+        <li>.schema</li>
+          <p>データベースに格納されたテーブルの構造を確認することができる。</p>
+          <pre>
+            <code>
+              .schema
+            </code>
+          </pre>
+          <p>実行結果</p>
+          <pre>
+            <code>
+              CREATE TABLE testTable001(id, name);
+              CREATE TABLE testTable002(id INTEGER PRIMARY KEY, name TEXT NOT NULL);
+            </code>
+          </pre>
+      </ul>
+      
+      <h3>テーブル名の変更</h3>
+      <p>テーブル名を変更するには下記のSQL文を使います。</p>
+      <pre>
+        <code>
+          ALTER TABLE 現在のテーブル名 RENAME TO 新しいテーブル名;
+        </code>
+      </pre>
 
-        <p>前述のテーブル"testTable002"を"myfriends"に変更してみます。</p>
-        <pre>
-          <code>
-            ALTER TABLE testTable002 RENAME TO myfriends;
-          </code>
-        </pre>
-        <p>テーブル名が変更されているかを.tablesコマンドで確認します。</p>
-        <pre>
-          <code>
-            .tables
+      <p>前述のテーブル"testTable002"を"myfriends"に変更してみます。</p>
+      <pre>
+        <code>
+          ALTER TABLE testTable002 RENAME TO myfriends;
+        </code>
+      </pre>
+      <p>テーブル名が変更されているかを.tablesコマンドで確認します。</p>
+      <pre>
+        <code>
+          .tables
 
-            myfriends  testTable001
-          </code>
-        </pre>
+          myfriends  testTable001
+        </code>
+      </pre>
 
-        <h3>カラムの追加</h3>
-        <p>
-          既につくってあるテーブルに後からカラムを追加することもできます。<br>
-          カラムを追加するには、下記のALTER TABLE文を使います。
-        </p>
-        <pre>
-          <code>
-            ALTER TABLE テーブル名 ADD COLUMN カラム名 [データ型];
-          </code>
-        </pre>
-        <p>
-          追加したカラムはテーブルの末尾に追加されます。<br>
-          また、カラムを追加する際には次の条件を満たしていなければなりません。
-        </p>
-        <ul>
-          <li>PRIMARY KEY や UNIQUE制約は設定できない。</li>
-          <li>DEFAULT制約を設定する時は、CURRENT_TIME/CURRENT_DATE/CARRENT_TIMESTAMPは指定できない。</li>
-          <li>NOT NULL制約を設定する時は、NULL以外のデフォルト値の設定が必要。</li>
-        </ul>
-        <p>現在のテーブルを確認してみます。</p>
-        <pre>
-          <code>
-            .schema
+      <h3>カラムの追加</h3>
+      <p>
+        既につくってあるテーブルに後からカラムを追加することもできます。<br>
+        カラムを追加するには、下記のALTER TABLE文を使います。
+      </p>
+      <pre>
+        <code>
+          ALTER TABLE テーブル名 ADD COLUMN カラム名 [データ型];
+        </code>
+      </pre>
+      <p>
+        追加したカラムはテーブルの末尾に追加されます。<br>
+        また、カラムを追加する際には次の条件を満たしていなければなりません。
+      </p>
+      <ul>
+        <li>PRIMARY KEY や UNIQUE制約は設定できない。</li>
+        <li>DEFAULT制約を設定する時は、CURRENT_TIME/CURRENT_DATE/CARRENT_TIMESTAMPは指定できない。</li>
+        <li>NOT NULL制約を設定する時は、NULL以外のデフォルト値の設定が必要。</li>
+      </ul>
+      <p>現在のテーブルを確認してみます。</p>
+      <pre>
+        <code>
+          .schema
 
-            CREATE TABLE myfriend(id INTEGER PRIMARY KEY, name TEXT NOT NULL);
-            CREATE TABLE testTable001(id, name);
-          </code>
-        </pre>
-        <p>テーブル”myfriends”に新しいカラム”address”を追加してみます。</p>
-        <pre>
-          <code>
-            ALTER TABLE myfriends ADD COLUMN address TEXT;
-          </code>
-        </pre>
-        <p>テーブルを確認すると、新しいカラム”address”が追加されたことが分かります。</p>
-        <pre>
-          <code>
-            .schema
+          CREATE TABLE myfriend(id INTEGER PRIMARY KEY, name TEXT NOT NULL);
+          CREATE TABLE testTable001(id, name);
+        </code>
+      </pre>
+      <p>テーブル”myfriends”に新しいカラム”address”を追加してみます。</p>
+      <pre>
+        <code>
+          ALTER TABLE myfriends ADD COLUMN address TEXT;
+        </code>
+      </pre>
+      <p>テーブルを確認すると、新しいカラム”address”が追加されたことが分かります。</p>
+      <pre>
+        <code>
+          .schema
 
-            CREATE TABLE myfriends(id INTEGER PRYMARY KEY, name TEXT NOT NULL, address TEXT);
-            CREATE TABLE testTable001(id, name);
-          </code>
-        </pre>
+          CREATE TABLE myfriends(id INTEGER PRYMARY KEY, name TEXT NOT NULL, address TEXT);
+          CREATE TABLE testTable001(id, name);
+        </code>
+      </pre>
 
-        <h3>カラムの削除</h3>
-        <p>
-          SQLite3では、カラムを削除するコマンドが無いようです。<br>
-          なので、任意のカラムを削除したい時は次の手順を行う必要があります。
-        </p>
-        <ol>
-          <li>元テーブル（削除対象のカラムが入っているもの）を用意する。</li>
-          <li>元テーブルのコピーを削除対象のカラムを除いて作成する。（必然的にテーブル名が違うものになる）</li>
-          <li>元テーブルを削除する。</li>
-          <li>コピーしたテーブル名を元テーブルの名前と同じものに変更する。</li>
-        </ol>
+      <h3>カラムの削除</h3>
+      <p>
+        SQLite3では、カラムを削除するコマンドが無いようです。<br>
+        なので、任意のカラムを削除したい時は次の手順を行う必要があります。
+      </p>
+      <ol>
+        <li>元テーブル（削除対象のカラムが入っているもの）を用意する。</li>
+        <li>元テーブルのコピーを削除対象のカラムを除いて作成する。（必然的にテーブル名が違うものになる）</li>
+        <li>元テーブルを削除する。</li>
+        <li>コピーしたテーブル名を元テーブルの名前と同じものに変更する。</li>
+      </ol>
 
-        <h3>テーブルの削除</h3>
-        <p>テーブルを削除するにはDROP TABLE文を使います。</p>
-        <p>.tablesコマンドで現在作成済みのテーブルを確認します。</p>
-        <pre>
-          <code>
-            .tables
+      <h3>テーブルの削除</h3>
+      <p>テーブルを削除するにはDROP TABLE文を使います。</p>
+      <p>.tablesコマンドで現在作成済みのテーブルを確認します。</p>
+      <pre>
+        <code>
+          .tables
 
-            myfriends  testTable001
-          </code>
-        </pre>
-        <p>テーブル”myfriends”を削除します。</p>
-        <pre>
-          <code>
-            DROP TABLE myfriends;
-          </code>
-        </pre>
-        <p>テーブルを確認してみます。</p>
-        <pre>
-          <code>
-            .tables
+          myfriends  testTable001
+        </code>
+      </pre>
+      <p>テーブル”myfriends”を削除します。</p>
+      <pre>
+        <code>
+          DROP TABLE myfriends;
+        </code>
+      </pre>
+      <p>テーブルを確認してみます。</p>
+      <pre>
+        <code>
+          .tables
 
-            testTable001
-          </code>
-        </pre>
-      </section>
+          testTable001
+        </code>
+      </pre>
+    </section>
     <!-- footer -->
     <footer class="footer">
       <div id="copyright"></div>

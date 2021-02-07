@@ -24,250 +24,267 @@
     <!--navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="navbar-brand">
-        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        t's Web Labo
-    </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../aboutme.html">About me</a>
-            </li>
-            <li class="nav-item dropdown active">
-              <a href="ubuntu001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ubuntu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="ubuntu001.html">Ubuntuってなに？</a>
-                <a class="dropdown-item active" href="ubuntu002.html">Linuxコマンド</a>
-                <a class="dropdown-item" href="ubuntu003.html">ShellScript</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Androidアプリ
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
-                <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
-                <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                SQLite3
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLIte3とは</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vim
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
-                <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../javascriptNote/javascriptNote.html">JavaScript入門！！</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <section>
-        <!--jumbotron-->
-        <div class="jumbotron">
-          <h1 class="display-4 text-accent text-bright">ユーザーを育ててくれるOS「Ubuntu」</h1>
-          <p class="lead">Ubuntuをより楽しく便利に使う方法が詰まってます！！</p>
-          <hr class="my-4">
-          <p class="lead">
-            Linuxコマンドを使うとUbuntuの便利さがより深く体感できます。<br>
-            一緒にLinuxコマンドを使えるようになってみませんか？
-          </p>
-        </div>
-        <h2>ターミナルでUbuntuがより便利になる！！</h2>
-        <h4>Linuxコマンドを使ってみよう</h4>
-        <p>
-          Linuxコマンドを使えるとUbuntuとより仲良くなれます。</br>
-          ここでは、個人的によく使うコマンドをまとめていきます。
+          <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
+                  Ubuntu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item active" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="../vim/vim001.html" type="button" data-toggle="dropdown">
+                  Vim
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li><a class="dropdown-item" href="../javascriptNote/javascriptNote.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="../ExpressApp/expressApp.html">Expressアプリ</a></li>
+            </ul>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutme.html">About me</a>
+          </li>    
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <!--jumbotron-->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">ユーザーを育ててくれるOS「Ubuntu」</h1>
+        <p class="lead">Ubuntuをより楽しく便利に使う方法が詰まってます！！</p>
+        <hr class="my-4">
+        <p class="lead">
+          Linuxコマンドを使うとUbuntuの便利さがより深く体感できます。<br>
+          一緒にLinuxコマンドを使えるようになってみませんか？
         </p>
+      </div>
+      <h2>ターミナルでUbuntuがより便利になる！！</h2>
+      <h4>Linuxコマンドを使ってみよう</h4>
+      <p>
+        Linuxコマンドを使えるとUbuntuとより仲良くなれます。</br>
+        ここでは、個人的によく使うコマンドをまとめていきます。
+      </p>
 
-        <h5>ディレクトリ（フォルダ）操作</h5>
-        <table class="table table-striped table-dark">
-          <thead class="text-center">
-            <tr>
-              <th scope="col">コマンド</th>
-              <th scope="col">機能</th>
-              <th scope="col">使い方（例文）</th>
-            </tr>
-          </thead>
-          <tbody class="text-left">
-            <tr>
-              <th scope="row">ls</th>
-              <td>ファイルやディレクトリの情報を表示させるコマンド</td>
-              <td>
-                <pre>
-                  <code>
-                    ls
-                    Documents  Music     Templates
-                    Downloads  Pictures  Videos
-                    Desktop    Dropbox   Public    snap
-                  </code>
-                </pre>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">pwd</th>
-              <td>現在のディレクトリの場所を表示させる</td>
-              <td>
-                <pre>
-                  <code>
-                    pwd
-                    /home/xxxxxx(ユーザー名)/
-                  </code>
-                </pre>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">cd</th>
-              <td>ディレクトリを移動するためのコマンド</td>
-              <td>
-                <pre>
-                  <code>
-                    pwd
-                    /home/xxxxxx(ユーザー名)/
-                    cd Desktop
-                    pwd
-                    /home/xxxxxx(ユーザー名)/Desktop/
-                    cd ~
-                    pwd
-                    /home/xxxxxx(ユーザー名)/
-                  </code>
-                </pre>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">mkdir</th>
-              <td>新しいディレクトリを作成する</td>
-              <td>
-                <pre>
-                  <code>
-                    ls
-                    Documents  Music     Templates
-                    Downloads  Pictures  Videos
-                    Desktop    Dropbox   Public    snap
-                    mkdir Scripts
-                    ls
-                    Documents  Music     Templates
-                    Downloads  Pictures  Scripts   Videos
-                    Desktop    Dropbox   Public    snap
-                  </code>
-                </pre>
-              </td>
-            </tr>
-            <!-- <tr>
-              <th scope="row">rm</th>
-              <td>ディレクトリを消去する</td>
-            </tr> -->
-          </tbody>
-        </table>
-        <h5>ファイル操作</h5>
-        <table class="table table-striped table-dark">
-          <thead class="text-center">
-            <tr>
-              <th scope="col">コマンド</th>
-              <th scope="col">機能</th>
-              <th scope="col">使い方（例文）</th>
-            </tr>
-          </thead>
-          <tbody class="text-left">
-            <tr>
-              <th scope="row">touch</th>
-              <td>ファイルを新規作成する</td>
-              <td>
-                <pre>
-                  <code>
-                    touch sample.txt
-                    ls
-                    sample.txt
-                  </code>
-                </pre>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">cat</th>
-              <td>ファイルの内容を表示させる</td>
-              <td>
-                <pre>
-                  <code>
-                    cat sample.txt
-                    これはsample.txtのテキストです。
-                  </code>
-                </pre>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">cp</th>
-              <td>ファイルをコピーする</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">mv</th>
-              <td>
-                <ul>
-                  <li>ファイル名を変更する</li>
-                  <li>ファイルを移動させる</li>
-                </ul>
-              </td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-        <h5>システム操作</h5>
-        <table class="table table-striped table-dark">
-          <thead>
-            <tr>
-              <th scope="col">コマンド</th>
-              <th scope="col">機能</th>
-              <th scope="col">使い方（例文）</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">sudo</th>
-              <td>コマンドを管理者権限で実行する場合に使う</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">reboot</th>
-              <td>PCの再起動</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">shutdown</th>
-              <td>PCの電源OFF</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <h5>ディレクトリ（フォルダ）操作</h5>
+      <table class="table table-striped table-dark">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">コマンド</th>
+            <th scope="col">機能</th>
+            <th scope="col">使い方（例文）</th>
+          </tr>
+        </thead>
+        <tbody class="text-left">
+          <tr>
+            <th scope="row">ls</th>
+            <td>ファイルやディレクトリの情報を表示させるコマンド</td>
+            <td>
+              <pre>
+                <code>
+                  ls
+                  Documents  Music     Templates
+                  Downloads  Pictures  Videos
+                  Desktop    Dropbox   Public    snap
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">pwd</th>
+            <td>現在のディレクトリの場所を表示させる</td>
+            <td>
+              <pre>
+                <code>
+                  pwd
+                  /home/xxxxxx(ユーザー名)/
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">cd</th>
+            <td>ディレクトリを移動するためのコマンド</td>
+            <td>
+              <pre>
+                <code>
+                  pwd
+                  /home/xxxxxx(ユーザー名)/
+                  cd Desktop
+                  pwd
+                  /home/xxxxxx(ユーザー名)/Desktop/
+                  cd ~
+                  pwd
+                  /home/xxxxxx(ユーザー名)/
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">mkdir</th>
+            <td>新しいディレクトリを作成する</td>
+            <td>
+              <pre>
+                <code>
+                  ls
+                  Documents  Music     Templates
+                  Downloads  Pictures  Videos
+                  Desktop    Dropbox   Public    snap
+                  mkdir Scripts
+                  ls
+                  Documents  Music     Templates
+                  Downloads  Pictures  Scripts   Videos
+                  Desktop    Dropbox   Public    snap
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <!-- <tr>
+            <th scope="row">rm</th>
+            <td>ディレクトリを消去する</td>
+          </tr> -->
+        </tbody>
+      </table>
+      <h5>ファイル操作</h5>
+      <table class="table table-striped table-dark">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">コマンド</th>
+            <th scope="col">機能</th>
+            <th scope="col">使い方（例文）</th>
+          </tr>
+        </thead>
+        <tbody class="text-left">
+          <tr>
+            <th scope="row">touch</th>
+            <td>ファイルを新規作成する</td>
+            <td>
+              <pre>
+                <code>
+                  touch sample.txt
+                  ls
+                  sample.txt
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">cat</th>
+            <td>ファイルの内容を表示させる</td>
+            <td>
+              <pre>
+                <code>
+                  cat sample.txt
+                  これはsample.txtのテキストです。
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">cp</th>
+            <td>ファイルをコピーする</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">mv</th>
+            <td>
+              <ul>
+                <li>ファイル名を変更する</li>
+                <li>ファイルを移動させる</li>
+              </ul>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h5>システム操作</h5>
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">コマンド</th>
+            <th scope="col">機能</th>
+            <th scope="col">使い方（例文）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">sudo</th>
+            <td>コマンドを管理者権限で実行する場合に使う</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">reboot</th>
+            <td>PCの再起動</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">shutdown</th>
+            <td>PCの電源OFF</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <!-- footer -->
     <footer class="footer">
       <div id="copyright"></div>

@@ -24,159 +24,176 @@
     <!--navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="navbar-brand">
-        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        t's Web Labo
+          <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
       </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../aboutme.html">About me</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../ubuntu/ubuntu001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ubuntu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
-                <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
-                <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Androidアプリ
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
-                <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
-                <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown active">
-              <a href="sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                SQLite3
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="sqlite3_001.html">SQLite3とは</a>
-                <a class="dropdown-item" href="sqlite3_002.html">データベースの操作</a>
-                <a class="dropdown-item" href="sqlite3_003.html">テーブルの操作</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="sqlite3_004.html">データの追加（INSERT文）</a>
-                <a class="dropdown-item" href="sqlite3_005.html">データの更新（UPDATE文）</a>
-                <a class="dropdown-item active" href="sqlite3_006.html">データの削除（DELETE文）</a>
-                <a class="dropdown-item" href="sqlite3_007.html">データの取得（SELECT文）</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="sqlite3_008.html">テーブルの結合（JOIN句）</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vim
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
-                <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../javascriptNote/javascriptNote.html">JavaScript入門！！</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <section>
-        <!--jumbotron-->
-        <div class="jumbotron">
-          <h1 class="display-4 text-accent text-bright">SQLite3</h1>
-          <p class="lead">
-            SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
-            SQLite3を通してデータベースとSQL文に触れてみませんか？
-          </p>
-          <hr class="my-4">
-          <p class="lead">
-            DELETE文はテーブルに格納されているデータを削除する時に使います。<br>
-            注意深くWHERE句を使って不必要な部分にDELETE文を効かせないようにするところがポイント。
-          </p>
-        </div>
-        <h2 class="text-bright">データの削除（DELETE文）</h2>
-        <p>
-          テーブルからデータを削除するには、DELETE文を使います。
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
+                  Ubuntu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="../vim/vim001.html" type="button" data-toggle="dropdown">
+                  Vim
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item active" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li><a class="dropdown-item" href="../javascriptNote/javascriptNote.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="../ExpressApp/expressApp.html">Expressアプリ</a></li>
+            </ul>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutme.html">About me</a>
+          </li>    
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <!--jumbotron-->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">SQLite3</h1>
+        <p class="lead">
+          SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
+          SQLite3を通してデータベースとSQL文に触れてみませんか？
         </p>
-        <p>書式</p>
-        <pre>
-          <code>
-            DELETE FROM テーブル名 WHERE 条件式;
-          </code>
-        </pre>
-        <p>
-          まず削除の対象となるデータを条件式を使って指定します。<br>
-          条件式に一致するデータが複数の場合は複数のデータがまとめて削除されることになります。<br>
-          WHERE句を省略してしまった場合はテーブルに含まれる全てのデータが削除されます。
+        <hr class="my-4">
+        <p class="lead">
+          DELETE文はテーブルに格納されているデータを削除する時に使います。<br>
+          注意深くWHERE句を使って不必要な部分にDELETE文を効かせないようにするところがポイント。
         </p>
-        <p>
-          下記のテーブルを例にDELETE文を試してみます。
-        </p>
-        <pre>
-          <code>
-            CREATE TABLE testUser3 (id INTEGER, name TEXT, age INTEGER);
-            INSERT INTO testUser3 VALUES (1, 'Yamada', 32);
-            INSERT INTO testUser3 VALUES (2, 'Suzuki', 15);
-            INSERT INTO testUser3 VALUES (3, 'Honda', 18);
-            INSERT INTO testUser3 VALUES (4, 'Endou', 24);
-            INSERT INTO testUser3 VALUES (5, 'Furuta', 19);
-          </code>
-        </pre>
-        <pre>
-          <code>
-            SELECT * FROM testUser3;
+      </div>
+      <h2 class="text-bright">データの削除（DELETE文）</h2>
+      <p>
+        テーブルからデータを削除するには、DELETE文を使います。
+      </p>
+      <p>書式</p>
+      <pre>
+        <code>
+          DELETE FROM テーブル名 WHERE 条件式;
+        </code>
+      </pre>
+      <p>
+        まず削除の対象となるデータを条件式を使って指定します。<br>
+        条件式に一致するデータが複数の場合は複数のデータがまとめて削除されることになります。<br>
+        WHERE句を省略してしまった場合はテーブルに含まれる全てのデータが削除されます。
+      </p>
+      <p>
+        下記のテーブルを例にDELETE文を試してみます。
+      </p>
+      <pre>
+        <code>
+          CREATE TABLE testUser3 (id INTEGER, name TEXT, age INTEGER);
+          INSERT INTO testUser3 VALUES (1, 'Yamada', 32);
+          INSERT INTO testUser3 VALUES (2, 'Suzuki', 15);
+          INSERT INTO testUser3 VALUES (3, 'Honda', 18);
+          INSERT INTO testUser3 VALUES (4, 'Endou', 24);
+          INSERT INTO testUser3 VALUES (5, 'Furuta', 19);
+        </code>
+      </pre>
+      <pre>
+        <code>
+          SELECT * FROM testUser3;
 
-            id          name        age       
-            ----------  ----------  ----------
-            1           Yamada      32        
-            2           Suzuki      15        
-            3           Honda       18        
-            4           Endou       24        
-            5           Furuta      19        
-          </code>
-        </pre>
-        <p>ageカラム20より小さいデータを削除します。</p>
-        <pre>
-          <code>
-            DELETE FROM testUser3 WHERE age &lt; 20
-          </code>
-        </pre>
-        <p>実行結果</p>
-        <pre>
-          <code>
-            SELECT * FROM testUser3;
+          id          name        age       
+          ----------  ----------  ----------
+          1           Yamada      32        
+          2           Suzuki      15        
+          3           Honda       18        
+          4           Endou       24        
+          5           Furuta      19        
+        </code>
+      </pre>
+      <p>ageカラム20より小さいデータを削除します。</p>
+      <pre>
+        <code>
+          DELETE FROM testUser3 WHERE age &lt; 20
+        </code>
+      </pre>
+      <p>実行結果</p>
+      <pre>
+        <code>
+          SELECT * FROM testUser3;
 
-            id          name        age       
-            ----------  ----------  ----------
-            1           Yamada      32        
-            4           Endou       24        
-          </code>
-        </pre>
-        <p>WHERE句を省略して全てのデータを削除してみます。</p>
-        <pre>
-          <code>
-            DELETE FROM testUser3;
-          </code>
-        </pre>
-        <p>実行結果</p>
-        <pre>
-          <code>
-            SELECT * FROM testUser3;
+          id          name        age       
+          ----------  ----------  ----------
+          1           Yamada      32        
+          4           Endou       24        
+        </code>
+      </pre>
+      <p>WHERE句を省略して全てのデータを削除してみます。</p>
+      <pre>
+        <code>
+          DELETE FROM testUser3;
+        </code>
+      </pre>
+      <p>実行結果</p>
+      <pre>
+        <code>
+          SELECT * FROM testUser3;
 
-          </code>
-        </pre>
-      </section>
+        </code>
+      </pre>
+    </section>
     <!-- footer -->
     <footer class="footer">
       <div id="copyright"></div>

@@ -24,151 +24,168 @@
     <!--navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="navbar-brand">
-        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        t's Web Labo
-    </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../aboutme.html">About me</a>
-            </li>
-            <li class="nav-item dropdown active">
-              <a href="ubuntu001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ubuntu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="ubuntu001.html">Ubuntuってなに？</a>
-                <a class="dropdown-item" href="ubuntu002.html">Linuxコマンド</a>
-                <a class="dropdown-item active" href="ubuntu003.html">ShellScript</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Androidアプリ
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
-                <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
-                <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                SQLite3
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vim
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
-                <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../javascriptNote/javascriptNote.html">JavaScript入門！！</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <section>
-        <!--jumbotron-->
-        <div class="jumbotron">
-          <h1 class="display-4 text-accent text-bright">ユーザーを育ててくれるOS「Ubuntu」</h1>
-          <p class="lead">Ubuntuをより楽しく便利に使う方法が詰まってます！！</p>
-          <hr class="my-4">
-          <p class="lead">
-            ShellScriptはLinuxコマンドより少し敷居が高いかもしれません。<br>
-            ルーティンとしてLinuxコマンドを走らせたい時などにはShellScriptが便利です。<br>
-            僕もまだ未熟な分野ですが、一緒に勉強していきましょう！！
-          </p>
-        </div>        
-        <h2>ShellScript</h2>
-        <p>
-          ShellScriptは複数のLinuxコマンドをひとつのファイルに記述して実行できるようにしたもの。<br>
-          ターミナルでUbuntuをアップデートするなど、複数のコマンドをルーティンで実行させたい時に有効。
+          <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
+                  Ubuntu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
+                  <a class="dropdown-item active" href="../ubuntu/ubuntu003.html">ShellScript</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="../vim/vim001.html" type="button" data-toggle="dropdown">
+                  Vim
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li><a class="dropdown-item" href="../javascriptNote/javascriptNote.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="../ExpressApp/expressApp.html">Expressアプリ</a></li>
+            </ul>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutme.html">About me</a>
+          </li>    
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <!--jumbotron-->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">ユーザーを育ててくれるOS「Ubuntu」</h1>
+        <p class="lead">Ubuntuをより楽しく便利に使う方法が詰まってます！！</p>
+        <hr class="my-4">
+        <p class="lead">
+          ShellScriptはLinuxコマンドより少し敷居が高いかもしれません。<br>
+          ルーティンとしてLinuxコマンドを走らせたい時などにはShellScriptが便利です。<br>
+          僕もまだ未熟な分野ですが、一緒に勉強していきましょう！！
         </p>
-        <h3>ShellScriptのファイルの作成から実行まで</h3>
-        <ul>
-          <li>「****(ファイル名).sh」の形でファイルを作成</li>
-            <pre>
-              <code>
-                touch ****.sh
-              </code>
-            </pre>
-          <li>ファイルにShellScriptを記述</li>
-            <pre>
-              <code>
-                #!/bin/bash
-                sudo apt update;
-              </code>
-            </pre>
-            <p>必ず1行目に<code>#!/bin/bash</code>というシバンと呼ばれる定型文を書く</p>
-          <li>ファイルに実行権限を付与</li>
-            <pre>
-              <code>
-                chmod +x ****.sh
-              </code>
-            </pre>
-          <li>ShellScriptを実行</li>
+      </div>        
+      <h2>ShellScript</h2>
+      <p>
+        ShellScriptは複数のLinuxコマンドをひとつのファイルに記述して実行できるようにしたもの。<br>
+        ターミナルでUbuntuをアップデートするなど、複数のコマンドをルーティンで実行させたい時に有効。
+      </p>
+      <h3>ShellScriptのファイルの作成から実行まで</h3>
+      <ul>
+        <li>「****(ファイル名).sh」の形でファイルを作成</li>
           <pre>
             <code>
-              sh ****.sh
+              touch ****.sh
             </code>
           </pre>
-        </ul>
-        <h3>ShellScriptの例：Ubuntuアップデート</h3>
-        <p>
-          Ubuntuのアップデートをターミナルで行う時、Linuxコマンドで行うと６つのコマンドを「&&」で繋げて実行するか<br>
-          別々に実行させる必要があり、かつ定期的に同じことをする必要が出てくるためShellScriptにしておくと効率的にアップデートを行えます。<br>
-          このファイルを実行させると、ファイル内に<code>sudo</code>（管理者権限コマンド）があるため、パスワードを尋ねられます。
-        </p>
+        <li>ファイルにShellScriptを記述</li>
+          <pre>
+            <code>
+              #!/bin/bash
+              sudo apt update;
+            </code>
+          </pre>
+          <p>必ず1行目に<code>#!/bin/bash</code>というシバンと呼ばれる定型文を書く</p>
+        <li>ファイルに実行権限を付与</li>
+          <pre>
+            <code>
+              chmod +x ****.sh
+            </code>
+          </pre>
+        <li>ShellScriptを実行</li>
         <pre>
           <code>
-            #!/bin/bash
-
-            # Ubuntu本体とインストールされているソフトウェアのメンテナンス・アップデート
-
-            # 最新のアップデートを確認
-            sudo apt-get update;
-
-            # 確認したアップデートを適用
-            sudo apt-get -y upgrade;
-
-            # ディストリビューションを最新のものに適用
-            sudo apt-get -y dist-upgrade;
-
-            # aptのパッケージキャッシュクリア
-            sudo apt-get clean;
-
-            # 依存関係解決後に使わなくなったパッケージを削除
-            sudo apt-get -y autoremove;
-
-            # 他のパッケージの依存関係を満たすため自動的にインストールされ、不要になったパッケージを削除
-            sudo apt-get -y autoclean;
+            sh ****.sh
           </code>
         </pre>
-      </section>
+      </ul>
+      <h3>ShellScriptの例：Ubuntuアップデート</h3>
+      <p>
+        Ubuntuのアップデートをターミナルで行う時、Linuxコマンドで行うと６つのコマンドを「&&」で繋げて実行するか<br>
+        別々に実行させる必要があり、かつ定期的に同じことをする必要が出てくるためShellScriptにしておくと効率的にアップデートを行えます。<br>
+        このファイルを実行させると、ファイル内に<code>sudo</code>（管理者権限コマンド）があるため、パスワードを尋ねられます。
+      </p>
+      <pre>
+        <code>
+          #!/bin/bash
+
+          # Ubuntu本体とインストールされているソフトウェアのメンテナンス・アップデート
+
+          # 最新のアップデートを確認
+          sudo apt-get update;
+
+          # 確認したアップデートを適用
+          sudo apt-get -y upgrade;
+
+          # ディストリビューションを最新のものに適用
+          sudo apt-get -y dist-upgrade;
+
+          # aptのパッケージキャッシュクリア
+          sudo apt-get clean;
+
+          # 依存関係解決後に使わなくなったパッケージを削除
+          sudo apt-get -y autoremove;
+
+          # 他のパッケージの依存関係を満たすため自動的にインストールされ、不要になったパッケージを削除
+          sudo apt-get -y autoclean;
+        </code>
+      </pre>
+    </section>
     <!-- footer -->
     <footer class="footer">
       <div id="copyright"></div>

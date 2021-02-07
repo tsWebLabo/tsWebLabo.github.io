@@ -24,585 +24,602 @@
     <!--navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="navbar-brand">
-        <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        t's Web Labo
+          <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
       </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../aboutme.html">About me</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../ubuntu/ubuntu001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ubuntu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
-                <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
-                <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Androidアプリ
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
-                <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
-                <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown active">
-              <a href="sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                SQLite3
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="sqlite3_001.html">SQLite3とは</a>
-                <a class="dropdown-item" href="sqlite3_002.html">データベースの操作</a>
-                <a class="dropdown-item" href="sqlite3_003.html">テーブルの操作</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="sqlite3_004.html">データの追加（INSERT文）</a>
-                <a class="dropdown-item" href="sqlite3_005.html">データの更新（UPDATE文）</a>
-                <a class="dropdown-item" href="sqlite3_006.html">データの削除（DELETE文）</a>
-                <a class="dropdown-item" href="sqlite3_007.html">データの取得（SELECT文）</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item active" href="sqlite3_008.html">テーブルの結合（JOIN句）</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="../vim/vim001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vim
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
-                <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../javascriptNote/javascriptNote.html">JavaScript入門！！</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <section>
-        <!--jumbotron-->
-        <div class="jumbotron">
-          <h1 class="display-4 text-accent text-bright">SQLite3</h1>
-          <p class="lead">
-            SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
-            SQLite3を通してデータベースとSQL文に触れてみませんか？
-          </p>
-          <hr class="my-4">
-          <p class="lead">
-            結合とは複数のテーブルを関連付けてデータを抽出する時に使います。<br>
-            データベースが「データベースたりうる」という部分でもあります。
-          </p>
-        </div>
-        <h2 class="text-bright">内部結合（INNER JOIN句）</h2>
-        <h3>内部結合とは</h3>
-        <p>
-          ２つのテーブルで結合の対象となるカラムを指定し、それぞれに同じ値が格納されているデータを結合して取得するもの。
-        </p>
-        <h3>INNER JOIN句の使い方</h3>
-        <ul>
-          <li>書式</li>
-          <pre>
-            <code>
-              SELECT テーブル名.カラム名, .... FROM テーブル名１ INNER JOIN テーブル名２ ON テーブル名１.カラム名１ = テーブル名２.カラム名２;
-            </code>
-          </pre>
-        </ul>
-        <h3>内部結合をやってみよう！！</h3>
-        <ul>
-          <li>2つのテーブルを用意します。</li>
-          <pre>
-            <code>
-              // 1つめのテーブル
-              CREATE TABLE staff(id INTEGER, name TEXT, depid INTEGER);
-              INSERT INTO staff VALUES(1, 'Suzuki', 1);
-              INSERT INTO staff VALUES(2, 'Endou', 3);
-              INSERT INTO staff VALUES(3, 'Katou', 1);
-              INSERT INTO staff VALUES(4, 'Yamada', 2);
-              INSERT INTO staff VALUES(5, 'Takahashi', 4);
-              INSERT INTO staff VALUES(6, 'Honda', 3);
-
-              SELECT * FROM staff;
-              id          name        deptid    
-              ----------  ----------  ----------
-              1           Suzuki      1         
-              2           Endou       3         
-              3           Katou       1         
-              4           Yamada      2         
-              5           Takahashi   4         
-              6           Honda       3         
-            </code>
-          </pre>
-          <pre>
-            <code>
-              // 2つめのテーブル
-              CREATE TABLE dept(id INTEGER, name TEXT);
-              INSERT INTO dept VALUES(1, 'Sales');
-              INSERT INTO dept VALUES(2, 'Manage');
-              INSERT INTO dept VALUES(3, 'Dev');
-
-              SELECT * FROM dept;
-              id          name      
-              ----------  ----------
-              1           Sales     
-              2           Manage    
-              3           Dev       
-            </code>
-          </pre>
-          <li>内部結合をやってみる</li>
-          <pre>
-            <code>
-              SELECT * FROM staff INNER JOIN dept ON staff.deptid = dept.id
-              id          name        deptid      id          name      
-              ----------  ----------  ----------  ----------  ----------
-              1           Suzuki      1           1           Sales     
-              2           Endou       3           3           Dev       
-              3           Katou       1           1           Sales     
-              4           Yamada      2           2           Manage    
-              6           Honda       3           3           Dev       
-            </code>
-          </pre>
-          <li>staffテーブルとdeptテーブルを逆にして内部結合</li>
-          <pre>
-            <code>
-              SELCT * FROM dept INNER JOIN staff ON dept.id = staff.deptid;
-              id          name        id          name        deptid    
-              ----------  ----------  ----------  ----------  ----------
-              1           Sales       1           Suzuki      1         
-              1           Sales       3           Katou       1         
-              2           Manage      4           Yamada      2         
-              3           Dev         2           Endou       3         
-              3           Dev         6           Honda       3         
-            </code>
-          </pre>
-          <li>取得するデータのカラムを指定する</li>
-          <pre>
-            <code>
-              SELECT staff.id, staff.name, dept.name FROM staff INNER JOIN dept ON staff.deptid = dept.id;
-              id          name        name      
-              ----------  ----------  ----------
-              1           Suzuki      Sales     
-              2           Endou       Dev       
-              3           Katou       Sales     
-              4           Yamada      Manage    
-              6           Honda       Dev       
-            </code>
-          </pre>
-          <li>カラムを指定する時の注意事項</li>
-          <p>
-            以下の条件を満たしている場合、「テーブル名.」の部分を省略して「カラム名」のみで指定することもできます。
-            <ul>
-              <li>どちらかのテーブルにしか含まれていないこと</li>
-              <li>テーブル名を省略してもどちらのテーブルのカラムかがわかる場合</li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
+                  Ubuntu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="../vim/vim001.html" type="button" data-toggle="dropdown">
+                  Vim
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                </div>
+              </li>
             </ul>
-            ２つのテーブルに同じカラム名があるのに「テーブル名」を省略した場合、次のようなエラーが出ます。
-          </p>
-          <pre>
-            <code>
-              SELECT staff.id, name, deptid, dept.name FROM staff INNER JOIN dept ON staff.deptid = dept.id;
-              Error: ambiguous column name: name
-            </code>
-          </pre>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item active" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li><a class="dropdown-item" href="../javascriptNote/javascriptNote.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="../ExpressApp/expressApp.html">Expressアプリ</a></li>
+            </ul>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutme.html">About me</a>
+          </li>    
         </ul>
+      </div>
+    </nav>
+    <section>
+      <!--jumbotron-->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">SQLite3</h1>
+        <p class="lead">
+          SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
+          SQLite3を通してデータベースとSQL文に触れてみませんか？
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+          結合とは複数のテーブルを関連付けてデータを抽出する時に使います。<br>
+          データベースが「データベースたりうる」という部分でもあります。
+        </p>
+      </div>
+      <h2 class="text-bright">内部結合（INNER JOIN句）</h2>
+      <h3>内部結合とは</h3>
+      <p>
+        ２つのテーブルで結合の対象となるカラムを指定し、それぞれに同じ値が格納されているデータを結合して取得するもの。
+      </p>
+      <h3>INNER JOIN句の使い方</h3>
+      <ul>
+        <li>書式</li>
+        <pre>
+          <code>
+            SELECT テーブル名.カラム名, .... FROM テーブル名１ INNER JOIN テーブル名２ ON テーブル名１.カラム名１ = テーブル名２.カラム名２;
+          </code>
+        </pre>
+      </ul>
+      <h3>内部結合をやってみよう！！</h3>
+      <ul>
+        <li>2つのテーブルを用意します。</li>
+        <pre>
+          <code>
+            // 1つめのテーブル
+            CREATE TABLE staff(id INTEGER, name TEXT, depid INTEGER);
+            INSERT INTO staff VALUES(1, 'Suzuki', 1);
+            INSERT INTO staff VALUES(2, 'Endou', 3);
+            INSERT INTO staff VALUES(3, 'Katou', 1);
+            INSERT INTO staff VALUES(4, 'Yamada', 2);
+            INSERT INTO staff VALUES(5, 'Takahashi', 4);
+            INSERT INTO staff VALUES(6, 'Honda', 3);
 
-        <hr class="line-dark">
+            SELECT * FROM staff;
+            id          name        deptid    
+            ----------  ----------  ----------
+            1           Suzuki      1         
+            2           Endou       3         
+            3           Katou       1         
+            4           Yamada      2         
+            5           Takahashi   4         
+            6           Honda       3         
+          </code>
+        </pre>
+        <pre>
+          <code>
+            // 2つめのテーブル
+            CREATE TABLE dept(id INTEGER, name TEXT);
+            INSERT INTO dept VALUES(1, 'Sales');
+            INSERT INTO dept VALUES(2, 'Manage');
+            INSERT INTO dept VALUES(3, 'Dev');
 
-        <h2 class="text-bright">外部結合（OUTER JOIN句）</h2>
-        <h3>外部結合とは</h3>
+            SELECT * FROM dept;
+            id          name      
+            ----------  ----------
+            1           Sales     
+            2           Manage    
+            3           Dev       
+          </code>
+        </pre>
+        <li>内部結合をやってみる</li>
+        <pre>
+          <code>
+            SELECT * FROM staff INNER JOIN dept ON staff.deptid = dept.id
+            id          name        deptid      id          name      
+            ----------  ----------  ----------  ----------  ----------
+            1           Suzuki      1           1           Sales     
+            2           Endou       3           3           Dev       
+            3           Katou       1           1           Sales     
+            4           Yamada      2           2           Manage    
+            6           Honda       3           3           Dev       
+          </code>
+        </pre>
+        <li>staffテーブルとdeptテーブルを逆にして内部結合</li>
+        <pre>
+          <code>
+            SELCT * FROM dept INNER JOIN staff ON dept.id = staff.deptid;
+            id          name        id          name        deptid    
+            ----------  ----------  ----------  ----------  ----------
+            1           Sales       1           Suzuki      1         
+            1           Sales       3           Katou       1         
+            2           Manage      4           Yamada      2         
+            3           Dev         2           Endou       3         
+            3           Dev         6           Honda       3         
+          </code>
+        </pre>
+        <li>取得するデータのカラムを指定する</li>
+        <pre>
+          <code>
+            SELECT staff.id, staff.name, dept.name FROM staff INNER JOIN dept ON staff.deptid = dept.id;
+            id          name        name      
+            ----------  ----------  ----------
+            1           Suzuki      Sales     
+            2           Endou       Dev       
+            3           Katou       Sales     
+            4           Yamada      Manage    
+            6           Honda       Dev       
+          </code>
+        </pre>
+        <li>カラムを指定する時の注意事項</li>
         <p>
-          2つのテーブルを結合してデータを取得する方法の中で、指定したそれぞれのテーブルのカラムの値が一致するデータだけでなく<br>
-          どちらかのテーブルにだけデータがある場合も合わせて取得する方法。<br>
-          このため内部結合のときと違い、<code>FROM</code>の後のテーブル名を入れ替えると結果が異なります。
-        </p>   
-        <h3>SQLite3での外部結合の種類</h3>
-        <p>
-          外部結合には以下の3種類があります。
+          以下の条件を満たしている場合、「テーブル名.」の部分を省略して「カラム名」のみで指定することもできます。
           <ul>
-            <li>左外部結合：左側のテーブルにしかないデータも取得する方法</li>
-            <li>右外部結合：右側のテーブルにしかないデータも取得する方法</li>
-            <li>完全外部結合：左側のテーブルにしかないデータも右側のテーブルにしかないデータも取得する方法</li>
+            <li>どちらかのテーブルにしか含まれていないこと</li>
+            <li>テーブル名を省略してもどちらのテーブルのカラムかがわかる場合</li>
           </ul>
-          SQLite3では、左外部結合（LEFT OUTER JOIN）しかサポートされていない。<br>
-          右外部結合（RIGHT OUTER JOIN）や完全外部結合（FULL OUTER JOIN）を行おうとすると、<br>
-          <code>Error:RIGHT and FULL OUTER JOINs are not currently supported</code>というエラーがでます。
+          ２つのテーブルに同じカラム名があるのに「テーブル名」を省略した場合、次のようなエラーが出ます。
         </p>
-        <h3>OUTER JOIN句の使い方</h3>
+        <pre>
+          <code>
+            SELECT staff.id, name, deptid, dept.name FROM staff INNER JOIN dept ON staff.deptid = dept.id;
+            Error: ambiguous column name: name
+          </code>
+        </pre>
+      </ul>
+
+      <hr class="line-dark">
+
+      <h2 class="text-bright">外部結合（OUTER JOIN句）</h2>
+      <h3>外部結合とは</h3>
+      <p>
+        2つのテーブルを結合してデータを取得する方法の中で、指定したそれぞれのテーブルのカラムの値が一致するデータだけでなく<br>
+        どちらかのテーブルにだけデータがある場合も合わせて取得する方法。<br>
+        このため内部結合のときと違い、<code>FROM</code>の後のテーブル名を入れ替えると結果が異なります。
+      </p>   
+      <h3>SQLite3での外部結合の種類</h3>
+      <p>
+        外部結合には以下の3種類があります。
         <ul>
-          <li>書式</li>
-          <pre>
-            <code>
-              SELECT (取得するカラム) FROM テーブル名1 LEFT OUTER JOIN テーブル名2 ON （結合条件）;
-            </code>
-          </pre>
+          <li>左外部結合：左側のテーブルにしかないデータも取得する方法</li>
+          <li>右外部結合：右側のテーブルにしかないデータも取得する方法</li>
+          <li>完全外部結合：左側のテーブルにしかないデータも右側のテーブルにしかないデータも取得する方法</li>
         </ul>
-        <h3>外部結合をやってみよう！！</h3>
-        <ul>
-          <li>2つのテーブルを用意します。</li>
-          <pre>
-            <code>
-              // 1つめのテーブル
-              CREATE TABLE staff(id INTEGER, name TEXT, depid INTEGER);
-              INSERT INTO staff VALUES(1, 'Suzuki', 1);
-              INSERT INTO staff VALUES(2, 'Endou', 3);
-              INSERT INTO staff VALUES(3, 'Katou', 1);
-              INSERT INTO staff VALUES(4, 'Yamada', 2);
-              INSERT INTO staff VALUES(5, 'Takahashi', 4);
-              INSERT INTO staff VALUES(6, 'Honda', 3);
+        SQLite3では、左外部結合（LEFT OUTER JOIN）しかサポートされていない。<br>
+        右外部結合（RIGHT OUTER JOIN）や完全外部結合（FULL OUTER JOIN）を行おうとすると、<br>
+        <code>Error:RIGHT and FULL OUTER JOINs are not currently supported</code>というエラーがでます。
+      </p>
+      <h3>OUTER JOIN句の使い方</h3>
+      <ul>
+        <li>書式</li>
+        <pre>
+          <code>
+            SELECT (取得するカラム) FROM テーブル名1 LEFT OUTER JOIN テーブル名2 ON （結合条件）;
+          </code>
+        </pre>
+      </ul>
+      <h3>外部結合をやってみよう！！</h3>
+      <ul>
+        <li>2つのテーブルを用意します。</li>
+        <pre>
+          <code>
+            // 1つめのテーブル
+            CREATE TABLE staff(id INTEGER, name TEXT, depid INTEGER);
+            INSERT INTO staff VALUES(1, 'Suzuki', 1);
+            INSERT INTO staff VALUES(2, 'Endou', 3);
+            INSERT INTO staff VALUES(3, 'Katou', 1);
+            INSERT INTO staff VALUES(4, 'Yamada', 2);
+            INSERT INTO staff VALUES(5, 'Takahashi', 4);
+            INSERT INTO staff VALUES(6, 'Honda', 3);
 
-              SELECT * FROM staff;
-              id          name        deptid    
-              ----------  ----------  ----------
-              1           Suzuki      1         
-              2           Endou       3         
-              3           Katou       1         
-              4           Yamada      2         
-              5           Takahashi   4         
-              6           Honda       3         
-            </code>
-          </pre>
-          <pre>
-            <code>
-              // 2つめのテーブル
-              CREATE TABLE dept(id INTEGER, name TEXT);
-              INSERT INTO dept VALUES(1, 'Sales');
-              INSERT INTO dept VALUES(2, 'Manage');
-              INSERT INTO dept VALUES(3, 'Dev');
+            SELECT * FROM staff;
+            id          name        deptid    
+            ----------  ----------  ----------
+            1           Suzuki      1         
+            2           Endou       3         
+            3           Katou       1         
+            4           Yamada      2         
+            5           Takahashi   4         
+            6           Honda       3         
+          </code>
+        </pre>
+        <pre>
+          <code>
+            // 2つめのテーブル
+            CREATE TABLE dept(id INTEGER, name TEXT);
+            INSERT INTO dept VALUES(1, 'Sales');
+            INSERT INTO dept VALUES(2, 'Manage');
+            INSERT INTO dept VALUES(3, 'Dev');
 
-              SELECT * FROM dept;
-              id          name      
-              ----------  ----------
-              1           Sales     
-              2           Manage    
-              3           Dev       
-            </code>
-          </pre>
-          <li>外部結合をやってみる</li>
-          <pre>
-            <code>
-              SELECT * FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
-              id          name        deptid      id          name      
-              ----------  ----------  ----------  ----------  ----------
-              1           Suzuki      1           1           Sales     
-              2           Endou       3           3           Dev       
-              3           Katou       1           1           Sales     
-              4           Yamada      2           2           Manage    
-              5           Takahashi   4                                 
-              6           Honda       3           3           Dev       
-            </code>
-          </pre>
-          <li>staffテーブルとdeptテーブルを逆にして外部結合</li>
-          <pre>
-            <code>
-              SELECT * FROM dept LEFT OUTER JOIN staff ON dept.id = staff.deptid;
-              id          name        id          name        deptid    
-              ----------  ----------  ----------  ----------  ----------
-              1           Sales       1           Suzuki      1         
-              1           Sales       3           Katou       1         
-              2           Manage      4           Yamada      2         
-              3           Dev         2           Endou       3         
-              3           Dev         6           Honda       3         
-            </code>
-          </pre>
-          <li>取得するデータのカラムを指定する</li>
-          <pre>
-            <code>
-              SELECT staff.id, staff.name, dept.name FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
-              id          name        name      
-              ----------  ----------  ----------
-              1           Suzuki      Sales     
-              2           Endou       Dev       
-              3           Katou       Sales     
-              4           Yamada      Manage    
-              5           Takahashi             
-              6           Honda       Dev       
-            </code>
-          </pre>
-          <li>カラムを指定する時の注意事項</li>
-          <p>
-            以下の条件を満たしている場合、「テーブル名.」の部分を省略して「カラム名」のみで指定することもできます。
-            <ul>
-              <li>どちらかのテーブルにしか含まれていないこと</li>
-              <li>テーブル名を省略してもどちらのテーブルのカラムかがわかる場合</li>
-            </ul>
-            ２つのテーブルに同じカラム名があるのに「テーブル名」を省略した場合、次のようなエラーが出ます。
-          </p>
-          <pre>
-            <code>
-              SELECT staff.id, name, deptid, dept.name FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
-              Error: ambiguous column name: name
-            </code>
-          </pre>
-        </ul>
-
-        <hr class="line-dark">
-
-        <h2 class="text-bright">交差結合（CROSS JOIN句）</h2>
-        <h3>交差結合とは</h3>
+            SELECT * FROM dept;
+            id          name      
+            ----------  ----------
+            1           Sales     
+            2           Manage    
+            3           Dev       
+          </code>
+        </pre>
+        <li>外部結合をやってみる</li>
+        <pre>
+          <code>
+            SELECT * FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
+            id          name        deptid      id          name      
+            ----------  ----------  ----------  ----------  ----------
+            1           Suzuki      1           1           Sales     
+            2           Endou       3           3           Dev       
+            3           Katou       1           1           Sales     
+            4           Yamada      2           2           Manage    
+            5           Takahashi   4                                 
+            6           Honda       3           3           Dev       
+          </code>
+        </pre>
+        <li>staffテーブルとdeptテーブルを逆にして外部結合</li>
+        <pre>
+          <code>
+            SELECT * FROM dept LEFT OUTER JOIN staff ON dept.id = staff.deptid;
+            id          name        id          name        deptid    
+            ----------  ----------  ----------  ----------  ----------
+            1           Sales       1           Suzuki      1         
+            1           Sales       3           Katou       1         
+            2           Manage      4           Yamada      2         
+            3           Dev         2           Endou       3         
+            3           Dev         6           Honda       3         
+          </code>
+        </pre>
+        <li>取得するデータのカラムを指定する</li>
+        <pre>
+          <code>
+            SELECT staff.id, staff.name, dept.name FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
+            id          name        name      
+            ----------  ----------  ----------
+            1           Suzuki      Sales     
+            2           Endou       Dev       
+            3           Katou       Sales     
+            4           Yamada      Manage    
+            5           Takahashi             
+            6           Honda       Dev       
+          </code>
+        </pre>
+        <li>カラムを指定する時の注意事項</li>
         <p>
-          交差結合とは、2つのテーブルのデータの全ての組み合わせを取得するものです。<br>
-          左側のテーブルのデータ1つにつき右側のテーブルのデータを最初から最後まで1つずつ結合します。<br>
-          左側のデータがなくなるまで繰り返します。
+          以下の条件を満たしている場合、「テーブル名.」の部分を省略して「カラム名」のみで指定することもできます。
+          <ul>
+            <li>どちらかのテーブルにしか含まれていないこと</li>
+            <li>テーブル名を省略してもどちらのテーブルのカラムかがわかる場合</li>
+          </ul>
+          ２つのテーブルに同じカラム名があるのに「テーブル名」を省略した場合、次のようなエラーが出ます。
         </p>
-        <p>
-          左側のテーブルのデータ＝n個、右側のテーブルのデータ＝m個だった場合、<br>
-          交差結合したデータの数が、n✕m個となり、場合によっては非常に多くなりますので注意が必要です。
-        </p>
-        <h3>CROSS JOIN句の使い方</h3>
+        <pre>
+          <code>
+            SELECT staff.id, name, deptid, dept.name FROM staff LEFT OUTER JOIN dept ON staff.deptid = dept.id;
+            Error: ambiguous column name: name
+          </code>
+        </pre>
+      </ul>
+
+      <hr class="line-dark">
+
+      <h2 class="text-bright">交差結合（CROSS JOIN句）</h2>
+      <h3>交差結合とは</h3>
+      <p>
+        交差結合とは、2つのテーブルのデータの全ての組み合わせを取得するものです。<br>
+        左側のテーブルのデータ1つにつき右側のテーブルのデータを最初から最後まで1つずつ結合します。<br>
+        左側のデータがなくなるまで繰り返します。
+      </p>
+      <p>
+        左側のテーブルのデータ＝n個、右側のテーブルのデータ＝m個だった場合、<br>
+        交差結合したデータの数が、n✕m個となり、場合によっては非常に多くなりますので注意が必要です。
+      </p>
+      <h3>CROSS JOIN句の使い方</h3>
+      <ul>
+        <li>書式</li>
+        <pre>
+          <code>
+            SELECT （取得するカラム） FROM テーブル名1 CROSS JOIN テーブル名2 ON （結合条件）;
+          </code>
+        </pre>
+      </ul>
+      <h3>交差結合をやってみよう！！</h3>
+      <ul>
+        <li>2つのテーブルを用意する</li>
+        <pre>
+          <code>
+            //1つめのテーブル
+            CREATE TABLE product(id INTEGER, name TEXT);
+            INSERT INTO product VALUES(1, 'Desk');
+            INSERT INTO product VALUES(2, 'Light');
+            INSERT INTO product VALUES(3, 'Chair');
+            
+            SELECT * FROM product;
+            id          name      
+            ----------  ----------
+            1           Desk      
+            2           Light     
+            3           Chair     
+          </code>
+        </pre>
+        <pre>
+          <code>
+            // 2つめのテーブル
+            CREATE TABLE color(id INTEGER, name TEXT);
+            INSERT INTO color VALUES(1, 'Red');
+            INSERT INTO color VALUES(2, 'Blue');
+            INSERT INTO color VALUES(3, 'White');
+            
+            SELECT * FROM color;
+            id          name      
+            ----------  ----------
+            1           Red       
+            2           Blue      
+            3           White     
+          </code>
+        </pre>
+        <li>交差結合をやってみる</li>
+        <pre>
+          <code>
+            SELECT * FROM product CROSS JOIN color;
+            id          name        id          name      
+            ----------  ----------  ----------  ----------
+            1           Desk        1           Red       
+            1           Desk        2           Blue      
+            1           Desk        3           White     
+            2           Light       1           Red       
+            2           Light       2           Blue      
+            2           Light       3           White     
+            3           Chair       1           Red       
+            3           Chair       2           Blue      
+            3           Chair       3           White     
+          </code>
+        </pre>
+        <li>取得するデータのカラムを指定する</li>
+        <pre>
+          <code>
+            SELECT product.id, product.name, color.name FROM product CROSS JOIN color;
+            id          name        name      
+            ----------  ----------  ----------
+            1           Desk        Red       
+            1           Desk        Blue      
+            1           Desk        White     
+            2           Light       Red       
+            2           Light       Blue      
+            2           Light       White     
+            3           Chair       Red       
+            3           Chair       Blue      
+            3           Chair       White     
+          </code>
+        </pre>
+      </ul>
+
+      <hr class="line-dark">
+
+      <h2 class="text-bright">自然結合（NATURAL）</h2>
+      <h3>自然結合とは</h3>
+      <p>
+        内部結合や外部結合の場合、結合条件で指定したそれぞれのテーブルのカラムを比較してデータを結合していました。<br>
+        キーワード<code>NATURAL</code>を指定すると、カラム名を指定しなくても2つのテーブルで同名のカラムを使って結合を行えます。 
+      </p>   
+      <h3>NATURALキーワードの使い方</h3>
+      <ul>
+        <li>内部結合の場合</li>
+        <pre>
+          <code>
+            SELECT テーブル名.カラム名, .... FROM テーブル名1 NATURAL INNER JOIN テーブル名2;
+          </code>
+        </pre>
+        <li>外部結合の場合</li>
+        <pre>
+          <code>
+            SELECT テーブル名.カラム名, .... FROM テーブル名1 NATURAL LEFT OUTER JOIN テーブル名2;
+          </code>
+        </pre>
+      </ul>
+      <h3>自然結合をやってみよう！！</h3>
+      <ul>
+        <li>2つのテーブルを用意します。</li>
+        <pre>
+          <code>
+            // 1つめのテーブル
+            CREATE TABLE staff(id INTEGER, name TEXT, deptid INTEGER);
+            INSERT INTO staff VALUES(1, 'Suzuki', 1);
+            INSERT INTO staff VALUES(2, 'Endou', 3);
+            INSERT INTO staff VALUES(3, 'Katou', 1);
+            INSERT INTO staff VALUES(4, 'Yamada', 2);
+            INSERT INTO staff VALUES(5, 'Takahashi', 4);
+            INSERT INTO staff VALUES(6, 'Honda', 3);
+            
+            SELECT * FROM staff;
+            id          name        deptid    
+            ----------  ----------  ----------
+            1           Suzuki      1         
+            2           Endou       3         
+            3           Katou       1         
+            4           Yamada      2         
+            5           Takahashi   4         
+            6           Honda       3         
+          </code>
+        </pre>
+        <pre>
+          <code>
+            // 2つめのテーブル
+            CREATE TABLE dept(deptid INTEGER, deptname TEXT);
+            INSERT INTO dept VALUES(1, 'Sales');
+            INSERT INTO dept VALUES(2, 'Manage');
+            INSERT INTO dept VALUES(3, 'Dev');
+
+            SELECT * FROM dept;
+            deptid      deptname  
+            ----------  ----------
+            1           Sales     
+            2           Manage    
+            3           Dev       
+          </code>
+        </pre>
+        <li>自然結合をやってみる</li>
         <ul>
-          <li>書式</li>
+          <li>内部結合</li>
           <pre>
             <code>
-              SELECT （取得するカラム） FROM テーブル名1 CROSS JOIN テーブル名2 ON （結合条件）;
-            </code>
-          </pre>
-        </ul>
-        <h3>交差結合をやってみよう！！</h3>
-        <ul>
-          <li>2つのテーブルを用意する</li>
-          <pre>
-            <code>
-              //1つめのテーブル
-              CREATE TABLE product(id INTEGER, name TEXT);
-              INSERT INTO product VALUES(1, 'Desk');
-              INSERT INTO product VALUES(2, 'Light');
-              INSERT INTO product VALUES(3, 'Chair');
-              
-              SELECT * FROM product;
-              id          name      
-              ----------  ----------
-              1           Desk      
-              2           Light     
-              3           Chair     
-            </code>
-          </pre>
-          <pre>
-            <code>
-              // 2つめのテーブル
-              CREATE TABLE color(id INTEGER, name TEXT);
-              INSERT INTO color VALUES(1, 'Red');
-              INSERT INTO color VALUES(2, 'Blue');
-              INSERT INTO color VALUES(3, 'White');
-              
-              SELECT * FROM color;
-              id          name      
-              ----------  ----------
-              1           Red       
-              2           Blue      
-              3           White     
-            </code>
-          </pre>
-          <li>交差結合をやってみる</li>
-          <pre>
-            <code>
-              SELECT * FROM product CROSS JOIN color;
-              id          name        id          name      
+              SELECT * FROM staff NATURAL INNER JOIN dept;
+              id          name        deptid      deptname  
               ----------  ----------  ----------  ----------
-              1           Desk        1           Red       
-              1           Desk        2           Blue      
-              1           Desk        3           White     
-              2           Light       1           Red       
-              2           Light       2           Blue      
-              2           Light       3           White     
-              3           Chair       1           Red       
-              3           Chair       2           Blue      
-              3           Chair       3           White     
+              1           Suzuki      1           Sales     
+              2           Endou       3           Dev       
+              3           Katou       1           Sales     
+              4           Yamada      2           Manage    
+              6           Honda       3           Dev       
             </code>
           </pre>
-          <li>取得するデータのカラムを指定する</li>
+          <li>外部結合</li>
           <pre>
             <code>
-              SELECT product.id, product.name, color.name FROM product CROSS JOIN color;
+              SELECT * FROM staff NATURAL LEFT OUTER JOIN dept;
+              id          name        deptid      deptname  
+              ----------  ----------  ----------  ----------
+              1           Suzuki      1           Sales     
+              2           Endou       3           Dev       
+              3           Katou       1           Sales     
+              4           Yamada      2           Manage    
+              5           Takahashi   4                     
+              6           Honda       3           Dev       
+            </code>
+          </pre>
+        </ul>
+      </ul>
+
+      <hr class="line-dark">
+
+      <h2 class="text-bright">自己結合</h2>
+      <h3>自己結合とは</h3>
+      <p>
+        内部結合や外部結合を行うときに、自分自身のテーブルと結合すること。<br>
+        自己結合では同じテーブルを使用するためそれぞれに別名をつけてSQLを記述します。
+      </p>   
+      <h3>自己結合の使い方</h3>
+      <ul>
+        <li>書式</li>
+        <pre>
+          <code>
+            SELECT 別名1.カラム名, .... FROM テーブル名 別名1 INNER JOIN テーブル名 別名2 ON 別名1.カラム名 = 別名2.カラム名;
+          </code>
+        </pre>
+      </ul>
+      <h3>自己結合をやってみよう！！</h3>
+      <ul>
+        <li>1つのテーブルを用意します。</li>
+        <pre>
+          <code>
+            CREATE TABLE staff(id INTEGER, name TEXT, bossid INTEGER);
+            INSERT INTO staff VALUES(1, 'Yamada', 3);
+            INSERT INTO staff VALUES(2, 'Itou', 4);
+            INSERT INTO staff VALUES(3, 'Suzuki', 5);
+            INSERT INTO staff VALUES(4, 'Ueda', 3);
+            INSERT INTO staff VALUES(5, 'Kuroda', 0);
+
+            SELECT * staff;
+            id          name        bossid    
+            ----------  ----------  ----------
+            1           Yamada      3         
+            2           Itou        4         
+            3           Suzuki      5         
+            4           Ueda        3         
+            5           Kuroda      0         
+          </code>
+        </pre>
+        <li>自己結合をやってみる</li>
+        <ul>
+          <li>内部結合</li>
+          <pre>
+            <code>
+              SELECT person.id, person.name, boss.name FROM staff person INNER JOIN staff boss ON person.bossid = boss.id;
               id          name        name      
               ----------  ----------  ----------
-              1           Desk        Red       
-              1           Desk        Blue      
-              1           Desk        White     
-              2           Light       Red       
-              2           Light       Blue      
-              2           Light       White     
-              3           Chair       Red       
-              3           Chair       Blue      
-              3           Chair       White     
+              1           Yamada      Suzuki    
+              2           Itou        Ueda      
+              3           Suzuki      Kuroda    
+              4           Ueda        Suzuki  
             </code>
           </pre>
-        </ul>
-
-        <hr class="line-dark">
-
-        <h2 class="text-bright">自然結合（NATURAL）</h2>
-        <h3>自然結合とは</h3>
-        <p>
-          内部結合や外部結合の場合、結合条件で指定したそれぞれのテーブルのカラムを比較してデータを結合していました。<br>
-          キーワード<code>NATURAL</code>を指定すると、カラム名を指定しなくても2つのテーブルで同名のカラムを使って結合を行えます。 
-        </p>   
-        <h3>NATURALキーワードの使い方</h3>
-        <ul>
-          <li>内部結合の場合</li>
+          <li>外部結合</li>
           <pre>
             <code>
-              SELECT テーブル名.カラム名, .... FROM テーブル名1 NATURAL INNER JOIN テーブル名2;
-            </code>
-          </pre>
-          <li>外部結合の場合</li>
-          <pre>
-            <code>
-              SELECT テーブル名.カラム名, .... FROM テーブル名1 NATURAL LEFT OUTER JOIN テーブル名2;
-            </code>
-          </pre>
-        </ul>
-        <h3>自然結合をやってみよう！！</h3>
-        <ul>
-          <li>2つのテーブルを用意します。</li>
-          <pre>
-            <code>
-              // 1つめのテーブル
-              CREATE TABLE staff(id INTEGER, name TEXT, deptid INTEGER);
-              INSERT INTO staff VALUES(1, 'Suzuki', 1);
-              INSERT INTO staff VALUES(2, 'Endou', 3);
-              INSERT INTO staff VALUES(3, 'Katou', 1);
-              INSERT INTO staff VALUES(4, 'Yamada', 2);
-              INSERT INTO staff VALUES(5, 'Takahashi', 4);
-              INSERT INTO staff VALUES(6, 'Honda', 3);
-              
-              SELECT * FROM staff;
-              id          name        deptid    
+              SELECT person.id, person.name, boss.name FROM staff person LEFT OUTER JOIN staff boss ON person.bossid = boss.id;
+              id          name        name      
               ----------  ----------  ----------
-              1           Suzuki      1         
-              2           Endou       3         
-              3           Katou       1         
-              4           Yamada      2         
-              5           Takahashi   4         
-              6           Honda       3         
-            </code>
-          </pre>
-          <pre>
-            <code>
-              // 2つめのテーブル
-              CREATE TABLE dept(deptid INTEGER, deptname TEXT);
-              INSERT INTO dept VALUES(1, 'Sales');
-              INSERT INTO dept VALUES(2, 'Manage');
-              INSERT INTO dept VALUES(3, 'Dev');
-
-              SELECT * FROM dept;
-              deptid      deptname  
-              ----------  ----------
-              1           Sales     
-              2           Manage    
-              3           Dev       
-            </code>
-          </pre>
-          <li>自然結合をやってみる</li>
-          <ul>
-            <li>内部結合</li>
-            <pre>
-              <code>
-                SELECT * FROM staff NATURAL INNER JOIN dept;
-                id          name        deptid      deptname  
-                ----------  ----------  ----------  ----------
-                1           Suzuki      1           Sales     
-                2           Endou       3           Dev       
-                3           Katou       1           Sales     
-                4           Yamada      2           Manage    
-                6           Honda       3           Dev       
-              </code>
-            </pre>
-            <li>外部結合</li>
-            <pre>
-              <code>
-                SELECT * FROM staff NATURAL LEFT OUTER JOIN dept;
-                id          name        deptid      deptname  
-                ----------  ----------  ----------  ----------
-                1           Suzuki      1           Sales     
-                2           Endou       3           Dev       
-                3           Katou       1           Sales     
-                4           Yamada      2           Manage    
-                5           Takahashi   4                     
-                6           Honda       3           Dev       
-              </code>
-            </pre>
-          </ul>
-        </ul>
-
-        <hr class="line-dark">
-
-        <h2 class="text-bright">自己結合</h2>
-        <h3>自己結合とは</h3>
-        <p>
-          内部結合や外部結合を行うときに、自分自身のテーブルと結合すること。<br>
-          自己結合では同じテーブルを使用するためそれぞれに別名をつけてSQLを記述します。
-        </p>   
-        <h3>自己結合の使い方</h3>
-        <ul>
-          <li>書式</li>
-          <pre>
-            <code>
-              SELECT 別名1.カラム名, .... FROM テーブル名 別名1 INNER JOIN テーブル名 別名2 ON 別名1.カラム名 = 別名2.カラム名;
+              1           Yamada      Suzuki    
+              2           Itou        Ueda      
+              3           Suzuki      Kuroda    
+              4           Ueda        Suzuki    
+              5           Kuroda                
             </code>
           </pre>
         </ul>
-        <h3>自己結合をやってみよう！！</h3>
-        <ul>
-          <li>1つのテーブルを用意します。</li>
-          <pre>
-            <code>
-              CREATE TABLE staff(id INTEGER, name TEXT, bossid INTEGER);
-              INSERT INTO staff VALUES(1, 'Yamada', 3);
-              INSERT INTO staff VALUES(2, 'Itou', 4);
-              INSERT INTO staff VALUES(3, 'Suzuki', 5);
-              INSERT INTO staff VALUES(4, 'Ueda', 3);
-              INSERT INTO staff VALUES(5, 'Kuroda', 0);
-
-              SELECT * staff;
-              id          name        bossid    
-              ----------  ----------  ----------
-              1           Yamada      3         
-              2           Itou        4         
-              3           Suzuki      5         
-              4           Ueda        3         
-              5           Kuroda      0         
-            </code>
-          </pre>
-          <li>自己結合をやってみる</li>
-          <ul>
-            <li>内部結合</li>
-            <pre>
-              <code>
-                SELECT person.id, person.name, boss.name FROM staff person INNER JOIN staff boss ON person.bossid = boss.id;
-                id          name        name      
-                ----------  ----------  ----------
-                1           Yamada      Suzuki    
-                2           Itou        Ueda      
-                3           Suzuki      Kuroda    
-                4           Ueda        Suzuki  
-              </code>
-            </pre>
-            <li>外部結合</li>
-            <pre>
-              <code>
-                SELECT person.id, person.name, boss.name FROM staff person LEFT OUTER JOIN staff boss ON person.bossid = boss.id;
-                id          name        name      
-                ----------  ----------  ----------
-                1           Yamada      Suzuki    
-                2           Itou        Ueda      
-                3           Suzuki      Kuroda    
-                4           Ueda        Suzuki    
-                5           Kuroda                
-              </code>
-            </pre>
-          </ul>
-        </ul>
-      </section>
+      </ul>
+    </section>
     <!-- footer -->
     <footer class="footer">
       <div id="copyright"></div>
