@@ -40,12 +40,12 @@ a:hover {
 }
 
 .dropdown-menu {
-  background-color: #333;
+  background-color: #555;
 
 }
 
 .dropdown-item {
-  color: #aaa;
+  color: #ccc;
 }
 
 .dropdown-item.active {
