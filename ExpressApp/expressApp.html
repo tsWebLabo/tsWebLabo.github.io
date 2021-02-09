@@ -199,9 +199,13 @@
             const express = require('express');
             const app = express();
 
-            app.get('/', (req, res) => res.send('Hello World!'));
+            app.get('/', (req, res) => {
+              res.send('Hello World!');
+            });
 
-            app.listen(3000, () => console.log('Example app listening on port 3000!'));
+            app.listen(3000, () => {
+              console.log('Example app listening on port 3000!');
+            });
           </code>
         </pre>
         <h5>Expressの実行</h5>
@@ -217,6 +221,7 @@
         <p>
           Webブラウザを開き、<code>localhost:3000</code>と入力すると画面上に「Hello World!」が表示されます。
         </p>
+        <img src="./images/express.png" alt="">
       </section>
       
     <!-- footer -->
