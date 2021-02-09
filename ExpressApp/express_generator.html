@@ -123,15 +123,156 @@
         <div class="jumbotron">
           <h1 class="display-4 text-accent text-bright">Express-generator</h1>
           <p class="lead">
-            Express-generatorは、・・・
+            Express-generatorは、Webアプリケーションのひな型を生成してくれるツールです。
           </p>
           <hr class="my-4">
           <p class="lead">
             
           </p>
         </div>
-        <h2>Express-generatorとは</h2>
-        <h2>導入方法</h2>
+        <h2 class="text-bright">Express-generatorとは</h2>
+        <p>
+          Node.jsでWebアプリケーションを作成するのにExpressというフレームワークで「骨組み」をつくるという話をしました。<br>
+          Express-generatorは、Expressをもとに、Webアプリケーションの「ひな型」を作成するツールです。<br>
+          これによりWebアプリケーション作成を更に快適に開発できるようになります。
+        </p>
+        <h5>UIを作るテンプレートエンジン</h5>
+        <p>
+          ビューエンジン（WebサイトでのHTML的存在）は、EJS、Hbs、Pug、Twig、Vash等のビューエンジンを使うことができます。<br>
+          このサイトでは、Pugを使っていきます。
+        </p>
+        <p>
+          スタイルシートは、CSSをそのまま使うこともできますが、LESS、SASS、Compass、Stylus等の<br>
+          一般的なスタイルシートエンジンを使うこともできます。
+        </p>
+
+        <hr class="line-dark">
+
+        <h2 class="text-bright">Express-generator導入</h2>
+        <h5>Express-generatorのインストール</h5>
+        <p>
+          ターミナルで下記コマンドを入力し、Express-generatorをグローバル環境にインストールします。
+          ※グローバル環境：パソコンのシステムの中にインストールするもので、一度インストールすれば何度でも使えます。
+        </p>
+        <pre>
+          <code>
+            sudo npm install express-generator -g
+          </code>
+        </pre>
+        <pre>
+          <code>
+            // カレントディレクトリにインストールする方法
+            npm install express-generator --save
+          </code>
+        </pre>
+        <p>
+          PCのシステムにインストールするのはちょっと・・・という方は、こちらでも使えるみたいです。<br>
+          ※この方法も僕の環境で試してみましたが、現状Hello World!の表示までできていません。<br>
+          この場合は新しいプロジェクトごとにExpress-generatorをインストールする必要が出てくると考えられます。
+        </p>
+        <pre>
+          <code>
+            // Express-generatorのヘルプ表示
+            express --help
+
+            Usage: express [options] [dir]
+
+            Options:
+
+              -h, --help           output usage information
+                  --version        output the version number
+              -e, --ejs            add ejs engine support
+                  --pug            add pug engine support
+                  --hbs            add handlebars engine support
+              -H, --hogan          add hogan.js engine support
+              -v, --view <engine>  add view <engine> support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+              -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
+                  --git            add .gitignore
+              -f, --force          force on non-empty directory
+          </code>
+        </pre>
+
+        <hr class="line-dark">
+
+        <h2>Hello World!を表示させてみよう！！</h2>
+        <p>
+          ここまででExpress-generatorの準備が整いました。<br>
+          早速つくっていきましょう！！
+        </p>
+        <h5>プロジェクト作成</h5>
+        <pre>
+          <code>
+            express myApp --view=pug
+
+            create : myApp/
+            create : myApp/public/
+            create : myApp/public/javascripts/
+            create : myApp/public/images/
+            create : myApp/public/stylesheets/
+            create : myApp/public/stylesheets/style.css
+            create : myApp/routes/
+            create : myApp/routes/index.js
+            create : myApp/routes/users.js
+            create : myApp/views/
+            create : myApp/views/error.pug
+            create : myApp/views/index.pug
+            create : myApp/views/layout.pug
+            create : myApp/app.js
+            create : myApp/package.json
+            create : myApp/bin/
+            create : myApp/bin/www
+
+            change directory:
+              $ cd myApp
+
+            install dependencies:
+              $ npm install
+
+            run the app:
+              $ DEBUG=myapp:* npm start
+          </code>
+        </pre>
+        <h5>ディレクトリの確認</h5>
+        <pre>
+          <code>
+            ls
+
+            myApp
+
+            cd myApp
+            ls
+
+            app.js bin package.json public routes views
+          </code>
+        </pre>
+        <p>
+          このようにmyAppディレクトリの中にたくさんのディレクトリやファイルが生成されています。
+        </p>
+        <h5>依存関係パッケージのインストール</h5>
+        <pre>
+          <code>
+            // myAppディレクトリに移動してから行います。
+            npm install
+          </code>
+        </pre>
+        <p>
+          この作業は、Express-generatorを使うのに必要なパッケージをインストールするものです。<br>
+          必ず<code>cd myApp</code>でmyAppディレクトリに移動してから行いましょう。
+        </p>
+        <h5>実行してみよう！！</h5>
+        <pre>
+          <code>
+            npm start
+          </code>
+        </pre>
+        <p>
+          このコマンドを入力した後、ブラウザで<code>localhost:3000</code>と入力してアプリにアクセスしてみましょう。<br>
+          次のような表示がされれば成功です。
+        </p>
+        <img src="./images/express_generator.png" alt="Express-generatorの表示キャプチャ画像">
+        
+        <hr class="line-dark">
+
         <h2></h2>
         <h2></h2>
         <h2></h2>
