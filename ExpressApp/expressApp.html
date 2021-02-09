@@ -123,7 +123,7 @@
             
           </p>
         </div>
-        <h2>Expressとは</h2>
+        <h2 class="text-bright">Expressとは</h2>
         <h5>Node.jsのためのWebアプリケーションを作るためのフレームワーク</h5>
         <blockquote class="blockquote">
           Expressは、Webアプリケーションとモバイルアプリケーション向けの<br>
@@ -134,18 +134,85 @@
           </footer>
         </blockquote>
         <p>
-          ExpressはNode.jsを使ってWebアプリケーションを作るためにとても便利なツールです。
+          ExpressはNode.jsを使ってWebアプリケーションを作るためにとても便利なフレームワークです。
           UIはpugファイルで定義できますし、作成段階にはサーバーを用意していなくてもlocalhost（仮想サーバー）を使って<br>
-          Webアプリケーションをテストしながら作っていけることが
+          Webアプリケーションをテストしながら作っていけることが個人的にとても気に入っています。
+        </p>
+        <h5>フレームワークとは</h5>
+        <p>
+          フレームワークとは、アプリケーション等のシステム開発時によく使う機能やディレクトリの構造等を用意してある骨組みです。<br>
+          フレームワークを使うことで短時間での開発が可能になり、バグの低減にも繋がります。
+        </p>
+        <p>
+          フレームワークには固有のルールがあるのでプログラミング言語のスキルに加えフレームワークの知識も必要になりますが、<br>
+          学習コストに見合う恩恵が得られると思います。
         </p>
         <h5>なぜExpressを選んだのか</h5>
         <p>
-          Express以外にもNode.jsフレームワークはたくさん
+          Expressの特徴として、「高速」で「オープンソース」で「軽量」であることがあげられます。<br>
+          その他にもExpressに関しての情報量が多いので独学でも勉強しやすい部類に入ると思われます。
         </p>
-        <h5></h5>
-        <h2>Expressの導入方法</h2>
-        <h2>Expressでつくるユーザーインターフェース</h2>
-        <h2>Expressでデータベースにアクセス</h2>
+
+        <hr class="line-dark">
+
+        <h2 class="text-bright">Expressの導入からHello World!へ</h2>
+        <h5>Expressのインストール</h5>
+        <p>
+          Expressをインストールするには「npm」を使います。npmとは、「Node Package Manager」のことです。<br>
+          当サイトの <a href="https://tsweblabo.github.io/javascriptNote/javascriptNote.html">JavaScriptのページ</a>のデータベースの部分でも少し触れています。<br>
+          ExpressはNode.jsのフレームワークなので、Node.jsとnpmがインストールされていることを前提とします。
+        </p>
+        <pre>
+          <code>
+            // Expressをインストールするディレクトリを作ります。
+            mkdir myApp
+
+            // ディレクトリ myAppに移動します。
+            cd myApp
+
+            // npmを起動します。
+            npm init
+
+            // Expressをインストールします。
+            npm install expressApp
+
+            // ディレクトリが増えていることが確認できます。
+            ls
+
+            package.json package-lock.json app.js node.modules
+          </code>
+        </pre>
+        <h5>app.jsのコード</h5>
+        <p>
+          ディレクトリの中のapp.jsを開くと以下のコードが記述されています。
+        </p>
+        <pre>
+          <code>
+            const express = require('express');
+            const app = express();
+
+            app.get('/', (req, res) => res.send('Hello World!'));
+
+            app.listen(3000, () => console.log('Example app listening on port 3000!'));
+          </code>
+        </pre>
+        <h5>Expressの実行</h5>
+        <p>
+          ターミナルで下記のコマンドを打つことでExpressを実行することが可能です。
+        </p>
+        <pre>
+          <code>
+            node app.js
+          </code>
+        </pre>
+
+        <p>
+          Webブラウザを開き、<code>localhost:3000</code>と入力すると画面上に「Hello World!」が表示されます。
+        </p>
+
+        <hr class="line-dark">
+        <h2 class="text-bright">Express-generatorでつくるユーザーインターフェース</h2>
+        <h2 class="text-bright">Express-generatorでデータベースにアクセス</h2>
         <h2></h2>
       </section>
       
