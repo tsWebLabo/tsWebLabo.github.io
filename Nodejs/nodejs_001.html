@@ -138,24 +138,53 @@
       <!--jumbotron-->
       <div class="jumbotron">
         <h1 class="display-4 text-accent text-bright">Node.js入門！！</h1>
-        <p class="lead">JavaScriptを基礎から勉強していきます。</p>
+        <p class="lead">
+          サーバーサイドで動くJavaScript <strong>ー Node.js ー</strong><br>
+          JavaScriptはブラウザでページに動きを追加するだけじゃない！！
+        </p>
         <hr class="my-4">
         <p class="lead">
-          YouTubeライブ配信で勉強した内容をまとめて記録していきます。
+          Node.jsを使うことでより幅が広がるJavaScriptを楽しもう！！
         </p>
       </div>
-      <h2 class="text-bright">Node.jsとは</h2>       
+      <h2 class="text-bright">Node.jsとは</h2>  
+      <h3>「Node.js」はJavaScript実行環境</h3>     
       <p>
-        JavaScriptでデータベースにアクセスするには「node.js」を使うことになります。<br>
-        またデータベースについては様々なものがありますが「SQLite3」を使っていきます。
-      </p> 
+        Node.jsはフレームワークやライブラリではなくJavaScriptの実行環境です。<br>
+        「実行環境」という言葉を聞いて「？？？」という方のために。<br>
+        僕もあやふやなところがあるのでそこを理解していきましょう。
+      </p>
+      <h5>実行環境とは</h5>
+      <p>
+        プログラムの実行するための環境です。<br>
+        ・・・そのままですね。<br>
+        プログラムを動かすために必要なものが揃ってるパッケージとでもいえば分かりやすいでしょうか。<br>
+        Node.js以外にも、Javaでいうところの「JRE」などプログラミング言語によってそれぞれ実行環境があります。<br>
+        似たような言葉で「開発環境」とか「動作環境」というものがあるので混同しないよう注意しましょう。
+      </p>  
+      <h5>「開発環境」とは、「動作環境」とは</h5>
+      <p>
+
+      </p>
+      <h5>「フレームワーク」とは、「ライブラリ」とは</h5>
+      <p>
+        
+      </p>
+      <hr class="line-dark">
+      <h3>Node.jsでできること</h3>
+      <p>
+
+      </p>
+      <hr class="line-dark">
       <h5>本記事執筆時の環境</h5>
       <ul>
         <li>OS：Ubuntu 20.04 LTS</li>
         <li>node.js：ver 12.18.3</li>
         <li>SQLite3：ver 3.31.1</li>
       </ul>
-      <h5>node.jsの導入方法</h5>
+      <hr class="line-dark">
+
+      <h2>node.jsの導入方法</h2>
       <p>
         上記環境で僕が実際にnode.jsを導入した方法を記載します。<br>
         後々のnode.jsのバージョン管理のことを考え、n packageでの導入を行いました。
@@ -207,7 +236,8 @@
           </code>
         </pre>
       </ol>
-      <h5>node.jsでのSQLite3アクセスの準備</h5>
+      <hr class="line-dark">
+      <h2>node.jsでのデータベースアクセス</h2>
       <p>
         node.jsやSQLite3のデータベースファイルを格納しておくディレクトリ（フォルダ）をつくります。<br>
         ディレクトリの場所はお好みの場所で構いません。<br>
