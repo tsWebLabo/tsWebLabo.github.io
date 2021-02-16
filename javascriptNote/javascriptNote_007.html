@@ -81,7 +81,7 @@
                 </div>
               </li>
               <li class="dropright drop-hover">
-                <a class="dropdown-item dropdown-toggle active" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="dropdown-item dropdown-toggle" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   SQLite3
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -89,7 +89,7 @@
                   <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item active" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
@@ -97,7 +97,24 @@
                   <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
                 </div>
               </li>
-              <li><a class="dropdown-item" href="../javascriptNote/javascriptNote_001.html">JavaScript</a></li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../javascriptNote/javascriptNote_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown", aria-haspopup="true" aria-expanded="false">
+                  JavaScript
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_001.html">JavaScriptとは</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_002.html">演算子</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_003.html">配列</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_004.html">代入</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_005.html">条件分岐</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_006.html">try...catch文</a>
+                  <a class="dropdown-item active" href="../javascriptNote/javascriptNote_007.html">繰り返し</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_008.html">関数</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_009.html">画面入出力</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_010.html">処理の呼び出し</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_011.html">データベースアクセス</a>
+                </div>
+              </li>
               <li class="dropright drop-hover">
                 <a class="dropdown-item dropdown-toggle" href="../ExpressApp/expressApp.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Express
@@ -119,199 +136,172 @@
     <section>
       <!--jumbotron-->
       <div class="jumbotron">
-        <h1 class="display-4 text-accent text-bright">SQLite3</h1>
-        <p class="lead">
-          SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
-          SQLite3を通してデータベースとSQL文に触れてみませんか？
-        </p>
+        <h1 class="display-4 text-accent text-bright">JavaScript入門！！</h1>
+        <p class="lead">JavaScriptを基礎から勉強していきます。</p>
         <hr class="my-4">
         <p class="lead">
-          テーブルにデータを追加するためのSQLがINSERT文です。<br>
-          INSERT文を効果的に使ってテーブルにデータを追加していきましょう。
+          YouTubeライブ配信で勉強した内容をまとめて記録していきます。
         </p>
       </div>
-      <h2 class="text-bright">データの追加（INSERT文）</h2>
+      <h2 class="text-bright">繰り返し</h2>
+      <h5>for文</h5>
       <p>
-        テーブルにデータを追加するにはINSERT文を使います。<br>
-        全てのカラムにデータを追加する方法と、カラムを指定してデータを追加する方法があります。
+        for文は条件式がfalseと評価されるまでループします。
       </p>
-      <h3>全てのカラムに値を指定してデータを追加する方法</h3>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名 VALUES(値1, 値2, ....);
-        </code>
-      </pre>
+      <p>
+        基本構文で見るfor文の処理の流れ
+      </p>
+      <ol>
+        <li>初期化式を実行</li>
+        <li>条件式の評価</li>
+          <ul>
+            <li><code>true</code>の場合 ：ループ文が実行される </li>
+            <li><code>false</code>の場合：forループ文が終了する</li>
+          </ul>
+        <li>加算式を実行</li>
+        <li>2. に戻る</li>
+      </ol>
+      <ul>
+        <li>基本構文</li>
+        <pre>
+          <code>
+            for([初期化式]; [条件式]; [加算式]) {
+              命令文;
+            }
+          </code>
+        </pre>
+        <li>例1 Hello World!!を5回繰り返す</li>
+        <pre>
+          <code>
+            for(let i = 0; i &lt; 5; i++) {
+              console.log('Hello World!!');
+            }
 
-      <p>
-        例文<br>
-        テスト用にテーブルを作成します。
-      </p>
-      <pre>
-        <code>
-          CREATE TABLE testUser(id INTEGER, name TEXT, age INTEGER, address TEXT);
-        </code>
-      </pre>
-      <p>
-        このテーブルには４つのカラムがあります。<br>
-        このテーブルにデータを追加する場合、4つの値をカラムの順番に沿って追加します。<br>
-        例えば、id=1, name='Yamada', age=19, address='Tokyo'だとします。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser VALUES (1, 'Yamada', 19, 'Tokyo');
-        </code>
-      </pre>
-      <p>引き続き以下のデータを追加してみます</p>
-      <pre>
-        <code>
-          INSERT INTO testUser VALUES (2, 'Mori', 32, 'Kyoto');
-          INSERT INTO testUser VALUES (3, 'Ueda', 27, 'Tokyo');
-          INSERT INTO testUser VALUES (4, 'Mitsui', 20, 'Nagoya');
-        </code>
-      </pre>
-      <p>
-        データが追加されたので、SELECT分を使ってデータを取得してみます。
-      </p>
-      <pre>
-        <code>
-          SELECT * FROM testUser;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        old         address   
-          ----------  ----------  ----------  ----------
-          1           Yamada      19          Tokyo     
-          2           Mori        32          Kyoto     
-          3           Ueda        27          Tokyo     
-          4           Mitsui      20          Nagoya
-        </code>
-      </pre>
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+          </code>
+        </pre>
+        <li>例2 無限ループ：Hello World!!がとまらない</li>
+        <pre>
+          <code>
+            for(let i = 0; i &gt;= 0; i++) {
+              console.log('Hello World!!');
+            }
 
-      <h3>特定のカラムに値を指定してデータを追加する方法</h3>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名(カラム1, カラム2, ....) VALUES(値1, 値2, ....);
-        </code>
-      </pre>
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            ︙
+            
+          </code>
+        </pre>
+        <li>例3 for文を使って配列の要素を全部表示させる</li>
+        <pre>
+          <code>
+            var a = ['みかん', 'りんご', 'いちご', 'すいか', 'ぶどう', 'ゆず'];
 
-      <p>
-        例文<br>
-        テスト用にテーブルを作成します。
-      </p>
-      <pre>
-        <code>
-          CREATE TABLE testUser2(id INTEGER, name TEXT, age INTEGER, address TEXT DEFAULT 'NO VALUE');
-        </code>
-      </pre>
-      <p>
-        テーブルには３つのカラムがあり、addressカラムにはDEFAULT制約が設定されています。
-        まずは３つのカラム全てに値を指定してデータを追加してみます。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser2(id, name, address) VALUES(1, 'Honda', 'Tokyo');
-        </code>
-      </pre>
-      <p>
-        次に２つのカラムだけに値を指定してデータを追加してみます。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser2(id, name) VALUES(2, 'Okada');
-          INSERT INTO testUser2(id, address) VALUES(3, 'Mori');
-        </code>
-      </pre>
-      <p>
-        データが追加されたので、SELECT分を使ってデータを取得してみます。
-      </p>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-        </code>
-      </pre>
-      <p>
-        ２つ目のデータを追加した時には、addressカラムの値を指定していなかったのですが、<br>
-        addressカラムにはDEFAULT制約が設定されているためデフォルト値である'no value'が格納されています。
-      </p>
-      <p>
-        ３つ目のデータを追加した時には、nameカラムの値を指定していなかったので、デフォルト値であるNULLが格納されています。<br>
-        （NULLは画面上では何も表示されません）
-      </p>
-      <p>
-        尚、データを追加する際に記述するカラムの順番はテーブルで定義されているカラムの順番通りである必要はありません。<br>
-        次の２つのINSERT文は同じ結果となり、エラーにもなりません。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO user(id, name) VALUES(2, 'Ueda');
-          INSERT INTO user(name, id) VALUES('Ueda', 2);
-        </code>
-      </pre>
+            for(let i = 0; i &lt; a.length; i++) {
+              console.log(a[i]);
+            }
 
-      <h3>値を指定せずにデータを追加する方法</h3>
+            みかん
+            りんご
+            いちご
+            すいか
+            ぶどう
+            ゆず
+          </code>
+        </pre>
+      </ul>
+      <h5>do...while文</h5>
       <p>
-        値を指定せずにデータを追加することもできます。<br>
-        この場合、全てのカラムにデフォルト値が格納されます。
+        基本構文にあるとおりdo...while文は実行される命令文が条件式より前に記述される。<br>
+        do...while文では条件式の判定の前に一度<code>do{}</code>の中の命令文が実行される。<br>
+        その後条件式の判定がされ、条件式がfalseになる直前まで繰り返される。
       </p>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名 DEFAULT VALUES;
-        </code>
-      </pre>
-      <p>先程のテーブル'testUser2'をそのまま利用します。</p>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-        </code>
-      </pre>
-      <p>値を指定せずにデータを追加します。</p>
-      <pre>
-        <code>
-          INSERT INTO testUser2 DEFAULT VALUES;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-                                  NO VALUE  
-        </code>
-      </pre>
+      <ul>
+        <li>基本構文</li>
+        <pre>
+          <code>
+            do {
+              文;
+            } while(条件式);
+          </code>
+        </pre>
+        <li>例文</li>
+        <pre>
+          <code>
+            let i = 0;
+
+            do {
+              i += 1;
+              console.log(i);
+            } while(i &lt; 5);
+
+            1
+            2
+            3
+            4
+            5
+          </code>
+        </pre>
+      </ul>
+      <h5>while文</h5>
       <p>
-        追加されたデータは値が指定されていないので、<br>
-        DEFAULT制約がされていないカラム（id, name）にはNULLが格納される。<br>
-        DEFAULT制約が設定されているカラム（address）にはデフォルト値が格納されました。
+        条件式の判定を行い条件式＝falseになるまで命令文を繰り返す
       </p>
+      <ul>
+        <li>基本構文</li>
+        <pre>
+          <code>
+            while(条件式) {
+              命令文
+            }
+          </code>
+        </pre>
+        <li>例文1</li>
+        <pre>
+          <code>
+            let n = 0;
+            let x = 0;
+
+            while(n &lt; 3) {
+              n++;
+              x += n;
+
+              console.log("n=" + n " | x=" + x);
+            }
+
+            n=1 | x=1
+            n=2 | x=3
+            n=3 | x=6
+          </code>
+        </pre>
+        <li>例文2：無限ループ</li>
+        <p>
+          条件式がfalseにならない場合、無限ループになる。<br>
+          プログラムをしっかり設計し、条件式がfalseになることを確認し無限ループを避けましょう。
+        </p>
+        <pre>
+          <code>
+            while(true) {
+              cosole.log('Hello World!!');
+            }
+
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            Hello World!!
+            ︙
+          </code>
+        </pre>
+      </ul>
     </section>
     <!-- footer -->
     <footer class="footer">

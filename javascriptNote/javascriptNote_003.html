@@ -81,7 +81,7 @@
                 </div>
               </li>
               <li class="dropright drop-hover">
-                <a class="dropdown-item dropdown-toggle active" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="dropdown-item dropdown-toggle" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   SQLite3
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -89,7 +89,7 @@
                   <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item active" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
@@ -97,7 +97,24 @@
                   <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
                 </div>
               </li>
-              <li><a class="dropdown-item" href="../javascriptNote/javascriptNote_001.html">JavaScript</a></li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../javascriptNote/javascriptNote_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown", aria-haspopup="true" aria-expanded="false">
+                  JavaScript
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_001.html">JavaScriptとは</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_002.html">演算子</a>
+                  <a class="dropdown-item active" href="../javascriptNote/javascriptNote_003.html">配列</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_004.html">代入</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_005.html">条件分岐</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_006.html">try...catch文</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_007.html">繰り返し</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_008.html">関数</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_009.html">画面入出力</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_010.html">処理の呼び出し</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_011.html">データベースアクセス</a>
+                </div>
+              </li>
               <li class="dropright drop-hover">
                 <a class="dropdown-item dropdown-toggle" href="../ExpressApp/expressApp.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Express
@@ -119,199 +136,141 @@
     <section>
       <!--jumbotron-->
       <div class="jumbotron">
-        <h1 class="display-4 text-accent text-bright">SQLite3</h1>
-        <p class="lead">
-          SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
-          SQLite3を通してデータベースとSQL文に触れてみませんか？
-        </p>
+        <h1 class="display-4 text-accent text-bright">JavaScript入門！！</h1>
+        <p class="lead">JavaScriptを基礎から勉強していきます。</p>
         <hr class="my-4">
         <p class="lead">
-          テーブルにデータを追加するためのSQLがINSERT文です。<br>
-          INSERT文を効果的に使ってテーブルにデータを追加していきましょう。
+          YouTubeライブ配信で勉強した内容をまとめて記録していきます。
         </p>
       </div>
-      <h2 class="text-bright">データの追加（INSERT文）</h2>
-      <p>
-        テーブルにデータを追加するにはINSERT文を使います。<br>
-        全てのカラムにデータを追加する方法と、カラムを指定してデータを追加する方法があります。
-      </p>
-      <h3>全てのカラムに値を指定してデータを追加する方法</h3>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名 VALUES(値1, 値2, ....);
-        </code>
-      </pre>
+      <h2 class="text-bright">配列</h2>
+      <ul>
+        <li>配列とは</li>
+          <ul>
+            <li>リストのようなオブジェクトである</li>
+            <li>単一オブジェクト内に複数の値をリストとして保持している</li>
+            <li>配列オブジェクトは変数に格納される</li>
+            <li>リスト内の値に個別にアクセスすることができる</li>
+          </ul>
+        <li>配列をつくる</li>
+          <ul>
+            <li>配列を定義してから要素を代入する方法</li>
+            <pre>
+              <code>
+                var a = new array(); // 配列aを定義
+                a[0] = 'dog';
+                a[1] = 'cat';
+                a[3] = 'hen';
 
-      <p>
-        例文<br>
-        テスト用にテーブルを作成します。
-      </p>
-      <pre>
-        <code>
-          CREATE TABLE testUser(id INTEGER, name TEXT, age INTEGER, address TEXT);
-        </code>
-      </pre>
-      <p>
-        このテーブルには４つのカラムがあります。<br>
-        このテーブルにデータを追加する場合、4つの値をカラムの順番に沿って追加します。<br>
-        例えば、id=1, name='Yamada', age=19, address='Tokyo'だとします。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser VALUES (1, 'Yamada', 19, 'Tokyo');
-        </code>
-      </pre>
-      <p>引き続き以下のデータを追加してみます</p>
-      <pre>
-        <code>
-          INSERT INTO testUser VALUES (2, 'Mori', 32, 'Kyoto');
-          INSERT INTO testUser VALUES (3, 'Ueda', 27, 'Tokyo');
-          INSERT INTO testUser VALUES (4, 'Mitsui', 20, 'Nagoya');
-        </code>
-      </pre>
-      <p>
-        データが追加されたので、SELECT分を使ってデータを取得してみます。
-      </p>
-      <pre>
-        <code>
-          SELECT * FROM testUser;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        old         address   
-          ----------  ----------  ----------  ----------
-          1           Yamada      19          Tokyo     
-          2           Mori        32          Kyoto     
-          3           Ueda        27          Tokyo     
-          4           Mitsui      20          Nagoya
-        </code>
-      </pre>
+                a.length; // 3
+              </code>
+            </pre>
+            <li>配列の定義と要素の代入を同時に行う方法</li>
+            <pre>
+              <code>
+                var b = ['dog', 'cat', 'hen'];
 
-      <h3>特定のカラムに値を指定してデータを追加する方法</h3>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名(カラム1, カラム2, ....) VALUES(値1, 値2, ....);
-        </code>
-      </pre>
+                b.length; // 3
+              </code>
+            </pre>
+          </ul>
+        <li>配列を呼び出す</li>
+        <p>配列を呼び出すにはfor文を使って呼び出すことができます。</p>
+        <pre>
+          <code>
+            for(let i = 0; i &lt; a.length; i++) {
+              console.log(a[i]);
+            }
 
-      <p>
-        例文<br>
-        テスト用にテーブルを作成します。
-      </p>
-      <pre>
-        <code>
-          CREATE TABLE testUser2(id INTEGER, name TEXT, age INTEGER, address TEXT DEFAULT 'NO VALUE');
-        </code>
-      </pre>
-      <p>
-        テーブルには３つのカラムがあり、addressカラムにはDEFAULT制約が設定されています。
-        まずは３つのカラム全てに値を指定してデータを追加してみます。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser2(id, name, address) VALUES(1, 'Honda', 'Tokyo');
-        </code>
-      </pre>
-      <p>
-        次に２つのカラムだけに値を指定してデータを追加してみます。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser2(id, name) VALUES(2, 'Okada');
-          INSERT INTO testUser2(id, address) VALUES(3, 'Mori');
-        </code>
-      </pre>
-      <p>
-        データが追加されたので、SELECT分を使ってデータを取得してみます。
-      </p>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-        </code>
-      </pre>
-      <p>
-        ２つ目のデータを追加した時には、addressカラムの値を指定していなかったのですが、<br>
-        addressカラムにはDEFAULT制約が設定されているためデフォルト値である'no value'が格納されています。
-      </p>
-      <p>
-        ３つ目のデータを追加した時には、nameカラムの値を指定していなかったので、デフォルト値であるNULLが格納されています。<br>
-        （NULLは画面上では何も表示されません）
-      </p>
-      <p>
-        尚、データを追加する際に記述するカラムの順番はテーブルで定義されているカラムの順番通りである必要はありません。<br>
-        次の２つのINSERT文は同じ結果となり、エラーにもなりません。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO user(id, name) VALUES(2, 'Ueda');
-          INSERT INTO user(name, id) VALUES('Ueda', 2);
-        </code>
-      </pre>
+            "dog"
+            "cat"
+            "hen"
+          </code>
+        </pre>
+        <li>項目の追加と削除</li>
+        <pre>
+          <code>
+            // あらかじめ配列を定義しておきます
+            let myArray = ['札幌', '仙台', '東京', '名古屋', '大阪', '博多'];
+          </code>
+        </pre>
+        <pre>
+          <code>
+            // 配列の呼び出し
+            for(let i = 0; i &lt; myArray.length; i++) {
+              console.log(myArray[i]);
+            }
 
-      <h3>値を指定せずにデータを追加する方法</h3>
-      <p>
-        値を指定せずにデータを追加することもできます。<br>
-        この場合、全てのカラムにデフォルト値が格納されます。
-      </p>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名 DEFAULT VALUES;
-        </code>
-      </pre>
-      <p>先程のテーブル'testUser2'をそのまま利用します。</p>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-        </code>
-      </pre>
-      <p>値を指定せずにデータを追加します。</p>
-      <pre>
-        <code>
-          INSERT INTO testUser2 DEFAULT VALUES;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-                                  NO VALUE  
-        </code>
-      </pre>
-      <p>
-        追加されたデータは値が指定されていないので、<br>
-        DEFAULT制約がされていないカラム（id, name）にはNULLが格納される。<br>
-        DEFAULT制約が設定されているカラム（address）にはデフォルト値が格納されました。
-      </p>
+            札幌
+            仙台
+            東京
+            名古屋
+            大阪
+            博多
+          </code>
+        </pre>
+        <ul>
+          <li>項目の追加</li>
+          <p>
+            配列の最後に項目を追加するには<code>push()</code>を使います。<br>
+            <code>push()</code>を使う時はひとつ以上の項目を引数に指定します。
+          </p>
+          <pre>
+            <code>
+              myArray.push('横浜');
+
+              myArray.push('神戸', '広島', '京都');
+            </code>
+          </pre>
+          <pre>
+            <code>
+              // 配列の呼び出し
+              for(let i = 0; i &lt; myArray.length; i++) {
+                console.log(myArray[i]);
+              }
+
+              札幌
+              仙台
+              東京
+              名古屋
+              大阪
+              博多
+              横浜
+              神戸
+              広島
+              京都
+            </code>
+          </pre>
+          <li>項目の削除</li>
+          <p>
+            配列の最後の項目を削除するには<code>pop()</code>を使います。
+          </p>  
+          <pre>
+            <code>
+              myArray.pop();
+            </code>
+          </pre>
+          <pre>
+            <code>
+              // 配列の呼び出し
+              for(let i = 0; i &lt; myArray.length; i++) {
+                console.log(myArray[i]);
+              }
+
+              札幌
+              仙台
+              東京
+              名古屋
+              大阪
+              博多
+              横浜
+              神戸
+              広島
+            </code>
+          </pre>
+        </ul>  
+        <li>配列のメソッド</li>
+      </ul>
     </section>
     <!-- footer -->
     <footer class="footer">

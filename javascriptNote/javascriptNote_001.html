@@ -81,7 +81,7 @@
                 </div>
               </li>
               <li class="dropright drop-hover">
-                <a class="dropdown-item dropdown-toggle active" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="dropdown-item dropdown-toggle" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   SQLite3
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -89,7 +89,7 @@
                   <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item active" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
                   <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
@@ -97,7 +97,24 @@
                   <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
                 </div>
               </li>
-              <li><a class="dropdown-item" href="../javascriptNote/javascriptNote_001.html">JavaScript</a></li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../javascriptNote/javascriptNote_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown", aria-haspopup="true" aria-expanded="false">
+                  JavaScript
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item active" href="../javascriptNote/javascriptNote_001.html">JavaScriptとは</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_002.html">演算子</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_003.html">配列</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_004.html">代入</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_005.html">条件分岐</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_006.html">try...catch文</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_007.html">繰り返し</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_008.html">関数</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_009.html">画面入出力</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_010.html">処理の呼び出し</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_011.html">データベースアクセス</a>
+                </div>
+              </li>
               <li class="dropright drop-hover">
                 <a class="dropdown-item dropdown-toggle" href="../ExpressApp/expressApp.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Express
@@ -119,199 +136,77 @@
     <section>
       <!--jumbotron-->
       <div class="jumbotron">
-        <h1 class="display-4 text-accent text-bright">SQLite3</h1>
-        <p class="lead">
-          SQLite3は、サーバーを用意する必要なく気軽に使えるデータベースです。<br>
-          SQLite3を通してデータベースとSQL文に触れてみませんか？
-        </p>
+        <h1 class="display-4 text-accent text-bright">JavaScript入門！！</h1>
+        <p class="lead">JavaScriptを基礎から勉強していきます。</p>
         <hr class="my-4">
         <p class="lead">
-          テーブルにデータを追加するためのSQLがINSERT文です。<br>
-          INSERT文を効果的に使ってテーブルにデータを追加していきましょう。
+          YouTubeライブ配信で勉強した内容をまとめて記録していきます。
         </p>
       </div>
-      <h2 class="text-bright">データの追加（INSERT文）</h2>
-      <p>
-        テーブルにデータを追加するにはINSERT文を使います。<br>
-        全てのカラムにデータを追加する方法と、カラムを指定してデータを追加する方法があります。
-      </p>
-      <h3>全てのカラムに値を指定してデータを追加する方法</h3>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名 VALUES(値1, 値2, ....);
-        </code>
-      </pre>
-
-      <p>
-        例文<br>
-        テスト用にテーブルを作成します。
-      </p>
-      <pre>
-        <code>
-          CREATE TABLE testUser(id INTEGER, name TEXT, age INTEGER, address TEXT);
-        </code>
-      </pre>
-      <p>
-        このテーブルには４つのカラムがあります。<br>
-        このテーブルにデータを追加する場合、4つの値をカラムの順番に沿って追加します。<br>
-        例えば、id=1, name='Yamada', age=19, address='Tokyo'だとします。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser VALUES (1, 'Yamada', 19, 'Tokyo');
-        </code>
-      </pre>
-      <p>引き続き以下のデータを追加してみます</p>
-      <pre>
-        <code>
-          INSERT INTO testUser VALUES (2, 'Mori', 32, 'Kyoto');
-          INSERT INTO testUser VALUES (3, 'Ueda', 27, 'Tokyo');
-          INSERT INTO testUser VALUES (4, 'Mitsui', 20, 'Nagoya');
-        </code>
-      </pre>
-      <p>
-        データが追加されたので、SELECT分を使ってデータを取得してみます。
-      </p>
-      <pre>
-        <code>
-          SELECT * FROM testUser;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        old         address   
-          ----------  ----------  ----------  ----------
-          1           Yamada      19          Tokyo     
-          2           Mori        32          Kyoto     
-          3           Ueda        27          Tokyo     
-          4           Mitsui      20          Nagoya
-        </code>
-      </pre>
-
-      <h3>特定のカラムに値を指定してデータを追加する方法</h3>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名(カラム1, カラム2, ....) VALUES(値1, 値2, ....);
-        </code>
-      </pre>
-
-      <p>
-        例文<br>
-        テスト用にテーブルを作成します。
-      </p>
-      <pre>
-        <code>
-          CREATE TABLE testUser2(id INTEGER, name TEXT, age INTEGER, address TEXT DEFAULT 'NO VALUE');
-        </code>
-      </pre>
-      <p>
-        テーブルには３つのカラムがあり、addressカラムにはDEFAULT制約が設定されています。
-        まずは３つのカラム全てに値を指定してデータを追加してみます。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser2(id, name, address) VALUES(1, 'Honda', 'Tokyo');
-        </code>
-      </pre>
-      <p>
-        次に２つのカラムだけに値を指定してデータを追加してみます。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO testUser2(id, name) VALUES(2, 'Okada');
-          INSERT INTO testUser2(id, address) VALUES(3, 'Mori');
-        </code>
-      </pre>
-      <p>
-        データが追加されたので、SELECT分を使ってデータを取得してみます。
-      </p>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-        </code>
-      </pre>
-      <p>
-        ２つ目のデータを追加した時には、addressカラムの値を指定していなかったのですが、<br>
-        addressカラムにはDEFAULT制約が設定されているためデフォルト値である'no value'が格納されています。
-      </p>
-      <p>
-        ３つ目のデータを追加した時には、nameカラムの値を指定していなかったので、デフォルト値であるNULLが格納されています。<br>
-        （NULLは画面上では何も表示されません）
-      </p>
-      <p>
-        尚、データを追加する際に記述するカラムの順番はテーブルで定義されているカラムの順番通りである必要はありません。<br>
-        次の２つのINSERT文は同じ結果となり、エラーにもなりません。
-      </p>
-      <pre>
-        <code>
-          INSERT INTO user(id, name) VALUES(2, 'Ueda');
-          INSERT INTO user(name, id) VALUES('Ueda', 2);
-        </code>
-      </pre>
-
-      <h3>値を指定せずにデータを追加する方法</h3>
-      <p>
-        値を指定せずにデータを追加することもできます。<br>
-        この場合、全てのカラムにデフォルト値が格納されます。
-      </p>
-      <p>書式</p>
-      <pre>
-        <code>
-          INSERT INTO テーブル名 DEFAULT VALUES;
-        </code>
-      </pre>
-      <p>先程のテーブル'testUser2'をそのまま利用します。</p>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-        </code>
-      </pre>
-      <p>値を指定せずにデータを追加します。</p>
-      <pre>
-        <code>
-          INSERT INTO testUser2 DEFAULT VALUES;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          SELECT * FROM testUser2;
-        </code>
-      </pre>
-      <pre>
-        <code>
-          id          name        address   
-          ----------  ----------  ----------
-          1           Honda       Tokyo     
-          2           Okada       NO VALUE  
-          3                       Mori      
-                                  NO VALUE  
-        </code>
-      </pre>
-      <p>
-        追加されたデータは値が指定されていないので、<br>
-        DEFAULT制約がされていないカラム（id, name）にはNULLが格納される。<br>
-        DEFAULT制約が設定されているカラム（address）にはデフォルト値が格納されました。
-      </p>
+      <h2 class="text-bright">JavaScriptとは。</h2>
+      <ul>
+        <li>クロスプラットフォームで動作する。</li>
+        <p>
+          どのOSでも、どのブラウザでもJavaScriptは使えます。
+        </p>
+        <li>動的型付け言語</li>
+        <p>
+          変数のデータ型は宣言が不要（動的型付け、弱い型付け）
+        </p>
+        <li>オブジェクト指向言語</li>
+        <p>
+          オブジェクトのデータ型に区別はない。<br>
+          継承はプロトタイプベースの機構を通して行われ、プロパティとメソッドはどんなオブジェクトにも動的に追加できる。
+        </p>
+        <li>スクリプト言語</li>
+        <li>クライアントサイドJavaScript</li>
+        <li>サーバーサイドJavaScript</li>
+        <li>JavaScriptとJavaは別物です。</li>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">型</h2>
+      <ul>
+        <li>数値</li>
+        <li>文字列</li>
+        <li>真偽値</li>
+        <li>Symbol</li>
+        <li>オブジェクト</li>
+          <ul>
+            <li>関数</li>
+            <li>Array(配列)</li>
+            <li>Date</li>
+            <li>RegExp(正規表現)</li>
+          </ul>
+        <li>null</li>
+        <p>
+          意図的に「値がない」ということを示す値
+        </p>
+        <li>undefined</li>
+        <p>
+          初期化されていない状態を示す。<br>
+          値が代入されていない状態を示す値
+        </p>
+      </ul>
+      <hr class="line-dark">
+      <h2 class="text-bright">変数</h2>
+      <ul>
+        <li>var</li>
+        <p>
+          最も一般的な宣言キーワード。<br>
+          <code>let</code>、<code>const</code>のような制約がない。<br>
+          varキーワードで宣言した変数は、変数を宣言した関数ブロックから使用できます。
+        </p>
+        <li>let</li>
+        <p>
+          ブロックレベルの変数を宣言できる。<br>
+          宣言されたブロックの外からは変数を使えない。
+        </p>
+        <li>const</li>
+        <p>
+          変更を意図しない変数を宣言できる。
+          宣言されたあとに変更ができない。（＝定数）
+        </p>
+      </ul>
     </section>
     <!-- footer -->
     <footer class="footer">

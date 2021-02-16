@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="t's Web Labo">
+    <meta name="keywords" content="パソコン, プログラミング, Ubuntu, Androidアプリ開発">
+    <meta name="description" content="はじめまして、t's Web Laboの「たむ」と申します。
+    「プログラミングって楽しい」を多くの方と共有したいと思っています。Webサイト作成をはじめとして様々なアプリケーション開発に挑戦します。
+    現状私のスキルは高くはないですが、当サイトやYouTubeライブ配信を通して少しずつ成長していきますので応援して頂けると嬉しいです。">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/tsweblabo.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/lowerPage.css">
+    <title>t's Web Labo</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <div class="navbar-brand">
+          <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
+                  Ubuntu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu002.html">Linuxコマンド</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntu003.html">ShellScript</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="../vim/vim001.html" type="button" data-toggle="dropdown">
+                  Vim
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../javascriptNote/javascriptNote_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown", aria-haspopup="true" aria-expanded="false">
+                  JavaScript
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_001.html">JavaScriptとは</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_002.html">演算子</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_003.html">配列</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_004.html">代入</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_005.html">条件分岐</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_006.html">try...catch文</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_007.html">繰り返し</a>
+                  <a class="dropdown-item active" href="../javascriptNote/javascriptNote_008.html">関数</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_009.html">画面入出力</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_010.html">処理の呼び出し</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_011.html">データベースアクセス</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../ExpressApp/expressApp.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Express
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ExpressApp/expressApp.html">Express</a>
+                  <a class="dropdown-item" href="../ExpressApp/express_generator.html">Express-generator</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutme.html">About me</a>
+          </li>    
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <!--jumbotron-->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">JavaScript入門！！</h1>
+        <p class="lead">JavaScriptを基礎から勉強していきます。</p>
+        <hr class="my-4">
+        <p class="lead">
+          YouTubeライブ配信で勉強した内容をまとめて記録していきます。
+        </p>
+      </div>
+      <h2 class="text-bright">関数</h2>
+      <h5>関数とは</h5>
+      <ul>
+        <li>関数は一連の処理の集まりである</li>
+        <li>関数は外部（再帰の場合は内部）から呼ばれることのできる「サブプログラム」</li>
+        <li>値を関数に渡すことができ（＝引数）、関数は値を返すことができる（＝戻り値）</li>
+        <li>関数はFunctionオブジェクトである</li>
+      </ul>
+      <h5>関数を定義する</h5>
+      <ul>
+        <li>関数の宣言</li>
+        <ul>
+          <li>基本構文</li>
+          <pre>
+            <code>
+              function 関数名(引数1, 引数2, ...) {
+                関数の本体;
+              }
+            </code>
+          </pre>
+          <li>例文：四則演算の関数を書いてみる</li>
+          <pre>
+            <code>
+              // 足し算の関数の定義
+              function add(number01, number02) {
+                return number01 + number02;
+              }
+
+              // 引き算の関数の定義
+              function sub(number01, number02) {
+                return number01 - number02;
+              }
+
+              // 掛け算の関数の定義
+              function multiple(number01, number02) {
+                return number01 * number02; 
+              }
+
+              // 割り算の関数の定義
+              function division(number01, number02) {
+                return number01 / number02;
+              }
+
+              // 剰余の関数の定義
+              function surplus (number01, number02) {
+                return number01 % number02;
+              }
+
+              // ２つの値（数字）を変数に格納
+              var num01 = 15;
+              var num02 = 10;
+
+              // 関数の呼び出し
+              var answer01 = add(num01, num02);
+              var answer02 = sub(num01, num02);
+              var answer03 = multiple(num01, num02);
+              var answer04 = division(num01, num02);
+              var answer05 = surplus(num01, num02);
+
+              // ターミナルへの出力
+              console.log('足し算の結果は ' + answer01);
+              console.log('引き算の結果は ' + answer02);
+              console.log('掛け算の結果は ' + answer03);
+              console.log('割り算の結果は ' + Math.floor(answer04) + ' 余り ' + answer05);
+
+              // 出力結果
+              足し算の結果は 25
+              引き算の結果は 5
+              掛け算の結果は 150
+              割り算の結果は 1 余り 5
+            </code>
+          </pre>
+        </ul>
+        <li>関数式</li>
+        <ul>
+          <li>基本構文</li>
+          <pre>
+            <code>
+              const 変数名 = function(引数1, 引数2, ...) {
+                関数の本体;
+              }
+            </code>
+          </pre>
+          <li>例文：先程の四則演算の関数を関数式で書いてみる</li>
+          <pre>
+            <code>
+              // 足し算の関数の定義
+              const add = function(number01, number02) {
+                return number01 + number02;
+              }
+
+              // 引き算の関数の定義
+              const sub = function(number01, number02) {
+                return number01 - number02;
+              } 
+
+              // 掛け算の関数の定義
+              const multiple = function(number01, number02) {
+                return number01 * number02;
+              }
+
+              // 割り算の関数の定義
+              const division = function(number01, number02) {
+                return number01 / number02;
+              }
+
+              // 剰余の関数の定義
+              const surplus = function(number01, number02) {
+                return number01 % number02;
+              }
+
+              // ２つの値（数字）を変数に格納
+              var num01 = 15;
+              var num02 = 10;
+
+              // 関数の呼び出し
+              var answer01 = add(num01, num02);
+              var answer02 = sub(num01, num02);
+              var answer03 = multiple(num01, num02);
+              var answer04 = division(num01, num02);
+              var answer05 = surplus(num01, num02);
+
+              // ターミナルへの出力
+              console.log('足し算の結果は ' + answer01);
+              console.log('引き算の結果は ' + answer02);
+              console.log('掛け算の結果は ' + answer03);
+              console.log('割り算の結果は ' + Math.floor(answer04) + ' 余り ' + answer05);
+
+              // 出力結果
+              足し算の結果は 25
+              引き算の結果は 5
+              掛け算の結果は 150
+              割り算の結果は 1 余り 5
+            </code>
+          </pre>
+        </ul>
+      </ul>
+      <h5>関数の呼び出し</h5>
+      <ul>
+        <li>関数を定義しても、その関数が実行されるわけではない</li>
+        <li>関数は、指定した一連の処理に名前を付けたもの</li>
+        <li>関数に引数をわたし呼び出すことで、指定された処理を実行し結果を返してくれる。</li>
+      </ul>
+      <p>関数の呼び出し方法</p>
+      <pre>
+        <code>
+          // 関数の定義：定義されただけ
+          function hello(hello) {
+            console.log(hello);
+          }
+
+          // 関数の呼び出し：ここで関数が実行される
+          hello('Good morning!!');
+          hello('Good afternoon!!');
+          hello('Good evening!!');
+
+          // 結果
+          Good morning!!
+          Good afternoon!!
+          Good evening!!
+        </code>
+      </pre>
+      <h5>関数のスコープ</h5>
+      <p>
+        <ul>
+          <li>スコープ＝定義されたもの（変数・関数）を参照できる範囲</li>
+          <li>スコープには、グローバルスコープとローカルスコープがある</li>
+          <li>関数の内部で宣言された変数は関数の外部からアクセスできない</li>
+          <li>関数は自身が定義されたスコープ内で定義されている全ての変数や関数にアクセスできる</li>
+        </ul>
+      </p>
+      <pre>
+        <code>
+          // 関数のスコープ
+          // グローバルスコープで変数を定義
+          var num1 = 20;
+          var num2 = 3;
+          var name = 'Sasaki';
+
+          // グローバルスコープで関数を定義
+          function multiply() {
+            return num1 * num2;
+          }
+
+          console.log(multiply());
+
+          // 結果
+          60
+
+          // グローバル ↔ ローカル
+
+          function getScore() {
+            var num1 = 2;
+            var num2 = 3;
+
+            function add() {
+              return name + ' scored ' + (num1 + num2);
+            }
+            return add();
+          }
+
+          console.log(getScore());
+
+          // 結果
+          Sasaki scored 5
+        </code>
+      </pre>
+      <h5>スコープと関数スタック</h5>
+      <ul>
+        <li>再帰</li>
+        <pre>
+          <code>
+            function loop(x) {
+              if(x >= 10) 
+                return;
+                console.log(x);
+                loop(x + 1); // 再帰呼び出し
+            }
+            loop(0);
+
+            // 結果
+            0
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+          </code>
+        </pre>
+        <li>入れ子の関数とクロージャ</li>
+        <li>変数の保護</li>
+        <li>多重入れ子関数</li>
+        <li>名前衝突</li>
+      </ul>
+      <h5>クロージャ</h5>
+      <h5>argumentsオブジェクトの使用</h5>
+      <h5>関数の引数</h5>
+      <ul>
+        <li>デフォルト引数</li>
+        <li>残余引数</li>
+      </ul>
+      <h5>アロー関数</h5>
+      <ul>
+        <li>短縮形の関数</li>
+        <li>別々のthisはない</li>
+      </ul>
+      <h5>定義済み関数</h5>
+
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div id="copyright"></div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <!-- my Javascript file -->
+    <script src="../JavaScript/navbar.js"></script>
+    <script src="../JavaScript/copyright.js"></script>
+  </body>
+</html>
