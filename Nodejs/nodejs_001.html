@@ -184,7 +184,6 @@
           ライブラリ…プログラムを組む上で使いたい部品や便利なものが入っている道具箱のようなもの
         </li>
       </ul>
-
       <hr class="line-dark">
       <h3>Node.jsでできること</h3>
       <ul>
@@ -193,13 +192,6 @@
           <li>データベースアクセス</li>
         </ul>
         <li>gulp</li>
-        <ul>
-          <li>Node.jsベースのタスクランナー（自動化プログラムのひとつ）</li>
-          <li>HTML、CSS、JSファイルの圧縮</li>
-          <li>SassやLess、pugファイルのコンパイル</li>
-          <li>JavaScriptの構文チェック</li>
-          <li>…and more</li>
-        </ul>
         <li>Webサービスの開発</li>
         <li>スマホアプリの開発</li>
         <li>IoT関連の開発</li>
@@ -212,8 +204,7 @@
         <li>SQLite3：ver 3.31.1</li>
       </ul>
       <hr class="line-dark">
-
-      <h2>node.jsの導入方法</h2>
+      <h2 class="text-bright">node.jsの導入方法</h2>
       <p>
         上記環境で僕が実際にnode.jsを導入した方法を記載します。<br>
         後々のnode.jsのバージョン管理のことを考え、n packageでの導入を行いました。
@@ -266,7 +257,192 @@
         </pre>
       </ol>
       <hr class="line-dark">
-      <h2>node.jsでのデータベースアクセス</h2>
+      <h2 class="text-bright">Gulpを使ってPugやSassをコンパイルする</h2>
+      <h3>Gulpとは</h3>
+      <p>
+        Gulpとは、Node.jsベースのタスクランナー（自動化プログラムのひとつ）です。
+      </p>
+      <h3>Gulpでできること</h3>
+      <ul>
+        <li>HTML、CSS、JSファイルの圧縮</li>
+        <li>SassやLess、pugファイルのコンパイル</li>
+        <li>JavaScriptの構文チェック</li>
+        <li>…and more</li>
+      </ul>
+      <h3>Gulpの導入方法</h3>
+      <p>
+        GulpはNode.jsベースなので、「Node.js」と「npm」がインストールされていることが前提です。
+      </p>
+      <h5>Gulpをグローバル環境にインストール</h5>
+      <p>
+        初めてGulpを使う方はこの手順から行います。
+      </p>
+      <ul>
+        <li>Gulpをグローバル環境にインストール</li>
+        <pre>
+          <code>
+            sudo npm install -g gulp
+          </code>
+        </pre>
+        <li>インストールされたGulpのバージョン確認</li>
+        <pre>
+          <code>
+            // どちらのコマンドでも確認できます。
+            gulp -v
+
+            gulp --version
+          </code>
+        </pre>
+      </ul>
+      <h5>プロジェクトごとに必要な手順</h5>
+      <ul>  
+        <li>プロジェクトのディレクトリ作成</li>
+        <pre>
+          <code>
+            // プロジェクトディレクトリをつくる ディレクトリ名：testGulp
+            mkdir testGulp
+            // testGulpに移動
+            cd testGulp
+          </code>
+        </pre>
+        <li>package.jsonファイルの作成</li>
+        <pre>
+          <code>
+            npm init
+          </code>
+        </pre>
+        <li>Gulp本体をローカル環境にもインストール</li>
+        <pre>
+          <code>
+            npm install --save-dev gulp
+          </code>
+        </pre>
+        <li>必要なプラグインのインストール</li>
+        <pre>
+          <code>
+            npm install --save-dev gulp-notify
+            npm install --save-dev gulp-plumber
+            npm install --save-dev gulp-pug
+            npm install --save-dev gulp-sass
+            npm install --save-dev gulp-autoprefixer
+            npm install --save-dev gulp-uglify
+            npm install --save-dev browser-sync
+          </code>
+        </pre>
+        <li>ディレクトリ構成</li>
+        <ul class="directory">
+          <li>dist/</li>
+          <ul class="directory">
+            <li>css/</li>
+            <li>js/</li>
+          </ul class="directory">
+          <li>src/</li>
+          <ul class="directory">
+            <li>js/</li>
+            <li>pug/</li>
+            <li>scss/</li>
+          </ul>
+          <li>gulpfile.js</li>
+          <li>package.json</li>
+        </ul>
+        <li>gulpfile.js</li>
+        <pre>
+          <code>
+            const gulp          = require('gulp');
+            const notify        = require('gulp-notify');
+            const plumber       = require('gulp-plumber');
+            const sass          = require('gulp-sass');
+            const pug           = require('gulp-pug');
+            const autoprefixer  = require('gulp-autoprefixer');
+            const uglify        = require('gulp-uglify');
+            const browserSync   = require('browser-sync');
+
+            // setting : PATH
+            const paths = {
+              'root'      : './dist',
+              'pug'       : './src/pug/**/*.pug',
+              'html'      : './dist/**/*.html',
+              'cssSrc'    : './src/scss/**/*.scss',
+              'cssDist'   : './dist/css/',
+              'jsSrc'     : './src/js/**/*.js',
+              'jsDist'    : './dist/js/'
+            }
+
+            // gulpコマンドの省略
+            const { watch, series, task, src, dest, parallel} = require('gulp');
+
+            // Sass
+            task('sass', function() {
+              return(
+                src(paths.cssSrc)
+                .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+                .pipe(sass({
+                  outputStyle: 'expanded' // Minifyするなら 'compressed'
+                }))
+                .pipe(autoprefixer({
+                  browsers: ['ie >= 11'],
+                  cascade: false,
+                  grid: true
+                }))
+                .pipe(dest(paths.cssDist))
+              );
+            });
+
+            // Pag
+            task('Pug', function () {
+              return(
+                src(paths.pug, '!./src/pug/**/*.pug')
+                .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+                .pipe(pug({
+                  pretty: true,
+                  basedir: "./src/pug"
+                }))
+                .pipe(dest(paths.html))
+              );
+            });
+
+            // JS Compress
+            task('js', function(){
+              return(
+                src(paths.jsSrc)
+                .pipe(plumber())
+                .pipe(uglify())
+                .pipe(dest(paths.jsDist))
+              );
+            });
+
+            // browser-sync
+            task('browser-sync', () => {
+              return browserSync.init({
+                server:{
+                  baseDir: paths.root
+                },
+                port: 8000,
+                reloadOnRestart: true
+              });
+            });
+
+            // browser-sync reload
+            task('reload', (done) => {
+              browserSync.reload();
+              done();
+            });
+
+            // watch
+            task('watch', (done) => {
+              watch([paths.cssSrc], series('sass', 'reload'));
+              watch([paths.jsSrc], series('js', 'reload'));
+              watch([paths.pug], series('pug', 'reload'));
+              done();
+            });
+            task('default', parallel('watch', 'browser-sync'));
+          </code>
+        </pre>
+      </ul>
+      
+
+      <hr class="line-dark">
+      <h2 class="text-bright">node.jsでのデータベースアクセス</h2>
       <p>
         node.jsやSQLite3のデータベースファイルを格納しておくディレクトリ（フォルダ）をつくります。<br>
         ディレクトリの場所はお好みの場所で構いません。<br>
