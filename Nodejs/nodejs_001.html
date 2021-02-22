@@ -277,7 +277,7 @@
       <p>
         初めてGulpを使う方はこの手順から行います。
       </p>
-      <ul>
+      <ol>
         <li>Gulpをグローバル環境にインストール</li>
         <pre>
           <code>
@@ -293,9 +293,9 @@
             gulp --version
           </code>
         </pre>
-      </ul>
+      </ol>
       <h5>プロジェクトごとに必要な手順</h5>
-      <ul>  
+      <ol>  
         <li>プロジェクトのディレクトリ作成</li>
         <pre>
           <code>
@@ -305,10 +305,21 @@
             cd testGulp
           </code>
         </pre>
-        <li>package.jsonファイルの作成</li>
+        <li>プロジェクトディレクトリの内部ディレクトリ作成</li>
         <pre>
           <code>
-            npm init
+            // コンパイル後に出力されるファイルを格納する場所
+            mkdir dist dist/css dist/img dist/js
+
+            // Gulpの設定ファイル
+            mkdir gulpfile.js
+            touch gulpfile.js/index.js gulpfile.js/module.js
+
+            // 編集用ファイルの格納場所
+            mkdir src src/img src/js src/pug src/scss
+
+            // 各編集用ファイルを作成
+            touch src/js/main.js src/pug/index.pug src/pug/_layout.pug src/scss/main.scss
           </code>
         </pre>
         <li>Gulp本体をローカル環境にもインストール</li>
@@ -317,128 +328,216 @@
             npm install --save-dev gulp
           </code>
         </pre>
+        <li>ディレクトリ構成を確認</li>
+          <ul class="directory">
+            <li>dist/</li>
+            <ul class="directory">
+              <li>css/</li>
+              <li>js/</li>
+            </ul class="directory">
+            <li>src/</li>
+            <ul class="directory">
+              <li>js/</li>
+              <li>pug/</li>
+              <li>scss/</li>
+            </ul>
+            <li>gulpfile.js</li>
+            <li>package.json</li>
+          </ul>
         <li>必要なプラグインのインストール</li>
         <pre>
           <code>
-            npm install --save-dev gulp-notify
-            npm install --save-dev gulp-plumber
             npm install --save-dev gulp-pug
             npm install --save-dev gulp-sass
-            npm install --save-dev gulp-autoprefixer
-            npm install --save-dev gulp-uglify
+            npm install --save-dev gulp-csso
+            npm install --save-dev gulp-concat
             npm install --save-dev browser-sync
+            npm install --save-dev gulp-plumber
+            npm install --save-dev gulp-notify
+            npm install --save-dev gulp-autoprefixer
+            npm install --save-dev gulp-sourcemaps
+            npm install --save-dev gulp-rename
+            npm install --save-dev gulp-imagemin
+            npm install --save-dev gulp-changed
+            npm install --save-dev uglify-es
+            npm install --save-dev gulp-uglify
           </code>
         </pre>
-        <li>ディレクトリ構成</li>
-        <ul class="directory">
-          <li>dist/</li>
-          <ul class="directory">
-            <li>css/</li>
-            <li>js/</li>
-          </ul class="directory">
-          <li>src/</li>
-          <ul class="directory">
-            <li>js/</li>
-            <li>pug/</li>
-            <li>scss/</li>
+        <li>Gulpの設定ファイルを記述</li>
+          <ul>
+            <li>module.js</li>
+            <pre>
+              <code>
+                module.exports = {
+                  pug: require('gulp-pug'),
+                  sass: require('gulp-sass'),
+                  minifyCSS: require('gulp-csso'),
+                  concat: require('gulp-concat'),
+                  browserSync: require('browser-sync'),
+                  plumber: require('gulp-plumber'),
+                  notify: require('gulp-notify'),
+                  autoprefixer: require('gulp-autoprefixer'),
+                  sourcemaps: require('gulp-sourcemaps'),
+                  rename: require('gulp-rename'),
+                  imagemin: require('gulp-imagemin'),
+                  changed: require('gulp-changed'),
+                  uglifyes: require('uglify-es'),
+                  composer: require('gulp-uglify/composer')
+                };
+              </code>
+            </pre>
+            <li>index.js</li>
+            <pre>
+              <code>
+                const {src, dest, parallel, watch} = require('gulp');
+                const $ = require('./module.js');
+                const uglify = $.composer($.uglifyes, $.composer);
+
+                const path = {
+                  src: './src',
+                  dist: './dist',
+                };
+
+                /**
+                * pugファイルのコンパイル
+                */
+                function html() {
+                  return src([`${path.src}/pug/*.pug`, `!${path.src}/pug/**/_*.pug`])
+                    .pipe(
+                      $.plumber({
+                        errorHandler: $.notify.onError('Error: <%= error.message %>'),
+                      })
+                    )
+                    .pipe(
+                      $.pug({
+                        pretty: true,
+                      })
+                    )
+                    .pipe(dest(path.dist))
+                    .pipe(
+                      $.browserSync.reload({
+                        stream: true,
+                        once: true,
+                      })
+                    );
+                }
+
+                /**
+                * scssファイルのコンパイル
+                */
+                function css() {
+                  return src(`${path.src}/scss/*.scss`)
+                    .pipe(
+                      $.plumber({
+                        errorHandler: $.notify.onError('Error: <%= error.message %>'),
+                      })
+                    )
+                    .pipe($.sourcemaps.init())
+                    .pipe($.sass())
+                    .pipe($.autoprefixer())
+                    .pipe($.sourcemaps.write())
+                    .pipe(dest(`${path.dist}/css`))
+                    .pipe(
+                      $.rename({
+                        suffix: '.min',
+                      })
+                    )
+                    .pipe($.minifyCSS())
+                    .pipe(dest(`${path.dist}/css`))
+                    .pipe(
+                      $.browserSync.reload({
+                        stream: true,
+                        once: true,
+                      })
+                    );
+                }
+
+                /**
+                * JavaScriptファイルの圧縮
+                */
+                function js() {
+                  return src(`${path.src}/js/**/*.js`, {sourcemaps: true})
+                    .pipe(
+                      $.plumber({
+                        errorHandler: $.notify.onError('Error: <%= error.message %>'),
+                      })
+                    )
+                    .pipe(uglify({output: {comments: /^!/ }}))
+                    .pipe(
+                      $.concat('main.min.js', {
+                        newLine: '\n',
+                      })
+                    )
+                    .pipe(dest(`${path.dist}/js`, {sourcemaps: true}))
+                    .pipe(
+                      $.browserSync.reload({
+                        stream: true,
+                        once: true,
+                      })
+                    );
+                }
+
+                /**
+                * 画像ファイルの圧縮
+                */
+                function img() {
+                  return src(`${path.src}/img/**/**`)
+                    .pipe($.changed(`${path.dist}/img/`))
+                    .pipe(
+                      $.imagemin({
+                        optimizationLevel: 3,
+                      })
+                    )
+                    .pipe(dest(`${path.dist}/img/`));
+                }
+
+                function bs() {
+                  $.browserSync.init({
+                    server: {
+                      baseDir: path.dist,
+                    },
+                    notify: true,
+                    xip: false,
+                  });
+                }
+
+                exports.html = html;
+                exports.css = css;
+                exports.js = js;
+                exports.bs = bs;
+                exports.img = img;
+
+                exports.default = parallel([html, css, js, img, bs], () => {
+                  watch(`${path.src}/pug/**`, html);
+                  watch(`${path.src}/scss/**`, css);
+                  watch(`${path.src}/js/**`, js);
+                  watch(`${path.src}/img/**`, img);
+                });
+              </code>
+            </pre>
           </ul>
-          <li>gulpfile.js</li>
-          <li>package.json</li>
-        </ul>
-        <li>gulpfile.js</li>
+
+        
+        <li>gulp・Node.jsの依存関係を整理し必要なパッケージをインストール</li>
         <pre>
           <code>
-            const gulp          = require('gulp');
-            const notify        = require('gulp-notify');
-            const plumber       = require('gulp-plumber');
-            const sass          = require('gulp-sass');
-            const pug           = require('gulp-pug');
-            const autoprefixer  = require('gulp-autoprefixer');
-            const uglify        = require('gulp-uglify');
-            const browserSync   = require('browser-sync');
-
-            // setting : PATH
-            const paths = {
-              'root'      : './dist',
-              'pug'       : './src/pug/**/*.pug',
-              'html'      : './dist/**/*.html',
-              'cssSrc'    : './src/scss/**/*.scss',
-              'cssDist'   : './dist/css/',
-              'jsSrc'     : './src/js/**/*.js',
-              'jsDist'    : './dist/js/'
-            }
-
-            // gulpコマンドの省略
-            const { watch, series, task, src, dest, parallel} = require('gulp');
-
-            // Sass
-            task('sass', function() {
-              return(
-                src(paths.cssSrc)
-                .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-                .pipe(sass({
-                  outputStyle: 'expanded' // Minifyするなら 'compressed'
-                }))
-                .pipe(autoprefixer({
-                  browsers: ['ie >= 11'],
-                  cascade: false,
-                  grid: true
-                }))
-                .pipe(dest(paths.cssDist))
-              );
-            });
-
-            // Pag
-            task('Pug', function () {
-              return(
-                src(paths.pug, '!./src/pug/**/*.pug')
-                .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-                .pipe(pug({
-                  pretty: true,
-                  basedir: "./src/pug"
-                }))
-                .pipe(dest(paths.html))
-              );
-            });
-
-            // JS Compress
-            task('js', function(){
-              return(
-                src(paths.jsSrc)
-                .pipe(plumber())
-                .pipe(uglify())
-                .pipe(dest(paths.jsDist))
-              );
-            });
-
-            // browser-sync
-            task('browser-sync', () => {
-              return browserSync.init({
-                server:{
-                  baseDir: paths.root
-                },
-                port: 8000,
-                reloadOnRestart: true
-              });
-            });
-
-            // browser-sync reload
-            task('reload', (done) => {
-              browserSync.reload();
-              done();
-            });
-
-            // watch
-            task('watch', (done) => {
-              watch([paths.cssSrc], series('sass', 'reload'));
-              watch([paths.jsSrc], series('js', 'reload'));
-              watch([paths.pug], series('pug', 'reload'));
-              done();
-            });
-            task('default', parallel('watch', 'browser-sync'));
+            npm init
+          </code> 
+        </pre>
+        <li>gulpを起動する</li>
+        <pre>
+          <code>
+            gulp
           </code>
         </pre>
-      </ul>
+      </ol>
+      <p>
+        以上の手順でGulpの準備が完了です。<br>
+        最後のコマンド<code>gulp</code>により自動でブラウザが起動しlocalhost:3000でページが表示されます。<br>
+        ターミナルがGulpを動かしていますが、終了させたい時は<code>ctrl + c</code>で停止させることが可能です。<br>
+        プラグインに<code>browser-sync</code>がインストールされているので、Gulpを起動させた状態で編集用ファイルを変更し保存すると<br>
+        変更箇所が自動でブラウザに反映されます。
+      </p>
       
 
       <hr class="line-dark">
