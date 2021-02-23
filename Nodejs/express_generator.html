@@ -160,7 +160,7 @@
           このサイトでは、Pugを使っていきます。
         </p>
         <p>
-          スタイルシートは、CSSをそのまま使うこともできますが、LESS、SASS、Compass、Stylus等の<br>
+          スタイルシートは、CSSをそのまま使うこともできますが、Less、Sass、Compass、Stylus等の<br>
           一般的なスタイルシートエンジンを使うこともできます。
         </p>
 
@@ -220,25 +220,11 @@
         <h5>プロジェクト作成</h5>
         <pre>
           <code>
+            // Sassを使わない場合
             express myApp --view=pug
 
-            create : myApp/
-            create : myApp/public/
-            create : myApp/public/javascripts/
-            create : myApp/public/images/
-            create : myApp/public/stylesheets/
-            create : myApp/public/stylesheets/style.css
-            create : myApp/routes/
-            create : myApp/routes/index.js
-            create : myApp/routes/users.js
-            create : myApp/views/
-            create : myApp/views/error.pug
-            create : myApp/views/index.pug
-            create : myApp/views/layout.pug
-            create : myApp/app.js
-            create : myApp/package.json
-            create : myApp/bin/
-            create : myApp/bin/www
+            // Sassを使う場合
+            express myapp --view=pug --css=scss
 
             change directory:
               $ cd myApp
