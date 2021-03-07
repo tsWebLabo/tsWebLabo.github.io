@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="t's Web Labo">
+    <meta name="keywords" content="パソコン, プログラミング, Ubuntu, Androidアプリ開発">
+    <meta name="description" content="はじめまして、t's Web Laboの「たむ」と申します。
+    「プログラミングって楽しい」を多くの方と共有したいと思っています。Webサイト作成をはじめとして様々なアプリケーション開発に挑戦します。
+    現状私のスキルは高くはないですが、当サイトやYouTubeライブ配信を通して少しずつ成長していきますので応援して頂けると嬉しいです。">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/tsweblabo.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/lowerPage.css">
+    <title>t's Web Labo</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <div class="navbar-brand">
+          <img src="../images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          t's Web Labo
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- index -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- tools -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ツール
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle active" href="../ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
+                  Ubuntu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../ubuntu/ubuntu001.html">Ubuntuってなに？</a>
+                  <a class="dropdown-item active" href="../ubuntu/ubuntu_initialSetting.html">インストールと初期設定</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../ubuntu/ubuntuLinuxCommand.html">Linuxコマンド</a>
+                  <a class="dropdown-item" href="../ubuntu/ubuntuShellScript.html">ShellScript</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover"> 
+                <a class="dropdown-item dropdown-toggle" href="../vim/vim001.html" type="button" data-toggle="dropdown">
+                  Vim
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../vim/vim001.html">インストールと設定</a>
+                  <a class="dropdown-item" href="../vim/vim002.html">モード・基本操作</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- programming -->
+          <li class="nav-item dropdown drop-hover">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              プログラミング
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Androidアプリ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../androidApp/androidApp001.html">Basic-Tips</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp002.html">データベースアクセス</a>
+                  <a class="dropdown-item" href="../androidApp/androidApp003.html">Androidアプリの紹介</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SQLite3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_001.html">SQLite3とは</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_002.html">データベースの操作</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_003.html">テーブルの操作</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../javascriptNote/javascriptNote_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown", aria-haspopup="true" aria-expanded="false">
+                  JavaScript
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_001.html">JavaScriptとは</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_002.html">演算子</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_003.html">配列</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_004.html">代入</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_005.html">条件分岐</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_006.html">try...catch文</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_007.html">繰り返し</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_008.html">関数</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_009.html">画面入出力</a>
+                  <a class="dropdown-item" href="../javascriptNote/javascriptNote_010.html">処理の呼び出し</a>
+                </div>
+              </li>
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="../Nodejs/nodejs_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Node.js
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="../Nodejs/nodejs_001.html">Node.js</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../Nodejs/expressApp.html">Express</a>
+                  <a class="dropdown-item" href="../Nodejs/express_generator.html">Express-generator</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- aboutme -->
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutme.html">About me</a>
+          </li>    
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <!--jumbotron-->
+      <div class="jumbotron">
+        <h1 class="display-4 text-accent text-bright">ユーザーを育ててくれるOS「Ubuntu」</h1>
+        <p class="lead">Ubuntuをより楽しく便利に使う方法が詰まってます！！</p>
+        <hr class="my-4">
+        <p class="lead">Ubuntuのインストールから初期設定までの流れをご紹介！！</p>
+      </div>
+      <h2 class="text-bright">Ubuntuのインストールから初期設定まで</h2>
+      <p>
+        UbuntuはオープンソースなOSなので誰でも使うことができます。<br>
+        オープンソースなので、一般的なOSと違って『カスタマーサービス等がなく、自分で解決しなければならない』というところが最初の難関であるように思います。<br>
+        この難関を越えてUbuntuに親しんでいただくためにも、僕の経験を含めてインストールから初期設定までの流れを書いていきます。
+      </p>
+      <p>
+        注意事項：
+      </p>
+      <h3 class="text-bright">インストールの方法</h3>
+      <h5>インストールディスクの準備</h5>
+      <ul>
+        <li>書籍付録のインストールディスクを使う</li>
+        <li>インストールディスクを自分で作る</li>
+      </ul>
+      <h5>Ubuntuのインストール</h5>
+      <ol>
+        <li>PCを起動し、インストールディスクを本体にセット</li>
+        <li>PCを再起動しBIOS画面を起動させる</li>
+        <li>BIOSのブートセレクタでインストールディスクの場所をを選択し、起動させる</li>
+        <li>インストール画面の指示に従ってインストール</li>
+        <li></li>
+      </ol>
+      <hr class="line-dark">
+      <h3 class="text-bright">ホームディレクトリの表記変更</h3>
+      <p>
+        ホームディレクトリ直下のディレクトリ名を日本語表記から英語表記に変える
+      </p>
+      <hr class="line-dark">
+      <h3 class="text-bright">日本語入力を有効にする（fcitx-mozc）</h3>
+      <ul>
+        <li>言語サポートの起動</li>
+        <li>キーボード入力に使うIMシステムの変更</li>
+        <li>PC再起動</li>
+        <li>言語サポートの確認</li>
+      </ul>
+      <hr class="line-dark">
+      <h3 class="text-bright">セキュリティツール</h3>
+      <ul>
+        <li>ClambTK</li>
+        <li>firewall</li>
+      </ul>
+      <hr class="line-dark">
+      <h3 class="text-bright">Ubuntuをアップデートして再起動</h3>
+      <pre>
+        <code>
+          // Ubuntuのアップデートコマンド
+          sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && sudo apt-get -y autoclean
+          // アップデート終了後、再起動
+          reboot
+        </code>
+      </pre>
+      <hr class="line-dark">
+      <h3 class="text-bright">ツールのインストール・セッティング</h3>
+      <h5>エディタ</h5>
+      <ul>
+        <li>Vim</li>
+        <li>VSCode</li>
+      </ul>
+      <h5>ブラウザ</h5>
+      <ul>
+        <li>Google Chrome</li>
+      </ul>
+      <h5>IDE(統合開発環境)</h5>
+      <ul>
+        <li>Android Studio</li>
+      </ul>
+      <h5>Git(バージョン管理ソフト)</h5>
+      <ul>
+        <li>Gitのインストール</li>
+        <li>ターミナルにGitのブランチを表示させる</li>
+      </ul>
+      <h5>SQlite3(データベース)</h5>
+      <h5>内部温度のモニタリングソフト</h5>
+      <hr class="line-dark">
+      <h3 class="text-bright">プログラミング言語の環境構築など</h3>
+      <ul>
+        <li>Java</li>
+        <li>Node.js</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div id="copyright"></div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <!-- my Javascript file -->
+    <script src="../JavaScript/navbar.js"></script>
+    <script src="../JavaScript/copyright.js"></script>
+  </body>
+</html>
