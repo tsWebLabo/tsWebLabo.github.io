@@ -26,6 +26,11 @@ a:hover {
     content: "";
 }
 
+.outerLink {
+    text-decoration: none;
+    color: #16FFCE;
+}
+
 /* navbar */
 .navbar {
     background-color: #333;
