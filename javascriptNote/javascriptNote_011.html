@@ -148,9 +148,119 @@
         </p>
       </div>
       <h2 class="text-bright">クラス</h2>
+      <h3>クラスとは</h3>
+      <h5>オブジェクト指向言語における一般的な「class」</h5>
       <p>
-        クラスについての記事を書く予定
+        オブジェクト指向言語には「class」という仕組みを持つものが多くあります。<br>
+        クラスにはオブジェクトを作る際のデータやメソッドを定義してあり、クラスをインスタンス化するなどしてオブジェクトとして生成する。<br>
+        クラスは以下のような特徴を持ちます。（言語によって異なる場合があるので注意が必要です。）
       </p>
+      <ul>
+        <li>クラスとはオブジェクトを作る際の設計図である</li>
+        <li>クラスの中には<strong>「フィールド（属性）」と「メソッド（働き）」</strong>が存在する。</li>
+        <ul>
+          <li>フィールド：クラスに定義される変数</li>
+          <li>メソッド：クラスに定義される関数</li>
+        </ul>
+        <li>フィールドとメソッドをあわせて<strong>「メンバ」</strong>という</li>
+        <li>コンストラクタや継承といった機能を備えている</li>
+        <li>オブジェクトを使う(Javaを例に取ります)</li>
+        <ul>
+          <li>staticメソッドの場合</li>
+          <pre>
+            <code>
+              // クラス名.メソッド名で呼び出せる
+              Car.handle();
+              Car.accelerator();
+              Car.brake()
+            </code>
+          </pre>
+          <li>staticでないメソッドの場合</li>
+          <pre>
+            <code>
+              // クラスをインスタンス化して代入
+              Car sportsCar = new Car();
+              // 代入したオブジェクトを使ってメソッド呼び出し
+              sportsCar.handle();
+              sportsCar.accelerator();
+              sportsCar.brake();
+            </code>
+          </pre>
+        </ul>
+      </ul>
+      <h5>JavaScriptにおける「class」</h5>
+      <ul>
+        <li>共通点</li>
+        <ul>
+          <li>クラスはオブジェクトを作成するためのテンプレート（設計図）</li>
+          <li>コンストラクタや継承の概念も備えている</li>
+        </ul>
+        <li>相違点</li>
+        <ul>
+          <li>クラス変数はコンストラクタ内でのみ記述できる</li>
+          <li>クラス直下にはメソッドだけしか記述できない</li>
+          <li>クラスの定義方法には<strong>「クラス宣言」</strong>と<strong>「クラス式」</strong>の2つが存在する</li>
+        </ul>
+      </ul>
+      <hr class="line-dark">
+      <h3>クラスの定義方法</h3>
+      <p>
+        クラスは実際には「特別な関数」であり、関数が「関数宣言」と「関数式」で定義できるように、<br>
+        クラス構文にも「クラス宣言」と「クラス式」の２つの方法があります。
+      </p>
+      <h5>クラス宣言</h5>
+      <pre>
+        <code>
+          class Rectangle {
+            constructor(height, width) {
+              this.height = height;
+              this.width = width;
+            }
+          }
+        </code>
+      </pre>
+      <h5>クラス式</h5>
+      <pre>
+        <code>
+          // 名前無し
+          var Rectangle = class {
+            constructor(height , width) {
+              this.height = height;
+              this.width = width;
+            }
+          };
+          console.log(Rectangle.name);
+          // 出力："Rectangle"
+
+          // 名前付き
+          var Rectangle = class Rectangle2 {
+            constructor(height, width) {
+              this.height = height;
+              this.width = width;
+            }
+          }
+          console.log(Rectangle.name);
+          // 出力："Rectangle2"
+        </code>
+      </pre>
+      <hr class="line-dark">
+      <h3>クラス本体とメソッド定義</h3>
+      <h5>コンストラクタ</h5>
+      <h5>プロトタイプメソッド</h5>
+      <h5>静的メソッドとプロパティ</h5>
+      <h5>プロトタイプと静的メソッドによるボクシング</h5>
+      <h5>インスタンスプロパティ</h5>
+      <h5>フィールド宣言</h5>
+      <ul>
+        <li>public field宣言</li>
+        <li>private field宣言</li>
+      </ul>
+      <hr class="line-dark">
+      <h3>'extends'によるサブクラスの定義</h3>
+      <hr class="line-dark">
+      <h3>'super'によるスーパークラスの呼び出し</h3>
+      <hr class="line-dark">
+      <h3>ミックスイン</h3>
     </section>
     <!-- footer -->
     <footer class="footer">
