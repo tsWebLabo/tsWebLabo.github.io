@@ -714,6 +714,136 @@
           </p>
         </div><!-- /.media-body -->
       </div><!-- /.media -->
+
+      <hr class="line-dark">
+      <h2 class="text-bright">requre()で別のJSファイルのメソッドを呼び出す</h2>
+      <p>
+        上記のデータベースアクセスのコードでは、同一ファイル内でメソッドの呼び出しを行いました。<br>
+        しかしこれでは汎用性が低く、他のアプリケーションに使い回すたびにメソッドの呼び出し部分を書き換える必要があり、<br>
+        意図せずDBアクセスのメソッドそのものを書き換えてしまうなど、バグの温床にもなりかねません。
+      </p>
+      <p>
+        そこで、データベースアクセスのメソッドを別ファイルに記述し、メソッド呼び出し用のファイルからアクセスすることで<br>
+        データベースアクセスのメソッドを「カプセル化」することで、コードの可読性があがりメンテナンス効率化とともにバグの発生も減らせます。<br>
+        上記のコードを元にカプセル化したコードを書いてみましょう。
+      </p>
+      <ul>
+        <li>databaseAccess.js</li>
+        <pre>
+          <code>
+            // データベースアクセスのJSファイル
+            var sqlite3 = require('sqlite3').verbose();
+            exports.db = db = new sqlite3.Database('./database/test003.db');
+
+            /**
+            * テーブル消去メソッド
+            */
+            function dropTable() {
+              let SQL_dropTable = 'DROP TABLE IF EXISTS testTable;';
+              db.run(SQL_dropTable);
+            }
+
+            /**
+            * テーブル定義メソッド
+            */
+            function createTable() {
+              let SQL_createTable = 'CREATE TABLE IF NOT EXISTS testTable(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT);';
+              db.run(SQL_createTable);
+            }
+
+            /**
+            * テーブルを初期化
+            */
+            exports.tableInitialize = function tableInitialize() {
+              dropTable();
+              createTable();
+            }
+
+            /**
+            * SELECT文
+            */
+            exports.selectAll = function selectAll() {
+              let SQL_selectAll = 'SELECT * FROM testTable;';
+              db.each(SQL_selectAll, (error, row) => {
+                if(error) {
+                  console.error('ERROR!', error);
+                  return;
+                }
+                console.log(row.id + ' | ' + row.name);
+              });
+            }
+
+            /**
+            * INSERT文
+            * @param {新規追加する名前} newName 
+            */
+            exports.insertData = function insertData(newName) {
+              let SQL_insert = 'INSERT INTO testTable (name) VALUES (?);';
+              const stmt_insert = db.prepare(SQL_insert);
+
+              stmt_insert.run(newName);
+              stmt_insert.finalize();
+            }
+
+            /**
+            * UPDATE文
+            * @param {更新前の名前} oldName 
+            * @param {更新後の名前} newName 
+            */
+            exports.updateData = function updateData(oldName, newName) {
+              let SQL_update = 'UPDATE testTable SET name = ? WHERE name = ?;';
+              const stmt_update = db.prepare(SQL_update);
+
+              stmt_update.run(newName, oldName);
+              stmt_update.finalize();
+            }
+
+            /**
+            * DELETE文
+            * @param {削除する名前} deleteName 
+            */
+            exports.deleteData = function deleteData(deleteName) {
+              let SQL_delete = 'DELETE FROM testTable WHERE name = ?;';
+              const stmt_delete = db.prepare(SQL_delete);
+
+              stmt_delete.run(deleteName);
+              stmt_delete.finalize();
+            }
+          </code>
+        </pre>
+        <li>main.js</li>
+        <pre>
+          <code>
+            var dbAccess = require('./databaseAccess.js');
+
+            dbAccess.db.serialize(() => {
+              dbAccess.tableInitialize();
+              dbAccess.insertData('aaaa');
+              dbAccess.insertData('bbbb');
+              dbAccess.insertData('cccc');
+              dbAccess.insertData('dddd');
+              dbAccess.insertData('eeee');
+
+              dbAccess.updateData('cccc', 'ffff');
+              dbAccess.updateData('dddd', 'gggg');
+
+              dbAccess.deleteData('eeee');
+              
+              dbAccess.selectAll();
+            });
+            dbAccess.db.close();
+          </code>
+        </pre>
+        <p>コマンド<code>node main.js</code>を実行</p>
+        <pre>
+          <code>
+            1 | aaaa
+            2 | bbbb
+            3 | ffff
+            4 | gggg
+          </code>
+        </pre>
+      </ul>
     </section>
     <!-- footer -->
     <footer class="footer">
