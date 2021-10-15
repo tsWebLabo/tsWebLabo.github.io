@@ -4,186 +4,26 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="t's Web Labo">
-    <meta name="keywords" content="パソコン, プログラミング, Ubuntu, Androidアプリ開発">
-    <meta name="description" content="はじめまして、t's Web Laboの「たむ」と申します。
-    「プログラミングって楽しい」を多くの方と共有したいと思っています。Webサイト作成をはじめとして様々なアプリケーション開発に挑戦します。
-    現状私のスキルは高くはないですが、当サイトやYouTubeライブ配信を通して少しずつ成長していきますので応援して頂けると嬉しいです。">
-
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/tsweblabo.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- custom CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/top.css">
-    <title>t's Web Labo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
   </head>
   <body>
-    <!--navbar-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-      <div class="navbar-brand">
-          <img src="images/tsweblabo_Logo02.png" width="30" height="30" class="d-inline-block align-top" alt="">
-          t's Web Labo
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <!-- index -->
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <!-- tools -->
-          <li class="nav-item dropdown drop-hover">
-            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              ツール
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li class="dropright drop-hover">
-                <a class="dropdown-item dropdown-toggle" href="./ubuntu/ubuntu001.html" type="button" data-toggle="dropdown">
-                  Ubuntu
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="./ubuntu/ubuntu001.html">Ubuntuってなに？</a>
-                  <a class="dropdown-item" href="./ubuntu/ubuntu_initialSetting.html">インストールと初期設定</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="./ubuntu/ubuntuLinuxCommand.html">Linuxコマンド</a>
-                  <a class="dropdown-item" href="./ubuntu/ubuntuShellScript.html">ShellScript</a>
-                </div>
-              </li>
-              <li class="dropright drop-hover"> 
-                <a class="dropdown-item dropdown-toggle" href="./vim/vim001.html" type="button" data-toggle="dropdown">
-                  Vim
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="./vim/vim001.html">インストールと設定</a>
-                  <a class="dropdown-item" href="./vim/vim002.html">モード・基本操作</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- programming -->
-          <li class="nav-item dropdown drop-hover">
-            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              プログラミング
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li class="dropright drop-hover">
-                <a class="dropdown-item dropdown-toggle" href="./androidApp/androidApp001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Androidアプリ
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="./androidApp/androidApp001.html">Basic-Tips</a>
-                  <a class="dropdown-item" href="./androidApp/androidApp002.html">データベースアクセス</a>
-                  <a class="dropdown-item" href="./androidApp/androidApp003.html">Androidアプリの紹介</a>
-                </div>
-              </li>
-              <li class="dropright drop-hover">
-                <a class="dropdown-item dropdown-toggle" href="./sqlite3/sqlite3_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  SQLite3
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="./sqlite3/sqlite3_001.html">SQLite3とは</a>
-                  <a class="dropdown-item" href="./sqlite3/sqlite3_002.html">データベースの操作</a>
-                  <a class="dropdown-item" href="./sqlite3/sqlite3_003.html">テーブルの操作</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="./sqlite3/sqlite3_004.html">データの追加（INSERT文）</a>
-                  <a class="dropdown-item" href="./sqlite3/sqlite3_005.html">データの更新（UPDATE文）</a>
-                  <a class="dropdown-item" href="./sqlite3/sqlite3_006.html">データの削除（DELETE文）</a>
-                  <a class="dropdown-item" href="./sqlite3/sqlite3_007.html">データの取得（SELECT文）</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="./sqlite3/sqlite3_008.html">テーブルの結合（JOIN句）</a>
-                </div>
-              </li>
-              <li class="dropright drop-hover">
-                <a class="dropdown-item dropdown-toggle" href="./javascriptNote/javascriptNote_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown", aria-haspopup="true" aria-expanded="false">
-                  JavaScript
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_001.html">JavaScriptとは</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_002.html">演算子</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_003.html">配列</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_004.html">代入</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_005.html">条件分岐</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_006.html">try...catch文</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_007.html">繰り返し</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_008.html">関数</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_009.html">画面入出力</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_010.html">処理の呼び出し</a>
-                  <a class="dropdown-item" href="./javascriptNote/javascriptNote_011.html">クラス</a>
-                </div>
-              </li>
-              <li class="dropright drop-hover">
-                <a class="dropdown-item dropdown-toggle" href="./Nodejs/nodejs_001.html" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Node.js
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="./Nodejs/nodejs_001.html">Node.js</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="./Nodejs/expressApp.html">Express</a>
-                  <a class="dropdown-item" href="./Nodejs/express_generator.html">Express-generator</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- aboutme -->
-          <li class="nav-item">
-            <a class="nav-link" href="./aboutme.html">About me</a>
-          </li>    
-        </ul>
-      </div>
-    </nav>
-    <!--jumbotron-->
-    <div class="jumbotron">
-      <div class="contents_top">
-        <h1 class="display-4 text-center text-accent">Geekになる。</h1>
-        <p class="lead text-center">
-          次の世代の子どもたちが大人になって仕事のことで悩んでいる時「好きなことを仕事にしていいんよ」と寄り添える大人でありたい。<br>
-          「Geek」と呼ばれるくらいにプログラミングスキルを高めて作り出したシステムやサービスで誰かを笑顔にしたい。 
-        </p>
-        <hr class="my-4">
-        <h2 class="display-4 text-center text-accent">Live Stream / Twitter / Qiita</h2>
-        <p class="lead text-center">
-          ライブ配信では、僕自身のスキルアップを兼ねて皆さんにプログラミングって楽しいんだよということを伝えたくて配信しています。<br>
-          ライブコーディングやタイピング動画を通して「プログラミングそのものの楽しさ」を感じてみませんか？
-        </p>
-        <p class="lead text-center">
-          Twitterでプログラミングやライブ配信の告知をしてます。<br>
-          Qiitaで勉強したことを記事にまとめています。<br>
-          リンクを貼っておきますので、気軽に見てみてください。
-        </p>
-        <div class="form-group row justify-content-center">
-          <p class="text-center">
-            <a class="btn btn-lg btn-outline-secondary" href="https://www.youtube.com/channel/UCLC97HZr8Ck2tZUxgj2v67Q" target="blank" role="button">t's Web Laboのチャンネル</a>
-          </p>
-          <p class="text-center">
-            <a class="btn btn-lg btn-outline-secondary" href="https://twitter.com/ts_Web_Labo" target="blank" role="button">Twitter</a>
-          </p>
-          <p class="text-center">
-            <a class="btn btn-lg btn-outline-secondary" href="https://qiita.com/tsweblabo" target="blank" role="button">Qiita</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- footer -->
-    <footer>
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark footer">
-        <div id="copyright"></div>
-      </nav>
-    </footer>
+    <h1>Hello, world!</h1>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    
-    <!-- my Javascript file -->
-    <script src="JavaScript/navbar.js"></script>
-    <script src="JavaScript/copyright.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
