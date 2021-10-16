@@ -6,7 +6,7 @@ tsweblabo.github.io
   index.html
   /css
   /js
-  /img
+  /image
   /node_modules
   package-lock.json
   /archives
