@@ -6,3 +6,12 @@ html {
   width: 80vw;
   margin: 0 auto;
 }
+
+.myThumbnail {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+footer {
+  background-color: #ccc;
+}
