@@ -5,11 +5,12 @@ html {
 .carousel {
   width: 80vw;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
-.myThumbnail {
-  margin-left: 10vw;
-  margin-right: 10vw;
+article {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 footer {
